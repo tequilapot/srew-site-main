@@ -33,8 +33,8 @@ function initNavbar(){
     },{passive:true});
     updateNavbar();
 
-    // Close mobile menu on link click
-    _qa('.navbar-nav .nav-link').forEach(function(link){
+    // Close mobile menu on link click (except dropdown toggles)
+    _qa('.navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item').forEach(function(link){
         _on(link,'click',function(){
             const collapse=_qs('.navbar-collapse');
             if(collapse&&collapse.classList.contains('show')){
