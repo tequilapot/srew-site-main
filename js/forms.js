@@ -92,10 +92,10 @@ function initBrochureForm(){
         e.preventDefault();
 
         const name=_id('brochureName').value.trim();
-        const email=_id('brochureEmail').value.trim();
         const phone=_id('brochurePhone').value.trim();
+        const requirement=_id('brochureRequirement').value.trim();
 
-        if(!name||!email){
+        if(!name||!phone||!requirement){
             toast('Please fill in all required fields.','error');
             return;
         }
@@ -105,8 +105,8 @@ function initBrochureForm(){
 
         const fields=[
             {name:'firstname',value:name},
-            {name:'email',value:email},
             {name:'phone',value:phone},
+            {name:'message',value:requirement},
             {name:'source',value:'Website Brochure Download'}
         ];
 
@@ -114,11 +114,7 @@ function initBrochureForm(){
         .then(function(){
             w.open('brochures/srew-company-profile.pdf','_blank');
 
-            const modal=_id('brochureModal');
-            if(modal){
-                const inst=bootstrap.Modal.getInstance(modal);
-                if(inst)inst.hide();else new bootstrap.Modal(modal).hide();
-            }
+            if(typeof w.closeBrochureModal==='function') w.closeBrochureModal();
 
             setTimeout(function(){
                 toast('Brochure download started! Check your new tab.','success');

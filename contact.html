@@ -40,8 +40,8 @@
                 <a class="navbar-brand me-1 me-md-3 d-flex align-items-center" href="index.html" aria-label="S R ENGG WORKS - Home" style="flex-shrink:0; text-decoration: none;">
                     <img src="images/logo.png" alt="S R ENGG WORKS Logo" class="d-inline-block align-text-top nav-logo-img me-2">
                     <div class="d-none d-xl-flex flex-column justify-content-center" style="font-size: 0.75rem; line-height: 1.2; color: #555;">
-                        <span class="fw-bold" style="color: var(--c-primary-ultra);">ISO 9001:2015 CERTIFIED OEM</span>
-                        <span>GSTIN: <span class="text-muted">XXXXXXXXXXXXXXX</span></span>
+                        <span class="fw-bold" style="color: var(--c-primary-ultra);">ISO 9001:2015 CERTIFIED</span>
+                        <span>GSTIN: <span class="text-muted">36BEIPR4767N1ZL</span></span>
                     </div>
                 </a>
                 
@@ -193,10 +193,26 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-4">
-                        <h4>Our Location</h4>
-                        <div class="map-responsive">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.3124765326115!2d78.46154547542842!3d17.540303398381397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f1554b670b3%3A0xe27581d046798e10!2sS%20R%20ENGG%20WORKS!5e0!3m2!1sen!2sin!4v1746938279460!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="S R ENGG WORKS location on Google Maps"></iframe>
+                    <div class="mt-4 reveal" style="transition-delay: 0.2s;">
+                        <h4 class="text-gradient">Our Location</h4>
+                        <div class="commutes">
+                            <div class="commutes-map" aria-label="Map">
+                                <div class="map-view"></div>
+                            </div>
+                            <div class="commutes-info">
+                                <div class="commutes-initial-state">
+                                    <div class="description">
+                                        <h1 class="heading">Estimate commute time</h1>
+                                        <p>See travel time to our office</p>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm btn-premium add-button">Add yours</button>
+                                </div>
+                                <div class="commutes-destinations" style="display:none">
+                                    <div class="destinations-container">
+                                        <div class="destination-list"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,9 +272,30 @@
 
     <a href="https://wa.me/918790759460" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 
+    <!-- Commutes Map Modal -->
+    <div class="commutes-modal-container">
+        <div class="commutes-modal">
+            <h2 class="h5 mb-3 text-gradient">Add Destination</h2>
+            <form id="destination-form">
+                <input type="text" class="form-control mb-3" name="destination-address" placeholder="Enter your location">
+                <div class="d-flex gap-2 mb-3 travel-modes">
+                    <input type="radio" name="travel-mode" id="driving-mode" value="DRIVING" checked class="btn-check">
+                    <label class="btn btn-outline-primary btn-sm" for="driving-mode">Driving</label>
+                    <input type="radio" name="travel-mode" id="transit-mode" value="TRANSIT" class="btn-check">
+                    <label class="btn btn-outline-primary btn-sm" for="transit-mode">Transit</label>
+                </div>
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-light btn-sm cancel-button">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-sm add-destination-button">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242639779.js"></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/forms.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=places,geometry" async defer></script>
+    <script src="js/commutes-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
 </body>
 </html>

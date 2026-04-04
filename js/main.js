@@ -50,19 +50,25 @@ function initNavbar(){
    ────────────────────────────────────────────── */
 function initRevealAnimations(){
     if(!('IntersectionObserver' in w))return;
-    const elements=_qa('.reveal');
+    const elements=_qa('.reveal, .stagger-container');
     if(!elements.length)return;
 
     const observer=new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
             if(entry.isIntersecting){
                 entry.target.classList.add('visible');
+                // Optional: add a slight delay for children if it's a stagger container
+                if(entry.target.classList.contains('stagger-container')){
+                    _qa('> *', entry.target).forEach((child, i) => {
+                        child.style.transitionDelay = (i * 100) + 'ms';
+                    });
+                }
                 observer.unobserve(entry.target);
             }
         });
     },{
-        threshold:0.12,
-        rootMargin:'0px 0px -40px 0px'
+        threshold:0.15,
+        rootMargin:'0px 0px -50px 0px'
     });
 
     elements.forEach(function(el){observer.observe(el)});
