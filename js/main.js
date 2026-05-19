@@ -10,6 +10,7 @@
    ────────────────────────────────────────────── */
 const _qs=(s,c)=>(c||d).querySelector(s);
 const _qa=(s,c)=>(c||d).querySelectorAll(s);
+const _id=s=>d.getElementById(s);
 const _on=(el,ev,fn,opts)=>el&&el.addEventListener(ev,fn,opts);
 const _raf=w.requestAnimationFrame||function(cb){return setTimeout(cb,16)};
 const _throttle=(fn,ms)=>{let t=0;return function(...a){const n=Date.now();if(n-t>=ms){t=n;fn.apply(this,a)}}};
@@ -42,6 +43,16 @@ function initNavbar(){
                 if(bsCollapse)bsCollapse.hide();
             }
         });
+    });
+}
+
+function initNavbarDismissOutside(){
+    _on(d,'click',function(ev){
+        const navbar=_qs('#navbarNav');
+        const toggler=_qs('.navbar-toggler');
+        if(navbar&&navbar.classList.contains('show')&&toggler&&!navbar.contains(ev.target)&&!toggler.contains(ev.target)){
+            toggler.click();
+        }
     });
 }
 
@@ -223,8 +234,9 @@ function initLazyImages(){
    AUTO-INJECT REVEAL CLASSES
    ────────────────────────────────────────────── */
 function injectReveals(){
-    // Section headers
+    // Section headers — skip #products (no animation wanted there)
     _qa('.section-header').forEach(function(el){
+        if(el.closest('#products')) return;
         if(!el.classList.contains('reveal')){
             el.classList.add('reveal');
         }
@@ -239,6 +251,7 @@ function injectReveals(){
 
     // Cards
     _qa('.product-card, .project-card').forEach(function(el,i){
+        if(el.closest('#products')) return; // Skip animations in the #products section (requested to be removed)
         if(!el.classList.contains('reveal')){
             el.classList.add('reveal');
             el.style.transitionDelay=(i%3)*120+'ms';
@@ -316,6 +329,41 @@ w._srew_toast=function(message,type){
 };
 
 /* ──────────────────────────────────────────────
+   BROCHURE MODAL (home)
+   ────────────────────────────────────────────── */
+function initBrochureModal(){
+    function openPDF(){
+        const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if(typeof window._srew_toast === 'function') {
+            window._srew_toast('Downloading brochure.', 'success');
+        }
+    }
+
+    const cta=_id('hero-cta-brochure');
+    if(cta){
+        _on(cta,'click',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            openPDF();
+        });
+    }
+
+    _qa('[data-brochure-trigger]').forEach(function(btn){
+        _on(btn,'click',function(e){
+            e.preventDefault();
+            openPDF();
+        });
+    });
+}
+
+/* ──────────────────────────────────────────────
    WHATSAPP FLOAT - Show after hero/header
    ────────────────────────────────────────────── */
 function initWhatsAppFloat(){
@@ -359,6 +407,7 @@ function initWhatsAppFloat(){
 function boot(){
     injectReveals();
     initNavbar();
+    initNavbarDismissOutside();
     initHero();
     initRevealAnimations();
     initCounters();
@@ -367,6 +416,7 @@ function boot(){
     initYear();
     initLazyImages();
     initWhatsAppFloat();
+    initBrochureModal();
 }
 
 if(d.readyState==='loading'){

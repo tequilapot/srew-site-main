@@ -68,16 +68,20 @@ function setButtonLoading(btn,loading){
     }
 }
 
-/* HubSpot submission */
-function submitToHubSpot(portalId,formId,fields,ctx){
-    const data={fields:fields,context:ctx||{pageUri:w.location.href,pageName:d.title}};
-    return fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+portalId+'/'+formId,{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(data)
-    }).then(function(res){
-        if(!res.ok)throw new Error('Submission failed');
-        return res.json();
+
+
+/* Google Sheets submission */
+function submitToGoogleSheet(data){
+    const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
+    const formData = new URLSearchParams();
+    for(const key in data){
+        formData.append(key, data[key]);
+    }
+    return fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString()
     });
 }
 
@@ -93,43 +97,43 @@ function initBrochureForm(){
 
         const name=_id('brochureName').value.trim();
         const phone=_id('brochurePhone').value.trim();
-        const requirement=_id('brochureRequirement').value.trim();
 
-        if(!name||!phone||!requirement){
-            toast('Please fill in all required fields.','error');
+        if(!name||!phone){
+            toast('Please fill in your name and contact number.','error');
             return;
         }
 
-        const btn=form.querySelector('button[type="submit"]');
-        setButtonLoading(btn,true);
+        if(!/^[0-9]{10}$/.test(phone)){
+            toast('Please enter a valid 10-digit mobile number.','error');
+            return;
+        }
 
-        const fields=[
-            {name:'firstname',value:name},
-            {name:'phone',value:phone},
-            {name:'message',value:requirement},
-            {name:'source',value:'Website Brochure Download'}
-        ];
+        /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
+        const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
+        const link = d.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
+        link.target = '_blank';
+        d.body.appendChild(link);
+        link.click();
+        d.body.removeChild(link);
 
-        submitToHubSpot('242639779','bb460223-e3af-4172-9c0e-2671eb85b832',fields)
-        .then(function(){
-            w.open('brochures/srew-company-profile.pdf','_blank');
+        if(typeof w.closeBrochureModal==='function') w.closeBrochureModal();
 
-            if(typeof w.closeBrochureModal==='function') w.closeBrochureModal();
-
-            setTimeout(function(){
-                toast('Brochure download started! Check your new tab.','success');
-            },300);
-            form.reset();
-            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
-                el.classList.remove('is-valid','is-invalid');
-            });
-        })
-        .catch(function(err){
-            toast('Something went wrong. Please try again.','error');
-        })
-        .finally(function(){
-            setButtonLoading(btn,false);
+        toast('Downloading brochure.','success');
+        form.reset();
+        form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
+            el.classList.remove('is-valid','is-invalid');
         });
+
+
+        // Send to Google Sheets
+        const gsData = {
+            name: name,
+            phone: phone,
+            source: 'Brochure Download'
+        };
+        submitToGoogleSheet(gsData).catch(function(){});
     });
 }
 
@@ -158,16 +162,16 @@ function initContactForm(){
 
         if(msgs)msgs.innerHTML='<div class="alert alert-info" role="alert"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Sending your message...</span></div>';
 
-        const fields=[
-            {name:'firstname',value:name},
-            {name:'email',value:email},
-            {name:'phone',value:phone},
-            {name:'subject',value:subject},
-            {name:'message',value:message},
-            {name:'source',value:'Website Contact Form'}
-        ];
-
-        submitToHubSpot('242639779','bb460223-e3af-4172-9c0e-2671eb85b832',fields)
+        // Send to Google Sheets
+        const gsData = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message,
+            source: 'Contact Form'
+        };
+        submitToGoogleSheet(gsData)
         .then(function(){
             if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Your message has been submitted. We will get back to you soon.</div>';
             toast('Message sent successfully!','success');
@@ -175,10 +179,14 @@ function initContactForm(){
             form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
                 el.classList.remove('is-valid','is-invalid');
             });
+            /* Auto-dismiss message after 5 seconds */
+            if(msgs) setTimeout(function(){ msgs.innerHTML=''; }, 5000);
         })
         .catch(function(){
             if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
             toast('Failed to send. Please try again.','error');
+            /* Auto-dismiss message after 5 seconds */
+            if(msgs) setTimeout(function(){ msgs.innerHTML=''; }, 5000);
         });
     });
 }
