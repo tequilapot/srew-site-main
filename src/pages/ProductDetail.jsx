@@ -77,8 +77,62 @@ export const ProductDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{product.name} - 30–800 TPH Industrial Crushing | SREW</title>
-        <meta name="description" content={`Get standard brochures, dimensional blueprint specs, and aggregate capacity reviews for SREW's high-yield ${product.name}.`} />
+        <title>{`${product.name} - 30–800 TPH Industrial Crushing | SREW`}</title>
+        <meta name="description" content={`${product.purpose} S R ENGG WORKS is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
+        <meta name="keywords" content={`${product.shortName}, S R ENGG WORKS, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
+        <link rel="canonical" href={`https://www.srenggworks.com/products/${product.slug}`} />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={`https://www.srenggworks.com/products/${product.slug}`} />
+        <meta property="og:title" content={`${product.name} - Crushing &amp; Screening Machinery`} />
+        <meta property="og:description" content={`${product.purpose} ISO 9001:2015 certified turnkey plants up to 800 TPH.`} />
+        <meta property="og:image" content={`https://www.srenggworks.com${product.image}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${product.name} - Heavy Duty SREW Machinery`} />
+        <meta name="twitter:description" content={`Get standard brochures, dimensional blueprint specs, and aggregate capacity reviews for SREW's high-yield ${product.name}.`} />
+        <meta name="twitter:image" content={`https://www.srenggworks.com${product.image}`} />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "${product.name}",
+            "image": "https://www.srenggworks.com${product.image}",
+            "description": "${product.purpose}",
+            "brand": {
+              "@type": "Brand",
+              "name": "SREW"
+            },
+            "category": "${product.category}",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "INR",
+              "priceRange": "₹₹₹",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": {
+                "@type": "Organization",
+                "name": "S R ENGG WORKS"
+              }
+            }
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.srenggworks.com/products"},
+              {"@type": "ListItem", "position": 3, "name": "${product.shortName}", "item": "https://www.srenggworks.com/products/${product.slug}"}
+            ]
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Shared Components
@@ -14,7 +14,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Industries from './pages/Industries';
 import Projects from './pages/Projects';
-import ProjectDetail from './components/ProjectDetail'; // Written to components/ProjectDetail.jsx
+import ProjectDetail from './components/ProjectDetail';
 import SpareParts from './pages/SpareParts';
 import Certifications from './pages/Certifications';
 import Sustainability from './pages/Sustainability';
@@ -23,9 +23,31 @@ import Contact from './pages/Contact';
 // Policies
 import { Privacy, Terms, Cookies } from './pages/Policies';
 
+// Analytics Page View Tracker for React SPA
+const AnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Small timeout ensures react-helmet-async has updated the document.title
+    const timer = setTimeout(() => {
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_path: location.pathname + location.search,
+          page_title: document.title,
+        });
+      }
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  return null;
+};
+
 export const App = () => {
   return (
     <HelmetProvider>
+      <AnalyticsTracker />
       <div className="d-flex flex-column min-h-screen">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         

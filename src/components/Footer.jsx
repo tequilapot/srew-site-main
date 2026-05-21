@@ -98,7 +98,7 @@ export const Footer = () => {
                 <a href="mailto:srenggworks2016@gmail.com" className="text-white-50 text-decoration-none">srenggworks2016@gmail.com</a>
               </li>
             </ul>
-            <div className="mt-4">
+            <div className="mt-4 d-flex flex-column gap-2 align-items-start">
               <a 
                 href="https://wa.me/918790759460" 
                 target="_blank" 
@@ -107,6 +107,36 @@ export const Footer = () => {
                 aria-label="Chat on WhatsApp"
               >
                 <i className="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+              </a>
+              <a 
+                href="https://www.google.com/maps?cid=16523674681657852383" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-outline-light btn-curved small d-inline-flex align-items-center"
+                aria-label="Review us on Google"
+                style={{
+                  borderColor: '#4285F4',
+                  background: 'rgba(66, 133, 244, 0.15)',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#4285F4';
+                  e.currentTarget.style.color = '#fff';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(66, 133, 244, 0.15)';
+                  e.currentTarget.style.color = '';
+                }}
+              >
+                <i className="fab fa-google me-2 text-warning" style={{ color: '#FBBC05' }}></i>
+                <span className="me-2 text-white">Review us on Google</span>
+                <span className="text-warning small d-flex" style={{ gap: '2px' }}>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                </span>
               </a>
             </div>
           </div>

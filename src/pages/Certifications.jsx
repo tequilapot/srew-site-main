@@ -6,8 +6,56 @@ export const Certifications = () => {
   return (
     <>
       <Helmet>
-        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | SREW</title>
+        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | S R ENGG WORKS</title>
         <meta name="description" content="Explore S R ENGG WORKS rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
+        <meta name="keywords" content="ISO 9001:2015, quality assurance, NDT testing, metallurgical analysis, dynamic run check, SREW certifications, aggregate machinery quality, Hyderabad, India" />
+        <link rel="canonical" href="https://www.srenggworks.com/certifications" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/certifications" />
+        <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - S R ENGG WORKS" />
+        <meta property="og:description" content="Guaranteeing industrial yield, metallurgical toughness, and zero-accident mechanical structural integrity under ISO 9001:2015." />
+        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="SREW Quality &amp; Certifications" />
+        <meta name="twitter:description" content="ISO 9001:2015 certified design, manufacture, and assembly of premium aggregate crushing and sand plants." />
+        <meta name="twitter:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Quality & Certifications - ISO 9001:2015 Standards | S R ENGG WORKS",
+            "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for S R ENGG WORKS.",
+            "url": "https://www.srenggworks.com/certifications",
+            "dateModified": "2026-05-21",
+            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "publisher": {
+              "@type": "Organization",
+              "name": "S R ENGG WORKS",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.srenggworks.com/images/logo.png"
+              }
+            }
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Certifications", "item": "https://www.srenggworks.com/certifications"}
+            ]
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">

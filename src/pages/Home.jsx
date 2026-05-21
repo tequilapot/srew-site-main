@@ -55,8 +55,188 @@ export const Home = () => {
   return (
     <>
       <Helmet>
-        <title>S R ENGG WORKS - Crushing, Screening &amp; M-Sand Plants | Hyderabad</title>
-        <meta name="description" content="ISO 9001:2015 certified manufacturer of crushing, screening, aggregate washing, and M-sand plants (30-800 TPH). 30+ years engineering expertise." />
+        <title>S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions | India</title>
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
+        <link rel="canonical" href="https://www.srenggworks.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/" />
+        <meta property="og:title" content="S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:image" content="https://www.srenggworks.com/images/hero-background.jpg" />
+        <meta property="og:site_name" content="S R ENGG WORKS" />
+        <meta property="og:locale" content="en_IN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="S R ENGG WORKS - Crushing &amp; Screening Plant Solutions" />
+        <meta name="twitter:description" content="Turnkey crushing &amp; screening plants for quarry operators, M-Sand producers, mining &amp; infrastructure. 30+ years experience. Hyderabad." />
+        <meta name="twitter:image" content="https://www.srenggworks.com/images/hero-background.jpg" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "S R ENGG WORKS",
+            "alternateName": "SREW",
+            "url": "https://www.srenggworks.com",
+            "logo": "https://www.srenggworks.com/images/logo.png",
+            "description": "S R ENGG WORKS (SREW) is an Indian precision engineering and industrial fabrication company specializing in the design, manufacture, installation, and servicing of crushing plants, screening plants, sand processing plants, and material handling systems. Founded in 2018 with over 30 years of combined industry experience, SREW has delivered 120+ turnkey projects across mining, construction, infrastructure, and C&D waste recycling sectors from its manufacturing facility in Hyderabad, Telangana.",
+            "foundingDate": "2018",
+            "areaServed": "IN",
+            "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 50},
+            "knowsAbout": ["Crushing Plants", "Screening Plants", "Jaw Crushers", "Cone Crushers", "VSI Crushers", "HSI Crushers", "Vibrating Screens", "Sand Dryers", "Grizzly Feeders", "Silos", "Material Handling Systems", "C&D Waste Recycling Plants", "PLC Control Panels", "M-Sand Manufacturing", "Aggregate Production"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "SREW Equipment Catalog",
+              "itemListElement": [
+                {"@type": "OfferCatalog", "name": "Crushing Equipment", "description": "Jaw Crushers, Cone Crushers, VSI/HSI Crushers, Roller Crushers from 30 to 800 TPH"},
+                {"@type": "OfferCatalog", "name": "Screening Equipment", "description": "Vibrating Screens, Grizzly Feeders up to 600 TPH"},
+                {"@type": "OfferCatalog", "name": "Sand Processing", "description": "Sand Dryers, Silos, Sand Washing Plants"},
+                {"@type": "OfferCatalog", "name": "Material Handling", "description": "Belt Conveyors, Hoppers, Control Panels"}
+              ]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11-125, IDA Jeedimetla, Dulapally",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "500100",
+              "addressCountry": "IN"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91-8790759460",
+                "contactType": "sales",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi", "Telugu"]
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100070029793724",
+              "https://www.linkedin.com/company/thesrew",
+              "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
+              "https://www.instagram.com/srenggworks/",
+              "https://www.google.com/maps?cid=16523674681657852383"
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "S R ENGG WORKS",
+            "url": "https://www.srenggworks.com",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.srenggworks.com/products?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"}]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {"@type": "Question", "name": "What does S R ENGG WORKS (SREW) manufacture?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS (SREW) manufactures crushing plants, screening plants, sand processing plants, and material handling systems. Our product range includes Jaw Crushers, Cone Crushers, VSI/HSI Crushers, Roller Crushers, Vibrating Screens, Grizzly Feeders, Sand Dryers, Silos, Conveyors, Hoppers, PLC Control Panels, and C&D Waste Recycling Units."}},
+              {"@type": "Question", "name": "What capacity crushing plants does SREW offer?", "acceptedAnswer": {"@type": "Answer", "text": "SREW offers turnkey crushing and screening plants ranging from 30 TPH to 800 TPH capacity. We design and manufacture plants customized to specific project requirements for mining, construction, and recycling applications."}},
+              {"@type": "Question", "name": "Where is S R ENGG WORKS located?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS is headquartered at 11-125, IDA Jeedimetla, Dulapally, Hyderabad, Telangana 500100, India. Our manufacturing facility includes CNC machining centers, fabrication bays, hydraulic press shops, and PLC panel manufacturing units."}},
+              {"@type": "Question", "name": "What industries does SREW serve?", "acceptedAnswer": {"@type": "Answer", "text": "SREW serves four major industries: Mining (primary and secondary crushing), Construction & Infrastructure (aggregate and M-Sand production), C&D Waste Recycling (construction and demolition debris processing), and Sand Processing & Manufacturing (sand drying, washing, and storage)."}},
+              {"@type": "Question", "name": "Does SREW provide turnkey plant solutions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, SREW provides complete turnkey solutions including plant design, equipment manufacturing, installation, commissioning, and after-sales servicing. We have delivered over 120 turnkey projects across India for 45+ clients."}},
+              {"@type": "Question", "name": "How experienced is the SREW team?", "acceptedAnswer": {"@type": "Answer", "text": "Founded in 2018, S R ENGG WORKS brings over 30 years of combined industry experience in precision engineering and industrial fabrication. Our team has delivered 120+ projects for 45+ clients across mining, construction, and recycling sectors."}}
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".hero-carousel", ".performance-ledger", "#faq-section"]
+            },
+            "name": "S R ENGG WORKS - Crushing, Screening & Washing Plant Solutions",
+            "dateModified": "2026-05-21"
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "S R ENGG WORKS",
+            "alternateName": "SREW",
+            "@id": "https://www.srenggworks.com/#localbusiness",
+            "url": "https://www.srenggworks.com",
+            "telephone": "+91-8790759460",
+            "email": "srenggworks2016@gmail.com",
+            "image": "https://www.srenggworks.com/images/logo.png",
+            "logo": "https://www.srenggworks.com/images/logo.png",
+            "priceRange": "₹₹₹",
+            "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 30+ years experience. Hyderabad, India.",
+            "hasMap": "https://www.google.com/maps?cid=16523674681657852383",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 17.5158653,
+              "longitude": 78.4377875
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11-125, IDA Jeedimetla, Dulapally",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "500100",
+              "addressCountry": "IN"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "areaServed": [
+              {"@type": "State", "name": "Telangana"},
+              {"@type": "State", "name": "Andhra Pradesh"},
+              {"@type": "State", "name": "Maharashtra"},
+              {"@type": "State", "name": "Karnataka"},
+              {"@type": "State", "name": "Tamil Nadu"},
+              {"@type": "State", "name": "Odisha"},
+              {"@type": "State", "name": "West Bengal"},
+              {"@type": "Country", "name": "India"}
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100070029793724",
+              "https://www.linkedin.com/company/thesrew",
+              "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
+              "https://www.instagram.com/srenggworks/",
+              "https://www.indiamart.com/srengineeringworks-266746886/",
+              "https://www.google.com/maps?cid=16523674681657852383"
+            ]
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">

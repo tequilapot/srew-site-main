@@ -88,8 +88,89 @@ export const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - RFQ Crushing &amp; Screening Plants | SREW</title>
+        <title>Contact S R ENGG WORKS - Request RFQ &amp; Consultation</title>
         <meta name="description" content="Request a quote or consult S R ENGG WORKS on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
+        <link rel="canonical" href="https://www.srenggworks.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/contact" />
+        <meta property="og:title" content="Contact S R ENGG WORKS - Request RFQ &amp; Consultation" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "S R ENGG WORKS",
+            "alternateName": "SREW",
+            "@id": "https://www.srenggworks.com/#localbusiness",
+            "url": "https://www.srenggworks.com",
+            "telephone": "+91-8790759460",
+            "email": "srenggworks2016@gmail.com",
+            "image": "https://www.srenggworks.com/images/logo.png",
+            "logo": "https://www.srenggworks.com/images/logo.png",
+            "priceRange": "₹₹₹",
+            "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 30+ years experience. Hyderabad, India.",
+            "hasMap": "https://www.google.com/maps?cid=16523674681657852383",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 17.5158653,
+              "longitude": 78.4377875
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11-125, IDA Jeedimetla, Dulapally",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "500100",
+              "addressCountry": "IN"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100070029793724",
+              "https://www.linkedin.com/company/thesrew",
+              "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
+              "https://www.instagram.com/srenggworks/",
+              "https://www.google.com/maps?cid=16523674681657852383"
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.srenggworks.com/contact"}
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Contact S R ENGG WORKS - Request RFQ & Consultation",
+            "url": "https://www.srenggworks.com/contact",
+            "dateModified": "2026-05-21"
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">
@@ -253,6 +334,33 @@ export const Contact = () => {
                         <p className="small text-muted mb-0">
                           <a href="mailto:srenggworks2016@gmail.com" className="text-decoration-none text-muted">srenggworks2016@gmail.com</a>
                         </p>
+                      </div>
+                    </div>
+
+                    <div className="d-flex align-items-center mb-4 p-3 bg-light rounded border" style={{ borderLeft: '4px solid #4285F4' }}>
+                      <div className="me-3 fs-1 text-primary"><i className="fab fa-google"></i></div>
+                      <div className="flex-grow-1">
+                        <h3 className="h6 fw-bold mb-1 text-primary-ultra">Google Business Rating</h3>
+                        <div className="d-flex align-items-center gap-1 mb-1 text-warning small">
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <span className="text-muted ms-1 small fw-medium">5.0 Star Rated</span>
+                        </div>
+                        <a 
+                          href="https://www.google.com/maps?cid=16523674681657852383" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="btn btn-primary btn-sm btn-curved d-inline-flex align-items-center mt-1"
+                          style={{
+                            background: '#4285F4',
+                            borderColor: '#4285F4',
+                          }}
+                        >
+                          <i className="fas fa-pen-alt me-2"></i> Review Us on Google
+                        </a>
                       </div>
                     </div>
                   </div>

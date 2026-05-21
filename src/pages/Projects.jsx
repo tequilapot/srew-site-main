@@ -8,8 +8,153 @@ export const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>Project Case Studies - Turnkey Crushing &amp; Screening Plants | SREW</title>
-        <meta name="description" content="View S R ENGG WORKS successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
+        <title>Projects - Crushing &amp; Screening Plant Case Studies | S R ENGG WORKS</title>
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="keywords" content="crushing plant, screening plant, case studies, turnkey installation, Kepler, Singareni, Kesara, aggregate plant, project commissions, Hyderabad, India, SREW" />
+        <link rel="canonical" href="https://www.srenggworks.com/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/projects" />
+        <meta property="og:title" content="Project Case Studies - S R ENGG WORKS" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:image" content="https://www.srenggworks.com/images/Projects/project1.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Project Case Studies - S R ENGG WORKS" />
+        <meta name="twitter:description" content="View S R ENGG WORKS successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
+        <meta name="twitter:image" content="https://www.srenggworks.com/images/Projects/project1.jpg" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "SREW Project Case Studies",
+            "description": "Showcasing engineering solutions delivered across mining, construction, and recycling sectors.",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@type": "Article",
+                    "name": "200 TPH Crushing & Screening Plant – West Bengal",
+                    "description": "Delivered 3 output sizes and washed sand within a compact 3-acre plant layout."
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@type": "Article",
+                    "name": "400 TPH Aggregate Plant – Singareni",
+                    "description": "Achieved 385+ TPH production stability even during monsoon season."
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "@type": "Article",
+                    "name": "40 TPH Mobile Crushing Unit – Odisha",
+                    "description": "Deployed in 20 days, running in 6+ locations."
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "item": {
+                    "@type": "Article",
+                    "name": "150 TPH Cone Crusher Plant – Keesara",
+                    "description": "Supplied materials for multiple NHAI projects across Telangana."
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "item": {
+                    "@type": "Article",
+                    "name": "C&D Waste Recycling + Sand Dryer – 40 to 50 TPH",
+                    "description": "Converted C&D waste into usable sand and aggregates, fully compliant with green norms."
+                  }
+                }
+              ]
+            }
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.srenggworks.com/projects"}
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many projects has SREW completed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "S R ENGG WORKS has successfully completed over 120 turnkey projects for 45+ clients across India. Projects range from 30 TPH to 800 TPH capacity plants spanning mining, construction, infrastructure, and C&D waste recycling sectors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What types of turnkey projects does SREW deliver?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "SREW delivers complete turnkey crushing and screening plants, M-Sand manufacturing plants, aggregate production plants, C&D waste recycling facilities, and sand processing & drying plants. Each project includes design-to-commissioning services with ongoing after-sales support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does SREW handle project installation and commissioning?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, SREW provides end-to-end project delivery including site assessment, plant design, equipment manufacturing, transportation, installation, commissioning, operator training, and comprehensive after-sales support."
+                }
+              }
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Projects - Turnkey Crushing &amp; Screening Plants | SREW",
+            "url": "https://www.srenggworks.com/projects",
+            "dateModified": "2026-05-21",
+            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "publisher": {
+              "@type": "Organization",
+              "name": "S R ENGG WORKS",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.srenggworks.com/images/logo.png"
+              }
+            },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", ".lead", "#faq-section"]
+            }
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">

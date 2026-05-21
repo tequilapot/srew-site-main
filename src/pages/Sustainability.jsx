@@ -6,8 +6,56 @@ export const Sustainability = () => {
   return (
     <>
       <Helmet>
-        <title>Sustainability - Green Industrial aggregate Engineering | SREW</title>
-        <meta name="description" content="Explore S R ENGG WORKS eco-friendly aggregate systems. High-capacity C&amp;D waste recycling plants and zero-effluent water recirculating clarifier solutions." />
+        <title>Sustainability &amp; Green Engineering Solutions | S R ENGG WORKS</title>
+        <meta name="description" content="Explore S R ENGG WORKS eco-friendly aggregate systems, high-capacity C&amp;D waste recycling plants, and zero-effluent water recirculating clarifiers." />
+        <meta name="keywords" content="sustainability, green engineering, C&amp;D recycling, circular economy, water conservation, eco aggregate, zero effluent clarifiers, SREW green tech, Hyderabad, India" />
+        <link rel="canonical" href="https://www.srenggworks.com/sustainability" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/sustainability" />
+        <meta property="og:title" content="Sustainability &amp; Circular Economy Solutions - S R ENGG WORKS" />
+        <meta property="og:description" content="Leading circular economy solutions, reducing urban landfills, and optimizing water conservation in aggregate processing." />
+        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="SREW Sustainability Initiatives" />
+        <meta name="twitter:description" content="Integrated C&amp;D waste recycling plants and eco clarifiers engineered for sustainable aggregate production." />
+        <meta name="twitter:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Sustainability & Green Engineering Solutions | S R ENGG WORKS",
+            "description": "Information on eco-friendly aggregate systems, C&D waste recycling, and water clarifiers at S R ENGG WORKS.",
+            "url": "https://www.srenggworks.com/sustainability",
+            "dateModified": "2026-05-21",
+            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "publisher": {
+              "@type": "Organization",
+              "name": "S R ENGG WORKS",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.srenggworks.com/images/logo.png"
+              }
+            }
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Sustainability", "item": "https://www.srenggworks.com/sustainability"}
+            ]
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">

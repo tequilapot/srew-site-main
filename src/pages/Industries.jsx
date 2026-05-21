@@ -6,8 +6,145 @@ export const Industries = () => {
   return (
     <>
       <Helmet>
-        <title>Industries We Serve - Mining, Quarry &amp; C&amp;D Recycling | SREW</title>
-        <meta name="description" content="Discover S R ENGG WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
+        <title>Industries Served - Mining, Construction, Recycling, Sand Processing | S R ENGG WORKS</title>
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
+        <link rel="canonical" href="https://www.srenggworks.com/industries" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.srenggworks.com/industries" />
+        <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:image" content="https://www.srenggworks.com/images/mining.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Industries We Serve - S R ENGG WORKS" />
+        <meta name="twitter:description" content="Discover S R ENGG WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
+        <meta name="twitter:image" content="https://www.srenggworks.com/images/mining.jpg" />
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad, Telangana, India" />
+        <meta name="geo.position" content="17.5158653;78.4377875" />
+        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "provider": {
+              "@type": "Organization",
+              "name": "S R ENGG WORKS"
+            },
+            "serviceType": "Industrial Equipment Manufacturing",
+            "areaServed": [
+              {"@type": "State", "name": "Telangana"},
+              {"@type": "State", "name": "Andhra Pradesh"},
+              {"@type": "State", "name": "Odisha"},
+              {"@type": "State", "name": "West Bengal"},
+              {"@type": "State", "name": "Maharashtra"},
+              {"@type": "State", "name": "Tamil Nadu"},
+              {"@type": "State", "name": "Karnataka"},
+              {"@type": "Country", "name": "India"}
+            ],
+            "audience": {
+              "@type": "Audience",
+              "audienceType": [
+                "Quarry Operators",
+                "Mining Companies",
+                "Infrastructure Contractors",
+                "M-Sand Producers",
+                "C&D Waste Recycling Entrepreneurs",
+                "EPC Companies",
+                "NHAI Highway Contractors"
+              ]
+            },
+            "description": "Turnkey crushing plants, screening plants, M-Sand plants, and material handling systems for quarry operators, mining companies, highway contractors, M-Sand producers, C&D recycling entrepreneurs, and EPC firms across India."
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.srenggworks.com/industries"}
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What industries does S R ENGG WORKS serve?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "S R ENGG WORKS serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does SREW provide C&D waste recycling plants?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, SREW designs and manufactures integrated C&D (Construction & Demolition) waste recycling plants from 30 to 50 TPH. These plants include pre-sorting hoppers, trommel screens, jaw crushers, sand dryers, and optional magnetic metal separators. They are fully compliant with Swachh Bharat and Smart Cities Mission green norms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What mining equipment does SREW supply?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For quarry operators and mining companies, SREW supplies high-capacity Jaw Crushers for primary breaking, Cone Crushers for secondary crushing, Vibrating Screens for sizing, Grizzly Feeders for pre-screening, and Conveyor Systems. All equipment is built for continuous 24/7 operation in granite, basalt, and limestone quarries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What size crushing plant do I need for a highway or road project?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For NHAI highway and road construction projects, SREW recommends 200–800 TPH crushing plants with a Jaw Crusher for primary crushing, Cone Crusher for secondary crushing, and multi-deck Vibrating Screens for grading aggregates to IRC specifications. We provide complete turnkey installation, commissioning, and after-sales support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I set up an M-Sand manufacturing plant?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To set up an M-Sand (manufactured sand) plant, you need a VSI Crusher for producing cubical sand, Vibrating Screens for grading, a Sand Dryer for moisture control, Silos for storage, and optional sand washing systems. SREW provides the complete M-Sand plant as a turnkey solution, from design to commissioning."
+                }
+              }
+            ]
+          }
+        `}
+        </script>
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Industries Served - Mining, Construction, Recycling | SREW",
+            "url": "https://www.srenggworks.com/industries",
+            "dateModified": "2026-05-21",
+            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "publisher": {
+              "@type": "Organization",
+              "name": "S R ENGG WORKS",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.srenggworks.com/images/logo.png"
+              }
+            },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", ".lead", "#faq-section"]
+            }
+          }
+        `}
+        </script>
       </Helmet>
 
       <main id="main-content" role="main">
