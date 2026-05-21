@@ -4,6 +4,8 @@
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
+console.log("[SREW Debug] main.js is executing...");
+
 
 /* ──────────────────────────────────────────────
    UTILITY HELPERS
@@ -34,9 +36,10 @@ function initNavbar(){
     },{passive:true});
     updateNavbar();
 
-    // Close mobile menu on link click (except dropdown toggles)
-    _qa('.navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item').forEach(function(link){
+    // Close mobile menu on link click (except dropdown toggles and mega triggers)
+    _qa('.navbar-nav .nav-link:not(.dropdown-toggle):not(.mega-nav-trigger), .navbar-nav .dropdown-item, .mega-item').forEach(function(link){
         _on(link,'click',function(){
+            console.log("[JS main.js click listener debug] Link clicked: Tag=" + link.tagName + " Text=" + link.innerText.split('\n')[0] + " Classes=" + link.className);
             const collapse=_qs('.navbar-collapse');
             if(collapse&&collapse.classList.contains('show')){
                 const bsCollapse=bootstrap.Collapse.getInstance(collapse);
@@ -332,11 +335,20 @@ w._srew_toast=function(message,type){
    BROCHURE MODAL (home)
    ────────────────────────────────────────────── */
 function initBrochureModal(){
+    console.log("[SREW Debug] initBrochureModal() called.");
+    const overlay = _id('brochureOverlay');
+    const popup = _id('brochurePopup');
+    const cta = _id('hero-cta-brochure');
+    const closeBtn = _id('brochureCloseBtn');
+    const okBtn = _id('brochureSuccessOkBtn');
+    const grid = _id('brochureGrid');
+    const successPane = _id('brochureSuccessPane');
+
     function openPDF(){
         const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
+        link.download = 'SREW-Company-Profile.pdf';
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
@@ -346,21 +358,192 @@ function initBrochureModal(){
         }
     }
 
-    const cta=_id('hero-cta-brochure');
-    if(cta){
-        _on(cta,'click',function(e){
+    function openModal() {
+        if (!overlay || !popup) {
+            // Graceful fallback if modal markup is not present (e.g. on other pages)
+            openPDF();
+            return;
+        }
+        // Reset layout display styles before showing
+        if (grid) grid.style.display = '';
+        if (successPane) successPane.style.display = 'none';
+
+        overlay.classList.add('active');
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeModal() {
+        if (!overlay || !popup) return;
+        overlay.classList.remove('active');
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Wait for visual transition to complete before resetting styles & fields
+        setTimeout(function(){
+            if (grid) grid.style.display = '';
+            if (successPane) successPane.style.display = 'none';
+            const form = _id('brochureForm');
+            if (form) {
+                form.reset();
+                form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
+                    el.classList.remove('is-valid','is-invalid');
+                });
+            }
+        }, 400);
+    }
+
+    // Expose helpers globally so forms.js can invoke them
+    window.openBrochureModal = openModal;
+    window.closeBrochureModal = closeModal;
+
+    if (cta) {
+        console.log("[SREW Debug] brochure CTA button found:", cta);
+        _on(cta, 'click', function(e) {
+            console.log("[SREW Debug] brochure CTA button clicked!");
             e.preventDefault();
             e.stopPropagation();
-            openPDF();
+            openModal();
         });
     }
 
-    _qa('[data-brochure-trigger]').forEach(function(btn){
-        _on(btn,'click',function(e){
+    _qa('[data-brochure-trigger]').forEach(function(btn) {
+        _on(btn, 'click', function(e) {
             e.preventDefault();
-            openPDF();
+            openModal();
         });
     });
+
+    if (closeBtn) {
+        _on(closeBtn, 'click', function(e) {
+            e.preventDefault();
+            closeModal();
+        });
+    }
+
+    if (okBtn) {
+        _on(okBtn, 'click', function(e) {
+            e.preventDefault();
+            closeModal();
+        });
+    }
+
+    if (overlay) {
+        _on(overlay, 'click', function(e) {
+            closeModal();
+        });
+    }
+
+    // Escape key closes the modal
+    _on(document, 'keydown', function(e) {
+        if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
+/* ──────────────────────────────────────────────
+   MEGA DROPDOWN MENU
+   ────────────────────────────────────────────── */
+function initMegaMenu(){
+    const items = _qa('.mega-nav-item');
+    if(!items.length) return;
+
+    const isMobile = () => w.innerWidth < 992;
+
+    // Create backdrop element for desktop
+    let backdrop = _id('megaBackdrop');
+    if(!backdrop){
+        backdrop = d.createElement('div');
+        backdrop.id = 'megaBackdrop';
+        backdrop.className = 'mega-backdrop';
+        d.body.appendChild(backdrop);
+    }
+
+    function openItem(item){
+        // Close any other open items first
+        items.forEach(function(i){ if(i !== item) closeItem(i); });
+        item.classList.add('is-open');
+        const trigger = item.querySelector('.mega-nav-trigger');
+        if(trigger) trigger.setAttribute('aria-expanded', 'true');
+        if(!isMobile()) backdrop.classList.add('active');
+    }
+
+    function closeItem(item){
+        item.classList.remove('is-open');
+        const trigger = item.querySelector('.mega-nav-trigger');
+        if(trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+
+    function closeAll(){
+        items.forEach(closeItem);
+        backdrop.classList.remove('active');
+    }
+
+    items.forEach(function(item){
+        const trigger = item.querySelector('.mega-nav-trigger');
+        const dropdown = item.querySelector('.mega-dropdown');
+        if(!trigger || !dropdown) return;
+
+        let leaveTimer;
+
+        // Desktop: hover open
+        item.addEventListener('mouseenter', function(){
+            if(isMobile()) return;
+            clearTimeout(leaveTimer);
+            openItem(item);
+        });
+
+        item.addEventListener('mouseleave', function(){
+            if(isMobile()) return;
+            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 120);
+        });
+
+        // Desktop & mobile: click/tap the trigger to navigate or toggle
+        trigger.addEventListener('click', function(e){
+            if(isMobile()){
+                // On mobile, toggle the accordion
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = item.classList.contains('is-open');
+                if(isOpen){
+                    closeItem(item);
+                } else {
+                    openItem(item);
+                }
+            }
+            // On desktop, the link navigates naturally — allow it
+        });
+
+        // Keep open when hovering over the dropdown panel itself
+        dropdown.addEventListener('mouseenter', function(){
+            if(isMobile()) return;
+            clearTimeout(leaveTimer);
+        });
+        dropdown.addEventListener('mouseleave', function(){
+            if(isMobile()) return;
+            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 120);
+        });
+    });
+
+    // Backdrop click closes all (desktop)
+    backdrop.addEventListener('click', closeAll);
+
+    // Escape key closes all
+    _on(d, 'keydown', function(e){
+        if(e.key === 'Escape') closeAll();
+    });
+
+    // Close when clicking outside on mobile
+    _on(d, 'click', function(e){
+        if(isMobile()){
+            const insideAnyItem = Array.from(items).some(function(item){ return item.contains(e.target); });
+            if(!insideAnyItem) closeAll();
+        }
+    });
+
+    // Close mega menu on window resize to avoid stuck states
+    _on(w, 'resize', _debounce(function(){ closeAll(); }, 200));
 }
 
 /* ──────────────────────────────────────────────
@@ -405,9 +588,11 @@ function initWhatsAppFloat(){
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
 function boot(){
+    console.log("[SREW Debug] Booting systems...");
     injectReveals();
     initNavbar();
     initNavbarDismissOutside();
+    initMegaMenu();
     initHero();
     initRevealAnimations();
     initCounters();

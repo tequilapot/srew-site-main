@@ -68,28 +68,42 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item mega-nav-item" id="megaProductsItem">
+                            <a class="nav-link mega-nav-trigger" href="products.html" id="productsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 Products
+                                <i class="fas fa-chevron-down mega-chevron" aria-hidden="true"></i>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                                <li><a class="dropdown-item" href="products.html#jaw-crushers">Jaw Crushers</a></li>
-                                <li><a class="dropdown-item" href="products.html#cone-crushers">Cone Crushers</a></li>
-                                <li><a class="dropdown-item" href="products.html#vsi-hsi-crushers">VSI/HSI Crushers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#roller-crushers">Roller Crushers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#vibrating-screens">Vibrating
-                                        Screens</a></li>
-                                <li><a class="dropdown-item" href="products.html#grizzly-feeders">Grizzly Feeders</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#sand-dryers">Sand Dryers</a></li>
-                                <li><a class="dropdown-item" href="products.html#silos">Silos &amp; Hoppers</a></li>
-                                <li><a class="dropdown-item" href="products.html#control-panels">Control Panels</a></li>
-                                <li><a class="dropdown-item" href="products.html#recycling-units">C&amp;D Recycling
-                                        Units</a></li>
-                            </ul>
+                            <div class="mega-dropdown" id="megaProductsDropdown" role="menu" aria-labelledby="productsDropdown">
+                                <div class="mega-dropdown-inner">
+                                    <div class="mega-col mega-col-main">
+                                        <div class="mega-col-header">
+                                            <span>PRODUCT CATEGORIES</span>
+                                            <a href="products.html" class="mega-see-all">View All Products &rarr;</a>
+                                        </div>
+                                        <div class="mega-grid">
+                                            <a href="products.html#jaw-crushers" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-cog"></i></div><div class="mega-item-text"><span class="mega-item-title">Jaw Crushers</span><span class="mega-item-desc">Primary crushing, 30&ndash;800 TPH</span></div></a>
+                                            <a href="products.html#cone-crushers" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-filter"></i></div><div class="mega-item-text"><span class="mega-item-title">Cone Crushers</span><span class="mega-item-desc">Secondary &amp; tertiary reduction</span></div></a>
+                                            <a href="products.html#vsi-hsi-crushers" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-wind"></i></div><div class="mega-item-text"><span class="mega-item-title">VSI / HSI Crushers</span><span class="mega-item-desc">High-velocity impact crushing</span></div></a>
+                                            <a href="products.html#roller-crushers" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-circle-notch"></i></div><div class="mega-item-text"><span class="mega-item-title">Roller Crushers</span><span class="mega-item-desc">Fine material processing</span></div></a>
+                                            <a href="products.html#vibrating-screens" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-th"></i></div><div class="mega-item-text"><span class="mega-item-title">Vibrating Screens</span><span class="mega-item-desc">Multi-deck aggregate sorting</span></div></a>
+                                            <a href="products.html#grizzly-feeders" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-bars"></i></div><div class="mega-item-text"><span class="mega-item-title">Grizzly Feeders</span><span class="mega-item-desc">Pre-screening bulk material</span></div></a>
+                                            <a href="products.html#sand-dryers" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-sun"></i></div><div class="mega-item-text"><span class="mega-item-title">Sand Dryers</span><span class="mega-item-desc">M-Sand moisture processing</span></div></a>
+                                            <a href="products.html#silos" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-database"></i></div><div class="mega-item-text"><span class="mega-item-title">Silos &amp; Hoppers</span><span class="mega-item-desc">Storage &amp; feed systems</span></div></a>
+                                            <a href="products.html#control-panels" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-sliders-h"></i></div><div class="mega-item-text"><span class="mega-item-title">Control Panels</span><span class="mega-item-desc">PLC &amp; automation systems</span></div></a>
+                                            <a href="products.html#recycling-units" class="mega-item" role="menuitem"><div class="mega-item-icon"><i class="fas fa-recycle"></i></div><div class="mega-item-text"><span class="mega-item-title">C&amp;D Recycling Units</span><span class="mega-item-desc">Construction waste processing</span></div></a>
+                                        </div>
+                                    </div>
+                                    <div class="mega-col mega-col-featured">
+                                        <div class="mega-col-header"><span>FEATURED PLANT TYPES</span></div>
+                                        <div class="mega-featured-list">
+                                            <a href="projects.html" class="mega-featured-card"><img src="images/project-singareni.jpg" alt="400 TPH Turnkey Plant" class="mega-featured-img"><div class="mega-featured-info"><span class="mega-featured-title">400 TPH Turnkey Plant</span><span class="mega-featured-sub">Complete crushing &amp; screening setup</span></div></a>
+                                            <a href="products.html#jaw-crushers" class="mega-featured-card"><img src="images/product-jaw-crusher.jpg" alt="Jaw Crusher Series" class="mega-featured-img"><div class="mega-featured-info"><span class="mega-featured-title">Jaw Crusher Series</span><span class="mega-featured-sub">Industry-leading primary crushers</span></div></a>
+                                            <a href="products.html#vibrating-screens" class="mega-featured-card"><img src="images/Products/vibrating-screen.jpg" alt="Vibrating Screen Range" class="mega-featured-img"><div class="mega-featured-info"><span class="mega-featured-title">Vibrating Screen Range</span><span class="mega-featured-sub">Precision multi-deck aggregate sorting</span></div></a>
+                                        </div>
+                                        <div class="mega-featured-footer"><a href="contact.html" class="mega-cta-btn">Request a Quote &rarr;</a></div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="industries.html">Industries</a>

@@ -1,0 +1,284 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useSearchParams } from 'react-router-dom';
+import { ScrollReveal } from '../components/ScrollReveal';
+
+export const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  
+  const [status, setStatus] = useState({ type: '', text: '' });
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Read search parameters for pre-filling form subjects
+    const inquiry = searchParams.get('inquiry') || searchParams.get('product') || searchParams.get('project_inquiry') || searchParams.get('industry');
+    if (inquiry) {
+      setFormData(prev => ({
+        ...prev,
+        subject: `Inquiry about ${decodeURIComponent(inquiry)}`
+      }));
+    }
+  }, [searchParams]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, phone, subject, message } = formData;
+
+    if (!name || !email || !subject || !message) {
+      setStatus({ type: 'danger', text: 'Please fill out all required fields.' });
+      return;
+    }
+
+    if (phone && !/^[0-9]{10}$/.test(phone)) {
+      setStatus({ type: 'danger', text: 'Please enter a valid 10-digit mobile number.' });
+      return;
+    }
+
+    setSubmitting(true);
+    setStatus({ type: 'info', text: 'Sending your message...' });
+
+    // Submit payload to SREW's validated Google Apps Script endpoint
+    const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
+    
+    const params = new URLSearchParams();
+    params.append('name', name);
+    params.append('email', email);
+    params.append('phone', phone);
+    params.append('subject', subject);
+    params.append('message', message);
+    params.append('source', 'Contact Form');
+
+    fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString()
+    })
+      .then(() => {
+        setStatus({ type: 'success', text: '✓ Thank you! Your message has been submitted. We will get back to you soon.' });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        setSubmitting(false);
+        // Clear message after 6 seconds
+        setTimeout(() => setStatus({ type: '', text: '' }), 6000);
+      })
+      .catch(() => {
+        setStatus({ type: 'danger', text: 'There was an error sending your message. Please try again or call us directly.' });
+        setSubmitting(false);
+      });
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Contact Us - RFQ Crushing &amp; Screening Plants | SREW</title>
+        <meta name="description" content="Request a quote or consult S R ENGG WORKS on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
+      </Helmet>
+
+      <main id="main-content" role="main">
+        {/* Page Header */}
+        <section className="page-header py-5 bg-light" aria-label="Page header">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="fw-extrabold text-primary-ultra">Contact Our Team</h1>
+                <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: '#555' }}>
+                  Request an RFQ quote, consult on equipment engineering, or request immediate technical field support.
+                </p>
+                <nav aria-label="Breadcrumb" className="mt-4">
+                  <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="/">Home</a></li>
+                    <li className="breadcrumb-item active" aria-current="page">Contact Us</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form & Coordinates Section */}
+        <section className="py-5" aria-label="Contact coordinates and form">
+          <div className="container py-3">
+            <div className="row g-5">
+              
+              {/* Form Column */}
+              <div className="col-lg-7">
+                <ScrollReveal>
+                  <div className="card border-0 shadow-sm p-4 p-md-5 rounded-lg bg-light-alt">
+                    <h2 className="text-primary-ultra h3 mb-2">Request an RFQ Quote</h2>
+                    <p className="small text-muted mb-4">Complete our engineering inquiry form and our sales representatives will contact you within 24 hours.</p>
+                    
+                    {status.text && (
+                      <div className={`alert alert-${status.type} d-flex align-items-center gap-2`} role="alert">
+                        {status.type === 'info' && <i className="fas fa-spinner fa-spin"></i>}
+                        <span>{status.text}</span>
+                      </div>
+                    )}
+
+                    <form onSubmit={handleSubmit} className="row g-3">
+                      <div className="col-md-6">
+                        <label htmlFor="name" className="form-label small fw-bold">Your Name <span className="text-danger">*</span></label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          disabled={submitting}
+                          placeholder="e.g. Rajesh Kumar"
+                        />
+                      </div>
+                      
+                      <div className="col-md-6">
+                        <label htmlFor="email" className="form-label small fw-bold">Business Email <span className="text-danger">*</span></label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          disabled={submitting}
+                          placeholder="e.g. rajesh@infrastructure.com"
+                        />
+                      </div>
+
+                      <div className="col-md-12">
+                        <label htmlFor="phone" className="form-label small fw-bold">Mobile Number (10-Digit) <span className="text-muted">(Optional)</span></label>
+                        <input
+                          type="tel"
+                          className="form-control"
+                          id="phone"
+                          name="phone"
+                          pattern="[0-9]{10}"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          disabled={submitting}
+                          placeholder="e.g. 9876543210"
+                        />
+                      </div>
+
+                      <div className="col-md-12">
+                        <label htmlFor="subject" className="form-label small fw-bold">Subject / Plant Equipment Interest <span className="text-danger">*</span></label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          required
+                          disabled={submitting}
+                          placeholder="e.g. Inquiry about 200 TPH Primary Jaw Crusher"
+                        />
+                      </div>
+
+                      <div className="col-md-12">
+                        <label htmlFor="message" className="form-label small fw-bold">Inquiry Details / Material Type &amp; TPH <span className="text-danger">*</span></label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          name="message"
+                          rows="5"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                          disabled={submitting}
+                          placeholder="Please provide details about your feed rock material, target sizing output, and capacity (TPH) requirements..."
+                        ></textarea>
+                      </div>
+
+                      <div className="col-md-12 mt-4">
+                        <button
+                          type="submit"
+                          className="btn btn-primary btn-curved btn-lg w-100"
+                          disabled={submitting}
+                        >
+                          {submitting ? 'Submitting Inquiry...' : 'Submit Engineering Request'}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </ScrollReveal>
+              </div>
+
+              {/* Coordinates Column */}
+              <div className="col-lg-5">
+                <ScrollReveal delay={200}>
+                  <div className="mb-5">
+                    <h2 className="text-primary-ultra h3 mb-4">Contact Information</h2>
+                    
+                    <div className="d-flex align-items-start mb-4">
+                      <div className="text-primary me-3 fs-3"><i className="fas fa-map-marker-alt"></i></div>
+                      <div>
+                        <h3 className="h6 fw-bold mb-1">Corporate Manufacturing Plant</h3>
+                        <p className="small text-muted mb-0">11-125, IDA Jeedimetla, Dulapally, Hyderabad, Telangana, India 500100</p>
+                      </div>
+                    </div>
+
+                    <div className="d-flex align-items-start mb-4">
+                      <div className="text-primary me-3 fs-3"><i className="fas fa-phone-alt"></i></div>
+                      <div>
+                        <h3 className="h6 fw-bold mb-1">Direct Sales Hotline</h3>
+                        <p className="small text-muted mb-0">
+                          <a href="tel:+918790759460" className="text-decoration-none text-muted">+91 8790759460</a> / <a href="tel:+919533333333" className="text-decoration-none text-muted">+91 95333 33333</a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="d-flex align-items-start mb-4">
+                      <div className="text-primary me-3 fs-3"><i className="fas fa-envelope"></i></div>
+                      <div>
+                        <h3 className="h6 fw-bold mb-1">Official Communications</h3>
+                        <p className="small text-muted mb-0">
+                          <a href="mailto:srenggworks2016@gmail.com" className="text-decoration-none text-muted">srenggworks2016@gmail.com</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Interactive Map Embed */}
+                  <div className="rounded overflow-hidden shadow-sm border" style={{ height: '300px' }}>
+                    <iframe
+                      title="S R ENGG WORKS Office &amp; Plant Location Map"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3804.8251347076595!2d78.43521257597143!3d17.515865299105436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb906cf2c78a0d%3A0xe54fb7a2e8c281df!2sS%20R%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1712490000000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </ScrollReveal>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default Contact;

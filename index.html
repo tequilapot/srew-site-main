@@ -177,8 +177,6 @@
         fbq('init', '953111953422761');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=953111953422761&ev=PageView&noscript=1" /></noscript>
     <!-- Local SEO geo tags -->
     <meta name="geo.region" content="IN-TG">
     <meta name="geo.placename" content="Hyderabad, Telangana, India">
@@ -241,6 +239,8 @@
 </head>
 
 <body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=953111953422761&ev=PageView&noscript=1" /></noscript>
     <!-- Skip to Content - A11y -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -275,28 +275,126 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item mega-nav-item" id="megaProductsItem">
+                            <a class="nav-link mega-nav-trigger" href="products.html" id="productsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 Products
+                                <i class="fas fa-chevron-down mega-chevron" aria-hidden="true"></i>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                                <li><a class="dropdown-item" href="products.html#jaw-crushers">Jaw Crushers</a></li>
-                                <li><a class="dropdown-item" href="products.html#cone-crushers">Cone Crushers</a></li>
-                                <li><a class="dropdown-item" href="products.html#vsi-hsi-crushers">VSI/HSI Crushers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#roller-crushers">Roller Crushers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#vibrating-screens">Vibrating
-                                        Screens</a></li>
-                                <li><a class="dropdown-item" href="products.html#grizzly-feeders">Grizzly Feeders</a>
-                                </li>
-                                <li><a class="dropdown-item" href="products.html#sand-dryers">Sand Dryers</a></li>
-                                <li><a class="dropdown-item" href="products.html#silos">Silos &amp; Hoppers</a></li>
-                                <li><a class="dropdown-item" href="products.html#control-panels">Control Panels</a></li>
-                                <li><a class="dropdown-item" href="products.html#recycling-units">C&amp;D Recycling
-                                        Units</a></li>
-                            </ul>
+                            <div class="mega-dropdown" id="megaProductsDropdown" role="menu" aria-labelledby="productsDropdown">
+                                <div class="mega-dropdown-inner">
+                                    <!-- Left column: Product Categories -->
+                                    <div class="mega-col mega-col-main">
+                                        <div class="mega-col-header">
+                                            <span>PRODUCT CATEGORIES</span>
+                                            <a href="products.html" class="mega-see-all">View All Products &rarr;</a>
+                                        </div>
+                                        <div class="mega-grid">
+                                            <a href="products.html#jaw-crushers" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-cog"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Jaw Crushers</span>
+                                                    <span class="mega-item-desc">Primary crushing, 30–800 TPH</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#cone-crushers" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-filter"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Cone Crushers</span>
+                                                    <span class="mega-item-desc">Secondary & tertiary reduction</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#vsi-hsi-crushers" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-wind"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">VSI / HSI Crushers</span>
+                                                    <span class="mega-item-desc">High-velocity impact crushing</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#roller-crushers" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-circle-notch"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Roller Crushers</span>
+                                                    <span class="mega-item-desc">Fine material processing</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#vibrating-screens" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-th"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Vibrating Screens</span>
+                                                    <span class="mega-item-desc">Multi-deck aggregate sorting</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#grizzly-feeders" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-bars"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Grizzly Feeders</span>
+                                                    <span class="mega-item-desc">Pre-screening bulk material</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#sand-dryers" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-sun"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Sand Dryers</span>
+                                                    <span class="mega-item-desc">M-Sand moisture processing</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#silos" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-database"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Silos &amp; Hoppers</span>
+                                                    <span class="mega-item-desc">Storage &amp; feed systems</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#control-panels" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-sliders-h"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">Control Panels</span>
+                                                    <span class="mega-item-desc">PLC &amp; automation systems</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#recycling-units" class="mega-item" role="menuitem">
+                                                <div class="mega-item-icon"><i class="fas fa-recycle"></i></div>
+                                                <div class="mega-item-text">
+                                                    <span class="mega-item-title">C&amp;D Recycling Units</span>
+                                                    <span class="mega-item-desc">Construction waste processing</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Right column: Featured -->
+                                    <div class="mega-col mega-col-featured">
+                                        <div class="mega-col-header">
+                                            <span>FEATURED PLANT TYPES</span>
+                                        </div>
+                                        <div class="mega-featured-list">
+                                            <a href="projects.html" class="mega-featured-card">
+                                                <img src="images/project-singareni.jpg" alt="400 TPH Turnkey Plant" class="mega-featured-img">
+                                                <div class="mega-featured-info">
+                                                    <span class="mega-featured-title">400 TPH Turnkey Plant</span>
+                                                    <span class="mega-featured-sub">Complete crushing &amp; screening setup</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#jaw-crushers" class="mega-featured-card">
+                                                <img src="images/product-jaw-crusher.jpg" alt="Jaw Crusher Series" class="mega-featured-img">
+                                                <div class="mega-featured-info">
+                                                    <span class="mega-featured-title">Jaw Crusher Series</span>
+                                                    <span class="mega-featured-sub">Industry-leading primary crushers</span>
+                                                </div>
+                                            </a>
+                                            <a href="products.html#vibrating-screens" class="mega-featured-card">
+                                                <img src="images/Products/vibrating-screen.jpg" alt="Vibrating Screen Range" class="mega-featured-img">
+                                                <div class="mega-featured-info">
+                                                    <span class="mega-featured-title">Vibrating Screen Range</span>
+                                                    <span class="mega-featured-sub">Precision multi-deck aggregate sorting</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mega-featured-footer">
+                                            <a href="contact.html" class="mega-cta-btn">Request a Quote &rarr;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="industries.html">Industries</a>
@@ -860,6 +958,61 @@
             </div>
         </div>
     </footer>
+    <!-- BROCHURE MODAL POPUP -->
+    <div id="brochureOverlay" class="brochure-overlay"></div>
+    <div id="brochurePopup" class="brochure-modal-card">
+        <button class="brochure-close-btn" aria-label="Close modal" id="brochureCloseBtn">✕</button>
+        <div class="brochure-modal-grid" id="brochureGrid">
+            <!-- Left Side: Image Showcase -->
+            <div class="brochure-modal-image-side">
+                <img src="images/project-singareni.jpg" alt="S R ENGG WORKS 400 TPH plant at Singareni" class="brochure-side-img">
+                <div class="brochure-image-overlay">
+                    <span class="brochure-image-badge">400 TPH Turnkey Plant</span>
+                </div>
+            </div>
+            <!-- Right Side: Form Area -->
+            <div class="brochure-modal-form-side">
+                <h3 class="brochure-form-title">Download Technical Specs</h3>
+                <p class="brochure-form-desc">Get comprehensive configurations, equipment dimensions, and plant layout schematics instantly.</p>
+                <form id="brochureForm" novalidate>
+                    <div class="brochure-input-group">
+                        <label for="brochureName" class="brochure-input-label">Full Name <span class="required-asterisk">*</span></label>
+                        <div class="brochure-input-wrapper">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" id="brochureName" name="name" required autocomplete="name" placeholder="Enter your full name">
+                        </div>
+                    </div>
+                    <div class="brochure-input-group">
+                        <label for="brochurePhone" class="brochure-input-label">Phone Number <span class="required-asterisk">*</span></label>
+                        <div class="brochure-input-wrapper">
+                            <i class="fas fa-phone-alt input-icon"></i>
+                            <input type="tel" id="brochurePhone" name="phone" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel" placeholder="10-digit mobile number">
+                        </div>
+                    </div>
+                    <div class="brochure-input-group">
+                        <label for="brochureRequirement" class="brochure-input-label">Your Requirement <span class="required-asterisk">*</span></label>
+                        <div class="brochure-input-wrapper">
+                            <i class="fas fa-align-left input-icon textarea-icon"></i>
+                            <textarea id="brochureRequirement" name="requirement" required placeholder="Describe your plant capacity or equipment needs (e.g. 200 TPH stone crusher)..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="brochure-submit-btn">
+                        <span>Download Brochure</span>
+                        <i class="fas fa-download icon-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- Success State Pane -->
+        <div class="brochure-success-pane" id="brochureSuccessPane" style="display: none;">
+            <div class="success-icon-wrapper">
+                <div class="success-checkmark"></div>
+            </div>
+            <h3 class="success-title">Download Successful!</h3>
+            <p class="success-message">Thank you for your interest. S R ENGG WORKS corporate brochure is now downloading.</p>
+            <button class="success-btn" id="brochureSuccessOkBtn">OK</button>
+        </div>
+    </div>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/918790759460" class="whatsapp-float" target="_blank" rel="noopener noreferrer"

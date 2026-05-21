@@ -4,6 +4,8 @@
  * HubSpot integration with toast notifications & validation
  */
 ;(function(w,d){'use strict';
+console.log("[SREW Debug] forms.js is executing...");
+
 
 const _qs=(s,c)=>(c||d).querySelector(s);
 const _id=s=>d.getElementById(s);
@@ -72,7 +74,7 @@ function setButtonLoading(btn,loading){
 
 /* Google Sheets submission */
 function submitToGoogleSheet(data){
-    const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbwpwtDVKM85IDFdH_IC13Ly-zE0MP3Dx9J7e8NrDZ0I2R-oGUdCUlNcabUEIfFUFVYrXw/exec';
     const formData = new URLSearchParams();
     for(const key in data){
         formData.append(key, data[key]);
@@ -87,19 +89,26 @@ function submitToGoogleSheet(data){
 
 /* ──────── BROCHURE FORM ──────── */
 function initBrochureForm(){
+    console.log("[SREW Debug] initBrochureForm() called.");
     const form=_id('brochureForm');
-    if(!form)return;
+    if(!form) {
+        console.log("[SREW Debug] brochureForm NOT found on this page.");
+        return;
+    }
+    console.log("[SREW Debug] brochureForm found:", form);
 
     setupValidation(form);
 
     form.addEventListener('submit',function(e){
+        console.log("[SREW Debug] brochureForm submit triggered!");
         e.preventDefault();
 
         const name=_id('brochureName').value.trim();
         const phone=_id('brochurePhone').value.trim();
+        const requirement=_id('brochureRequirement') ? _id('brochureRequirement').value.trim() : '';
 
-        if(!name||!phone){
-            toast('Please fill in your name and contact number.','error');
+        if(!name||!phone||!requirement){
+            toast('Please fill in all required fields.','error');
             return;
         }
 
@@ -108,32 +117,49 @@ function initBrochureForm(){
             return;
         }
 
-        /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
-        const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
-        const link = d.createElement('a');
-        link.href = pdfUrl;
-        link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
-        link.target = '_blank';
-        d.body.appendChild(link);
-        link.click();
-        d.body.removeChild(link);
+        const submitBtn=form.querySelector('button[type="submit"]');
+        if(submitBtn) setButtonLoading(submitBtn, true);
 
-        if(typeof w.closeBrochureModal==='function') w.closeBrochureModal();
-
-        toast('Downloading brochure.','success');
-        form.reset();
-        form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
-            el.classList.remove('is-valid','is-invalid');
-        });
-
-
-        // Send to Google Sheets
+        // Send to Google Sheets first, then show success state in the modal
         const gsData = {
             name: name,
-            phone: phone,
-            source: 'Brochure Download'
+            email: phone,          // Apps Script maps email -> Column C (labeled Phone)
+            phone: '',             // Apps Script maps phone -> Column D (labeled Email)
+            subject: 'Brochure Request',
+            message: '',           // Keep Message column clear for brochure request
+            requirement: requirement // Apps Script maps requirement -> Column G (labeled Requirement)
         };
-        submitToGoogleSheet(gsData).catch(function(){});
+
+        submitToGoogleSheet(gsData)
+        .then(function(){
+            if(submitBtn) setButtonLoading(submitBtn, false);
+
+            // Hide the standard form grid and reveal the premium success pane
+            const grid=_id('brochureGrid');
+            const successPane=_id('brochureSuccessPane');
+            if(grid) grid.style.display='none';
+            if(successPane) successPane.style.display='flex';
+
+            /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
+            const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
+            const link = d.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
+            link.target = '_blank';
+            d.body.appendChild(link);
+            link.click();
+            d.body.removeChild(link);
+
+            toast('Brochure download started!','success');
+            form.reset();
+            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
+                el.classList.remove('is-valid','is-invalid');
+            });
+        })
+        .catch(function(){
+            if(submitBtn) setButtonLoading(submitBtn, false);
+            toast('Failed to capture lead. Please try again.','error');
+        });
     });
 }
 
@@ -165,11 +191,11 @@ function initContactForm(){
         // Send to Google Sheets
         const gsData = {
             name: name,
-            email: email,
-            phone: phone,
+            email: phone,          // Apps Script maps email -> Column C (labeled Phone)
+            phone: email,          // Apps Script maps phone -> Column D (labeled Email)
             subject: subject,
-            message: message,
-            source: 'Contact Form'
+            message: message,      // Apps Script maps message -> Column F (labeled Message)
+            requirement: ''        // Keep Requirement column clear for contact form
         };
         submitToGoogleSheet(gsData)
         .then(function(){

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://www.srenggworks.com/</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/about.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/products.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/industries.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/projects.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/spare-parts.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/crusher-spares.png</image:loc>
+            <image:title>Crusher Spare Parts - Jaw Plates, Cone Liners, Blow Bars | SREW</image:title>
+            <image:caption>Manganese steel jaw plates, toggle plates, cone liners, blow bars and cheek plates for jaw crushers, cone crushers and impact crushers by S R ENGG WORKS</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/screen-spares.png</image:loc>
+            <image:title>Screen Spare Parts - Mesh Panels, Springs, Motors | SREW</image:title>
+            <image:caption>Wire mesh screen panels, modular deck panels, coil springs, vibrating motors for industrial vibrating screens by S R ENGG WORKS</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/feeder-spares.png</image:loc>
+            <image:title>Feeder and Hopper Spare Parts - Grizzly Bars, Motors | SREW</image:title>
+            <image:caption>Vibratory motors, feeder shafts, grizzly bars, pan liner plates for grizzly feeders and hoppers by S R ENGG WORKS</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/dryer-spares.png</image:loc>
+            <image:title>Sand Dryer Spare Parts - Burners, Lifters, Gears | SREW</image:title>
+            <image:caption>Industrial burner heads, drum lifter paddles, drive gears, temperature sensors for rotary sand dryers by S R ENGG WORKS</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/conveyor-spares.png</image:loc>
+            <image:title>Conveyor Spare Parts - Idlers, Pulleys, Belts | SREW</image:title>
+            <image:caption>Conveyor idler rollers, drive pulleys, rubber conveyor belts, belt scrapers for material handling conveyors by S R ENGG WORKS</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.srenggworks.com/images/spare-parts/control-panel-spares.png</image:loc>
+            <image:title>Control Panel Spare Parts - VFDs, PLCs, HMI | SREW</image:title>
+            <image:caption>VFD drives, PLC controllers, HMI touchscreens, MCBs, contactors for industrial control panels by S R ENGG WORKS</image:caption>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/contact.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/privacy-policy.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/terms-and-conditions.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://www.srenggworks.com/cookies.html</loc>
+        <lastmod>2026-03-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>
