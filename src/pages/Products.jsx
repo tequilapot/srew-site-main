@@ -91,16 +91,16 @@ export const Products = () => {
         <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | S R ENGG WORKS</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://www.srenggworks.com/products" />
+        <link rel="canonical" href="https://srewprojects.com/products" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/products" />
+        <meta property="og:url" content="https://srewprojects.com/products" />
         <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | SREW" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
-        <meta property="og:image" content="https://www.srenggworks.com/images/product-jaw-crusher.jpg" />
+        <meta property="og:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
         <meta name="twitter:description" content="Explore S R ENGG WORKS comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/product-jaw-crusher.jpg" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -121,7 +121,7 @@ export const Products = () => {
                   "name": "Jaw Crushers",
                   "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 30-800 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://www.srenggworks.com/products#jaw-crushers"
+                  "url": "https://srewprojects.com/products#jaw-crushers"
                 }
               },
               {
@@ -132,7 +132,7 @@ export const Products = () => {
                   "name": "Cone Crushers",
                   "description": "Secondary and tertiary crushing to produce fine and uniform aggregates. 50-500 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://www.srenggworks.com/products#cone-crushers"
+                  "url": "https://srewprojects.com/products#cone-crushers"
                 }
               },
               {
@@ -143,7 +143,7 @@ export const Products = () => {
                   "name": "VSI/HSI Crushers",
                   "description": "Shaping and producing cubical sand and aggregates. 50-300 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://www.srenggworks.com/products#vsi-hsi-crushers"
+                  "url": "https://srewprojects.com/products#vsi-hsi-crushers"
                 }
               },
               {
@@ -154,7 +154,7 @@ export const Products = () => {
                   "name": "Vibrating Screens",
                   "description": "Screening and grading materials into multiple precise sizes. Up to 400 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://www.srenggworks.com/products#vibrating-screens"
+                  "url": "https://srewprojects.com/products#vibrating-screens"
                 }
               },
               {
@@ -165,7 +165,7 @@ export const Products = () => {
                   "name": "Sand Dryers",
                   "description": "Reduce moisture content in sand for industrial applications. 20-50 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://www.srenggworks.com/products#sand-dryers"
+                  "url": "https://srewprojects.com/products#sand-dryers"
                 }
               }
             ]
@@ -178,8 +178,8 @@ export const Products = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.srenggworks.com/products"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://srewprojects.com/products"}
             ]
           }
         `}
@@ -232,7 +232,7 @@ export const Products = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Products - Jaw Crushers, Screening &amp; Sand Plants | SREW",
-            "url": "https://www.srenggworks.com/products",
+            "url": "https://srewprojects.com/products",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
@@ -240,7 +240,7 @@ export const Products = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             },
             "speakable": {

@@ -90,12 +90,12 @@ export const Contact = () => {
       <Helmet>
         <title>Contact S R ENGG WORKS - Request RFQ &amp; Consultation</title>
         <meta name="description" content="Request a quote or consult S R ENGG WORKS on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
-        <link rel="canonical" href="https://www.srenggworks.com/contact" />
+        <link rel="canonical" href="https://srewprojects.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/contact" />
+        <meta property="og:url" content="https://srewprojects.com/contact" />
         <meta property="og:title" content="Contact S R ENGG WORKS - Request RFQ &amp; Consultation" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
-        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -108,12 +108,12 @@ export const Contact = () => {
             "@type": "LocalBusiness",
             "name": "S R ENGG WORKS",
             "alternateName": "SREW",
-            "@id": "https://www.srenggworks.com/#localbusiness",
-            "url": "https://www.srenggworks.com",
+            "@id": "https://srewprojects.com/#localbusiness",
+            "url": "https://srewprojects.com",
             "telephone": "+91-8790759460",
             "email": "srenggworks2016@gmail.com",
-            "image": "https://www.srenggworks.com/images/logo.png",
-            "logo": "https://www.srenggworks.com/images/logo.png",
+            "image": "https://srewprojects.com/images/logo.png",
+            "logo": "https://srewprojects.com/images/logo.png",
             "priceRange": "₹₹₹",
             "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 30+ years experience. Hyderabad, India.",
             "hasMap": "https://www.google.com/maps?cid=16523674681657852383",
@@ -154,8 +154,8 @@ export const Contact = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.srenggworks.com/contact"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://srewprojects.com/contact"}
             ]
           }
         `}
@@ -166,7 +166,7 @@ export const Contact = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Contact S R ENGG WORKS - Request RFQ & Consultation",
-            "url": "https://www.srenggworks.com/contact",
+            "url": "https://srewprojects.com/contact",
             "dateModified": "2026-05-21"
           }
         `}

@@ -58,18 +58,18 @@ export const Home = () => {
         <title>S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions | India</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://www.srenggworks.com/" />
+        <link rel="canonical" href="https://srewprojects.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/" />
+        <meta property="og:url" content="https://srewprojects.com/" />
         <meta property="og:title" content="S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
-        <meta property="og:image" content="https://www.srenggworks.com/images/hero-background.jpg" />
+        <meta property="og:image" content="https://srewprojects.com/images/hero-background.jpg" />
         <meta property="og:site_name" content="S R ENGG WORKS" />
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="S R ENGG WORKS - Crushing &amp; Screening Plant Solutions" />
         <meta name="twitter:description" content="Turnkey crushing &amp; screening plants for quarry operators, M-Sand producers, mining &amp; infrastructure. 30+ years experience. Hyderabad." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/hero-background.jpg" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/hero-background.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -81,8 +81,8 @@ export const Home = () => {
             "@type": "Organization",
             "name": "S R ENGG WORKS",
             "alternateName": "SREW",
-            "url": "https://www.srenggworks.com",
-            "logo": "https://www.srenggworks.com/images/logo.png",
+            "url": "https://srewprojects.com",
+            "logo": "https://srewprojects.com/images/logo.png",
             "description": "S R ENGG WORKS (SREW) is an Indian precision engineering and industrial fabrication company specializing in the design, manufacture, installation, and servicing of crushing plants, screening plants, sand processing plants, and material handling systems. Founded in 2018 with over 30 years of combined industry experience, SREW has delivered 120+ turnkey projects across mining, construction, infrastructure, and C&D waste recycling sectors from its manufacturing facility in Hyderabad, Telangana.",
             "foundingDate": "2018",
             "areaServed": "IN",
@@ -131,10 +131,10 @@ export const Home = () => {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "S R ENGG WORKS",
-            "url": "https://www.srenggworks.com",
+            "url": "https://srewprojects.com",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.srenggworks.com/products?q={search_term_string}",
+              "target": "https://srewprojects.com/products?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           }
@@ -145,7 +145,7 @@ export const Home = () => {
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"}]
+            "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"}]
           }
         `}
         </script>
@@ -186,12 +186,12 @@ export const Home = () => {
             "@type": "LocalBusiness",
             "name": "S R ENGG WORKS",
             "alternateName": "SREW",
-            "@id": "https://www.srenggworks.com/#localbusiness",
-            "url": "https://www.srenggworks.com",
+            "@id": "https://srewprojects.com/#localbusiness",
+            "url": "https://srewprojects.com",
             "telephone": "+91-8790759460",
             "email": "srenggworks2016@gmail.com",
-            "image": "https://www.srenggworks.com/images/logo.png",
-            "logo": "https://www.srenggworks.com/images/logo.png",
+            "image": "https://srewprojects.com/images/logo.png",
+            "logo": "https://srewprojects.com/images/logo.png",
             "priceRange": "₹₹₹",
             "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 30+ years experience. Hyderabad, India.",
             "hasMap": "https://www.google.com/maps?cid=16523674681657852383",

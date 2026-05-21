@@ -8,12 +8,12 @@ export const About = () => {
       <Helmet>
         <title>About S R ENGG WORKS - Precision Engineering India</title>
         <meta name="description" content="S R ENGG WORKS (SREW) is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 30+ years industry experience." />
-        <link rel="canonical" href="https://www.srenggworks.com/about" />
+        <link rel="canonical" href="https://srewprojects.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/about" />
+        <meta property="og:url" content="https://srewprojects.com/about" />
         <meta property="og:title" content="About S R ENGG WORKS - Precision Engineering India" />
         <meta property="og:description" content="ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 30+ years industry experience." />
-        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -25,7 +25,7 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "About S R ENGG WORKS - Precision Engineering India",
-            "url": "https://www.srenggworks.com/about",
+            "url": "https://srewprojects.com/about",
             "dateModified": "2026-05-21",
             "author": {
               "@type": "Organization",
@@ -36,7 +36,7 @@ export const About = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             },
             "speakable": {
@@ -52,8 +52,8 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.srenggworks.com/about"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://srewprojects.com/about"}
             ]
           }
         `}

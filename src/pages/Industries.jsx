@@ -9,16 +9,16 @@ export const Industries = () => {
         <title>Industries Served - Mining, Construction, Recycling, Sand Processing | S R ENGG WORKS</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://www.srenggworks.com/industries" />
+        <link rel="canonical" href="https://srewprojects.com/industries" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/industries" />
+        <meta property="og:url" content="https://srewprojects.com/industries" />
         <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
-        <meta property="og:image" content="https://www.srenggworks.com/images/mining.jpg" />
+        <meta property="og:image" content="https://srewprojects.com/images/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industries We Serve - S R ENGG WORKS" />
         <meta name="twitter:description" content="Discover S R ENGG WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/mining.jpg" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/mining.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -65,8 +65,8 @@ export const Industries = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.srenggworks.com/industries"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://srewprojects.com/industries"}
             ]
           }
         `}
@@ -127,7 +127,7 @@ export const Industries = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Industries Served - Mining, Construction, Recycling | SREW",
-            "url": "https://www.srenggworks.com/industries",
+            "url": "https://srewprojects.com/industries",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
@@ -135,7 +135,7 @@ export const Industries = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             },
             "speakable": {

@@ -27,4 +27,4 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-Sitemap: https://www.srenggworks.com/sitemap.xml
+Sitemap: https://srewprojects.com/sitemap.xml

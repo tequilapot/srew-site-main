@@ -23,16 +23,16 @@ export const Privacy = () => {
         <title>Privacy Policy | S R ENGG WORKS</title>
         <meta name="description" content="Read S R ENGG WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
         <meta name="keywords" content="privacy policy, data protection, privacy, S R ENGG WORKS, SREW privacy, Hyderabad" />
-        <link rel="canonical" href="https://www.srenggworks.com/privacy" />
+        <link rel="canonical" href="https://srewprojects.com/privacy" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/privacy" />
+        <meta property="og:url" content="https://srewprojects.com/privacy" />
         <meta property="og:title" content="Privacy Policy - S R ENGG WORKS" />
         <meta property="og:description" content="Read S R ENGG WORKS Privacy Policy to understand how we protect your personal and project information." />
-        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Privacy Policy - S R ENGG WORKS" />
         <meta name="twitter:description" content="Our commitment to safeguarding your corporate engineering inquiries and RFQ data." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -44,7 +44,7 @@ export const Privacy = () => {
             "@type": "WebPage",
             "name": "Privacy Policy | S R ENGG WORKS",
             "description": "Read S R ENGG WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
-            "url": "https://www.srenggworks.com/privacy",
+            "url": "https://srewprojects.com/privacy",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
@@ -52,7 +52,7 @@ export const Privacy = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             }
           }
@@ -64,8 +64,8 @@ export const Privacy = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.srenggworks.com/privacy"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://srewprojects.com/privacy"}
             ]
           }
         `}
@@ -78,7 +78,7 @@ export const Privacy = () => {
             <div className="col-lg-10 mx-auto">
               <p className="small text-muted mb-4">Last Updated: May 20, 2026</p>
               <h2>1. Introduction</h2>
-              <p>S R ENGG WORKS (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srenggworks.com, or submit RFQ and brochure requests.</p>
+              <p>S R ENGG WORKS (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srewprojects.com, or submit RFQ and brochure requests.</p>
               
               <h2 className="mt-4">2. Information We Collect</h2>
               <p>We collect information that you voluntarily provide to us through contact forms, RFQ selectors, and brochure download inputs, including your name, company name, email address, phone number, and engineering project details.</p>
@@ -106,16 +106,16 @@ export const Terms = () => {
         <title>Terms &amp; Conditions | S R ENGG WORKS</title>
         <meta name="description" content="Review S R ENGG WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
         <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, S R ENGG WORKS, SREW terms, Hyderabad" />
-        <link rel="canonical" href="https://www.srenggworks.com/terms" />
+        <link rel="canonical" href="https://srewprojects.com/terms" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/terms" />
+        <meta property="og:url" content="https://srewprojects.com/terms" />
         <meta property="og:title" content="Terms &amp; Conditions - S R ENGG WORKS" />
         <meta property="og:description" content="Review S R ENGG WORKS Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
-        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Terms &amp; Conditions - S R ENGG WORKS" />
         <meta name="twitter:description" content="Review intellectual property, mechanical drawings copyright, and aggregate crushing selector calculations usage terms." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -127,7 +127,7 @@ export const Terms = () => {
             "@type": "WebPage",
             "name": "Terms & Conditions | S R ENGG WORKS",
             "description": "Review S R ENGG WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
-            "url": "https://www.srenggworks.com/terms",
+            "url": "https://srewprojects.com/terms",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
@@ -135,7 +135,7 @@ export const Terms = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             }
           }
@@ -147,8 +147,8 @@ export const Terms = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://www.srenggworks.com/terms"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://srewprojects.com/terms"}
             ]
           }
         `}
@@ -186,16 +186,16 @@ export const Cookies = () => {
         <title>Cookie Policy | S R ENGG WORKS</title>
         <meta name="description" content="Learn about cookies on S R ENGG WORKS website and how they help us optimize your aggregate machinery configuration experience." />
         <meta name="keywords" content="cookie policy, cookies, tracking, analytics, S R ENGG WORKS, SREW cookies, Hyderabad" />
-        <link rel="canonical" href="https://www.srenggworks.com/cookies" />
+        <link rel="canonical" href="https://srewprojects.com/cookies" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.srenggworks.com/cookies" />
+        <meta property="og:url" content="https://srewprojects.com/cookies" />
         <meta property="og:title" content="Cookie Policy - S R ENGG WORKS" />
         <meta property="og:description" content="Learn about cookies on S R ENGG WORKS website and how they help us optimize your browsing and TPH selector experience." />
-        <meta property="og:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Cookie Policy - S R ENGG WORKS" />
         <meta name="twitter:description" content="Understand cookie settings, analytical tags, and browser configuration choices." />
-        <meta name="twitter:image" content="https://www.srenggworks.com/images/logo.png" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -207,7 +207,7 @@ export const Cookies = () => {
             "@type": "WebPage",
             "name": "Cookie Policy | S R ENGG WORKS",
             "description": "Learn about cookies on S R ENGG WORKS website and how they help us optimize your aggregate machinery configuration experience.",
-            "url": "https://www.srenggworks.com/cookies",
+            "url": "https://srewprojects.com/cookies",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
@@ -215,7 +215,7 @@ export const Cookies = () => {
               "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.srenggworks.com/images/logo.png"
+                "url": "https://srewprojects.com/images/logo.png"
               }
             }
           }
@@ -227,8 +227,8 @@ export const Cookies = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srenggworks.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Cookie Policy", "item": "https://www.srenggworks.com/cookies"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Cookie Policy", "item": "https://srewprojects.com/cookies"}
             ]
           }
         `}
