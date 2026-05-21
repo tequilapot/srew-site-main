@@ -109,7 +109,7 @@ export const Footer = () => {
                 <i className="fab fa-whatsapp me-2"></i> Chat on WhatsApp
               </a>
               <a 
-                href="https://www.google.com/maps?cid=16523674681657852383" 
+                href="https://share.google/IXjjQttMRNoPQ8jGD" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline-light btn-curved small d-inline-flex align-items-center"

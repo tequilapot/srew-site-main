@@ -350,7 +350,7 @@ export const Contact = () => {
                           <span className="text-muted ms-1 small fw-medium">5.0 Star Rated</span>
                         </div>
                         <a 
-                          href="https://www.google.com/maps?cid=16523674681657852383" 
+                          href="https://share.google/IXjjQttMRNoPQ8jGD" 
                           target="_blank" 
                           rel="noopener noreferrer" 
                           className="btn btn-primary btn-sm btn-curved d-inline-flex align-items-center mt-1"
