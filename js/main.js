@@ -333,10 +333,10 @@ w._srew_toast=function(message,type){
    ────────────────────────────────────────────── */
 function initBrochureModal(){
     function openPDF(){
-        const pdfUrl = new URL('brochures/SREW_infra_projects.pdf', window.location.href).href;
+        const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'SREW_infra_projects.pdf'; // Forces a download natively
+        link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
