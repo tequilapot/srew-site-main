@@ -3606,4 +3606,72 @@ body {
     }
 }
 
+/* Infinite Autoplay Logo Ticker Styles */
+.logo-ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+.logo-ticker-container::before,
+.logo-ticker-container::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+.logo-ticker-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+.logo-ticker-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+.logo-ticker-inner {
+    display: inline-flex;
+    animation: logoTickerScroll 30s linear infinite;
+    width: max-content;
+}
+.logo-ticker-container:hover .logo-ticker-inner {
+    animation-play-state: paused;
+}
+.logo-slide {
+    display: inline-flex;
+    align-items: center;
+    gap: 4.5rem;
+    padding-right: 4.5rem;
+}
+.client-logo-cell-new {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 150px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%) opacity(70%);
+}
+.client-logo-cell-new:hover {
+    transform: scale(1.08);
+    filter: grayscale(0%) opacity(100%);
+}
+.client-logo-cell-new img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@keyframes logoTickerScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
