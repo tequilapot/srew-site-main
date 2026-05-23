@@ -14,11 +14,11 @@ export const Industries = () => {
         <meta property="og:url" content="https://srewprojects.com/industries" />
         <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
-        <meta property="og:image" content="https://srewprojects.com/images/mining.jpg" />
+        <meta property="og:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industries We Serve - S R ENGG WORKS" />
         <meta name="twitter:description" content="Discover S R ENGG WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/mining.jpg" />
+        <meta name="twitter:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
