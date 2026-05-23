@@ -3307,10 +3307,10 @@ body {
 }
 .crawler-card:hover {
     transform: translateY(-5px);
-    background-color: #f05252 !important;
-    color: #ffffff !important;
+    background-color: #ffc107 !important;
+    color: #1e293b !important;
     border-color: transparent;
-    box-shadow: 0 15px 35px rgba(240, 82, 82, 0.35);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.35);
 }
 .crawler-card h3 {
     font-family: var(--ff-heading);
@@ -3320,7 +3320,7 @@ body {
     transition: color 0.3s ease;
 }
 .crawler-card:hover h3 {
-    color: #ffffff !important;
+    color: #1e293b !important;
 }
 .crawler-card p {
     font-size: 0.88rem;
@@ -3330,17 +3330,17 @@ body {
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 .crawler-card:hover p {
-    color: #ffffff !important;
-    opacity: 1;
+    color: #1e293b !important;
+    opacity: 0.95;
 }
 .crawler-card .card-icon {
     font-size: 2.2rem;
-    color: #f05252;
+    color: #ffc107;
     margin-bottom: 1.2rem;
     transition: color 0.3s ease;
 }
 .crawler-card:hover .card-icon {
-    color: #ffffff !important;
+    color: #1e293b !important;
 }
 
 /* 3. Revamped Capabilities About section styles */
