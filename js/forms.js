@@ -199,14 +199,20 @@ function initContactForm(){
         };
         submitToGoogleSheet(gsData)
         .then(function(){
-            if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Your message has been submitted. We will get back to you soon.</div>';
+            // Trigger Google Ads conversion event if available
+            if (typeof w.gtag_report_conversion === 'function') {
+                w.gtag_report_conversion();
+            }
+            if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Redirecting to thank you page...</div>';
             toast('Message sent successfully!','success');
             form.reset();
             form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
                 el.classList.remove('is-valid','is-invalid');
             });
-            /* Auto-dismiss message after 5 seconds */
-            if(msgs) setTimeout(function(){ msgs.innerHTML=''; }, 5000);
+            /* Redirect to the dedicated premium thank you page after 1.5 seconds */
+            setTimeout(function(){
+                w.location.href = 'thankyou.html';
+            }, 1500);
         })
         .catch(function(){
             if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
