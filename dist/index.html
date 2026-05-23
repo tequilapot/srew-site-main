@@ -243,7 +243,7 @@
     }
     </script>
 <style>.mega-item:hover { background: #f8f9fa; border-radius: 8px; } .mega-item:hover span { color: var(--c-primary-ultra) !important; }</style>
-  <link rel="stylesheet" crossorigin href="/assets/index-CvvY2fuH.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-Br_53Deb.css">
 </head>
 
 <body>
@@ -458,37 +458,65 @@
 
         <!-- HERO SECTION -->
         <section class="hero-section" aria-label="Company introduction">
-            <div class="hero-container">
-                <!-- Premium Bootstrap 5 Autoplay Cinematic Crossfade Carousel -->
-                <div id="heroCarousel" class="carousel slide carousel-fade h-100 w-100 position-absolute" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-inner h-100 w-100">
-                        <div class="carousel-item active h-100 w-100">
-                            <img src="/assets/srew-hopper-Dq4LYL5Y.jpg" alt="S R ENGG WORKS - Industrial Crushing Equipment Plant in operation" class="d-block w-100 h-100 hero-image" style="object-fit: cover;">
-                            <div class="overlay" aria-hidden="true"></div>
-                        </div>
-                        <div class="carousel-item h-100 w-100">
-                            <img src="/assets/about-company-CXrgqQ2f.jpg" alt="S R ENGG WORKS - Manufacturing Facility & Team" class="d-block w-100 h-100 hero-image" style="object-fit: cover;">
-                            <div class="overlay" aria-hidden="true"></div>
+            <div id="heroCarousel" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="carousel" data-bs-interval="6000">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators container text-start" style="justify-content: flex-start; left: 0; right: 0; bottom: 40px; padding-left: var(--bs-gutter-x, 0.75rem); z-index: 10;">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 40px; height: 5px; border-radius: 3px; background-color: #ffc107; border: none;"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="width: 40px; height: 5px; border-radius: 3px; background-color: #ffc107; border: none;"></button>
+                </div>
+
+                <div class="carousel-inner h-100 w-100">
+                    <!-- Slide 1: Crushing & Screening Plant -->
+                    <div class="carousel-item active h-100 w-100">
+                        <img src="/assets/srew-hopper-Dq4LYL5Y.jpg" alt="S R ENGG WORKS - Industrial Crushing Equipment Plant in operation" class="d-block w-100 h-100 hero-image" style="object-fit: cover;">
+                        <div class="overlay" aria-hidden="true"></div>
+                        <div class="hero-content text-start d-flex align-items-center h-100" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 3;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-9 text-start">
+                                        <span class="usp-badge d-inline-block mb-3 reveal" style="background: rgba(0, 86, 179, 0.7); border-color: rgba(255, 255, 255, 0.25);">ISO 9001:2015 Certified Manufacturer</span>
+                                        <h1 class="reveal" style="text-align: left; margin-left: 0; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; text-shadow: 0 3px 15px rgba(0,0,0,0.65);">Premium Manufacturer of High-Capacity Crushing &amp; Screening Plants</h1>
+                                        <p class="lead reveal" style="text-align: left; margin-left: 0; max-width: 650px; font-size: clamp(0.95rem, 1.5vw, 1.2rem); text-shadow: 0 2px 10px rgba(0,0,0,0.5); color: #ffffff !important; opacity: 0.95; transition-delay: 0.1s;">Engineered for maximum yield. We design, manufacture, and integrate heavy-duty crushing, screening, M-Sand, and material handling systems for elite operators.</p>
+                                        <div class="hero-buttons reveal" style="justify-content: flex-start; margin-left: 0; transition-delay: 0.2s;">
+                                            <a href="contact.html" class="btn btn-warning btn-curved btn-premium px-5 py-3 fw-bold text-dark shadow-lg" style="border: none;">Get a Quote <i class="fas fa-paper-plane ms-2"></i></a>
+                                            <button type="button" class="btn btn-outline-light btn-curved btn-premium px-4 py-3" id="hero-cta-brochure">Download Brochure</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="hero-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-10 mx-auto text-center">
-                                <h1 class="reveal">Premium Manufacturer of High-Capacity Crushing &amp; Screening Plants</h1>
-                                <p class="lead reveal" style="transition-delay: 0.1s;">Engineered for maximum yield. We design, manufacture, and integrate heavy-duty crushing, screening, M-Sand, and material handling systems for elite operators.</p>
-                                <div class="hero-buttons reveal" style="transition-delay: 0.2s;">
-                                    <a href="contact.html" class="btn btn-primary btn-curved btn-premium" id="hero-cta-quote">Get a
-                                        Quote</a>
-                                    <button type="button" class="btn btn-outline-light btn-curved btn-premium"
-                                        id="hero-cta-brochure">Download Brochure</button>
+                    <!-- Slide 2: SREW Team and Factory -->
+                    <div class="carousel-item h-100 w-100">
+                        <img src="/assets/about-company-CXrgqQ2f.jpg" alt="S R ENGG WORKS - Manufacturing Facility & Team" class="d-block w-100 h-100 hero-image" style="object-fit: cover;">
+                        <div class="overlay" aria-hidden="true"></div>
+                        <div class="hero-content text-start d-flex align-items-center h-100" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 3;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-9 text-start">
+                                        <span class="usp-badge d-inline-block mb-3" style="background: rgba(255, 193, 7, 0.2); border-color: rgba(255, 193, 7, 0.45); color: #ffc107;">30+ Years of Engineering Excellence</span>
+                                        <h1 style="text-align: left; margin-left: 0; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; text-shadow: 0 3px 15px rgba(0,0,0,0.65);">Precision Engineering &amp; Industrial Fabrication</h1>
+                                        <p class="lead" style="text-align: left; margin-left: 0; max-width: 650px; font-size: clamp(0.95rem, 1.5vw, 1.2rem); text-shadow: 0 2px 10px rgba(0,0,0,0.5); color: #ffffff !important; opacity: 0.95;">Over 30 years of excellence in custom industrial fabrication. SREW plants are built to rigorous global standards—delivering uncompromising operational uptime.</p>
+                                        <div class="hero-buttons" style="justify-content: flex-start; margin-left: 0;">
+                                            <a href="contact.html" class="btn btn-warning btn-curved btn-premium px-5 py-3 fw-bold text-dark shadow-lg" style="border: none;">Get a Quote <i class="fas fa-paper-plane ms-2"></i></a>
+                                            <button type="button" class="btn btn-outline-light btn-curved btn-premium px-4 py-3" id="hero-cta-brochure-2">Download Brochure</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" style="z-index: 10; width: 5%;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 50%;"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" style="z-index: 10; width: 5%;">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 50%;"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
@@ -502,12 +530,13 @@
                         <p class="lead text-white-50 mb-4" style="font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.7) !important;">
                             SREW Crawler Tracked Mobile Crushing Plant is a highly automated, extreme-efficiency crushing plant built for massive mobility, heavy fabrication durability, and state-of-the-art intelligent PLC control.
                         </p>
-                        <div class="crawler-image-wrapper text-center my-4">
-                            <img src="/assets/srew-mobile-crushing-plant-B9bozyHp.png" alt="SREW Crawler Type Mobile Crushing Plant" class="img-fluid" style="max-height: 320px; object-fit: contain;">
+                        <!-- Button moved directly below the text -->
+                        <div class="mb-4 text-center text-lg-start">
+                            <a href="contact.html?product=Crawler Mobile Crusher" class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow text-dark" style="border: none;">Inquire Now</a>
                         </div>
-                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                            <a href="mobile-crusher-manufacturer.html" class="btn btn-warning btn-lg rounded-pill px-4 fw-bold shadow text-dark">More Specs <i class="fas fa-arrow-right ms-2"></i></a>
-                            <a href="contact.html?product=Crawler Mobile Crusher" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">Inquire Now</a>
+                        <!-- Crawler image moved below the button and made size large -->
+                        <div class="crawler-image-wrapper text-center my-4">
+                            <img src="/assets/srew-mobile-crushing-plant-B9bozyHp.png" alt="SREW Crawler Type Mobile Crushing Plant" class="img-fluid" style="max-height: 440px; width: 100%; object-fit: contain; transform: scale(1.12); filter: drop-shadow(0 25px 50px rgba(0,0,0,0.55)); transition: transform 0.5s ease;">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -525,7 +554,7 @@
                                 <p>It adopts a fully automatic crushing control system, which quickly responds to iron (overload) and automatically releases reset protection to ensure continuous, stable, and efficient production.</p>
                             </div>
                             <!-- Card 3 -->
-                            <div class="crawler-card card-coral reveal" style="transition-delay: 0.3s;">
+                            <div class="crawler-card reveal" style="transition-delay: 0.3s;">
                                 <div class="card-icon"><i class="fas fa-cogs"></i></div>
                                 <h3>Intelligent Cavity Control</h3>
                                 <p>It is equipped with a PLC control system to keep full cavity continuous feeding, reasonable configuration, a smooth process, high production efficiency, good product shape, and the final product is a high-quality cube.</p>

@@ -3301,24 +3301,21 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-.crawler-card.card-coral {
-    background-color: #f05252;
-    color: #ffffff;
-}
 .crawler-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(13, 110, 253, 0.15);
-}
-.crawler-card.card-coral:hover {
-    box-shadow: 0 15px 35px rgba(240, 82, 82, 0.25);
+    background-color: #f05252 !important;
+    color: #ffffff !important;
+    border-color: transparent;
+    box-shadow: 0 15px 35px rgba(240, 82, 82, 0.35);
 }
 .crawler-card h3 {
     font-family: var(--ff-heading);
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
 }
-.crawler-card.card-coral h3 {
+.crawler-card:hover h3 {
     color: #ffffff !important;
 }
 .crawler-card p {
@@ -3326,14 +3323,20 @@ body {
     line-height: 1.5;
     margin-bottom: 0;
     opacity: 0.9;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+.crawler-card:hover p {
+    color: #ffffff !important;
+    opacity: 1;
 }
 .crawler-card .card-icon {
     font-size: 2.2rem;
     color: #f05252;
     margin-bottom: 1.2rem;
+    transition: color 0.3s ease;
 }
-.crawler-card.card-coral .card-icon {
-    color: #ffffff;
+.crawler-card:hover .card-icon {
+    color: #ffffff !important;
 }
 
 /* 3. Revamped Capabilities About section styles */
@@ -3569,6 +3572,34 @@ body {
     left: 0;
     top: 3px;
     color: #28a745;
+}
+
+/* Premium Left-Aligned Hero Content Support */
+.hero-content.text-start h1,
+.hero-content.text-start .lead {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+.hero-content.text-start .hero-buttons {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+    .hero-content.text-start h1,
+    .hero-content.text-start .lead {
+        text-align: left !important;
+    }
+    .hero-content.text-start .hero-buttons {
+        justify-content: flex-start !important;
+        flex-direction: row !important;
+        gap: 0.75rem !important;
+    }
+    .hero-content.text-start .hero-buttons .btn {
+        width: auto !important;
+        flex: 1;
+    }
 }
 
 
