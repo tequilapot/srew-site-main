@@ -613,7 +613,7 @@ a:hover {
 
 .dropdown-item:hover {
     background: rgba(var(--c-primary-rgb), 0.08);
-    color: var(--c-primary);
+    color: #ffc107 !important;
     transform: translateX(4px);
     padding-left: calc(var(--sp-5) + 4px);
 }
@@ -744,6 +744,10 @@ a:hover {
     transform: translateX(2px);
     text-decoration: none;
     color: #fff;
+}
+.mega-item:hover .mega-item-title {
+    color: #ffc107 !important;
+    transition: color 0.2s ease;
 }
 
 .mega-item-icon {
@@ -2169,7 +2173,7 @@ a:hover {
 
     .navbar-nav .dropdown-item:hover {
         background: rgba(var(--c-primary-rgb), 0.08);
-        color: var(--c-primary);
+        color: #ffc107 !important;
         padding-left: 34px;
         transform: none;
     }
