@@ -3964,4 +3964,120 @@ body {
     object-fit: cover !important;
 }
 
+/* 12. Video Gallery overrides & lightbox */
+.video-section {
+    background-color: var(--c-light-alt) !important;
+}
+
+.video-card {
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.4s var(--ease-out-expo) !important;
+    overflow: hidden !important;
+}
+
+.video-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 16px 36px rgba(11, 59, 120, 0.12) !important;
+}
+
+.video-card:hover .video-thumbnail-wrapper img {
+    transform: scale(1.08);
+}
+
+.video-card:hover .video-overlay {
+    background: rgba(8, 20, 38, 0.25) !important;
+}
+
+.video-card:hover .play-btn-circle {
+    transform: scale(1.12);
+    background: #0B3B78 !important;
+    color: #FFC107 !important;
+    box-shadow: 0 12px 32px rgba(11, 59, 120, 0.35) !important;
+}
+
+/* Lightbox Modal CSS */
+.video-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(8, 20, 38, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-lightbox-content {
+    width: 90%;
+    max-width: 800px;
+    background: #091220;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-lightbox-overlay.active .video-lightbox-content {
+    transform: scale(1);
+}
+
+.video-lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.video-lightbox-close:hover {
+    color: #FFC107;
+}
+
+.video-lightbox-title {
+    color: #ffffff;
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.75rem;
+}
+
+.video-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.video-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 

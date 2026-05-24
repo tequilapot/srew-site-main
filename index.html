@@ -258,6 +258,7 @@
     <div class="top-contact-banner d-none d-lg-block">
         <div class="container d-flex justify-content-between align-items-center h-100">
             <div class="top-info-left" style="color: rgba(255,255,255,0.85); font-weight: 500;">
+                <a href="#video-gallery" class="text-white text-decoration-none" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600;"><i class="fas fa-play-circle text-warning"></i> Watch Videos</a>
                 <span><i class="fas fa-certificate text-warning me-1"></i> ISO 9001:2015 Certified</span>
                 <span class="gst-line"><i class="fas fa-file-invoice text-warning me-1"></i> GSTIN: 36BEIPR4767N1ZL</span>
             </div>
@@ -1136,6 +1137,37 @@
 
         <!-- Clients relocated above products -->
 
+        <!-- VIDEO GALLERY SECTION -->
+        <section id="video-gallery" class="video-section py-5" aria-label="Product and Plant Videos">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3 text-uppercase">Plants In Action</span>
+                    <h2 class="display-5 fw-bold text-dark" style="font-family: var(--ff-display);">Video Gallery</h2>
+                    <p class="lead text-secondary">See S R ENGG WORKS crushing, screening, and material handling systems operating in real time across top-tier infrastructure projects.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Video 1 - Your YouTube Video -->
+                    <div class="col-lg-6 col-md-8 reveal mx-auto">
+                        <div class="video-card card h-100 border-0 shadow-sm overflow-hidden" style="cursor: pointer;" onclick="openVideoModal('https://www.youtube.com/embed/ECjllQYxTMk?si=FVavcdGX2A-cTGWz', 'S R ENGG WORKS Crushing Plant & Equipment in Action')">
+                            <div class="video-thumbnail-wrapper position-relative" style="height: 340px; overflow: hidden; background: #000;">
+                                <img src="images/Projects/project1.jpg" alt="S R ENGG WORKS Plant in Action" class="img-fluid w-100 h-100" style="object-fit: cover; transition: transform 0.5s ease;">
+                                <div class="video-overlay d-flex align-items-center justify-content-center position-absolute inset-0" style="background: rgba(8, 20, 38, 0.4); transition: background 0.3s ease;">
+                                    <div class="play-btn-circle d-flex align-items-center justify-content-center" style="width: 72px; height: 72px; border-radius: 50%; background: #FFC107; color: #0B3B78; font-size: 1.75rem; box-shadow: 0 8px 24px rgba(255, 193, 7, 0.4); transition: all 0.3s ease;">
+                                        <i class="fas fa-play" style="margin-left: 4px;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">High-Capacity Turnkey Crushing Plant</h4>
+                                <p class="text-muted small mb-0"><i class="fas fa-industry me-1 text-warning"></i> S R ENGG WORKS Turnkey aggregate plant circuit operation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ SECTION - AEO/GEO Optimized -->
         <section id="faq-section" class="faq-section py-5" aria-label="Frequently Asked Questions">
             <div class="container">
@@ -1361,13 +1393,44 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-
+    <!-- VIDEO LIGHTBOX MODAL -->
+    <div id="videoLightboxModal" class="video-lightbox-overlay" onclick="closeVideoModal()">
+        <div class="video-lightbox-content" onclick="event.stopPropagation()">
+            <button class="video-lightbox-close" onclick="closeVideoModal()">✕</button>
+            <h4 id="videoLightboxTitle" class="video-lightbox-title">Video Player</h4>
+            <div class="video-iframe-container">
+                <iframe id="videoLightboxIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>
+    <script>
+        function openVideoModal(url, title) {
+            const modal = document.getElementById('videoLightboxModal');
+            const iframe = document.getElementById('videoLightboxIframe');
+            const titleEl = document.getElementById('videoLightboxTitle');
+            if (modal && iframe) {
+                iframe.src = url;
+                if (titleEl) titleEl.textContent = title;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeVideoModal() {
+            const modal = document.getElementById('videoLightboxModal');
+            const iframe = document.getElementById('videoLightboxIframe');
+            if (modal && iframe) {
+                modal.classList.remove('active');
+                iframe.src = '';
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
 </body>
 
 </html>
