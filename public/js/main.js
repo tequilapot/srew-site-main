@@ -585,6 +585,46 @@ function initWhatsAppFloat(){
 }
 
 /* ──────────────────────────────────────────────
+   WHATSAPP GOOGLE ADS CONVERSION TRACKER
+   ────────────────────────────────────────────── */
+w.gtag_report_conversion = function(url, isBlank) {
+    console.log("[SREW Google Ads] gtag_report_conversion called with url:", url, "isBlank:", isBlank);
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+            if (isBlank) {
+                w.open(url, '_blank', 'noopener,noreferrer');
+            } else {
+                w.location = url;
+            }
+        }
+    };
+    if (typeof w.gtag !== 'undefined') {
+        w.gtag('event', 'conversion', {
+            'send_to': 'AW-17075907493/BJVNCPn1xbIcEKXXts4_',
+            'value': 1.0,
+            'currency': 'INR',
+            'event_callback': callback
+        });
+    } else {
+        console.warn("[SREW Google Ads] window.gtag is not defined. Executing callback directly.");
+        callback();
+    }
+    return false;
+};
+
+function initWhatsAppClickTracker() {
+    _on(d, 'click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href && (link.href.indexOf('wa.me') !== -1 || link.href.indexOf('whatsapp') !== -1)) {
+            console.log("[SREW Google Ads] WhatsApp link click detected:", link.href);
+            e.preventDefault();
+            const isBlank = link.target === '_blank';
+            w.gtag_report_conversion(link.href, isBlank);
+        }
+    });
+}
+
+/* ──────────────────────────────────────────────
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
 function boot(){
@@ -602,6 +642,7 @@ function boot(){
     initLazyImages();
     initWhatsAppFloat();
     initBrochureModal();
+    initWhatsAppClickTracker();
 }
 
 if(d.readyState==='loading'){
