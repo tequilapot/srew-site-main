@@ -9,13 +9,13 @@ export const Projects = () => {
     <>
       <Helmet>
         <title>Projects - Crushing &amp; Screening Plant Case Studies | S R ENGG WORKS</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, case studies, turnkey installation, Kepler, Singareni, Kesara, aggregate plant, project commissions, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/projects" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/projects" />
         <meta property="og:title" content="Project Case Studies - S R ENGG WORKS" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Project Case Studies - S R ENGG WORKS" />

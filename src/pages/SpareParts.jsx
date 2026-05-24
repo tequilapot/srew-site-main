@@ -13,13 +13,13 @@ export const SpareParts = () => {
     <>
       <Helmet>
         <title>Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | S R ENGG WORKS</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="jaw plates, cone mantles, VSI blow bars, conveyor rollers, screen mesh, crusher spares, grizzly bar, mineral processing, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/spare-parts" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/spare-parts" />
         <meta property="og:title" content="Spare Parts - Genuine Equipment Spares | SREW" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Spare Parts - Genuine Equipment Spares" />

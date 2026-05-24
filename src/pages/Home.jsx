@@ -56,19 +56,19 @@ export const Home = () => {
     <>
       <Helmet>
         <title>S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions | India</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/" />
         <meta property="og:title" content="S R ENGG WORKS - Crushing, Screening &amp; Washing Plant Solutions" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 30+ Years Experience" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/hero-background.jpg" />
         <meta property="og:site_name" content="S R ENGG WORKS" />
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="S R ENGG WORKS - Crushing &amp; Screening Plant Solutions" />
-        <meta name="twitter:description" content="Turnkey crushing &amp; screening plants for quarry operators, M-Sand producers, mining &amp; infrastructure. 30+ years experience. Hyderabad." />
+        <meta name="twitter:description" content="Turnkey crushing &amp; screening plants for quarry operators, M-Sand producers, mining &amp; infrastructure. 10+ years experience. Hyderabad." />
         <meta name="twitter:image" content="https://srewprojects.com/images/hero-background.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -193,7 +193,7 @@ export const Home = () => {
             "image": "https://srewprojects.com/images/logo.png",
             "logo": "https://srewprojects.com/images/logo.png",
             "priceRange": "₹₹₹",
-            "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 30+ years experience. Hyderabad, India.",
+            "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 10+ years experience. Hyderabad, India.",
             "hasMap": "https://www.google.com/maps?cid=16523674681657852383",
             "geo": {
               "@type": "GeoCoordinates",

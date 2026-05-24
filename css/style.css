@@ -63,12 +63,12 @@
    ═══════════════════════════════════════════════════════ */
 :root {
     /* Brand Palette - Restored Original Styles */
-    --c-primary: #0056b3;
-    --c-primary-rgb: 0, 86, 179;
-    --c-primary-light: #1a73e8;
-    --c-primary-dark: #003d82;
-    --c-primary-ultra: #002b5c;
-    --c-secondary: #6c757d;
+    --c-primary: #0B3B78;
+    --c-primary-rgb: 11, 59, 120;
+    --c-primary-light: #1654a1;
+    --c-primary-dark: #07264e;
+    --c-primary-ultra: #04152b;
+    --c-secondary: #F5F7FA;
     --c-accent: #ffc107;
     --c-accent-rgb: 255, 193, 7;
     --c-success: #25d366;
@@ -133,7 +133,7 @@
     --radius-md: 10px;
     --radius-lg: 16px;
     --radius-xl: 24px;
-    --radius-pill: 50px;
+    --radius-pill: 30px;
     --radius-full: 50%;
 
     /* Easings - custom cubic-beziers */
@@ -3672,6 +3672,296 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* ═══════════════════════════════════════════════════════
+   PREMIUM REFINEMENT PASS OVERRIDES - B2B INDUSTRIAL LOOK
+   ═══════════════════════════════════════════════════════ */
+
+/* 1. Global Spacing & Layout Spacings */
+.crawler-section,
+.clients-section,
+.products-section,
+.stats-section,
+.projects-section,
+.faq-section {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+}
+
+/* Enforce Consistent Card Border Radius Globally */
+.product-card,
+.project-card,
+.crawler-card,
+.faq-item,
+.spare-parts-card,
+.contact-details-card,
+.card {
+    border-radius: 16px !important;
+}
+
+/* Enforce Consistent Button Border Radius Globally */
+.btn,
+.btn-premium,
+.btn-curved {
+    border-radius: 30px !important;
+}
+
+/* 2. Top Header Bar refinements */
+.top-contact-banner {
+    height: 44px !important; /* Increased by 8px */
+}
+
+.navbar.fixed-top {
+    top: 44px !important; /* Adjusted for top bar height increase */
+}
+
+.navbar.fixed-top.scrolled {
+    top: 0 !important;
+}
+
+.top-info-left,
+.top-info-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 32px !important; /* Horizontal spacing */
+}
+
+.top-info-left span,
+.top-info-right a,
+.top-info-right span {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.top-info-left i,
+.top-info-right i {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+}
+
+/* GST Line Reduced Weight */
+.gst-line {
+    opacity: 0.65 !important;
+    font-weight: 400 !important;
+}
+
+/* 3. Hero Section refinements */
+.hero-section .overlay {
+    background: linear-gradient(180deg, rgba(8, 20, 38, 0.35) 0%, rgba(8, 20, 38, 0.35) 75%, rgba(8, 20, 38, 0) 100%) !important; /* 35% overlay with bottom fade */
+}
+
+.hero-content .container {
+    transform: translateY(-20px) !important; /* Move content slightly upward */
+}
+
+.hero-content .col-xl-8.col-lg-9 {
+    max-width: 600px !important; /* Limit hero content width */
+}
+
+.hero-content h1 {
+    line-height: 1.2 !important; /* Heading line-height */
+}
+
+.hero-image {
+    filter: brightness(0.95) saturate(1.1) !important; /* Keep image details visible */
+}
+
+/* 4. Star Product Section (Crawler Type Mobile Crushing Plant) */
+.crawler-card {
+    border-radius: 16px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+.crawler-card:hover {
+    transform: translateY(-5px) !important;
+    background-color: #FFF8E7 !important; /* Softer gold hover background */
+    border-color: #FFC107 !important; /* Soft gold border */
+    box-shadow: 0 12px 30px rgba(255, 193, 7, 0.15) !important;
+}
+
+.crawler-card:hover h3 {
+    color: #0B3B78 !important; /* Maintain readable navy */
+}
+
+.crawler-card:hover p {
+    color: #334155 !important;
+}
+
+.crawler-card:hover .card-icon {
+    color: #FFC107 !important; /* Soft gold icon */
+}
+
+.crawler-image-wrapper {
+    padding: 0.5rem !important; /* Reduced whitespace */
+    margin-bottom: 0 !important;
+}
+
+.crawler-image-wrapper img {
+    max-height: 500px !important; /* Max-height 500px */
+    object-fit: contain !important; /* Object-fit contain */
+    width: auto !important;
+    margin: 0 auto;
+}
+
+/* 5. Clients Section Ticker */
+.client-logo-cell-new {
+    width: 180px !important; /* Size 180px */
+    height: 90px !important; /* Size 90px */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    filter: none !important; /* Grayscale removed completely, keeps original colors */
+    transition: transform 0.3s ease !important;
+}
+
+.client-logo-cell-new img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+}
+
+.client-logo-cell-new:hover {
+    transform: scale(1.05) !important; /* Subtle hover scale 1.05 */
+}
+
+.logo-slide {
+    gap: 2.5rem !important; /* Reduced empty space */
+    padding-right: 2.5rem !important;
+}
+
+/* 6. Product Catalog Section */
+.product-card {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important; /* Subtle shadow */
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.product-card .card-img-top-wrapper {
+    height: 220px !important; /* Fixed height 220px */
+    overflow: hidden !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem !important;
+}
+
+.product-card .card-img-top-wrapper img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important; /* Centered object-fit contain */
+    mix-blend-mode: multiply !important;
+}
+
+.product-card .btn {
+    font-size: 0.8rem !important; /* Reduced button size by 10% */
+    padding: 8px 16px !important;
+}
+
+/* 7. Experience Section */
+.stat-box {
+    border-radius: 16px !important;
+    border-left: 4px solid var(--c-accent) !important;
+    background: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05) !important;
+}
+
+.stat-number {
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    color: #0B3B78 !important;
+}
+
+/* 8. Featured Projects Section */
+#projects {
+    margin-top: -40px !important; /* Reduce top margin by 40px */
+}
+
+.project-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    border-radius: 16px !important;
+}
+
+.project-card .project-image img {
+    height: 240px !important; /* Increased project image height slightly */
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.project-card .project-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.project-card .project-info h3 {
+    font-weight: 700 !important; /* Strengthened title weight */
+    font-size: 1.2rem !important;
+}
+
+.project-card .project-info .btn {
+    margin-top: auto !important; /* Keep CTA buttons aligned vertically at the bottom */
+    align-self: flex-start !important;
+}
+
+/* 9. FAQ Section */
+.faq-grid {
+    gap: 16px !important; /* Reduced card spacing */
+}
+
+.faq-item {
+    border-radius: 16px !important;
+    padding: 1.75rem !important; /* Increased card padding */
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-left: 4px solid #0B3B78 !important;
+}
+
+.faq-item:hover {
+    border-color: #0B3B78 !important; /* Hover border-color: primary blue */
+    box-shadow: 0 12px 30px rgba(11, 59, 120, 0.08) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* 10. Footer Section */
+.footer .col-md-4 {
+    max-width: 340px !important; /* Reduce footer columns width */
+    width: 100% !important;
+}
+
+.footer .row {
+    justify-content: space-between !important; /* Align and space columns beautifully */
+}
+
+.social-icons a {
+    width: 34px !important; /* Reduced by 15% from 40px */
+    height: 34px !important;
+    font-size: 0.85rem !important;
+}
+
+.footer {
+    padding-top: 60px !important;
+    padding-bottom: 30px !important; /* Reduce empty bottom spacing */
+}
+
+/* 11. Industries Section - Increase the size of the industries images */
+.industry-image-placeholder {
+    height: 420px !important; /* Increased size of the industries images */
+    width: 100% !important;
+}
+
+.industry-image-placeholder img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
 
