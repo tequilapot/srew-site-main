@@ -20,6 +20,21 @@ const getHtmlInputs = () => {
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url.split('?')[0];
+        if (url.startsWith('/blog/')) {
+          const slug = url.split('/blog/')[1];
+          const cleanSlug = slug.endsWith('.html') ? slug.slice(0, -5) : slug;
+          req.url = `/${cleanSlug}.html`;
+        } else if (url === '/blogs') {
+          req.url = '/blogs.html';
+        }
+        next();
+      });
+    }
+  },
   build: {
     rollupOptions: {
       input: getHtmlInputs()

@@ -624,3 +624,319 @@ a:hover {
   background-color: var(--c-primary);
   transform: translateY(-2px);
 }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE DESIGN SYSTEM OVERRIDES - MOBILE/TABLET
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 991.98px) {
+  :root {
+    --navbar-h: 64px;
+  }
+
+  .navbar-brand div.d-flex.flex-column {
+    display: none !important;
+  }
+
+  .nav-logo-img {
+    height: 32px !important;
+  }
+
+  .nav-phone-link {
+    margin-right: 16px !important;
+    font-size: var(--fs-sm) !important;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: var(--navbar-h);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--c-primary);
+    padding: 8px 0;
+    z-index: 1060;
+    max-height: calc(100vh - var(--navbar-h));
+    overflow-y: auto;
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 14px 20px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--fs-sm);
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Premium circular phone icon button instead of long raw text */
+  .nav-phone-link span {
+    display: none !important;
+  }
+  
+  .nav-phone-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 50% !important;
+    background: rgba(11, 59, 120, 0.08) !important;
+    border: 1px solid rgba(11, 59, 120, 0.15) !important;
+    color: var(--c-primary) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin-right: 4px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .nav-phone-link:hover {
+    background: var(--c-primary) !important;
+    color: var(--c-white) !important;
+    transform: scale(1.05);
+  }
+  
+  .nav-phone-link i {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+  }
+
+  /* React Hero Cinematic Scaling */
+  .carousel-slide .slide-content {
+    bottom: var(--sp-8) !important;
+    padding: 0 var(--sp-4) !important;
+  }
+
+  .carousel-slide .slide-content h2 {
+    font-size: clamp(1.5rem, 6vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: var(--sp-2) !important;
+  }
+
+  .carousel-slide .slide-content p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: var(--sp-4) !important;
+  }
+  
+  .carousel-slide .slide-content .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+  
+  .carousel-slide .slide-content .btn-container .btn {
+    width: 100% !important;
+    padding: 0.75rem 1.5rem !important;
+    margin: 0 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   B2B LEADS & CONVERSION ENGINE (CRO STYLES)
+   ═══════════════════════════════════════════════════════ */
+
+/* 1. Mobile Sticky Bottom CTA Bar */
+.sticky-mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
+  z-index: 1055;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 12px;
+}
+
+@media (max-width: 767.98px) {
+  .sticky-mobile-cta {
+    display: flex;
+  }
+  body {
+    padding-bottom: 72px !important;
+  }
+  .whatsapp-float {
+    bottom: 90px !important;
+    right: 20px !important;
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 26px !important;
+  }
+}
+
+.sticky-cta-btn {
+  flex: 1;
+  margin: 0 4px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.sticky-cta-btn.call {
+  background: rgba(11, 59, 120, 0.08);
+  color: var(--c-primary) !important;
+  border: 1px solid rgba(11, 59, 120, 0.15);
+}
+
+.sticky-cta-btn.whatsapp {
+  background: rgba(37, 211, 102, 0.1);
+  color: #25d366 !important;
+  border: 1px solid rgba(37, 211, 102, 0.15);
+}
+
+.sticky-cta-btn.quote {
+  background: var(--c-accent);
+  color: var(--c-darker) !important;
+  box-shadow: 0 4px 12px rgba(var(--c-accent-rgb), 0.35);
+}
+
+/* 2. Premium B2B Lead-Capture Form */
+.quote-form-card {
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 575.98px) {
+  .quote-form-card {
+    padding: 1.75rem;
+  }
+}
+
+.quote-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--grad-primary);
+}
+
+.quote-form-title {
+  font-family: var(--ff-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #002b5c;
+  margin-bottom: 0.5rem;
+}
+
+.quote-form-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 2.25rem;
+}
+
+.form-group-premium {
+  margin-bottom: 1.5rem;
+}
+
+.form-label-premium {
+  display: block;
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+.form-control-premium {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--ff-body);
+  font-size: 0.92rem;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.form-control-premium:focus {
+  background: #ffffff;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(11, 59, 120, 0.15);
+  outline: none;
+}
+
+select.form-control-premium {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23344155' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+}
+
+/* 3. Product B2B Badging */
+.product-spec-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+
+.product-spec-badge {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #475569;
+  text-align: left;
+}
+
+.product-spec-badge i {
+  color: var(--c-primary-light);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.product-spec-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 1px;
+  font-weight: 500;
+}
+

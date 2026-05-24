@@ -199,14 +199,20 @@ function initContactForm(){
         };
         submitToGoogleSheet(gsData)
         .then(function(){
-            if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Your message has been submitted. We will get back to you soon.</div>';
+            // Trigger Google Ads conversion event if available
+            if (typeof w.gtag_report_conversion === 'function') {
+                w.gtag_report_conversion();
+            }
+            if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Redirecting to thank you page...</div>';
             toast('Message sent successfully!','success');
             form.reset();
             form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
                 el.classList.remove('is-valid','is-invalid');
             });
-            /* Auto-dismiss message after 5 seconds */
-            if(msgs) setTimeout(function(){ msgs.innerHTML=''; }, 5000);
+            /* Redirect to the dedicated premium thank you page after 1.5 seconds */
+            setTimeout(function(){
+                w.location.href = 'thankyou.html';
+            }, 1500);
         })
         .catch(function(){
             if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
@@ -227,10 +233,74 @@ function initUrlPrefill(){
     }
 }
 
+/* ──────── B2B LEAD QUOTE FORM ──────── */
+function initLeadQuoteForm() {
+    const form = _id('leadQuoteForm');
+    if (!form) return;
+
+    setupValidation(form);
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = _id('quoteName').value.trim();
+        const email = _id('quoteEmail').value.trim();
+        const phone = _id('quotePhone').value.trim();
+        const location = _id('quoteLocation').value.trim();
+        const capacity = _id('quoteCapacity').value;
+        const material = _id('quoteMaterial').value;
+        const message = _id('quoteMessage').value.trim();
+
+        if (!name || !email || !phone || !location || !capacity || !material) {
+            toast('Please fill out all required fields.', 'error');
+            return;
+        }
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+            toast('Please enter a valid 10-digit mobile number.', 'error');
+            return;
+        }
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) setButtonLoading(submitBtn, true);
+
+        const gsData = {
+            name: name,
+            email: phone,                  // Maps to Column C (Phone)
+            phone: email,                  // Maps to Column D (Email)
+            subject: 'B2B Quote Request: ' + capacity + ' Capacity Plant',
+            message: 'Project Location: ' + location + '\nMaterial: ' + material + '\nMessage: ' + message, // Maps to Column F (Message)
+            requirement: 'Plant Capacity: ' + capacity + ' | Material: ' + material // Maps to Column G (Requirement)
+        };
+
+        submitToGoogleSheet(gsData)
+        .then(function() {
+            if (submitBtn) setButtonLoading(submitBtn, false);
+            // Trigger Google Ads conversion event if available
+            if (typeof w.gtag_report_conversion === 'function') {
+                w.gtag_report_conversion();
+            }
+            toast('Quote request submitted successfully!', 'success');
+            form.reset();
+            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el) {
+                el.classList.remove('is-valid', 'is-invalid');
+            });
+            setTimeout(function() {
+                w.location.href = 'thankyou.html';
+            }, 1000);
+        })
+        .catch(function() {
+            if (submitBtn) setButtonLoading(submitBtn, false);
+            toast('Failed to submit quote request. Please try again.', 'error');
+        });
+    });
+}
+
 /* ──────── BOOT ──────── */
 function boot(){
     initBrochureForm();
     initContactForm();
+    initLeadQuoteForm();
     initUrlPrefill();
 }
 

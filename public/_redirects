@@ -17,3 +17,23 @@
 # SPA catch-all fallback for any other React routes (certifications, sustainability, etc.)
 /certifications     /index.html           200
 /sustainability     /index.html           200
+
+# ──────────────────────────────────────────────
+# SREW B2B Industrial Blog Hub & Articles Pretty Redirects (Organic SEO Funnels)
+# ──────────────────────────────────────────────
+/blogs                                  /blogs.html                           200
+/blog/50-tph-crusher-plant-cost         /50-tph-crusher-plant-cost.html       200
+/blog/100-tph-crusher-plant-cost        /100-tph-crusher-plant-cost.html      200
+/blog/120-tph-crusher-plant-cost        /120-tph-crusher-plant-cost.html      200
+/blog/200-tph-crusher-plant-cost        /200-tph-crusher-plant-cost.html      200
+/blog/m-sand-plant-price-guide          /m-sand-plant-price-guide.html        200
+/blog/stone-crusher-plant-investment-guide  /stone-crusher-plant-investment-guide.html 200
+/blog/jaw-crusher-vs-cone-crusher       /jaw-crusher-vs-cone-crusher.html     200
+/blog/vsi-vs-hsi-crusher                /vsi-vs-hsi-crusher.html              200
+/blog/mobile-crusher-vs-fixed-crusher    /mobile-crusher-vs-fixed-crusher.html 200
+/blog/imported-vs-made-in-india-crushing-plants  /imported-vs-made-in-india-crushing-plants.html 200
+/blog/factors-to-compare-before-buying-a-crusher-plant  /factors-to-compare-before-buying-a-crusher-plant.html 200
+/blog/reasons-crusher-output-drops      /reasons-crusher-output-drops.html    200
+/blog/conveyor-failures                 /conveyor-failures.html               200
+/blog/vibrating-screen-issues           /vibrating-screen-issues.html         200
+/blog/crusher-maintenance-reduction-methods  /crusher-maintenance-reduction-methods.html 200

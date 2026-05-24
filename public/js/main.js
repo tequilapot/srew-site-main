@@ -73,7 +73,7 @@ function initRevealAnimations(){
                 entry.target.classList.add('visible');
                 // Optional: add a slight delay for children if it's a stagger container
                 if(entry.target.classList.contains('stagger-container')){
-                    _qa('> *', entry.target).forEach((child, i) => {
+                    Array.from(entry.target.children).forEach(function(child, i){
                         child.style.transitionDelay = (i * 100) + 'ms';
                     });
                 }

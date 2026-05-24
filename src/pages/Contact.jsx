@@ -116,7 +116,7 @@ export const Contact = () => {
             "logo": "https://srewprojects.com/images/logo.png",
             "priceRange": "₹₹₹",
             "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 30–800 TPH capacity. 10+ years experience. Hyderabad, India.",
-            "hasMap": "https://www.google.com/maps?cid=16523674681657852383",
+            "hasMap": "https://share.google/hDqCzUIV3UuE8WGLg",
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": 17.5158653,
@@ -143,7 +143,7 @@ export const Contact = () => {
               "https://www.linkedin.com/company/thesrew",
               "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
               "https://www.instagram.com/srenggworks/",
-              "https://www.google.com/maps?cid=16523674681657852383"
+              "https://share.google/hDqCzUIV3UuE8WGLg"
             ]
           }
         `}
@@ -350,7 +350,7 @@ export const Contact = () => {
                           <span className="text-muted ms-1 small fw-medium">5.0 Star Rated</span>
                         </div>
                         <a 
-                          href="https://share.google/IXjjQttMRNoPQ8jGD" 
+                          href="https://share.google/hDqCzUIV3UuE8WGLg" 
                           target="_blank" 
                           rel="noopener noreferrer" 
                           className="btn btn-primary btn-sm btn-curved d-inline-flex align-items-center mt-1"
