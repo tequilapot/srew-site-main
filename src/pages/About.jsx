@@ -7,12 +7,12 @@ export const About = () => {
     <>
       <Helmet>
         <title>About S R ENGG WORKS - Precision Engineering India</title>
-        <meta name="description" content="S R ENGG WORKS (SREW) is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 30+ years industry experience." />
+        <meta name="description" content="S R ENGG WORKS (SREW) is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
         <link rel="canonical" href="https://srewprojects.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/about" />
         <meta property="og:title" content="About S R ENGG WORKS - Precision Engineering India" />
-        <meta property="og:description" content="ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 30+ years industry experience." />
+        <meta property="og:description" content="ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="geo.region" content="IN-TG" />
@@ -64,7 +64,7 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              {"@type": "Question", "name": "When was S R ENGG WORKS established?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS (SREW) was established in 2018. Our founding team brings over 30 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
+              {"@type": "Question", "name": "When was S R ENGG WORKS established?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS (SREW) was established in 2018. Our founding team brings over 10 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
               {"@type": "Question", "name": "What are SREW's manufacturing facilities?", "acceptedAnswer": {"@type": "Answer", "text": "SREW operates a state-of-the-art manufacturing facility in Hyderabad, India, equipped with CNC machining centers for precision component manufacturing, high-precision fabrication bays for large-scale industrial structures, hydraulic press shops for metal forming, and PLC panel manufacturing units for plant automation."}},
               {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 30 TPH to 800 TPH."}}
             ]

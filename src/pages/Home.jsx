@@ -83,7 +83,7 @@ export const Home = () => {
             "alternateName": "SREW",
             "url": "https://srewprojects.com",
             "logo": "https://srewprojects.com/images/logo.png",
-            "description": "S R ENGG WORKS (SREW) is an Indian precision engineering and industrial fabrication company specializing in the design, manufacture, installation, and servicing of crushing plants, screening plants, sand processing plants, and material handling systems. Founded in 2018 with over 30 years of combined industry experience, SREW has delivered 120+ turnkey projects across mining, construction, infrastructure, and C&D waste recycling sectors from its manufacturing facility in Hyderabad, Telangana.",
+            "description": "S R ENGG WORKS (SREW) is an Indian precision engineering and industrial fabrication company specializing in the design, manufacture, installation, and servicing of crushing plants, screening plants, sand processing plants, and material handling systems. Founded in 2018 with over 10 years of combined industry experience, SREW has delivered 120+ turnkey projects across mining, construction, infrastructure, and C&D waste recycling sectors from its manufacturing facility in Hyderabad, Telangana.",
             "foundingDate": "2018",
             "areaServed": "IN",
             "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 50},
@@ -160,7 +160,7 @@ export const Home = () => {
               {"@type": "Question", "name": "Where is S R ENGG WORKS located?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS is headquartered at 11-125, IDA Jeedimetla, Dulapally, Hyderabad, Telangana 500100, India. Our manufacturing facility includes CNC machining centers, fabrication bays, hydraulic press shops, and PLC panel manufacturing units."}},
               {"@type": "Question", "name": "What industries does SREW serve?", "acceptedAnswer": {"@type": "Answer", "text": "SREW serves four major industries: Mining (primary and secondary crushing), Construction & Infrastructure (aggregate and M-Sand production), C&D Waste Recycling (construction and demolition debris processing), and Sand Processing & Manufacturing (sand drying, washing, and storage)."}},
               {"@type": "Question", "name": "Does SREW provide turnkey plant solutions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, SREW provides complete turnkey solutions including plant design, equipment manufacturing, installation, commissioning, and after-sales servicing. We have delivered over 120 turnkey projects across India for 45+ clients."}},
-              {"@type": "Question", "name": "How experienced is the SREW team?", "acceptedAnswer": {"@type": "Answer", "text": "Founded in 2018, S R ENGG WORKS brings over 30 years of combined industry experience in precision engineering and industrial fabrication. Our team has delivered 120+ projects for 45+ clients across mining, construction, and recycling sectors."}}
+              {"@type": "Question", "name": "How experienced is the SREW team?", "acceptedAnswer": {"@type": "Answer", "text": "Founded in 2018, S R ENGG WORKS brings over 10 years of combined industry experience in precision engineering and industrial fabrication. Our team has delivered 120+ projects for 45+ clients across mining, construction, and recycling sectors."}}
             ]
           }
         `}

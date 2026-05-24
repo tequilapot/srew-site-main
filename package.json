@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^12.13.0",
     "lucide-react": "^1.14.0",
     "prop-types": "^15.8.1",
     "puppeteer-core": "^24.43.1",
