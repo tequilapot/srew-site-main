@@ -91,6 +91,7 @@ export const Header = () => {
                   Spare Parts
                 </NavLink>
               </li>
+
               <li className="nav-item">
                 <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/certifications" onClick={handleNavClick}>
                   Quality Hub

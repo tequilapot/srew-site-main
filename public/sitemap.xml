@@ -22,22 +22,22 @@
         <priority>0.9</priority>
         <!-- Dynamic Image Indexing for all 11 Primary Products -->
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/jaw-crusher.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-jaw-crusher.jpg</image:loc>
             <image:title>Heavy-Duty Jaw Crusher - Primary Quarry Stone Crushing | SREW</image:title>
             <image:caption>ISO 9001:2015 certified heavy-duty jaw crusher (30-800 TPH) for primary quarry rock reduction by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/cone-crusher.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-cone-crusher-plant.png</image:loc>
             <image:title>Precision Hydraulic Cone Crusher - Secondary Aggregates | SREW</image:title>
             <image:caption>High-performance hydraulic cone crusher (50-500 TPH) for secondary and tertiary fine grading by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/VSI-crusher.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-vertical-shaft-crusher.png</image:loc>
             <image:title>VSI Crusher - Manufactured Sand (M-Sand) shaping | SREW</image:title>
             <image:caption>High-speed Vertical Shaft Impactor (VSI) for premium cubical sand shaping and M-sand yields by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/roller-crusher.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-roller-crusher.jpg</image:loc>
             <image:title>Fine Roller Crusher - Friable Material Sizing | SREW</image:title>
             <image:caption>Industrial double roller crusher for uniform coal, clay, and limestone crushing with minimal dust by S R ENGG WORKS</image:caption>
         </image:image>
@@ -47,32 +47,32 @@
             <image:caption>Multi-deck high-frequency vibrating screen for precise dry/wet classification of aggregate by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/grizzly-feeder.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-hopper.jpg</image:loc>
             <image:title>Heavy-Duty Grizzly Feeder - Primary Scalping | SREW</image:title>
             <image:caption>Linear-stroke vibrating grizzly feeder with stepped bars for primary crusher intake buffer by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/sand-dryer.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-sand-dryer.jpg</image:loc>
             <image:title>Rotary Industrial Sand Dryer - Thermal Moisture Removal | SREW</image:title>
             <image:caption>Modulating burner rotary sand drying system for plaster, silica, and M-sand de-moisturizing by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/silo.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-silo.jpg</image:loc>
             <image:title>Bulk Storage Silos and Primary Intake Hoppers | SREW</image:title>
             <image:caption>Reinforced structural bulk storage silos and intake hoppers with flow-assist vibrators by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/control-panel.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-panel-board.jpg</image:loc>
             <image:title>PLC Automation and Electrical Control Panels | SREW</image:title>
             <image:caption>IP55 rated dustproof electrical PLC control panels with intelligent VFD and HMI integration by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/cd-recycling.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-cd-recycling.jpg</image:loc>
             <image:title>Construction and Demolition (C&amp;D) Recycling Unit | SREW</image:title>
             <image:caption>Modular C&amp;D waste recycling and aggregate reclaiming plants with magnetic steel separation by S R ENGG WORKS</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://srewprojects.com/images/Products/conveyor.jpg</image:loc>
+            <image:loc>https://srewprojects.com/images/Products/srew-belt-conveyor.png</image:loc>
             <image:title>Material Handling Belt Conveyor Systems | SREW</image:title>
             <image:caption>Heavy-duty truss-frame bulk material handling rubber belt conveyor systems by S R ENGG WORKS</image:caption>
         </image:image>
