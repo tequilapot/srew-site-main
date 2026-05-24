@@ -3219,7 +3219,7 @@ body {
     transition: top 0.3s ease, height 0.4s var(--ease-out-expo), background 0.4s var(--ease-out-expo);
 }
 .navbar.fixed-top.scrolled {
-    top: 0;
+    top: 36px;
 }
 
 /* Mega-dropdown product icon improvements */
@@ -3717,7 +3717,7 @@ body {
 }
 
 .navbar.fixed-top.scrolled {
-    top: 0 !important;
+    top: 44px !important;
 }
 
 .top-info-left,
