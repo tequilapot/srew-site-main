@@ -2029,6 +2029,10 @@ a:hover {
         --navbar-h: 64px;
     }
 
+    .navbar.fixed-top {
+        top: 0 !important;
+    }
+
     .navbar .container {
         padding-left: 16px !important;
         padding-right: 16px !important;
