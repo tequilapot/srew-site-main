@@ -633,6 +633,14 @@ a:hover {
     --navbar-h: 64px;
   }
 
+  .navbar {
+    z-index: 1050 !important;
+  }
+
+  .slide-content {
+    padding-top: calc(var(--navbar-h) + 1.5rem) !important;
+  }
+
   .navbar .container {
     padding-left: 16px !important;
     padding-right: 16px !important;

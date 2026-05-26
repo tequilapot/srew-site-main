@@ -2031,6 +2031,11 @@ a:hover {
 
     .navbar.fixed-top {
         top: 0 !important;
+        z-index: 1050 !important;
+    }
+
+    .hero-content {
+        padding-top: calc(var(--navbar-h) + 1.5rem) !important;
     }
 
     .navbar .container {
