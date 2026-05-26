@@ -12,8 +12,8 @@ const _id=s=>d.getElementById(s);
 
 /* Toast helper - uses global from main.js */
 function toast(msg,type){
-    if(typeof w._srew_toast==='function'){
-        w._srew_toast(msg,type);
+    if(typeof w._sre_toast==='function'){
+        w._sre_toast(msg,type);
     }else{
         /* Fallback if main.js hasn't loaded yet */
         const c=d.createElement('div');
@@ -159,7 +159,7 @@ function initBrochureForm(){
             if(successPane) successPane.style.display='flex';
 
             /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
-            const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
+            const pdfUrl=new URL('brochures/srengineeringworks-company-profile.pdf',w.location.href).href;
             const link = d.createElement('a');
             link.href = pdfUrl;
             link.download = 'S.R.Engineering Works-Company-Profile.pdf'; // Forces a download natively

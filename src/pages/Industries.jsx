@@ -176,7 +176,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-jaw-crusher.jpg" alt="Aggregate Quarry crushing station" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/Products/sre-jaw-crusher.jpg" alt="Aggregate Quarry crushing station" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -201,7 +201,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5 flex-md-row-reverse">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-cone-crusher-plant.png" alt="Heavy mineral processing crushing line" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/Products/sre-cone-crusher-plant.png" alt="Heavy mineral processing crushing line" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -226,7 +226,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-vertical-shaft-crusher.png" alt="M-Sand manufacturing VSI plant" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/Products/sre-vertical-shaft-crusher.png" alt="M-Sand manufacturing VSI plant" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -251,7 +251,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5 flex-md-row-reverse">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-cd-recycling.jpg" alt="Construction & Demolition Waste Recycling" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/Products/sre-cd-recycling.jpg" alt="Construction & Demolition Waste Recycling" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">

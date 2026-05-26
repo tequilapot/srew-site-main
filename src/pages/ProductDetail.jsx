@@ -41,7 +41,7 @@ export const ProductDetail = () => {
 
     // Trigger PDF download natively
     const link = document.createElement('a');
-    link.href = '/brochures/srew-company-profile.pdf';
+    link.href = '/brochures/srengineeringworks-company-profile.pdf';
     link.download = 'S.R.Engineering Works-Company-Profile.pdf';
     link.target = '_blank';
     document.body.appendChild(link);

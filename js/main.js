@@ -311,7 +311,7 @@ function injectReveals(){
 /* ──────────────────────────────────────────────
    TOAST NOTIFICATIONS
    ────────────────────────────────────────────── */
-w._srew_toast=function(message,type){
+w._sre_toast=function(message,type){
     type=type||'info';
     let container=_qs('.toast-container');
     if(!container){
@@ -345,7 +345,7 @@ function initBrochureModal(){
     const successPane = _id('brochureSuccessPane');
 
     function openPDF(){
-        const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
+        const pdfUrl = new URL('brochures/srengineeringworks-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
         link.download = 'S.R.Engineering Works-Company-Profile.pdf';
@@ -353,8 +353,8 @@ function initBrochureModal(){
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if(typeof window._srew_toast === 'function') {
-            window._srew_toast('Downloading brochure.', 'success');
+        if(typeof window._sre_toast === 'function') {
+            window._sre_toast('Downloading brochure.', 'success');
         }
     }
 
@@ -628,12 +628,12 @@ function initWhatsAppClickTracker() {
    COOKIE CONSENT BANNER
    ────────────────────────────────────────────── */
 function initCookieConsent() {
-    const consent = localStorage.getItem('srew_cookie_consent');
+    const consent = localStorage.getItem('sre_cookie_consent');
     if (consent) return; // Already accepted or declined
 
     const banner = d.createElement('div');
-    banner.id = 'srewCookieBanner';
-    banner.className = 'srew-cookie-banner d-flex flex-column';
+    banner.id = 'sreCookieBanner';
+    banner.className = 'sre-cookie-banner d-flex flex-column';
     banner.innerHTML = `
         <div class="d-flex align-items-center mb-2">
             <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
@@ -656,12 +656,12 @@ function initCookieConsent() {
     }, 1000);
 
     _on(_id('cookieAcceptBtn'), 'click', function() {
-        localStorage.setItem('srew_cookie_consent', 'accepted');
+        localStorage.setItem('sre_cookie_consent', 'accepted');
         hideBanner();
     });
 
     _on(_id('cookieDeclineBtn'), 'click', function() {
-        localStorage.setItem('srew_cookie_consent', 'declined');
+        localStorage.setItem('sre_cookie_consent', 'declined');
         hideBanner();
     });
 

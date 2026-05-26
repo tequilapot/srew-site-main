@@ -27,28 +27,28 @@ export const Videos = () => {
       title: "S.R.Engineering Works Roller Crusher | Heavy-Duty Industrial Roll Crusher",
       duration: "0:47",
       description: "Heavy-duty roller crusher for coal, clay and industrial crushing applications.",
-      thumbnail: "/images/Products/srew-roller-crusher.jpg",
+      thumbnail: "/images/Products/sre-roller-crusher.jpg",
       url: "https://www.youtube.com/embed/ECjllQYxTMk?si=FVavcdGX2A-cTGWz&autoplay=1"
     },
     {
       title: "Jaw Crusher Plant | Primary Rock Breaking",
       duration: "2:12",
       description: "Primary jaw crusher plant designed for high-capacity rock crushing.",
-      thumbnail: "/images/Products/srew-jaw-crusher.jpg",
+      thumbnail: "/images/Products/sre-jaw-crusher.jpg",
       url: "https://www.youtube.com/embed/s8r6FAvzzgo?si=-zSm_Mnkld2s9F5W&autoplay=1"
     },
     {
       title: "Turnkey Crushing Screening & Washing Plant",
       duration: "1:31",
       description: "Complete turnkey crushing, screening and washing plant operation.",
-      thumbnail: "/images/Products/srew-cone-crusher-plant.png",
+      thumbnail: "/images/Products/sre-cone-crusher-plant.png",
       url: "https://www.youtube.com/embed/cpBA2UDgPgI?si=melBAJFqJ6PweRaC&autoplay=1"
     },
     {
       title: "Turnkey Crushing & Screening Plant",
       duration: "1:03",
       description: "Integrated crushing and screening plant with optimized performance.",
-      thumbnail: "/images/Products/srew-mobile-crushing-plant.png",
+      thumbnail: "/images/Products/sre-mobile-crushing-plant.png",
       url: "https://www.youtube.com/embed/a15meWcHKHM?si=YyK7SELL0xGARERQ&autoplay=1"
     }
   ];
