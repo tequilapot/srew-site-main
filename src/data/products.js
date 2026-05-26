@@ -26,7 +26,7 @@ export const products = [
       { key: "Lubrication", val: "Heavy-duty centralized grease system" }
     ],
     image: "/images/Products/srew-jaw-crusher.jpg",
-    details: "Designed to operate in the toughest geological environments, SREW jaw crushers stand out for their robust frames, high crushing chambers, and premium fatigue resistance. Offering exceptional uptime, these machines perform primary reduction of hard materials, preparing feeds for secondary crushing stages."
+    details: "Designed to operate in the toughest geological environments, S.R.Engineering Works jaw crushers stand out for their robust frames, high crushing chambers, and premium fatigue resistance. Offering exceptional uptime, these machines perform primary reduction of hard materials, preparing feeds for secondary crushing stages."
   },
   {
     slug: "cone-crushers",
@@ -55,7 +55,7 @@ export const products = [
       { key: "Drive System", val: "V-belt direct motor drive" }
     ],
     image: "/images/Products/srew-cone-crusher-plant.png",
-    details: "SREW's Cone Crushers deliver unmatched performance in secondary and tertiary aggregate crushing. Characterized by reliable hydraulic control, high production yields, and excellent product shaping, these crushers ensure high reduction ratios even with abrasive materials like granite and hard quartz."
+    details: "S.R.Engineering Works' Cone Crushers deliver unmatched performance in secondary and tertiary aggregate crushing. Characterized by reliable hydraulic control, high production yields, and excellent product shaping, these crushers ensure high reduction ratios even with abrasive materials like granite and hard quartz."
   },
   {
     slug: "vsi-hsi-crushers",
@@ -84,7 +84,7 @@ export const products = [
       { key: "Automation", val: "Continuous vibration sensors & speed control" }
     ],
     image: "/images/Products/srew-vertical-shaft-crusher.png",
-    details: "Whether you need premium cubical aggregate shaping or dynamic high-volume M-Sand processing, SREW's impact crushers are the industrial benchmark. VSIs utilize an advanced autogenous rock chamber to shape aggregates through friction, whereas HSIs feature robust, heavy-duty blow bars for high reduction ratios of softer rock."
+    details: "Whether you need premium cubical aggregate shaping or dynamic high-volume M-Sand processing, S.R.Engineering Works' impact crushers are the industrial benchmark. VSIs utilize an advanced autogenous rock chamber to shape aggregates through friction, whereas HSIs feature robust, heavy-duty blow bars for high reduction ratios of softer rock."
   },
   {
     slug: "roller-crushers",
@@ -113,7 +113,7 @@ export const products = [
       { key: "Gap Control", val: "Manual shim adjustment" }
     ],
     image: "/images/Products/srew-roller-crusher.jpg",
-    details: "For applications demanding uniform product sizing and minimal fine dust, SREW's roller crushers provide a balanced mechanical solution. Designed for soft to medium minerals like coal, clay, and soft limestone, they offer reliable gap control and low power consumption per ton processed."
+    details: "For applications demanding uniform product sizing and minimal fine dust, S.R.Engineering Works' roller crushers provide a balanced mechanical solution. Designed for soft to medium minerals like coal, clay, and soft limestone, they offer reliable gap control and low power consumption per ton processed."
   },
   {
     slug: "vibrating-screens",
@@ -142,7 +142,7 @@ export const products = [
       { key: "Isolation", val: "Calibrated heavy-duty helical steel springs" }
     ],
     image: "/images/Products/vibrating-screen.jpg",
-    details: "SREW vibrating screens represent high separation efficiency and massive processing capacities. Crafted with robust side plates and reinforced deck supports, they maintain high screening stroke rates even under extreme aggregate loads, ensuring high compliance to aggregate classification standards."
+    details: "S.R.Engineering Works vibrating screens represent high separation efficiency and massive processing capacities. Crafted with robust side plates and reinforced deck supports, they maintain high screening stroke rates even under extreme aggregate loads, ensuring high compliance to aggregate classification standards."
   },
   {
     slug: "grizzly-feeders",
@@ -171,7 +171,7 @@ export const products = [
       { key: "Mounting Type", val: "Suspended or floor-supported spring mounts" }
     ],
     image: "/images/Products/srew-hopper.jpg",
-    details: "Positioned at the start of any crushing operation, SREW grizzly feeders handle heavy aggregate impacts. By scalping out smaller sand and earth fines, they optimize primary crusher operations, ensuring a uniform and regulated material feed rate, raising total plant efficiency."
+    details: "Positioned at the start of any crushing operation, S.R.Engineering Works grizzly feeders handle heavy aggregate impacts. By scalping out smaller sand and earth fines, they optimize primary crusher operations, ensuring a uniform and regulated material feed rate, raising total plant efficiency."
   },
   {
     slug: "sand-dryers",
@@ -200,7 +200,7 @@ export const products = [
       { key: "Dust Recovery", val: "Multi-cyclone wet/dry dust collector" }
     ],
     image: "/images/Products/srew-sand-dryer.jpg",
-    details: "For dry plaster and industrial foundries, dry sand is a necessity. SREW rotary sand dryers utilize thermal convective drying inside a rotating cylinder. Integrated with modulating burners and high-volume exhaust fans, they strip moisture from sand efficiently, keeping fuel consumption low."
+    details: "For dry plaster and industrial foundries, dry sand is a necessity. S.R.Engineering Works rotary sand dryers utilize thermal convective drying inside a rotating cylinder. Integrated with modulating burners and high-volume exhaust fans, they strip moisture from sand efficiently, keeping fuel consumption low."
   },
   {
     slug: "silos-hoppers",
@@ -258,7 +258,7 @@ export const products = [
       { key: "Cabinet", val: "Powder-coated CNC fabricated sheet steel" }
     ],
     image: "/images/Products/srew-panel-board.jpg",
-    details: "A crushing plant's efficiency relies heavily on its electrical control. SREW custom designs and builds PLC-based automation control panels that manage sequential starting of conveyors, screens, and crushers. This prevents blockages, manages peak electricity loads, and protects expensive motors."
+    details: "A crushing plant's efficiency relies heavily on its electrical control. S.R.Engineering Works custom designs and builds PLC-based automation control panels that manage sequential starting of conveyors, screens, and crushers. This prevents blockages, manages peak electricity loads, and protects expensive motors."
   },
   {
     slug: "recycling-units",
@@ -287,7 +287,7 @@ export const products = [
       { key: "Eco Norms", val: "Zero-effluent water recirculating system ready" }
     ],
     image: "/images/Products/srew-cd-recycling.jpg",
-    details: "SREW C&D Recycling units are engineered for smart cities. By crushing old concrete, brick, and block rubble, they produce recycled concrete aggregate (RCA) and sand. Fully equipped with overbelt magnets and light-waste air knives, they deliver clean aggregates, making recycling highly profitable."
+    details: "S.R.Engineering Works C&D Recycling units are engineered for smart cities. By crushing old concrete, brick, and block rubble, they produce recycled concrete aggregate (RCA) and sand. Fully equipped with overbelt magnets and light-waste air knives, they deliver clean aggregates, making recycling highly profitable."
   },
   {
     slug: "conveyors",
@@ -316,6 +316,6 @@ export const products = [
       { key: "Width Options", val: "500mm, 650mm, 800mm, 1000mm, 1200mm, 1400mm" }
     ],
     image: "/images/Products/srew-belt-conveyor.png",
-    details: "Our material handling systems form the primary arterial network of any crushing plant. Engineered to carry huge aggregate loads over varied inclines, SREW conveyor systems are manufactured using structurally rigid trusses. Complete with impact-absorbing loading zones, they limit spillage and optimize flow."
+    details: "Our material handling systems form the primary arterial network of any crushing plant. Engineered to carry huge aggregate loads over varied inclines, S.R.Engineering Works conveyor systems are manufactured using structurally rigid trusses. Complete with impact-absorbing loading zones, they limit spillage and optimize flow."
   }
 ];

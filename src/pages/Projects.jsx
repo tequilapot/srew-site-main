@@ -8,18 +8,18 @@ export const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>Projects - Crushing &amp; Screening Plant Case Studies | S R ENGG WORKS</title>
+        <title>Projects - Crushing &amp; Screening Plant Case Studies | S.R.Engineering Works</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta name="keywords" content="crushing plant, screening plant, case studies, turnkey installation, Kepler, Singareni, Kesara, aggregate plant, project commissions, Hyderabad, India, SREW" />
+        <meta name="keywords" content="crushing plant, screening plant, case studies, turnkey installation, Kepler, Singareni, Kesara, aggregate plant, project commissions, Hyderabad, India, S.R.Engineering Works" />
         <link rel="canonical" href="https://srewprojects.com/projects" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/projects" />
-        <meta property="og:title" content="Project Case Studies - S R ENGG WORKS" />
+        <meta property="og:title" content="Project Case Studies - S.R.Engineering Works" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Project Case Studies - S R ENGG WORKS" />
-        <meta name="twitter:description" content="View S R ENGG WORKS successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
+        <meta name="twitter:title" content="Project Case Studies - S.R.Engineering Works" />
+        <meta name="twitter:description" content="View S.R.Engineering Works successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
         <meta name="twitter:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -30,7 +30,7 @@ export const Projects = () => {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "SREW Project Case Studies",
+            "name": "S.R.Engineering Works Project Case Studies",
             "description": "Showcasing engineering solutions delivered across mining, construction, and recycling sectors.",
             "mainEntity": {
               "@type": "ItemList",
@@ -105,26 +105,26 @@ export const Projects = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How many projects has SREW completed?",
+                "name": "How many projects has S.R.Engineering Works completed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "S R ENGG WORKS has successfully completed over 120 turnkey projects for 45+ clients across India. Projects range from 30 TPH to 800 TPH capacity plants spanning mining, construction, infrastructure, and C&D waste recycling sectors."
+                  "text": "S.R.Engineering Works has successfully completed over 120 turnkey projects for 45+ clients across India. Projects range from 30 TPH to 800 TPH capacity plants spanning mining, construction, infrastructure, and C&D waste recycling sectors."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What types of turnkey projects does SREW deliver?",
+                "name": "What types of turnkey projects does S.R.Engineering Works deliver?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW delivers complete turnkey crushing and screening plants, M-Sand manufacturing plants, aggregate production plants, C&D waste recycling facilities, and sand processing & drying plants. Each project includes design-to-commissioning services with ongoing after-sales support."
+                  "text": "S.R.Engineering Works delivers complete turnkey crushing and screening plants, M-Sand manufacturing plants, aggregate production plants, C&D waste recycling facilities, and sand processing & drying plants. Each project includes design-to-commissioning services with ongoing after-sales support."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does SREW handle project installation and commissioning?",
+                "name": "Does S.R.Engineering Works handle project installation and commissioning?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, SREW provides end-to-end project delivery including site assessment, plant design, equipment manufacturing, transportation, installation, commissioning, operator training, and comprehensive after-sales support."
+                  "text": "Yes, S.R.Engineering Works provides end-to-end project delivery including site assessment, plant design, equipment manufacturing, transportation, installation, commissioning, operator training, and comprehensive after-sales support."
                 }
               }
             ]
@@ -136,13 +136,13 @@ export const Projects = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Projects - Turnkey Crushing &amp; Screening Plants | SREW",
+            "name": "Projects - Turnkey Crushing &amp; Screening Plants | S.R.Engineering Works",
             "url": "https://srewprojects.com/projects",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -165,7 +165,7 @@ export const Projects = () => {
               <div className="col-12">
                 <h1 className="fw-extrabold text-primary-ultra">Engineering Case Studies</h1>
                 <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: '#555' }}>
-                  Proven performance: Discover how SREW delivers custom engineering plant setups across mining and construction sectors.
+                  Proven performance: Discover how S.R.Engineering Works delivers custom engineering plant setups across mining and construction sectors.
                 </p>
                 <nav aria-label="Breadcrumb" className="mt-4">
                   <ol className="breadcrumb">
@@ -236,7 +236,7 @@ export const Projects = () => {
             <div className="row align-items-center">
               <div className="col-lg-8 text-center text-lg-start mb-3 mb-lg-0">
                 <h2 className="text-white">Have a dynamic B2B plant project in mind?</h2>
-                <p className="mb-0">Let SREW design a tailor-made aggregate solution meeting your local specifications, grading, and budget curves.</p>
+                <p className="mb-0">Let S.R.Engineering Works design a tailor-made aggregate solution meeting your local specifications, grading, and budget curves.</p>
               </div>
               <div className="col-lg-4 text-center text-lg-end">
                 <Link to="/contact" className="btn btn-light btn-lg btn-curved">

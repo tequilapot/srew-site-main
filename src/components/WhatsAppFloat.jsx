@@ -19,7 +19,7 @@ export const WhatsAppFloat = () => {
   const handleClick = (e) => {
     e.preventDefault();
     const phone = '918790759460';
-    const message = encodeURIComponent("Hello SREW team, I would like to inquire about your crushing, screening, and processing equipment solutions.");
+    const message = encodeURIComponent("Hello S.R.Engineering Works team, I would like to inquire about your crushing, screening, and processing equipment solutions.");
     const url = `https://wa.me/${phone}?text=${message}`;
     
     if (typeof window.gtag_report_conversion === 'function') {
@@ -34,7 +34,7 @@ export const WhatsAppFloat = () => {
       href="#"
       onClick={handleClick}
       className={`whatsapp-float ${visible ? 'visible' : ''}`}
-      aria-label="Chat with S R ENGG WORKS on WhatsApp"
+      aria-label="Chat with S.R.Engineering Works on WhatsApp"
     >
       <i className="fab fa-whatsapp" aria-hidden="true"></i>
     </a>

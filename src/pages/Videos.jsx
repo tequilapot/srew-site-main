@@ -24,7 +24,7 @@ export const Videos = () => {
 
   const videoList = [
     {
-      title: "SREW Roller Crusher | Heavy-Duty Industrial Roll Crusher",
+      title: "S.R.Engineering Works Roller Crusher | Heavy-Duty Industrial Roll Crusher",
       duration: "0:47",
       description: "Heavy-duty roller crusher for coal, clay and industrial crushing applications.",
       thumbnail: "/images/Products/srew-roller-crusher.jpg",
@@ -56,13 +56,13 @@ export const Videos = () => {
   return (
     <>
       <Helmet>
-        <title>Plant Operations &amp; Equipment Videos - S R ENGG WORKS</title>
-        <meta name="description" content="Watch high-capacity SREW crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
+        <title>Plant Operations &amp; Equipment Videos - S.R.Engineering Works</title>
+        <meta name="description" content="Watch high-capacity S.R.Engineering Works crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
         <link rel="canonical" href="https://srewprojects.com/videos" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/videos" />
-        <meta property="og:title" content="Plant Operations &amp; Equipment Videos - S R ENGG WORKS" />
-        <meta property="og:description" content="Watch high-capacity SREW crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
+        <meta property="og:title" content="Plant Operations &amp; Equipment Videos - S.R.Engineering Works" />
+        <meta property="og:description" content="Watch high-capacity S.R.Engineering Works crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
         <meta property="og:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="geo.region" content="IN-TG" />
@@ -74,7 +74,7 @@ export const Videos = () => {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "SREW Plant Operations & Equipment Videos",
+            "name": "S.R.Engineering Works Plant Operations & Equipment Videos",
             "description": "Watch real-world equipment operation and plant setups for primary jaw crushers, heavy-duty roller crushers, M-sand washing, and complete turnkey aggregate systems.",
             "url": "https://srewprojects.com/videos"
           }
@@ -102,7 +102,7 @@ export const Videos = () => {
               <div className="col-lg-8 text-center text-lg-start">
                 <h1 className="fw-extrabold text-white" style={{ color: '#ffffff !important' }}>Plant Operations &amp; Equipment Videos</h1>
                 <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: 'rgba(255,255,255,0.95)' }}>
-                  Watch SREW crushing, screening, M-Sand and material handling systems operating in real-world projects.
+                  Watch S.R.Engineering Works crushing, screening, M-Sand and material handling systems operating in real-world projects.
                 </p>
                 <nav aria-label="Breadcrumb" className="mt-4">
                   <ol className="breadcrumb justify-content-center justify-content-lg-start">

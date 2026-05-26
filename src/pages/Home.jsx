@@ -118,9 +118,9 @@ export const Home = () => {
   return (
     <>
       <Helmet>
-        <title>S R ENGG WORKS - Complete Crushing, Screening &amp; M-Sand Plant Solutions</title>
+        <title>S.R.Engineering Works - Complete Crushing, Screening &amp; M-Sand Plant Solutions</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, Hyderabad, India, SREW" />
+        <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, Hyderabad, India, S.R.Engineering Works" />
         <link rel="canonical" href="https://srewprojects.com/" />
       </Helmet>
 
@@ -130,7 +130,7 @@ export const Home = () => {
           <div className="carousel-slide active" style={{ opacity: 1, zIndex: 2 }}>
             <img 
               src="/images/hero-background.jpg" 
-              alt="S R ENGG WORKS - Heavy Industrial Crushing Plant" 
+              alt="S.R.Engineering Works - Heavy Industrial Crushing Plant" 
               className="slide-img"
               style={{ objectFit: 'cover', transform: 'scale(1)' }}
             />
@@ -170,13 +170,13 @@ export const Home = () => {
               <div className="col-4 col-md-2"><img src="/images/clients/ncc-urban-infrastructure-logo.png" alt="NCC Urban" style={{ maxHeight: '38px', objectFit: 'contain', filter: 'grayscale(100%)' }} /></div>
               <div className="col-4 col-md-2"><img src="/images/clients/aparna-enterprises-logo.png" alt="Aparna Enterprises" style={{ maxHeight: '38px', objectFit: 'contain', filter: 'grayscale(100%)' }} /></div>
               <div className="col-4 col-md-2"><img src="/images/clients/versan-logo.png" alt="Versan" style={{ maxHeight: '38px', objectFit: 'contain', filter: 'grayscale(100%)' }} /></div>
-              <div className="col-4 col-md-2"><img src="/images/clients/logo-dark.png" alt="SREW Group" style={{ maxHeight: '38px', objectFit: 'contain', filter: 'grayscale(100%)' }} /></div>
+              <div className="col-4 col-md-2"><img src="/images/clients/logo-dark.png" alt="S.R.Engineering Works Group" style={{ maxHeight: '38px', objectFit: 'contain', filter: 'grayscale(100%)' }} /></div>
             </div>
           </div>
         </section>
 
         {/* Experience Metrics Section */}
-        <section className="py-5 bg-light" aria-label="SREW performance metrics">
+        <section className="py-5 bg-light" aria-label="S.R.Engineering Works performance metrics">
           <div className="container py-3">
             <ScrollReveal>
               <div className="performance-ledger text-white" style={{ background: 'var(--grad-dark)', borderRadius: '24px', padding: '3rem 2rem' }}>
@@ -436,12 +436,12 @@ export const Home = () => {
           </div>
         </section>
 
-        {/* Why Choose SREW Trust Factors */}
-        <section className="py-5 bg-white" aria-label="Why choose S R ENGG WORKS">
+        {/* Why Choose S.R.Engineering Works Trust Factors */}
+        <section className="py-5 bg-white" aria-label="Why choose S.R.Engineering Works">
           <div className="container">
             <div className="section-header text-center mb-5">
               <span className="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3 text-uppercase">Trust Pillars</span>
-              <h2 className="display-5 fw-bold text-dark">Why Infrastructure Leaders Trust SREW</h2>
+              <h2 className="display-5 fw-bold text-dark">Why Infrastructure Leaders Trust S.R.Engineering Works</h2>
             </div>
             
             <div className="row g-4">
@@ -475,7 +475,7 @@ export const Home = () => {
           <div className="container">
             <div className="section-header text-center mb-5">
               <h2>Frequently Asked Questions</h2>
-              <p>Common inquiries about S R ENGG WORKS turnkey crusher setups.</p>
+              <p>Common inquiries about S.R.Engineering Works turnkey crusher setups.</p>
             </div>
             <div className="row justify-content-center">
               <div className="col-lg-8">
@@ -483,12 +483,12 @@ export const Home = () => {
                   <div className="accordion-item border-0 mb-2">
                     <h3 className="accordion-header">
                       <button className="accordion-button fw-bold text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                        What capacity crushing plants does SREW manufacture?
+                        What capacity crushing plants does S.R.Engineering Works manufacture?
                       </button>
                     </h3>
                     <div id="collapse1" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body text-muted small">
-                        SREW offers turnkey crushing and screening plants ranging from 30 TPH to 800 TPH capacity. We design plants customized to mining, aggregates, and recycling sectors.
+                        S.R.Engineering Works offers turnkey crushing and screening plants ranging from 30 TPH to 800 TPH capacity. We design plants customized to mining, aggregates, and recycling sectors.
                       </div>
                     </div>
                   </div>
@@ -500,7 +500,7 @@ export const Home = () => {
                     </h3>
                     <div id="collapse2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body text-muted small">
-                        Yes, SREW provides end-to-end Engineering, Procurement, and Construction (EPC) turnkey support, including site blueprints, manufacturing, installation, and final plant boot sequence testing.
+                        Yes, S.R.Engineering Works provides end-to-end Engineering, Procurement, and Construction (EPC) turnkey support, including site blueprints, manufacturing, installation, and final plant boot sequence testing.
                       </div>
                     </div>
                   </div>
@@ -656,7 +656,7 @@ export const Home = () => {
                   <div className="text-warning mb-2 text-start">
                     <i className="fas fa-star"></i><i class="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                   </div>
-                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"S R ENGG WORKS provided a complete turnkey 200 TPH cone crushing plant for our quarry in Keesara. Outstanding build quality, high manganese wear parts, and excellent technical service team."</p>
+                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"S.R.Engineering Works provided a complete turnkey 200 TPH cone crushing plant for our quarry in Keesara. Outstanding build quality, high manganese wear parts, and excellent technical service team."</p>
                   <div className="d-flex align-items-center gap-2 mt-3 pt-3 border-top justify-content-between text-muted" style={{ fontSize: '0.72rem' }}>
                     <span>Google Review</span>
                     <span>3 months ago</span>
@@ -680,7 +680,7 @@ export const Home = () => {
                   <div className="text-warning mb-2 text-start">
                     <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                   </div>
-                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"Purchased their heavy duty Jaw Crusher and fine sand washing machine. Very happy with output. SREW team was prompt during installation. Best industrial machinery manufacturer in Hyderabad."</p>
+                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"Purchased their heavy duty Jaw Crusher and fine sand washing machine. Very happy with output. S.R.Engineering Works team was prompt during installation. Best industrial machinery manufacturer in Hyderabad."</p>
                   <div className="d-flex align-items-center gap-2 mt-3 pt-3 border-top justify-content-between text-muted" style={{ fontSize: '0.72rem' }}>
                     <span>Google Review</span>
                     <span>2 months ago</span>
@@ -704,7 +704,7 @@ export const Home = () => {
                   <div className="text-warning mb-2 text-start">
                     <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                   </div>
-                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"SREW's PLC automated crawler mobile crushing plant has significantly improved our aggregates output. Their manganese casting jaws last longer, saving us replacement time and operational costs."</p>
+                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"S.R.Engineering Works' PLC automated crawler mobile crushing plant has significantly improved our aggregates output. Their manganese casting jaws last longer, saving us replacement time and operational costs."</p>
                   <div className="d-flex align-items-center gap-2 mt-3 pt-3 border-top justify-content-between text-muted" style={{ fontSize: '0.72rem' }}>
                     <span>Google Review</span>
                     <span>4 months ago</span>

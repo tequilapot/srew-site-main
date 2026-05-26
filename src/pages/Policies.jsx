@@ -8,7 +8,7 @@ const PoliciesHeader = ({ title }) => (
         <div className="col-12">
           <h1 className="fw-extrabold text-primary-ultra">{title}</h1>
           <p className="lead mt-3 mb-0" style={{ color: '#555' }}>
-            Legal and regulatory compliance guidelines for S R ENGG WORKS.
+            Legal and regulatory compliance guidelines for S.R.Engineering Works.
           </p>
         </div>
       </div>
@@ -20,17 +20,17 @@ export const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | S R ENGG WORKS</title>
-        <meta name="description" content="Read S R ENGG WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
-        <meta name="keywords" content="privacy policy, data protection, privacy, S R ENGG WORKS, SREW privacy, Hyderabad" />
+        <title>Privacy Policy | S.R.Engineering Works</title>
+        <meta name="description" content="Read S.R.Engineering Works Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
+        <meta name="keywords" content="privacy policy, data protection, privacy, S.R.Engineering Works, S.R.Engineering Works privacy, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/privacy" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/privacy" />
-        <meta property="og:title" content="Privacy Policy - S R ENGG WORKS" />
-        <meta property="og:description" content="Read S R ENGG WORKS Privacy Policy to understand how we protect your personal and project information." />
+        <meta property="og:title" content="Privacy Policy - S.R.Engineering Works" />
+        <meta property="og:description" content="Read S.R.Engineering Works Privacy Policy to understand how we protect your personal and project information." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Privacy Policy - S R ENGG WORKS" />
+        <meta name="twitter:title" content="Privacy Policy - S.R.Engineering Works" />
         <meta name="twitter:description" content="Our commitment to safeguarding your corporate engineering inquiries and RFQ data." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -42,14 +42,14 @@ export const Privacy = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Privacy Policy | S R ENGG WORKS",
-            "description": "Read S R ENGG WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
+            "name": "Privacy Policy | S.R.Engineering Works",
+            "description": "Read S.R.Engineering Works Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
             "url": "https://srewprojects.com/privacy",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -78,7 +78,7 @@ export const Privacy = () => {
             <div className="col-lg-10 mx-auto">
               <p className="small text-muted mb-4">Last Updated: May 20, 2026</p>
               <h2>1. Introduction</h2>
-              <p>S R ENGG WORKS (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srewprojects.com, or submit RFQ and brochure requests.</p>
+              <p>S.R.Engineering Works (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srewprojects.com, or submit RFQ and brochure requests.</p>
               
               <h2 className="mt-4">2. Information We Collect</h2>
               <p>We collect information that you voluntarily provide to us through contact forms, RFQ selectors, and brochure download inputs, including your name, company name, email address, phone number, and engineering project details.</p>
@@ -103,17 +103,17 @@ export const Terms = () => {
   return (
     <>
       <Helmet>
-        <title>Terms &amp; Conditions | S R ENGG WORKS</title>
-        <meta name="description" content="Review S R ENGG WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
-        <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, S R ENGG WORKS, SREW terms, Hyderabad" />
+        <title>Terms &amp; Conditions | S.R.Engineering Works</title>
+        <meta name="description" content="Review S.R.Engineering Works Terms and Conditions for website use, S.R.Engineering Works product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
+        <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, S.R.Engineering Works, S.R.Engineering Works terms, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/terms" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/terms" />
-        <meta property="og:title" content="Terms &amp; Conditions - S R ENGG WORKS" />
-        <meta property="og:description" content="Review S R ENGG WORKS Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
+        <meta property="og:title" content="Terms &amp; Conditions - S.R.Engineering Works" />
+        <meta property="og:description" content="Review S.R.Engineering Works Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Terms &amp; Conditions - S R ENGG WORKS" />
+        <meta name="twitter:title" content="Terms &amp; Conditions - S.R.Engineering Works" />
         <meta name="twitter:description" content="Review intellectual property, mechanical drawings copyright, and aggregate crushing selector calculations usage terms." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -125,14 +125,14 @@ export const Terms = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Terms & Conditions | S R ENGG WORKS",
-            "description": "Review S R ENGG WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
+            "name": "Terms & Conditions | S.R.Engineering Works",
+            "description": "Review S.R.Engineering Works Terms and Conditions for website use, S.R.Engineering Works product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
             "url": "https://srewprojects.com/terms",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -161,13 +161,13 @@ export const Terms = () => {
             <div className="col-lg-10 mx-auto">
               <p className="small text-muted mb-4">Last Updated: May 20, 2026</p>
               <h2>1. Acceptance of Terms</h2>
-              <p>By accessing or using the S R ENGG WORKS website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please refrain from using our online portal.</p>
+              <p>By accessing or using the S.R.Engineering Works website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please refrain from using our online portal.</p>
               
               <h2 className="mt-4">2. Intellectual Property</h2>
-              <p>All content displayed on this website, including SREW product blueprints, CAD diagrams, text, industrial photographs, spare parts metallurgy specifications, logos, and brochures, is the exclusive intellectual property of S R ENGG WORKS and is protected by Indian copyright laws.</p>
+              <p>All content displayed on this website, including S.R.Engineering Works product blueprints, CAD diagrams, text, industrial photographs, spare parts metallurgy specifications, logos, and brochures, is the exclusive intellectual property of S.R.Engineering Works and is protected by Indian copyright laws.</p>
               
               <h2 className="mt-4">3. Quotations &amp; Technical Accuracy</h2>
-              <p>All aggregate crushing capacities, technical measurements, and recommended crusher configurations generated by our online TPH Crusher Selector are intended for initial planning purposes only. Formal sales quotes and mechanical guarantees are strictly issued via authorized SREW engineering contracts.</p>
+              <p>All aggregate crushing capacities, technical measurements, and recommended crusher configurations generated by our online TPH Crusher Selector are intended for initial planning purposes only. Formal sales quotes and mechanical guarantees are strictly issued via authorized S.R.Engineering Works engineering contracts.</p>
               
               <h2 className="mt-4">4. Governing Law</h2>
               <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Telangana, India, and any disputes shall be resolved in the competent courts of Hyderabad.</p>
@@ -183,17 +183,17 @@ export const Cookies = () => {
   return (
     <>
       <Helmet>
-        <title>Cookie Policy | S R ENGG WORKS</title>
-        <meta name="description" content="Learn about cookies on S R ENGG WORKS website and how they help us optimize your aggregate machinery configuration experience." />
-        <meta name="keywords" content="cookie policy, cookies, tracking, analytics, S R ENGG WORKS, SREW cookies, Hyderabad" />
+        <title>Cookie Policy | S.R.Engineering Works</title>
+        <meta name="description" content="Learn about cookies on S.R.Engineering Works website and how they help us optimize your aggregate machinery configuration experience." />
+        <meta name="keywords" content="cookie policy, cookies, tracking, analytics, S.R.Engineering Works, S.R.Engineering Works cookies, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/cookies" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/cookies" />
-        <meta property="og:title" content="Cookie Policy - S R ENGG WORKS" />
-        <meta property="og:description" content="Learn about cookies on S R ENGG WORKS website and how they help us optimize your browsing and TPH selector experience." />
+        <meta property="og:title" content="Cookie Policy - S.R.Engineering Works" />
+        <meta property="og:description" content="Learn about cookies on S.R.Engineering Works website and how they help us optimize your browsing and TPH selector experience." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Cookie Policy - S R ENGG WORKS" />
+        <meta name="twitter:title" content="Cookie Policy - S.R.Engineering Works" />
         <meta name="twitter:description" content="Understand cookie settings, analytical tags, and browser configuration choices." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -205,14 +205,14 @@ export const Cookies = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Cookie Policy | S R ENGG WORKS",
-            "description": "Learn about cookies on S R ENGG WORKS website and how they help us optimize your aggregate machinery configuration experience.",
+            "name": "Cookie Policy | S.R.Engineering Works",
+            "description": "Learn about cookies on S.R.Engineering Works website and how they help us optimize your aggregate machinery configuration experience.",
             "url": "https://srewprojects.com/cookies",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -243,7 +243,7 @@ export const Cookies = () => {
               <h2>1. What are Cookies?</h2>
               <p>Cookies are small text files placed on your computer or mobile device by websites that you visit. They are widely used to make websites work more efficiently and provide analytical data to the website owners.</p>
               
-              <h2 className="mt-4">2. How SREW Uses Cookies</h2>
+              <h2 className="mt-4">2. How S.R.Engineering Works Uses Cookies</h2>
               <p>We use essential cookies to sustain smooth site navigation and support form submissions. We also use third-party analytical cookies (e.g. Google Analytics) to track anonymous user interaction data, identifying popular pages to help us refine the user experience.</p>
               
               <h2 className="mt-4">3. Managing Your Choices</h2>

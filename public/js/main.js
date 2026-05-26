@@ -1,10 +1,10 @@
 /**
- * SREW Core Engine v3.0
- * (c) S R ENGG WORKS - Proprietary
+ * S.R.Engineering Works Core Engine v3.0
+ * (c) S.R.Engineering Works - Proprietary
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
-console.log("[SREW Debug] main.js is executing...");
+console.log("[S.R.Engineering Works Debug] main.js is executing...");
 
 
 /* ──────────────────────────────────────────────
@@ -335,7 +335,7 @@ w._srew_toast=function(message,type){
    BROCHURE MODAL (home)
    ────────────────────────────────────────────── */
 function initBrochureModal(){
-    console.log("[SREW Debug] initBrochureModal() called.");
+    console.log("[S.R.Engineering Works Debug] initBrochureModal() called.");
     const overlay = _id('brochureOverlay');
     const popup = _id('brochurePopup');
     const cta = _id('hero-cta-brochure');
@@ -348,7 +348,7 @@ function initBrochureModal(){
         const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'SREW-Company-Profile.pdf';
+        link.download = 'S.R.Engineering Works-Company-Profile.pdf';
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
@@ -398,9 +398,9 @@ function initBrochureModal(){
     window.closeBrochureModal = closeModal;
 
     if (cta) {
-        console.log("[SREW Debug] brochure CTA button found:", cta);
+        console.log("[S.R.Engineering Works Debug] brochure CTA button found:", cta);
         _on(cta, 'click', function(e) {
-            console.log("[SREW Debug] brochure CTA button clicked!");
+            console.log("[S.R.Engineering Works Debug] brochure CTA button clicked!");
             e.preventDefault();
             e.stopPropagation();
             openModal();
@@ -588,7 +588,7 @@ function initWhatsAppFloat(){
    WHATSAPP GOOGLE ADS CONVERSION TRACKER
    ────────────────────────────────────────────── */
 w.gtag_report_conversion = function(url, isBlank) {
-    console.log("[SREW Google Ads] gtag_report_conversion called with url:", url, "isBlank:", isBlank);
+    console.log("[S.R.Engineering Works Google Ads] gtag_report_conversion called with url:", url, "isBlank:", isBlank);
     var callback = function () {
         if (typeof(url) != 'undefined') {
             if (isBlank) {
@@ -606,7 +606,7 @@ w.gtag_report_conversion = function(url, isBlank) {
             'event_callback': callback
         });
     } else {
-        console.warn("[SREW Google Ads] window.gtag is not defined. Executing callback directly.");
+        console.warn("[S.R.Engineering Works Google Ads] window.gtag is not defined. Executing callback directly.");
         callback();
     }
     return false;
@@ -616,7 +616,7 @@ function initWhatsAppClickTracker() {
     _on(d, 'click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.indexOf('wa.me') !== -1 || link.href.indexOf('whatsapp') !== -1)) {
-            console.log("[SREW Google Ads] WhatsApp link click detected:", link.href);
+            console.log("[S.R.Engineering Works Google Ads] WhatsApp link click detected:", link.href);
             e.preventDefault();
             const isBlank = link.target === '_blank';
             w.gtag_report_conversion(link.href, isBlank);
@@ -640,7 +640,7 @@ function initCookieConsent() {
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
-            S R ENGG WORKS uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
+            S.R.Engineering Works uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
         </p>
         <div class="d-flex gap-2">
             <button class="btn btn-primary btn-sm flex-grow-1 fw-bold py-2" id="cookieAcceptBtn" style="border-radius: 8px; font-size: 0.82rem;">Accept All</button>
@@ -677,7 +677,7 @@ function initCookieConsent() {
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
 function boot(){
-    console.log("[SREW Debug] Booting systems...");
+    console.log("[S.R.Engineering Works Debug] Booting systems...");
     injectReveals();
     initNavbar();
     initNavbarDismissOutside();

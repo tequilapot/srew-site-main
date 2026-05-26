@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * Commutes Map Module for SREW Premium Page
- * (c) 2026 S R ENGG WORKS
+ * Commutes Map Module for S.R.Engineering Works Premium Page
+ * (c) 2026 S.R.Engineering Works
  */
 function Commutes(configuration) {
   let commutesMap;

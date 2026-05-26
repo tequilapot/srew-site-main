@@ -18,8 +18,8 @@ export const Header = () => {
     <header role="banner">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" role="navigation" aria-label="Main navigation">
         <div class="container align-items-center">
-          <Link class="navbar-brand me-1 me-md-3 d-flex align-items-center" to="/" onClick={handleNavClick} aria-label="S R ENGG WORKS - Home" style={{ flexShrink: 0, textDecoration: 'none' }}>
-            <img src="/images/logo.png" alt="S R ENGG WORKS Logo" class="d-inline-block align-text-top nav-logo-img me-2" />
+          <Link class="navbar-brand me-1 me-md-3 d-flex align-items-center" to="/" onClick={handleNavClick} aria-label="S.R.Engineering Works - Home" style={{ flexShrink: 0, textDecoration: 'none' }}>
+            <img src="/images/logo.png" alt="S.R.Engineering Works Logo" class="d-inline-block align-text-top nav-logo-img me-2" />
             <div class="d-flex flex-column justify-content-center" style={{ fontSize: '0.65rem', lineHeight: 1.1, color: '#555' }}>
               <span class="fw-bold" style={{ color: 'var(--c-primary-ultra)' }}>ISO 9001:2015 CERTIFIED</span>
               <span>GSTIN: <span class="text-muted">36BEIPR4767N1ZL</span></span>

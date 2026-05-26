@@ -12,7 +12,7 @@ export const spareParts = [
     grade: "Premium Certified Grade",
     desc: "Corrugated manganese steel jaw plates (both fixed and movable) for primary heavy rock breaking. Engineered with custom chromium/manganese alloy ratios to deliver maximum crushing force with exceptionally high wear life in abrasive environments.",
     metallurgy: "18% Mn, 2% Cr / 22% Mn, 2% Cr (High Manganese Steel)",
-    compatibility: "SREW Jaw Crushers, compatible with all major Indian & International jaw crusher models.",
+    compatibility: "S.R.Engineering Works Jaw Crushers, compatible with all major Indian & International jaw crusher models.",
     image: "/images/spare-parts/stone-crusher-jaw-plates-500x500.webp"
   },
   {
@@ -52,7 +52,7 @@ export const spareParts = [
     grade: "Premium Certified Grade",
     desc: "Massive, bell-shaped manganese steel mantle wear liners for secondary and tertiary cone crushers. Optimized metallurgical grain structures provide excellent compressive resistance and wear progression under high-capacity crushing pressures.",
     metallurgy: "Mn18Cr2 / Mn22Cr2 High-manganese alloys with special micro-alloying additions",
-    compatibility: "SREW Cone Crushers, compatible with major national cone crusher brands.",
+    compatibility: "S.R.Engineering Works Cone Crushers, compatible with major national cone crusher brands.",
     image: "/images/spare-parts/crusher-mantle-500x500.webp"
   },
   {

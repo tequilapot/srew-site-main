@@ -6,9 +6,9 @@ export const Industries = () => {
   return (
     <>
       <Helmet>
-        <title>Industries Served - Mining, Construction, Recycling, Sand Processing | S R ENGG WORKS</title>
+        <title>Industries Served - Mining, Construction, Recycling, Sand Processing | S.R.Engineering Works</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
+        <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, S.R.Engineering Works" />
         <link rel="canonical" href="https://srewprojects.com/industries" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/industries" />
@@ -16,8 +16,8 @@ export const Industries = () => {
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Industries We Serve - S R ENGG WORKS" />
-        <meta name="twitter:description" content="Discover S R ENGG WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
+        <meta name="twitter:title" content="Industries We Serve - S.R.Engineering Works" />
+        <meta name="twitter:description" content="Discover S.R.Engineering Works industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
         <meta name="twitter:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -30,7 +30,7 @@ export const Industries = () => {
             "@type": "Service",
             "provider": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS"
+              "name": "S.R.Engineering Works"
             },
             "serviceType": "Industrial Equipment Manufacturing",
             "areaServed": [
@@ -79,26 +79,26 @@ export const Industries = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What industries does S R ENGG WORKS serve?",
+                "name": "What industries does S.R.Engineering Works serve?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "S R ENGG WORKS serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
+                  "text": "S.R.Engineering Works serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does SREW provide C&D waste recycling plants?",
+                "name": "Does S.R.Engineering Works provide C&D waste recycling plants?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, SREW designs and manufactures integrated C&D (Construction & Demolition) waste recycling plants from 30 to 50 TPH. These plants include pre-sorting hoppers, trommel screens, jaw crushers, sand dryers, and optional magnetic metal separators. They are fully compliant with Swachh Bharat and Smart Cities Mission green norms."
+                  "text": "Yes, S.R.Engineering Works designs and manufactures integrated C&D (Construction & Demolition) waste recycling plants from 30 to 50 TPH. These plants include pre-sorting hoppers, trommel screens, jaw crushers, sand dryers, and optional magnetic metal separators. They are fully compliant with Swachh Bharat and Smart Cities Mission green norms."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What mining equipment does SREW supply?",
+                "name": "What mining equipment does S.R.Engineering Works supply?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For quarry operators and mining companies, SREW supplies high-capacity Jaw Crushers for primary breaking, Cone Crushers for secondary crushing, Vibrating Screens for sizing, Grizzly Feeders for pre-screening, and Conveyor Systems. All equipment is built for continuous 24/7 operation in granite, basalt, and limestone quarries."
+                  "text": "For quarry operators and mining companies, S.R.Engineering Works supplies high-capacity Jaw Crushers for primary breaking, Cone Crushers for secondary crushing, Vibrating Screens for sizing, Grizzly Feeders for pre-screening, and Conveyor Systems. All equipment is built for continuous 24/7 operation in granite, basalt, and limestone quarries."
                 }
               },
               {
@@ -106,7 +106,7 @@ export const Industries = () => {
                 "name": "What size crushing plant do I need for a highway or road project?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For NHAI highway and road construction projects, SREW recommends 200–800 TPH crushing plants with a Jaw Crusher for primary crushing, Cone Crusher for secondary crushing, and multi-deck Vibrating Screens for grading aggregates to IRC specifications. We provide complete turnkey installation, commissioning, and after-sales support."
+                  "text": "For NHAI highway and road construction projects, S.R.Engineering Works recommends 200–800 TPH crushing plants with a Jaw Crusher for primary crushing, Cone Crusher for secondary crushing, and multi-deck Vibrating Screens for grading aggregates to IRC specifications. We provide complete turnkey installation, commissioning, and after-sales support."
                 }
               },
               {
@@ -114,7 +114,7 @@ export const Industries = () => {
                 "name": "How do I set up an M-Sand manufacturing plant?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "To set up an M-Sand (manufactured sand) plant, you need a VSI Crusher for producing cubical sand, Vibrating Screens for grading, a Sand Dryer for moisture control, Silos for storage, and optional sand washing systems. SREW provides the complete M-Sand plant as a turnkey solution, from design to commissioning."
+                  "text": "To set up an M-Sand (manufactured sand) plant, you need a VSI Crusher for producing cubical sand, Vibrating Screens for grading, a Sand Dryer for moisture control, Silos for storage, and optional sand washing systems. S.R.Engineering Works provides the complete M-Sand plant as a turnkey solution, from design to commissioning."
                 }
               }
             ]
@@ -126,13 +126,13 @@ export const Industries = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Industries Served - Mining, Construction, Recycling | SREW",
+            "name": "Industries Served - Mining, Construction, Recycling | S.R.Engineering Works",
             "url": "https://srewprojects.com/industries",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -182,7 +182,7 @@ export const Industries = () => {
                 <div className="col-md-7">
                   <h2 className="text-primary-ultra h3 mb-3">1. Quarry &amp; Aggregate Production</h2>
                   <p className="text-body mb-4">
-                    High-quality concrete and asphalt aggregates require precise cubical shape and consistent size grading. SREW designs complete primary, secondary, and tertiary plants to process granite, basalt, limestone, and gravel. By integrating high-stroke jaw crushers, precision hydraulic cone crushers, and multi-deck grading screens, we enable quarry operators to optimize output volumes and meet rigorous highway development standards.
+                    High-quality concrete and asphalt aggregates require precise cubical shape and consistent size grading. S.R.Engineering Works designs complete primary, secondary, and tertiary plants to process granite, basalt, limestone, and gravel. By integrating high-stroke jaw crushers, precision hydraulic cone crushers, and multi-deck grading screens, we enable quarry operators to optimize output volumes and meet rigorous highway development standards.
                   </p>
                   <ul className="list-inline small text-primary fw-bold">
                     <li className="list-inline-item me-3"><i className="fas fa-arrow-right me-1"></i> Road Aggregates</li>
@@ -207,7 +207,7 @@ export const Industries = () => {
                 <div className="col-md-7">
                   <h2 className="text-primary-ultra h3 mb-3">2. Mining &amp; Mineral Extraction</h2>
                   <p className="text-body mb-4">
-                    In heavy-duty mining environments, plant durability and mechanical reliability are vital. SREW provides heavy-duty jaw crushers and grizzly vibrating screens capable of processing highly abrasive ores, including iron ore, manganese, bauxite, and copper ores. Our equipment features thick structural frameworks, Hardox wear liners, and dynamically balanced shafts to withstand severe impact cycles.
+                    In heavy-duty mining environments, plant durability and mechanical reliability are vital. S.R.Engineering Works provides heavy-duty jaw crushers and grizzly vibrating screens capable of processing highly abrasive ores, including iron ore, manganese, bauxite, and copper ores. Our equipment features thick structural frameworks, Hardox wear liners, and dynamically balanced shafts to withstand severe impact cycles.
                   </p>
                   <ul className="list-inline small text-primary fw-bold">
                     <li className="list-inline-item me-3"><i className="fas fa-arrow-right me-1"></i> Abrasive Ore Reduction</li>
@@ -232,7 +232,7 @@ export const Industries = () => {
                 <div className="col-md-7">
                   <h2 className="text-primary-ultra h3 mb-3">3. Manufactured Sand (M-Sand)</h2>
                   <p className="text-body mb-4">
-                    With river sand mining strictly regulated, Manufactured Sand (M-Sand) is essential for construction. SREW VSI (Vertical Shaft Impactor) crushers and high-frequency screening plants are designed specifically to shape cubical concrete and plaster sand. Our advanced dry classification systems and wet spiral washing systems separate micro-fines efficiently, producing high-grade sand that complies with IS 383 standards.
+                    With river sand mining strictly regulated, Manufactured Sand (M-Sand) is essential for construction. S.R.Engineering Works VSI (Vertical Shaft Impactor) crushers and high-frequency screening plants are designed specifically to shape cubical concrete and plaster sand. Our advanced dry classification systems and wet spiral washing systems separate micro-fines efficiently, producing high-grade sand that complies with IS 383 standards.
                   </p>
                   <ul className="list-inline small text-primary fw-bold">
                     <li className="list-inline-item me-3"><i className="fas fa-arrow-right me-1"></i> Concrete M-Sand</li>
@@ -257,7 +257,7 @@ export const Industries = () => {
                 <div className="col-md-7">
                   <h2 className="text-primary-ultra h3 mb-3">4. Construction &amp; Demolition (C&amp;D) Recycling</h2>
                   <p className="text-body mb-4">
-                    Rapid urban expansion creates massive quantities of demolition debris. S R ENGG WORKS is an engineering pioneer in circular economy solutions, designing custom C&amp;D Waste Recycling plants. Our systems process old concrete, brick, and block rubble into clean, reusable aggregates and recycled concrete sand. Complete with overbelt magnetic separators and light-refuse air classifiers, these plants deliver clean, marketable raw materials, diverting waste from urban landfills.
+                    Rapid urban expansion creates massive quantities of demolition debris. S.R.Engineering Works is an engineering pioneer in circular economy solutions, designing custom C&amp;D Waste Recycling plants. Our systems process old concrete, brick, and block rubble into clean, reusable aggregates and recycled concrete sand. Complete with overbelt magnetic separators and light-refuse air classifiers, these plants deliver clean, marketable raw materials, diverting waste from urban landfills.
                   </p>
                   <ul className="list-inline small text-primary fw-bold">
                     <li className="list-inline-item me-3"><i className="fas fa-arrow-right me-1"></i> Concrete Rubble Recovery</li>

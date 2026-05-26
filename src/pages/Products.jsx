@@ -24,7 +24,7 @@ export const Products = () => {
     
     if (calcCapacity === '30-50') {
       return {
-        model: "SREW 24x15 Heavy-Duty Jaw Crusher",
+        model: "S.R.Engineering Works 24x15 Heavy-Duty Jaw Crusher",
         motor: "45 HP - 55 HP",
         ratio: "5:1",
         css: "40mm - 60mm",
@@ -33,7 +33,7 @@ export const Products = () => {
     } else if (calcCapacity === '50-100') {
       if (calcFeedSize === '800+') {
         return {
-          model: "SREW 36x24 Deep-Chamber Jaw Crusher",
+          model: "S.R.Engineering Works 36x24 Deep-Chamber Jaw Crusher",
           motor: "100 HP",
           ratio: "6:1",
           css: "75mm - 100mm",
@@ -41,7 +41,7 @@ export const Products = () => {
         };
       }
       return {
-        model: "SREW 30x20 Heavy-Duty Primary Jaw Crusher",
+        model: "S.R.Engineering Works 30x20 Heavy-Duty Primary Jaw Crusher",
         motor: "75 HP",
         ratio: "5.5:1",
         css: "50mm - 75mm",
@@ -50,7 +50,7 @@ export const Products = () => {
     } else if (calcCapacity === '100-200') {
       if (isHard) {
         return {
-          model: "SREW 36x24 Deep-Chamber Jaw Crusher + SREW Medium Cone Crusher",
+          model: "S.R.Engineering Works 36x24 Deep-Chamber Jaw Crusher + S.R.Engineering Works Medium Cone Crusher",
           motor: "125 HP (Jaw) + 150 HP (Cone)",
           ratio: "6:1 primary",
           css: "75mm CSS primary",
@@ -58,7 +58,7 @@ export const Products = () => {
         };
       }
       return {
-        model: "SREW 36x24 Deep-Chamber Jaw Crusher",
+        model: "S.R.Engineering Works 36x24 Deep-Chamber Jaw Crusher",
         motor: "100 HP - 125 HP",
         ratio: "6:1",
         css: "75mm - 90mm",
@@ -66,7 +66,7 @@ export const Products = () => {
       };
     } else if (calcCapacity === '200-300' || calcCapacity === '300-500' || calcCapacity === '500-800') {
       return {
-        model: "SREW Dual-Toggle 42x36 Primary Jaw Crusher + SREW Hydraulic Cone Crusher",
+        model: "S.R.Engineering Works Dual-Toggle 42x36 Primary Jaw Crusher + S.R.Engineering Works Hydraulic Cone Crusher",
         motor: "200 HP (Jaw) + 250 HP (Cone)",
         ratio: "6.5:1 aggregate system",
         css: "100mm CSS primary",
@@ -75,7 +75,7 @@ export const Products = () => {
     }
 
     return {
-      model: "SREW 30x20 Heavy-Duty Primary Jaw Crusher",
+      model: "S.R.Engineering Works 30x20 Heavy-Duty Primary Jaw Crusher",
       motor: "75 HP",
       ratio: "5.5:1",
       css: "50mm",
@@ -88,18 +88,18 @@ export const Products = () => {
   return (
     <>
       <Helmet>
-        <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | S R ENGG WORKS</title>
+        <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | S.R.Engineering Works</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
+        <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, S.R.Engineering Works" />
         <link rel="canonical" href="https://srewprojects.com/products" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/products" />
-        <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | SREW" />
+        <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | S.R.Engineering Works" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
-        <meta name="twitter:description" content="Explore S R ENGG WORKS comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
+        <meta name="twitter:description" content="Explore S.R.Engineering Works comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
         <meta name="twitter:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -110,7 +110,7 @@ export const Products = () => {
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "S R ENGG WORKS Products",
+            "name": "S.R.Engineering Works Products",
             "description": "Comprehensive range of crushing, screening and processing equipment",
             "itemListElement": [
               {
@@ -120,7 +120,7 @@ export const Products = () => {
                   "@type": "Product",
                   "name": "Jaw Crushers",
                   "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 30-800 TPH capacity.",
-                  "brand": {"@type": "Brand", "name": "SREW"},
+                  "brand": {"@type": "Brand", "name": "S.R.Engineering Works"},
                   "url": "https://srewprojects.com/products#jaw-crushers"
                 }
               },
@@ -131,7 +131,7 @@ export const Products = () => {
                   "@type": "Product",
                   "name": "Cone Crushers",
                   "description": "Secondary and tertiary crushing to produce fine and uniform aggregates. 50-500 TPH capacity.",
-                  "brand": {"@type": "Brand", "name": "SREW"},
+                  "brand": {"@type": "Brand", "name": "S.R.Engineering Works"},
                   "url": "https://srewprojects.com/products#cone-crushers"
                 }
               },
@@ -142,7 +142,7 @@ export const Products = () => {
                   "@type": "Product",
                   "name": "VSI/HSI Crushers",
                   "description": "Shaping and producing cubical sand and aggregates. 50-300 TPH capacity.",
-                  "brand": {"@type": "Brand", "name": "SREW"},
+                  "brand": {"@type": "Brand", "name": "S.R.Engineering Works"},
                   "url": "https://srewprojects.com/products#vsi-hsi-crushers"
                 }
               },
@@ -153,7 +153,7 @@ export const Products = () => {
                   "@type": "Product",
                   "name": "Vibrating Screens",
                   "description": "Screening and grading materials into multiple precise sizes. Up to 400 TPH.",
-                  "brand": {"@type": "Brand", "name": "SREW"},
+                  "brand": {"@type": "Brand", "name": "S.R.Engineering Works"},
                   "url": "https://srewprojects.com/products#vibrating-screens"
                 }
               },
@@ -164,7 +164,7 @@ export const Products = () => {
                   "@type": "Product",
                   "name": "Sand Dryers",
                   "description": "Reduce moisture content in sand for industrial applications. 20-50 TPH.",
-                  "brand": {"@type": "Brand", "name": "SREW"},
+                  "brand": {"@type": "Brand", "name": "S.R.Engineering Works"},
                   "url": "https://srewprojects.com/products#sand-dryers"
                 }
               }
@@ -192,26 +192,26 @@ export const Products = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What types of crushers does SREW manufacture?",
+                "name": "What types of crushers does S.R.Engineering Works manufacture?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "S R ENGG WORKS manufactures four types of crushers: Jaw Crushers (30-800 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
+                  "text": "S.R.Engineering Works manufactures four types of crushers: Jaw Crushers (30-800 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the capacity range of SREW jaw crushers?",
+                "name": "What is the capacity range of S.R.Engineering Works jaw crushers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW jaw crushers are available from 30 TPH to 800 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
+                  "text": "S.R.Engineering Works jaw crushers are available from 30 TPH to 800 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does SREW manufacture sand dryers?",
+                "name": "Does S.R.Engineering Works manufacture sand dryers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, SREW manufactures rotary sand dryers with 20-50 TPH capacity. They are available in LPG, Natural Gas, and Diesel-fired options with automatic temperature control, cyclone dust separation, and adjustable heat zones that maintain moisture levels under 2%. Used in foundries, ready-mix plants, and glass manufacturing."
+                  "text": "Yes, S.R.Engineering Works manufactures rotary sand dryers with 20-50 TPH capacity. They are available in LPG, Natural Gas, and Diesel-fired options with automatic temperature control, cyclone dust separation, and adjustable heat zones that maintain moisture levels under 2%. Used in foundries, ready-mix plants, and glass manufacturing."
                 }
               },
               {
@@ -219,7 +219,7 @@ export const Products = () => {
                 "name": "What is a VSI crusher used for?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A VSI (Vertical Shaft Impact) crusher is used for producing cubical manufactured sand (M-Sand) and high-quality aggregates. SREW VSI crushers use rock-on-rock or rock-on-anvil crushing principles at high RPM for superior particle shape. They are used in M-Sand manufacturing, plaster sand production, asphalt mixes, and concrete production."
+                  "text": "A VSI (Vertical Shaft Impact) crusher is used for producing cubical manufactured sand (M-Sand) and high-quality aggregates. S.R.Engineering Works VSI crushers use rock-on-rock or rock-on-anvil crushing principles at high RPM for superior particle shape. They are used in M-Sand manufacturing, plaster sand production, asphalt mixes, and concrete production."
                 }
               }
             ]
@@ -231,13 +231,13 @@ export const Products = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Products - Jaw Crushers, Screening &amp; Sand Plants | SREW",
+            "name": "Products - Jaw Crushers, Screening &amp; Sand Plants | S.R.Engineering Works",
             "url": "https://srewprojects.com/products",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "S.R.Engineering Works",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -284,7 +284,7 @@ export const Products = () => {
                     <p className="small text-muted mb-0">Select your operational parameters and our engineering selector will instantly recommend the optimal crusher system configuration.</p>
                   </div>
                   <div className="col-lg-4 text-lg-end mt-2 mt-lg-0">
-                    <span className="badge bg-primary text-white p-2 fw-bold"><i className="fas fa-robot me-1"></i> SREW AI Engineering Guide</span>
+                    <span className="badge bg-primary text-white p-2 fw-bold"><i className="fas fa-robot me-1"></i> S.R.Engineering Works AI Engineering Guide</span>
                   </div>
                 </div>
 

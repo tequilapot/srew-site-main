@@ -42,13 +42,13 @@ export const ProductDetail = () => {
     // Trigger PDF download natively
     const link = document.createElement('a');
     link.href = '/brochures/srew-company-profile.pdf';
-    link.download = 'SREW-Company-Profile.pdf';
+    link.download = 'S.R.Engineering Works-Company-Profile.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
-    // Send tracking data to SREW's validated Google Apps Script endpoint
+    // Send tracking data to S.R.Engineering Works' validated Google Apps Script endpoint
     const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
     
     const params = new URLSearchParams();
@@ -77,9 +77,9 @@ export const ProductDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{`${product.name} - 30–800 TPH Industrial Crushing | SREW`}</title>
-        <meta name="description" content={`${product.purpose} S R ENGG WORKS is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
-        <meta name="keywords" content={`${product.shortName}, S R ENGG WORKS, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
+        <title>{`${product.name} - 30–800 TPH Industrial Crushing | S.R.Engineering Works`}</title>
+        <meta name="description" content={`${product.purpose} S.R.Engineering Works is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
+        <meta name="keywords" content={`${product.shortName}, S.R.Engineering Works, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
         <link rel="canonical" href={`https://srewprojects.com/products/${product.slug}`} />
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://srewprojects.com/products/${product.slug}`} />
@@ -87,8 +87,8 @@ export const ProductDetail = () => {
         <meta property="og:description" content={`${product.purpose} ISO 9001:2015 certified turnkey plants up to 800 TPH.`} />
         <meta property="og:image" content={`https://srewprojects.com${product.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${product.name} - Heavy Duty SREW Machinery`} />
-        <meta name="twitter:description" content={`Get standard brochures, dimensional blueprint specs, and aggregate capacity reviews for SREW's high-yield ${product.name}.`} />
+        <meta name="twitter:title" content={`${product.name} - Heavy Duty S.R.Engineering Works Machinery`} />
+        <meta name="twitter:description" content={`Get standard brochures, dimensional blueprint specs, and aggregate capacity reviews for S.R.Engineering Works' high-yield ${product.name}.`} />
         <meta name="twitter:image" content={`https://srewprojects.com${product.image}`} />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -104,7 +104,7 @@ export const ProductDetail = () => {
             "description": "${product.purpose}",
             "brand": {
               "@type": "Brand",
-              "name": "SREW"
+              "name": "S.R.Engineering Works"
             },
             "category": "${product.category}",
             "offers": {
@@ -114,7 +114,7 @@ export const ProductDetail = () => {
               "itemCondition": "https://schema.org/NewCondition",
               "seller": {
                 "@type": "Organization",
-                "name": "S R ENGG WORKS"
+                "name": "S.R.Engineering Works"
               }
             }
           }

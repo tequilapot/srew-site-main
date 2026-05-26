@@ -3278,7 +3278,7 @@ body {
 }
 
 /* ==========================================================================
-   SREW OVERHAUL - PREMIUM WEB DESIGN SYSTEM & COMPONENTS
+   S.R.Engineering Works OVERHAUL - PREMIUM WEB DESIGN SYSTEM & COMPONENTS
    ========================================================================== */
 
 /* 1. Global Top Contact Banner styles */
@@ -3288,7 +3288,7 @@ body {
     left: 0;
     right: 0;
     height: 36px;
-    background-color: #081426; /* Premium SREW dark navy color */
+    background-color: #081426; /* Premium S.R.Engineering Works dark navy color */
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.72rem;
     z-index: 1060;
@@ -3332,7 +3332,7 @@ body {
     transform: scale(1.15);
 }
 
-/* 2. SREW Crawler Mobile Crushing Plant Section styles */
+/* 2. S.R.Engineering Works Crawler Mobile Crushing Plant Section styles */
 .crawler-section {
     background-color: #f4f6f9; /* Premium light grey background */
     color: #1e293b;            /* Dark text color */
@@ -3361,7 +3361,7 @@ body {
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
     line-height: 1.15;
-    color: #002b5c !important; /* SREW corporate dark blue */
+    color: #002b5c !important; /* S.R.Engineering Works corporate dark blue */
 }
 .crawler-image-wrapper {
     position: relative;
@@ -4372,7 +4372,7 @@ select.form-control-premium {
 
 
 /* ──────────────────────────────────────────────
-   SREW PREMIUM COOKIE CONSENT BANNER
+   S.R.Engineering Works PREMIUM COOKIE CONSENT BANNER
    ────────────────────────────────────────────── */
 .srew-cookie-banner {
     position: fixed;
