@@ -33,9 +33,17 @@ function validateField(input){
     if(input.required&&!value){
         valid=false;
     }else if(type==='email'&&value){
-        valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    }else if(type==='tel'&&value&&input.pattern){
-        valid=new RegExp(input.pattern).test(value);
+        valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(value);
+    }else if(type==='tel'&&value){
+        const form=input.closest('form');
+        const select=form?form.querySelector('.country-code-select'):null;
+        const countryCode=select?select.value:'+91';
+        const cleanPhone=value.replace(/[^0-9]/g,'');
+        if(countryCode==='+91'){
+            valid=/^[6-9][0-9]{9}$/.test(cleanPhone);
+        }else{
+            valid=cleanPhone.length>=7&&cleanPhone.length<=15;
+        }
     }
 
     input.classList.toggle('is-valid',valid&&value);
@@ -112,8 +120,18 @@ function initBrochureForm(){
             return;
         }
 
-        if(!/^[0-9]{10}$/.test(phone)){
-            toast('Please enter a valid 10-digit mobile number.','error');
+        const select=form.querySelector('.country-code-select');
+        const countryCode=select?select.value:'+91';
+        const cleanPhone=phone.replace(/[^0-9]/g,'');
+        let isPhoneValid=false;
+        if(countryCode==='+91'){
+            isPhoneValid=/^[6-9][0-9]{9}$/.test(cleanPhone);
+        }else{
+            isPhoneValid=cleanPhone.length>=7&&cleanPhone.length<=15;
+        }
+
+        if(!isPhoneValid){
+            toast('Please enter a valid mobile number.','error');
             return;
         }
 
@@ -123,7 +141,7 @@ function initBrochureForm(){
         // Send to Google Sheets first, then show success state in the modal
         const gsData = {
             name: name,
-            email: phone,          // Apps Script maps email -> Column C (labeled Phone)
+            email: countryCode + ' ' + cleanPhone,          // Apps Script maps email -> Column C (labeled Phone)
             phone: '',             // Apps Script maps phone -> Column D (labeled Email)
             subject: 'Brochure Request',
             message: '',           // Keep Message column clear for brochure request
@@ -186,12 +204,37 @@ function initContactForm(){
             return;
         }
 
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if(!emailRegex.test(email.trim())){
+            if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please enter a valid corporate email address.</div>';
+            toast('Please enter a valid corporate email address.','error');
+            return;
+        }
+
+        const select=form.querySelector('.country-code-select');
+        const countryCode=select?select.value:'+91';
+        const cleanPhone=phone.replace(/[^0-9]/g,'');
+
+        if(phone.trim()!==''){
+            let isPhoneValid=false;
+            if(countryCode==='+91'){
+                isPhoneValid=/^[6-9][0-9]{9}$/.test(cleanPhone);
+            }else{
+                isPhoneValid=cleanPhone.length>=7&&cleanPhone.length<=15;
+            }
+            if(!isPhoneValid){
+                if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please enter a valid phone number.</div>';
+                toast('Please enter a valid phone number.','error');
+                return;
+            }
+        }
+
         if(msgs)msgs.innerHTML='<div class="alert alert-info" role="alert"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Sending your message...</span></div>';
 
         // Send to Google Sheets
         const gsData = {
             name: name,
-            email: phone,          // Apps Script maps email -> Column C (labeled Phone)
+            email: phone.trim() !== '' ? (countryCode + ' ' + cleanPhone) : '', // Maps to Column C (labeled Phone)
             phone: email,          // Apps Script maps phone -> Column D (labeled Email)
             subject: subject,
             message: message,      // Apps Script maps message -> Column F (labeled Message)
@@ -209,7 +252,7 @@ function initContactForm(){
             form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
                 el.classList.remove('is-valid','is-invalid');
             });
-            /* Redirect to the dedicated premium thank you page after 1.5 seconds */
+            /* Redirect to the dedicated thank you page after 1.5 seconds */
             setTimeout(function(){
                 w.location.href = 'thankyou.html';
             }, 1500);
@@ -256,8 +299,25 @@ function initLeadQuoteForm() {
             return;
         }
 
-        if (!/^[0-9]{10}$/.test(phone)) {
-            toast('Please enter a valid 10-digit mobile number.', 'error');
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if(!emailRegex.test(email)){
+            toast('Please enter a valid corporate email address.', 'error');
+            return;
+        }
+
+        const select = form.querySelector('.country-code-select');
+        const countryCode = select ? select.value : '+91';
+        const cleanPhone = phone.replace(/[^0-9]/g, '');
+
+        let isPhoneValid = false;
+        if(countryCode === '+91') {
+            isPhoneValid = /^[6-9][0-9]{9}$/.test(cleanPhone);
+        } else {
+            isPhoneValid = cleanPhone.length >= 7 && cleanPhone.length <= 15;
+        }
+
+        if(!isPhoneValid){
+            toast('Please enter a valid phone number.', 'error');
             return;
         }
 
@@ -266,7 +326,7 @@ function initLeadQuoteForm() {
 
         const gsData = {
             name: name,
-            email: phone,                  // Maps to Column C (Phone)
+            email: countryCode + ' ' + cleanPhone,                  // Maps to Column C (Phone)
             phone: email,                  // Maps to Column D (Email)
             subject: 'B2B Quote Request: ' + capacity + ' Capacity Plant',
             message: 'Project Location: ' + location + '\nMaterial: ' + material + '\nMessage: ' + message, // Maps to Column F (Message)
@@ -296,8 +356,93 @@ function initLeadQuoteForm() {
     });
 }
 
+/* ──────── COUNTRY CODE INJECTOR ──────── */
+function initCountryCodeSelectors() {
+    const phoneInputs = d.querySelectorAll('input[type="tel"], input[name="phone"], #contactPhone, #quotePhone, #brochurePhone');
+    if (!phoneInputs.length) return;
+
+    const countries = [
+        { code: '+91', name: 'India', flag: '🇮🇳' },
+        { code: '+1', name: 'USA/Canada', flag: '🇺🇸' },
+        { code: '+44', name: 'UK', flag: '🇬🇧' },
+        { code: '+971', name: 'UAE', flag: '🇦🇪' },
+        { code: '+966', name: 'Saudi Arabia', flag: '🇸🇦' },
+        { code: '+968', name: 'Oman', flag: '🇴🇲' },
+        { code: '+974', name: 'Qatar', flag: '🇶🇦' },
+        { code: '+973', name: 'Bahrain', flag: '🇧🇭' },
+        { code: '+965', name: 'Kuwait', flag: '🇰🇼' },
+        { code: '+27', name: 'South Africa', flag: '🇿🇦' },
+        { code: '+61', name: 'Australia', flag: '🇦🇺' },
+        { code: '+65', name: 'Singapore', flag: '🇸🇬' },
+        { code: '+60', name: 'Malaysia', flag: '🇲🇾' },
+        { code: '+94', name: 'Sri Lanka', flag: '🇱🇰' },
+        { code: '+977', name: 'Nepal', flag: '🇳🇵' },
+        { code: '+880', name: 'Bangladesh', flag: '🇧🇩' }
+    ];
+
+    phoneInputs.forEach(function(input) {
+        if (input.dataset.countryInjected === 'true') return;
+
+        const select = d.createElement('select');
+        select.className = 'form-select country-code-select';
+        select.style.cssText = 'width: 105px; flex-shrink: 0; border-radius: 8px; border: 1px solid #ced4da; font-size: 0.88rem; padding: 0.375rem 0.5rem; background-position: right 0.5rem center; cursor: pointer;';
+        
+        if (input.classList.contains('form-control-premium')) {
+            select.className = 'form-control-premium country-code-select';
+            select.style.cssText = 'width: 110px; flex-shrink: 0; font-size: 0.9rem; padding: 10px 8px; border-radius: 8px; background-color: #fff; border: 1px solid #e2e8f0; height: 100%; cursor: pointer;';
+        }
+
+        countries.forEach(function(c) {
+            const opt = d.createElement('option');
+            opt.value = c.code;
+            opt.textContent = c.flag + ' ' + c.code;
+            select.appendChild(opt);
+        });
+
+        select.value = '+91';
+
+        const wrapper = d.createElement('div');
+        wrapper.className = 'd-flex align-items-stretch w-100 country-code-wrapper';
+        wrapper.style.cssText = 'gap: 8px; position: relative;';
+
+        const parent = input.parentNode;
+        parent.insertBefore(wrapper, input);
+        wrapper.appendChild(select);
+        wrapper.appendChild(input);
+
+        input.style.flexGrow = '1';
+        input.style.width = 'auto';
+
+        input.dataset.countryInjected = 'true';
+    });
+
+    fetch('https://ipapi.co/json/')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            if (data && data.country_calling_code) {
+                const callingCode = data.country_calling_code;
+                d.querySelectorAll('.country-code-select').forEach(function(sel) {
+                    const exists = Array.from(sel.options).some(function(opt) { return opt.value === callingCode; });
+                    if (exists) {
+                        sel.value = callingCode;
+                    } else {
+                        const opt = d.createElement('option');
+                        opt.value = callingCode;
+                        opt.textContent = (data.country_code || '📍') + ' ' + callingCode;
+                        sel.appendChild(opt);
+                        sel.value = callingCode;
+                    }
+                });
+            }
+        })
+        .catch(function(err) {
+            console.log('Location detection fallback to +91:', err);
+        });
+}
+
 /* ──────── BOOT ──────── */
 function boot(){
+    initCountryCodeSelectors();
     initBrochureForm();
     initContactForm();
     initLeadQuoteForm();

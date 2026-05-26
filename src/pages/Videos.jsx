@@ -139,13 +139,13 @@ export const Videos = () => {
                       onClick={() => openVideo(vid.url, vid.title)}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-8px) scale(1.01)';
-                        e.currentTarget.style.boxShadow = '0 15px 30px rgba(11, 59, 120, 0.12)';
+                        e.currentTarget.style.boxShadow = '0 15px 30px rgba(30, 96, 179, 0.12)';
                         const img = e.currentTarget.querySelector('img');
                         if (img) img.style.transform = 'scale(1.06)';
                         const btn = e.currentTarget.querySelector('.play-btn-circle');
                         if (btn) {
                           btn.style.background = '#FFC107';
-                          btn.style.color = '#0b3b78';
+                          btn.style.color = '#1E60B3';
                           btn.style.transform = 'scale(1.1)';
                         }
                       }}
@@ -156,7 +156,7 @@ export const Videos = () => {
                         if (img) img.style.transform = 'none';
                         const btn = e.currentTarget.querySelector('.play-btn-circle');
                         if (btn) {
-                          btn.style.background = 'rgba(11, 59, 120, 0.9)';
+                          btn.style.background = 'rgba(30, 96, 179, 0.9)';
                           btn.style.color = '#ffffff';
                           btn.style.transform = 'none';
                         }
@@ -170,7 +170,7 @@ export const Videos = () => {
                           loading="lazy"
                         />
                         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style={{ background: 'rgba(0,0,0,0.3)', transition: 'background 0.3s ease' }}>
-                          <div className="play-btn-circle" style={{ width: '60px', height: '60px', background: 'rgba(11, 59, 120, 0.9)', borderRadius: '50%', color: '#ffffff', boxShadow: '0 4px 15px rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}>
+                          <div className="play-btn-circle" style={{ width: '60px', height: '60px', background: 'rgba(30, 96, 179, 0.9)', borderRadius: '50%', color: '#ffffff', boxShadow: '0 4px 15px rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}>
                             <i className="fas fa-play" style={{ fontSize: '1.25rem', marginLeft: '3px' }}></i>
                           </div>
                         </div>
@@ -192,7 +192,7 @@ export const Videos = () => {
         </section>
 
         {/* Video CTA Section */}
-        <section className="cta-section py-5 text-white" aria-label="Call to action" style={{ background: 'linear-gradient(135deg, #0b3b78 0%, #1d528f 100%)' }}>
+        <section className="cta-section py-5 text-white" aria-label="Call to action" style={{ background: 'linear-gradient(135deg, #1E60B3 0%, #1d528f 100%)' }}>
           <div className="container text-center py-4">
             <h2 className="display-6 fw-bold mb-3 text-white">Need a customized crushing or screening solution?</h2>
             <p className="lead mb-4" style={{ opacity: 0.9, maxWidth: '700px', margin: '0 auto 2rem', color: 'rgba(255,255,255,0.95)' }}>

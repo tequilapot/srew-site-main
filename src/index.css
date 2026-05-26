@@ -4,11 +4,11 @@
 
 :root {
   /* Brand Palette */
-  --c-primary: #0056b3;
-  --c-primary-rgb: 0, 86, 179;
-  --c-primary-light: #1a73e8;
-  --c-primary-dark: #003d82;
-  --c-primary-ultra: #002b5c;
+  --c-primary: #1E60B3;
+  --c-primary-rgb: 30, 96, 179;
+  --c-primary-light: #3a82e6;
+  --c-primary-dark: #123e75;
+  --c-primary-ultra: #081d38;
   --c-secondary: #6c757d;
   --c-accent: #ffc107;
   --c-accent-rgb: 255, 193, 7;
@@ -689,8 +689,8 @@ a:hover {
     width: 38px;
     height: 38px;
     border-radius: 50% !important;
-    background: rgba(11, 59, 120, 0.08) !important;
-    border: 1px solid rgba(11, 59, 120, 0.15) !important;
+    background: rgba(var(--c-primary-rgb), 0.08) !important;
+    border: 1px solid rgba(var(--c-primary-rgb), 0.15) !important;
     color: var(--c-primary) !important;
     display: flex !important;
     align-items: center;
@@ -801,9 +801,9 @@ a:hover {
 }
 
 .sticky-cta-btn.call {
-  background: rgba(11, 59, 120, 0.08);
+  background: rgba(var(--c-primary-rgb), 0.08);
   color: var(--c-primary) !important;
-  border: 1px solid rgba(11, 59, 120, 0.15);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.15);
 }
 
 .sticky-cta-btn.whatsapp {
@@ -889,7 +889,7 @@ a:hover {
 .form-control-premium:focus {
   background: #ffffff;
   border-color: var(--c-primary);
-  box-shadow: 0 0 0 3px rgba(11, 59, 120, 0.15);
+  box-shadow: 0 0 0 3px rgba(var(--c-primary-rgb), 0.15);
   outline: none;
 }
 

@@ -625,6 +625,55 @@ function initWhatsAppClickTracker() {
 }
 
 /* ──────────────────────────────────────────────
+   COOKIE CONSENT BANNER
+   ────────────────────────────────────────────── */
+function initCookieConsent() {
+    const consent = localStorage.getItem('srew_cookie_consent');
+    if (consent) return; // Already accepted or declined
+
+    const banner = d.createElement('div');
+    banner.id = 'srewCookieBanner';
+    banner.className = 'srew-cookie-banner d-flex flex-column';
+    banner.innerHTML = `
+        <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
+            <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
+        </div>
+        <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
+            S R ENGG WORKS uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
+        </p>
+        <div class="d-flex gap-2">
+            <button class="btn btn-primary btn-sm flex-grow-1 fw-bold py-2" id="cookieAcceptBtn" style="border-radius: 8px; font-size: 0.82rem;">Accept All</button>
+            <button class="btn btn-outline-secondary btn-sm fw-bold py-2" id="cookieDeclineBtn" style="border-radius: 8px; font-size: 0.82rem;">Decline</button>
+        </div>
+    `;
+
+    d.body.appendChild(banner);
+
+    // Show banner with a slight delay
+    setTimeout(function() {
+        banner.classList.add('show');
+    }, 1000);
+
+    _on(_id('cookieAcceptBtn'), 'click', function() {
+        localStorage.setItem('srew_cookie_consent', 'accepted');
+        hideBanner();
+    });
+
+    _on(_id('cookieDeclineBtn'), 'click', function() {
+        localStorage.setItem('srew_cookie_consent', 'declined');
+        hideBanner();
+    });
+
+    function hideBanner() {
+        banner.classList.add('hiding');
+        setTimeout(function() {
+            banner.remove();
+        }, 500);
+    }
+}
+
+/* ──────────────────────────────────────────────
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
 function boot(){
@@ -643,6 +692,7 @@ function boot(){
     initWhatsAppFloat();
     initBrochureModal();
     initWhatsAppClickTracker();
+    initCookieConsent();
 }
 
 if(d.readyState==='loading'){

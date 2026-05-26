@@ -56,8 +56,13 @@ export const Home = () => {
       return;
     }
 
-    if (!/^[0-9]{10}$/.test(phone)) {
-      setFormStatus({ submitting: false, success: false, error: true, msg: 'Please enter a valid 10-digit mobile number.' });
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email.trim())) {
+      setFormStatus({ submitting: false, success: false, error: true, msg: 'Please enter a valid business email address.' });
+      return;
+    }
+
+    if (!/^[6-9][0-9]{9}$/.test(phone.trim())) {
+      setFormStatus({ submitting: false, success: false, error: true, msg: 'Please enter a valid 10-digit mobile number starting with 6-9.' });
       return;
     }
 
@@ -143,13 +148,13 @@ export const Home = () => {
                 </p>
                 <div className="btn-container d-flex flex-wrap gap-3 mt-4">
                   <a href="#quote-section" onClick={handleQuoteScroll} className="btn btn-warning btn-curved btn-lg text-dark fw-bold shadow-lg" style={{ border: 'none' }}>
-                    Get Project Quote <i className="fas fa-file-alt ms-2"></i>
+                    Get Quote <i className="fas fa-file-alt ms-2"></i>
                   </a>
                   <button type="button" onClick={() => { const brochureBtn = document.getElementById('hero-cta-brochure'); if(brochureBtn) brochureBtn.click(); }} className="btn btn-outline-light btn-curved btn-lg">
-                    Download Company Profile <i class="fas fa-download ms-2"></i>
+                    Download Brochure <i class="fas fa-download ms-2"></i>
                   </button>
                   <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" className="btn btn-success btn-curved btn-lg text-white fw-bold d-inline-flex align-items-center" style={{ border: 'none', backgroundColor: '#25d366' }}>
-                    <i className="fab fa-whatsapp me-2" style={{ fontSize: '1.2rem' }}></i> WhatsApp Expert
+                    <i className="fab fa-whatsapp me-2" style={{ fontSize: '1.2rem' }}></i> Chat
                   </a>
                 </div>
               </ScrollReveal>
