@@ -4193,7 +4193,7 @@ body {
     .sticky-mobile-cta {
         display: flex;
     }
-    body {
+    body:has(.sticky-mobile-cta) {
         padding-bottom: 72px !important;
     }
     .whatsapp-float {
