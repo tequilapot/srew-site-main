@@ -150,8 +150,21 @@ export const Home = () => {
                   <a href="#quote-section" onClick={handleQuoteScroll} className="btn btn-warning btn-curved btn-lg text-dark fw-bold shadow-lg" style={{ border: 'none' }}>
                     Get Quote <i className="fas fa-file-alt ms-2"></i>
                   </a>
-                  <button type="button" onClick={() => { const brochureBtn = document.getElementById('hero-cta-brochure'); if(brochureBtn) brochureBtn.click(); }} className="btn btn-outline-light btn-curved btn-lg">
-                    Download Brochure <i class="fas fa-download ms-2"></i>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const pdfUrl = '/brochures/srengineeringworks-company-profile.pdf';
+                      const link = document.createElement('a');
+                      link.href = pdfUrl;
+                      link.download = 'S.R.Engineering-Works-Company-Profile.pdf';
+                      link.target = '_blank';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                    className="btn btn-outline-light btn-curved btn-lg"
+                  >
+                    Download Brochure <i className="fas fa-download ms-2"></i>
                   </button>
                   <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" className="btn btn-success btn-curved btn-lg text-white fw-bold d-inline-flex align-items-center" style={{ border: 'none', backgroundColor: '#25d366' }}>
                     <i className="fab fa-whatsapp me-2" style={{ fontSize: '1.2rem' }}></i> Chat
