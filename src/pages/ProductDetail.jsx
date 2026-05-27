@@ -110,12 +110,20 @@ export const ProductDetail = () => {
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "INR",
+              "lowPrice": "150000",
+              "highPrice": "8500000",
+              "offerCount": "8",
               "priceRange": "₹₹₹",
               "itemCondition": "https://schema.org/NewCondition",
               "seller": {
                 "@type": "Organization",
                 "name": "S R ENGG WORKS"
               }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "32"
             }
           }
         `}

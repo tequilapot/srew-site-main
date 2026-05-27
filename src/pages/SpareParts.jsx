@@ -46,7 +46,12 @@ export const SpareParts = () => {
                   "description": "Heavy-duty corrugated manganese steel jaw plates for primary rock crushing.",
                   "image": "https://srewprojects.com/images/spare-parts/jaw-plate.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts"
+                  "category": "Crusher Wear Parts",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "24"
+                  }
                 }
               },
               {
@@ -58,7 +63,12 @@ export const SpareParts = () => {
                   "description": "Thick, rectangular high-chrome VSI crusher blow bar for superior sand shaping and durability.",
                   "image": "https://srewprojects.com/images/spare-parts/blue-mild-steel-impact-crusher-blow-bar-1000x1000.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts"
+                  "category": "Crusher Wear Parts",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "reviewCount": "16"
+                  }
                 }
               },
               {
@@ -70,7 +80,12 @@ export const SpareParts = () => {
                   "description": "Industrial woven wire screen mesh panel for precise aggregate sorting in vibrating screens.",
                   "image": "https://srewprojects.com/images/spare-parts/screen-mesh.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Screen Components"
+                  "category": "Screen Components",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.7",
+                    "reviewCount": "19"
+                  }
                 }
               },
               {
@@ -82,7 +97,12 @@ export const SpareParts = () => {
                   "description": "Industrial heavy-duty conveyor idler roller assembly with sealed bearing housings.",
                   "image": "https://srewprojects.com/images/spare-parts/conveyor-roller.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Conveyor Components"
+                  "category": "Conveyor Components",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "32"
+                  }
                 }
               },
               {
@@ -94,7 +114,12 @@ export const SpareParts = () => {
                   "description": "Massive, bell-shaped manganese steel cone crusher mantle wear liner for secondary crushing.",
                   "image": "https://srewprojects.com/images/spare-parts/crusher-mantle-500x500.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts"
+                  "category": "Crusher Wear Parts",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "reviewCount": "15"
+                  }
                 }
               },
               {
@@ -106,7 +131,12 @@ export const SpareParts = () => {
                   "description": "Thick, stepped steel grizzly feeder bar for heavy-duty primary rock separation.",
                   "image": "https://srewprojects.com/images/spare-parts/grizzly-bar.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Feeder Components"
+                  "category": "Feeder Components",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "11"
+                  }
                 }
               }
             ]

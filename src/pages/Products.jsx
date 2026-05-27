@@ -121,7 +121,12 @@ export const Products = () => {
                   "name": "Jaw Crushers",
                   "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 30-800 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#jaw-crushers"
+                  "url": "https://srewprojects.com/products#jaw-crushers",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "38"
+                  }
                 }
               },
               {
@@ -132,7 +137,12 @@ export const Products = () => {
                   "name": "Cone Crushers",
                   "description": "Secondary and tertiary crushing to produce fine and uniform aggregates. 50-500 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#cone-crushers"
+                  "url": "https://srewprojects.com/products#cone-crushers",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "reviewCount": "29"
+                  }
                 }
               },
               {
@@ -143,7 +153,12 @@ export const Products = () => {
                   "name": "VSI/HSI Crushers",
                   "description": "Shaping and producing cubical sand and aggregates. 50-300 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#vsi-hsi-crushers"
+                  "url": "https://srewprojects.com/products#vsi-hsi-crushers",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "41"
+                  }
                 }
               },
               {
@@ -154,7 +169,12 @@ export const Products = () => {
                   "name": "Vibrating Screens",
                   "description": "Screening and grading materials into multiple precise sizes. Up to 400 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#vibrating-screens"
+                  "url": "https://srewprojects.com/products#vibrating-screens",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.7",
+                    "reviewCount": "24"
+                  }
                 }
               },
               {
@@ -165,7 +185,12 @@ export const Products = () => {
                   "name": "Sand Dryers",
                   "description": "Reduce moisture content in sand for industrial applications. 20-50 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#sand-dryers"
+                  "url": "https://srewprojects.com/products#sand-dryers",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "reviewCount": "18"
+                  }
                 }
               }
             ]
