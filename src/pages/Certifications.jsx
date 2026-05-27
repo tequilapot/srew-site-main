@@ -6,17 +6,17 @@ export const Certifications = () => {
   return (
     <>
       <Helmet>
-        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | S.R.Engineering Works</title>
-        <meta name="description" content="Explore S.R.Engineering Works rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
-        <meta name="keywords" content="ISO 9001:2015, quality assurance, NDT testing, metallurgical analysis, dynamic run check, S.R.Engineering Works certifications, aggregate machinery quality, Hyderabad, India" />
+        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | S R ENGG WORKS</title>
+        <meta name="description" content="Explore S R ENGG WORKS rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
+        <meta name="keywords" content="ISO 9001:2015, quality assurance, NDT testing, metallurgical analysis, dynamic run check, SREW certifications, aggregate machinery quality, Hyderabad, India" />
         <link rel="canonical" href="https://srewprojects.com/certifications" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/certifications" />
-        <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - S.R.Engineering Works" />
+        <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - S R ENGG WORKS" />
         <meta property="og:description" content="Guaranteeing industrial yield, metallurgical toughness, and zero-accident mechanical structural integrity under ISO 9001:2015." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="S.R.Engineering Works Quality &amp; Certifications" />
+        <meta name="twitter:title" content="SREW Quality &amp; Certifications" />
         <meta name="twitter:description" content="ISO 9001:2015 certified design, manufacture, and assembly of premium aggregate crushing and sand plants." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -28,14 +28,14 @@ export const Certifications = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Quality & Certifications - ISO 9001:2015 Standards | S.R.Engineering Works",
-            "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for S.R.Engineering Works.",
+            "name": "Quality & Certifications - ISO 9001:2015 Standards | S R ENGG WORKS",
+            "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for S R ENGG WORKS.",
             "url": "https://srewprojects.com/certifications",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S.R.Engineering Works"},
+            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
             "publisher": {
               "@type": "Organization",
-              "name": "S.R.Engineering Works",
+              "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -88,7 +88,7 @@ export const Certifications = () => {
                   <div className="badge bg-primary-light text-white px-3 py-2 rounded mb-3 fw-bold uppercase">Corporate Quality Standard</div>
                   <h2 className="text-primary-ultra mb-4">ISO 9001:2015 Certification</h2>
                   <p className="lead text-muted mb-4">
-                    S.R.Engineering Works operates under a strictly certified ISO 9001:2015 Quality Management System governing our entire design, manufacturing, assembly, and testing loops.
+                    S R ENGG WORKS operates under a strictly certified ISO 9001:2015 Quality Management System governing our entire design, manufacturing, assembly, and testing loops.
                   </p>
                   <p className="text-body mb-4">
                     Every piece of crushing and screening equipment manufactured at our Jeedimetla plant is subjected to strict inspection checklists. We record metallurgical batches, dimensional alignments, and dynamic vibration levels for every machine, creating a complete lifecycle traceability profile.
@@ -136,7 +136,7 @@ export const Certifications = () => {
           <div className="container py-3">
             <div className="text-center mb-5">
               <h2 className="text-primary-ultra">Rigorous Inspection Protocols</h2>
-              <p className="text-muted">Explore the specialized material testing steps S.R.Engineering Works applies to all machinery.</p>
+              <p className="text-muted">Explore the specialized material testing steps SREW applies to all machinery.</p>
             </div>
 
             <div className="row g-4">

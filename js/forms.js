@@ -1,10 +1,10 @@
 /**
- * S.R.Engineering Works Forms Engine v3.0
- * (c) S.R.Engineering Works - Proprietary
+ * SREW Forms Engine v3.0
+ * (c) S R ENGG WORKS - Proprietary
  * HubSpot integration with toast notifications & validation
  */
 ;(function(w,d){'use strict';
-console.log("[S.R.Engineering Works Debug] forms.js is executing...");
+console.log("[SREW Debug] forms.js is executing...");
 
 
 const _qs=(s,c)=>(c||d).querySelector(s);
@@ -12,8 +12,8 @@ const _id=s=>d.getElementById(s);
 
 /* Toast helper - uses global from main.js */
 function toast(msg,type){
-    if(typeof w._sre_toast==='function'){
-        w._sre_toast(msg,type);
+    if(typeof w._srew_toast==='function'){
+        w._srew_toast(msg,type);
     }else{
         /* Fallback if main.js hasn't loaded yet */
         const c=d.createElement('div');
@@ -97,18 +97,18 @@ function submitToGoogleSheet(data){
 
 /* ──────── BROCHURE FORM ──────── */
 function initBrochureForm(){
-    console.log("[S.R.Engineering Works Debug] initBrochureForm() called.");
+    console.log("[SREW Debug] initBrochureForm() called.");
     const form=_id('brochureForm');
     if(!form) {
-        console.log("[S.R.Engineering Works Debug] brochureForm NOT found on this page.");
+        console.log("[SREW Debug] brochureForm NOT found on this page.");
         return;
     }
-    console.log("[S.R.Engineering Works Debug] brochureForm found:", form);
+    console.log("[SREW Debug] brochureForm found:", form);
 
     setupValidation(form);
 
     form.addEventListener('submit',function(e){
-        console.log("[S.R.Engineering Works Debug] brochureForm submit triggered!");
+        console.log("[SREW Debug] brochureForm submit triggered!");
         e.preventDefault();
 
         const name=_id('brochureName').value.trim();
@@ -159,10 +159,10 @@ function initBrochureForm(){
             if(successPane) successPane.style.display='flex';
 
             /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
-            const pdfUrl=new URL('brochures/srengineeringworks-company-profile.pdf',w.location.href).href;
+            const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
             const link = d.createElement('a');
             link.href = pdfUrl;
-            link.download = 'S.R.Engineering Works-Company-Profile.pdf'; // Forces a download natively
+            link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
             link.target = '_blank';
             d.body.appendChild(link);
             link.click();

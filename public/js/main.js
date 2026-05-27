@@ -1,10 +1,10 @@
 /**
- * S.R.Engineering Works Core Engine v3.0
- * (c) S.R.Engineering Works - Proprietary
+ * SREW Core Engine v3.0
+ * (c) S R ENGG WORKS - Proprietary
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
-console.log("[S.R.Engineering Works Debug] main.js is executing...");
+console.log("[SREW Debug] main.js is executing...");
 
 
 /* ──────────────────────────────────────────────
@@ -311,7 +311,7 @@ function injectReveals(){
 /* ──────────────────────────────────────────────
    TOAST NOTIFICATIONS
    ────────────────────────────────────────────── */
-w._sre_toast=function(message,type){
+w._srew_toast=function(message,type){
     type=type||'info';
     let container=_qs('.toast-container');
     if(!container){
@@ -335,7 +335,7 @@ w._sre_toast=function(message,type){
    BROCHURE MODAL (home)
    ────────────────────────────────────────────── */
 function initBrochureModal(){
-    console.log("[S.R.Engineering Works Debug] initBrochureModal() called.");
+    console.log("[SREW Debug] initBrochureModal() called.");
     const overlay = _id('brochureOverlay');
     const popup = _id('brochurePopup');
     const cta = _id('hero-cta-brochure');
@@ -345,16 +345,16 @@ function initBrochureModal(){
     const successPane = _id('brochureSuccessPane');
 
     function openPDF(){
-        const pdfUrl = new URL('brochures/srengineeringworks-company-profile.pdf', window.location.href).href;
+        const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'S.R.Engineering Works-Company-Profile.pdf';
+        link.download = 'SREW-Company-Profile.pdf';
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if(typeof window._sre_toast === 'function') {
-            window._sre_toast('Downloading brochure.', 'success');
+        if(typeof window._srew_toast === 'function') {
+            window._srew_toast('Downloading brochure.', 'success');
         }
     }
 
@@ -398,9 +398,9 @@ function initBrochureModal(){
     window.closeBrochureModal = closeModal;
 
     if (cta) {
-        console.log("[S.R.Engineering Works Debug] brochure CTA button found:", cta);
+        console.log("[SREW Debug] brochure CTA button found:", cta);
         _on(cta, 'click', function(e) {
-            console.log("[S.R.Engineering Works Debug] brochure CTA button clicked!");
+            console.log("[SREW Debug] brochure CTA button clicked!");
             e.preventDefault();
             e.stopPropagation();
             openModal();
@@ -588,7 +588,7 @@ function initWhatsAppFloat(){
    WHATSAPP GOOGLE ADS CONVERSION TRACKER
    ────────────────────────────────────────────── */
 w.gtag_report_conversion = function(url, isBlank) {
-    console.log("[S.R.Engineering Works Google Ads] gtag_report_conversion called with url:", url, "isBlank:", isBlank);
+    console.log("[SREW Google Ads] gtag_report_conversion called with url:", url, "isBlank:", isBlank);
     var callback = function () {
         if (typeof(url) != 'undefined') {
             if (isBlank) {
@@ -606,7 +606,7 @@ w.gtag_report_conversion = function(url, isBlank) {
             'event_callback': callback
         });
     } else {
-        console.warn("[S.R.Engineering Works Google Ads] window.gtag is not defined. Executing callback directly.");
+        console.warn("[SREW Google Ads] window.gtag is not defined. Executing callback directly.");
         callback();
     }
     return false;
@@ -616,7 +616,7 @@ function initWhatsAppClickTracker() {
     _on(d, 'click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.indexOf('wa.me') !== -1 || link.href.indexOf('whatsapp') !== -1)) {
-            console.log("[S.R.Engineering Works Google Ads] WhatsApp link click detected:", link.href);
+            console.log("[SREW Google Ads] WhatsApp link click detected:", link.href);
             e.preventDefault();
             const isBlank = link.target === '_blank';
             w.gtag_report_conversion(link.href, isBlank);
@@ -628,19 +628,19 @@ function initWhatsAppClickTracker() {
    COOKIE CONSENT BANNER
    ────────────────────────────────────────────── */
 function initCookieConsent() {
-    const consent = localStorage.getItem('sre_cookie_consent');
+    const consent = localStorage.getItem('srew_cookie_consent');
     if (consent) return; // Already accepted or declined
 
     const banner = d.createElement('div');
-    banner.id = 'sreCookieBanner';
-    banner.className = 'sre-cookie-banner d-flex flex-column';
+    banner.id = 'srewCookieBanner';
+    banner.className = 'srew-cookie-banner d-flex flex-column';
     banner.innerHTML = `
         <div class="d-flex align-items-center mb-2">
             <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
-            S.R.Engineering Works uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
+            S R ENGG WORKS uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
         </p>
         <div class="d-flex gap-2">
             <button class="btn btn-primary btn-sm flex-grow-1 fw-bold py-2" id="cookieAcceptBtn" style="border-radius: 8px; font-size: 0.82rem;">Accept All</button>
@@ -656,12 +656,12 @@ function initCookieConsent() {
     }, 1000);
 
     _on(_id('cookieAcceptBtn'), 'click', function() {
-        localStorage.setItem('sre_cookie_consent', 'accepted');
+        localStorage.setItem('srew_cookie_consent', 'accepted');
         hideBanner();
     });
 
     _on(_id('cookieDeclineBtn'), 'click', function() {
-        localStorage.setItem('sre_cookie_consent', 'declined');
+        localStorage.setItem('srew_cookie_consent', 'declined');
         hideBanner();
     });
 
@@ -677,7 +677,7 @@ function initCookieConsent() {
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
 function boot(){
-    console.log("[S.R.Engineering Works Debug] Booting systems...");
+    console.log("[SREW Debug] Booting systems...");
     injectReveals();
     initNavbar();
     initNavbarDismissOutside();

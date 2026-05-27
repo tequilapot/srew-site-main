@@ -21,18 +21,18 @@ export const ProjectDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{`${project.name} - Case Study | S.R.Engineering Works`}</title>
-        <meta name="description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for S.R.Engineering Works' ${project.name} turnkey project in ${project.location}.`} />
-        <meta name="keywords" content={`${project.name}, S.R.Engineering Works, case study, ${project.location}, aggregate plant, turnkey crushing plant, mineral processing, Hyderabad, India`} />
+        <title>{`${project.name} - Case Study | S R ENGG WORKS`}</title>
+        <meta name="description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for SREW's ${project.name} turnkey project in ${project.location}.`} />
+        <meta name="keywords" content={`${project.name}, S R ENGG WORKS, case study, ${project.location}, aggregate plant, turnkey crushing plant, mineral processing, Hyderabad, India`} />
         <link rel="canonical" href={`https://srewprojects.com/projects/${project.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://srewprojects.com/projects/${project.slug}`} />
-        <meta property="og:title" content={`${project.name} - S.R.Engineering Works Case Study`} />
-        <meta property="og:description" content={`Engineering breakdown of site setups, raw feed inputs, and final aggregate output yields for S.R.Engineering Works' ${project.name}.`} />
+        <meta property="og:title" content={`${project.name} - S R ENGG WORKS Case Study`} />
+        <meta property="og:description" content={`Engineering breakdown of site setups, raw feed inputs, and final aggregate output yields for SREW's ${project.name}.`} />
         <meta property="og:image" content={`https://srewprojects.com${project.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.name} Case Study`} />
-        <meta name="twitter:description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for S.R.Engineering Works' ${project.name} turnkey project.`} />
+        <meta name="twitter:description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for SREW's ${project.name} turnkey project.`} />
         <meta name="twitter:image" content={`https://srewprojects.com${project.image}`} />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -49,11 +49,11 @@ export const ProjectDetail = () => {
             "image": "https://srewprojects.com${project.image}",
             "author": {
               "@type": "Organization",
-              "name": "S.R.Engineering Works"
+              "name": "S R ENGG WORKS"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "S.R.Engineering Works",
+              "name": "S R ENGG WORKS",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -125,7 +125,7 @@ export const ProjectDetail = () => {
                   <h2 className="h4 text-primary-ultra fw-bold mb-3">2. Engineering Challenges</h2>
                   <p className="text-body mb-4">{project.challenge}</p>
 
-                  <h2 className="h4 text-primary-ultra fw-bold mb-3">3. S.R.Engineering Works Custom-Built Solution</h2>
+                  <h2 className="h4 text-primary-ultra fw-bold mb-3">3. SREW Custom-Built Solution</h2>
                   <p className="text-body mb-4">{project.solution}</p>
 
                   <h2 className="h4 text-primary-ultra fw-bold mb-3">4. Operations &amp; Production Outcome</h2>
