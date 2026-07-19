@@ -486,7 +486,7 @@ a:hover {
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.96) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    height: 64px;
+    height: var(--navbar-h);
 }
 
 .navbar .container {
@@ -524,7 +524,7 @@ a:hover {
 }
 
 .navbar.scrolled .navbar-brand img {
-    height: 36px;
+    height: 42px;
 }
 
 .navbar-nav .nav-link {
@@ -552,16 +552,26 @@ a:hover {
     opacity: 0;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-nav:not(:hover) .nav-link.active,
+.navbar-nav .nav-link:hover {
     color: var(--c-primary);
     transform: translateY(-1px);
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
+.navbar-nav:not(:hover) .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
     width: 70%;
     opacity: 1;
+}
+
+.navbar-nav:hover .nav-link.active:not(:hover) {
+    color: var(--c-dark);
+    transform: none;
+}
+
+.navbar-nav:hover .nav-link.active:not(:hover)::after {
+    width: 0 !important;
+    opacity: 0 !important;
 }
 
 .navbar-toggler {
@@ -675,7 +685,7 @@ a:hover {
 }
 
 .navbar.scrolled .mega-dropdown {
-    top: 64px;
+    top: var(--navbar-h);
 }
 
 .mega-dropdown-inner {
@@ -3304,13 +3314,15 @@ body {
     color: #ffc107 !important;
 }
 
-/* Offset navbar fixed-top for top-bar */
-.navbar.fixed-top {
-    top: 36px;
-    transition: top 0.3s ease, height 0.4s var(--ease-out-expo), background 0.4s var(--ease-out-expo);
-}
-.navbar.fixed-top.scrolled {
-    top: 36px;
+/* Offset navbar fixed-top for top-bar on desktop only */
+@media (min-width: 992px) {
+    .navbar.fixed-top {
+        top: 36px;
+        transition: top 0.3s ease, height 0.4s var(--ease-out-expo), background 0.4s var(--ease-out-expo);
+    }
+    .navbar.fixed-top.scrolled {
+        top: 36px;
+    }
 }
 
 /* Mega-dropdown product icon improvements */
@@ -3803,12 +3815,14 @@ body {
     height: 44px !important; /* Increased by 8px */
 }
 
-.navbar.fixed-top {
-    top: 44px !important; /* Adjusted for top bar height increase */
-}
+@media (min-width: 992px) {
+    .navbar.fixed-top {
+        top: 44px !important; /* Adjusted for top bar height increase on desktop */
+    }
 
-.navbar.fixed-top.scrolled {
-    top: 44px !important;
+    .navbar.fixed-top.scrolled {
+        top: 44px !important;
+    }
 }
 
 .top-info-left,
@@ -4468,3 +4482,180 @@ select.form-control-premium {
         border-radius: 12px;
     }
 }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE VIEW FIXES - NO TOP GAP, NO OVERFLOW, NO SCREEN MOVEMENT
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 991.98px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        position: relative !important;
+        margin: 0 !important;
+    }
+
+    body {
+        padding-top: var(--navbar-h, 64px) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Constrain all major page wrappers and grid rows so they never push viewport wider than 100vw */
+    #main-content,
+    .hero,
+    .hero-slider,
+    .section,
+    footer,
+    .container,
+    .row {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .navbar.fixed-top,
+    .navbar.fixed-top.scrolled {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+    }
+
+    .navbar-collapse {
+        position: fixed !important;
+        top: var(--navbar-h, 64px) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 8px 16px !important;
+        margin: 0 !important;
+    }
+
+    .navbar .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .navbar-brand {
+        max-width: calc(100% - 135px) !important;
+        flex-shrink: 1 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+
+    .nav-phone-link {
+        margin-right: 6px !important;
+        font-size: var(--fs-sm) !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Hide phone text on smaller screens so toggler button never overflows container border */
+    @media (max-width: 767.98px) {
+        .nav-phone-link span {
+            display: none !important;
+        }
+    }
+
+    .navbar-toggler {
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+        align-self: center !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Remove full-width box-shadow and border from sticky product tabs wrapper and page header so the middle line never touches outer screen borders */
+div[style*="position: sticky"]:has(#productTabs),
+div[style*="position: sticky"]:has(.nav-tabs-premium),
+div[style*="position: sticky"]:has(.nav-tabs),
+.page-header:has(+ div[style*="position: sticky"]) {
+    box-shadow: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+@media (max-width: 991.98px) {
+    /* Remove any full-width edge-to-edge lines above or below the sticky tabs container */
+    div[style*="position: sticky"]:has(#productTabs),
+    div[style*="position: sticky"]:has(.nav-tabs-premium),
+    div[style*="position: sticky"]:has(.nav-tabs),
+    .page-header {
+        box-shadow: none !important;
+        border-bottom: none !important;
+        border-top: none !important;
+    }
+
+    /* Fix product tabs (Overview, Technical Specifications, Gallery) going out of container border on mobile */
+    .nav-tabs-premium,
+    #productTabs,
+    .nav-tabs,
+    .nav-pills {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        justify-content: flex-start !important;
+        border-bottom: none !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-tabs-premium .nav-item,
+    #productTabs .nav-item,
+    .nav-tabs .nav-item,
+    .nav-pills .nav-item {
+        flex: 1 1 auto !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .nav-tabs-premium .nav-link,
+    #productTabs .nav-link,
+    .nav-tabs .nav-link,
+    .nav-pills .nav-link {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 8px 10px !important;
+        font-size: 0.82rem !important;
+        border-radius: 6px !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        box-sizing: border-box !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Ensure adjacent or wrapped buttons in mobile view always have vertical spacing */
+    .btn + .btn,
+    .d-flex.flex-wrap .btn,
+    .project-section .btn {
+        margin-bottom: 12px !important;
+    }
+}
+
+
+

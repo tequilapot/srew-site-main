@@ -6,12 +6,12 @@ export const About = () => {
   return (
     <>
       <Helmet>
-        <title>About S R ENGG WORKS - Precision Engineering India</title>
-        <meta name="description" content="S R ENGG WORKS (SREW) is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
+        <title>About SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Precision Engineering India</title>
+        <meta name="description" content="SREW Projects - Crushing & Screening Plant Manufacturer WORKS (SREW) is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
         <link rel="canonical" href="https://srewprojects.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/about" />
-        <meta property="og:title" content="About S R ENGG WORKS - Precision Engineering India" />
+        <meta property="og:title" content="About SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Precision Engineering India" />
         <meta property="og:description" content="ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
@@ -24,16 +24,16 @@ export const About = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "About S R ENGG WORKS - Precision Engineering India",
+            "name": "About SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Precision Engineering India",
             "url": "https://srewprojects.com/about",
             "dateModified": "2026-05-21",
             "author": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS"
+              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -64,7 +64,7 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              {"@type": "Question", "name": "When was S R ENGG WORKS established?", "acceptedAnswer": {"@type": "Answer", "text": "S R ENGG WORKS (SREW) was established in 2018. Our founding team brings over 10 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
+              {"@type": "Question", "name": "When was SREW Projects - Crushing & Screening Plant Manufacturer WORKS established?", "acceptedAnswer": {"@type": "Answer", "text": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS (SREW) was established in 2018. Our founding team brings over 10 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
               {"@type": "Question", "name": "What are SREW's manufacturing facilities?", "acceptedAnswer": {"@type": "Answer", "text": "SREW operates a state-of-the-art manufacturing facility in Hyderabad, India, equipped with CNC machining centers for precision component manufacturing, high-precision fabrication bays for large-scale industrial structures, hydraulic press shops for metal forming, and PLC panel manufacturing units for plant automation."}},
               {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 30 TPH to 800 TPH."}}
             ]
@@ -79,7 +79,7 @@ export const About = () => {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h1 className="fw-extrabold text-primary-ultra">About S R ENGG WORKS</h1>
+                <h1 className="fw-extrabold text-primary-ultra">About SREW Projects - Crushing & Screening Plant Manufacturer WORKS</h1>
                 <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: '#555' }}>
                   Precision engineering, custom industrial fabrication, and high-performance material processing solutions.
                 </p>
@@ -102,7 +102,7 @@ export const About = () => {
                 <ScrollReveal>
                   <h2 className="mb-4 text-primary-ultra">Certified B2B Industrial Leaders</h2>
                   <p className="lead text-muted mb-4">
-                    Founded with a vision to revolutionize aggregate crushing efficiency, S R ENGG WORKS (SREW) has grown into a key manufacturer of heavy-duty industrial processing machinery in India.
+                    Founded with a vision to revolutionize aggregate crushing efficiency, SREW Projects - Crushing & Screening Plant Manufacturer WORKS (SREW) has grown into a key manufacturer of heavy-duty industrial processing machinery in India.
                   </p>
                   <p className="mb-4 text-body">
                     Headquartered in Hyderabad, Telangana, we design, fabricate, deploy, and service high-yield turnkey plants spanning capacities from 30 TPH to 800 TPH. Our manufacturing facility in the Jeedimetla Industrial Area is equipped with state-of-the-art CNC machining centers, automated plasma cutting, heavy-duty rolling, and custom metallurgy heat-treatment testing systems.

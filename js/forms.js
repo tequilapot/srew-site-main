@@ -1,11 +1,17 @@
 /**
  * SREW Forms Engine v3.0
- * (c) S R ENGG WORKS - Proprietary
+ * (c) SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Proprietary
  * HubSpot integration with toast notifications & validation
  */
 ;(function(w,d){'use strict';
 console.log("[SREW Debug] forms.js is executing...");
 
+const ENV = w.SREW_ENV || {
+    WEB3FORMS_ACCESS_KEY: 'ddd31534-f1b6-47fb-84a9-7d998299513e',
+    WEB3FORMS_API_URL: 'https://api.web3forms.com/submit',
+    GOOGLE_SHEETS_CONTACT_URL: 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec',
+    GOOGLE_SHEETS_GENERAL_URL: 'https://script.google.com/macros/s/AKfycbwpwtDVKM85IDFdH_IC13Ly-zE0MP3Dx9J7e8NrDZ0I2R-oGUdCUlNcabUEIfFUFVYrXw/exec'
+};
 
 const _qs=(s,c)=>(c||d).querySelector(s);
 const _id=s=>d.getElementById(s);
@@ -82,7 +88,7 @@ function setButtonLoading(btn,loading){
 
 /* Google Sheets submission */
 function submitToGoogleSheet(data){
-    const url = 'https://script.google.com/macros/s/AKfycbwpwtDVKM85IDFdH_IC13Ly-zE0MP3Dx9J7e8NrDZ0I2R-oGUdCUlNcabUEIfFUFVYrXw/exec';
+    const url = ENV.GOOGLE_SHEETS_GENERAL_URL;
     const formData = new URLSearchParams();
     for(const key in data){
         formData.append(key, data[key]);
@@ -229,7 +235,24 @@ function initContactForm(){
             }
         }
 
-        if(msgs)msgs.innerHTML='<div class="alert alert-info" role="alert"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Sending your message...</span></div>';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const origBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
+        if(submitBtn){
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Sending...</span>';
+        }
+        if(msgs) msgs.innerHTML = '';
+
+        // Web3Forms payload
+        const web3Payload = JSON.stringify({
+            access_key: ENV.WEB3FORMS_ACCESS_KEY,
+            name: name,
+            email: email,
+            phone: phone.trim() !== '' ? (countryCode + ' ' + cleanPhone) : 'Not provided',
+            subject: subject,
+            message: message,
+            from_name: 'SREW Contact Form'
+        });
 
         // Send to Google Sheets
         const gsData = {
@@ -240,24 +263,36 @@ function initContactForm(){
             message: message,      // Apps Script maps message -> Column F (labeled Message)
             requirement: ''        // Keep Requirement column clear for contact form
         };
-        submitToGoogleSheet(gsData)
+
+        Promise.all([
+            fetch(ENV.WEB3FORMS_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: web3Payload
+            }).then(function(res) { return res.json(); }),
+            submitToGoogleSheet(gsData).catch(function(){})
+        ])
         .then(function(){
+            if(submitBtn){
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = origBtnText;
+            }
             // Trigger Google Ads conversion event if available
             if (typeof w.gtag_report_conversion === 'function') {
                 w.gtag_report_conversion();
             }
-            if(msgs)msgs.innerHTML='<div class="alert alert-success" role="alert">✓ Thank you! Redirecting to thank you page...</div>';
-            toast('Message sent successfully!','success');
+            if(msgs) msgs.innerHTML = '';
+            toast('✓ Form submitted successfully! We will get back to you shortly.','success');
             form.reset();
             form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
                 el.classList.remove('is-valid','is-invalid');
             });
-            /* Redirect to the dedicated thank you page after 1.5 seconds */
-            setTimeout(function(){
-                w.location.href = 'thankyou.html';
-            }, 1500);
         })
         .catch(function(){
+            if(submitBtn){
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = origBtnText;
+            }
             if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
             toast('Failed to send. Please try again.','error');
             /* Auto-dismiss message after 5 seconds */

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { products } from '../data/products';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { ENV } from '../env';
 
 export const ProductDetail = () => {
   const { slug } = useParams();
@@ -48,8 +49,8 @@ export const ProductDetail = () => {
     link.click();
     document.body.removeChild(link);
 
-    // Send tracking data to SREW's validated Google Apps Script endpoint
-    const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
+    // Send tracking data to SREW's validated Google Apps Script endpoint from central ENV
+    const url = ENV.GOOGLE_SHEETS_CONTACT_URL;
     
     const params = new URLSearchParams();
     params.append('name', brochureName);
@@ -78,8 +79,8 @@ export const ProductDetail = () => {
     <>
       <Helmet>
         <title>{`${product.name} - 30–800 TPH Industrial Crushing | SREW`}</title>
-        <meta name="description" content={`${product.purpose} S R ENGG WORKS is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
-        <meta name="keywords" content={`${product.shortName}, S R ENGG WORKS, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
+        <meta name="description" content={`${product.purpose} SREW Projects - Crushing & Screening Plant Manufacturer WORKS is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
+        <meta name="keywords" content={`${product.shortName}, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
         <link rel="canonical" href={`https://srewprojects.com/products/${product.slug}`} />
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://srewprojects.com/products/${product.slug}`} />
@@ -117,7 +118,7 @@ export const ProductDetail = () => {
               "itemCondition": "https://schema.org/NewCondition",
               "seller": {
                 "@type": "Organization",
-                "name": "S R ENGG WORKS"
+                "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
               }
             },
             "aggregateRating": {
