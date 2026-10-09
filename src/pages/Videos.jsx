@@ -56,12 +56,12 @@ export const Videos = () => {
   return (
     <>
       <Helmet>
-        <title>Plant Operations &amp; Equipment Videos - SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
+        <title>Plant Operations &amp; Equipment Videos - SREW Projects</title>
         <meta name="description" content="Watch high-capacity SREW crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
         <link rel="canonical" href="https://srewprojects.com/videos" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/videos" />
-        <meta property="og:title" content="Plant Operations &amp; Equipment Videos - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
+        <meta property="og:title" content="Plant Operations &amp; Equipment Videos - SREW Projects" />
         <meta property="og:description" content="Watch high-capacity SREW crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
         <meta property="og:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -1,6 +1,6 @@
 /**
  * SREW Forms Engine v3.0
- * (c) SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Proprietary
+ * (c) SREW Projects - Proprietary
  * HubSpot integration with toast notifications & validation
  */
 ;(function(w,d){'use strict';

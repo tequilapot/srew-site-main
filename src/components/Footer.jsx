@@ -15,7 +15,7 @@ export const Footer = () => {
         <div className="row g-4">
           {/* Column 1: Brand details & IndiaMART */}
           <div className="col-lg-4 col-md-6">
-            <h3 className="h4 text-white mb-3">SREW Projects - Crushing & Screening Plant Manufacturer WORKS</h3>
+            <h3 className="h4 text-white mb-3">SREW Projects</h3>
             <p className="small mb-4 text-white-50">
               ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants. Delivering 30–800 TPH solutions across the Indian subcontinent since 2018 with 10+ years of engineering core expertise.
             </p>
@@ -31,7 +31,7 @@ export const Footer = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="d-block mb-4" 
-              aria-label="IndiaMART company profile for SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
+              aria-label="IndiaMART company profile for SREW Projects"
               style={{ maxWidth: '160px' }}
             >
               <img src="/images/footer/indiamart.jpg" alt="IndiaMART Verified Seller Badge" className="img-fluid rounded" />
@@ -146,7 +146,7 @@ export const Footer = () => {
         
         <div className="row align-items-center small text-white-50">
           <div className="col-md-6 text-center text-md-start">
-            <p className="mb-2 mb-md-0">&copy; {currentYear} SREW Projects - Crushing & Screening Plant Manufacturer WORKS. All Rights Reserved.</p>
+            <p className="mb-2 mb-md-0">&copy; {currentYear} SREW Projects. All Rights Reserved.</p>
           </div>
           <div className="col-md-6 text-center text-md-end">
             <ul className="list-inline mb-0">

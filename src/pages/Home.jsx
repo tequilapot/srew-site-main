@@ -119,7 +119,7 @@ export const Home = () => {
   return (
     <>
       <Helmet>
-        <title>SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Complete Crushing, Screening &amp; M-Sand Plant Solutions</title>
+        <title>SREW Projects - Complete Crushing, Screening &amp; M-Sand Plant Solutions</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/" />
@@ -131,7 +131,7 @@ export const Home = () => {
           <div className="carousel-slide active" style={{ opacity: 1, zIndex: 2 }}>
             <img 
               src="/images/hero-background.jpg" 
-              alt="SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Heavy Industrial Crushing Plant" 
+              alt="SREW Projects - Heavy Industrial Crushing Plant" 
               className="slide-img"
               style={{ objectFit: 'cover', transform: 'scale(1)' }}
             />
@@ -451,7 +451,7 @@ export const Home = () => {
         </section>
 
         {/* Why Choose SREW Trust Factors */}
-        <section className="py-5 bg-white" aria-label="Why choose SREW Projects - Crushing & Screening Plant Manufacturer WORKS">
+        <section className="py-5 bg-white" aria-label="Why choose SREW Projects">
           <div className="container">
             <div className="section-header text-center mb-5">
               <span className="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3 text-uppercase">Trust Pillars</span>
@@ -489,7 +489,7 @@ export const Home = () => {
           <div className="container">
             <div className="section-header text-center mb-5">
               <h2>Frequently Asked Questions</h2>
-              <p>Common inquiries about SREW Projects - Crushing & Screening Plant Manufacturer WORKS turnkey crusher setups.</p>
+              <p>Common inquiries about SREW Projects turnkey crusher setups.</p>
             </div>
             <div className="row justify-content-center">
               <div className="col-lg-8">
@@ -670,7 +670,7 @@ export const Home = () => {
                   <div className="text-warning mb-2 text-start">
                     <i className="fas fa-star"></i><i class="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                   </div>
-                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"SREW Projects - Crushing & Screening Plant Manufacturer WORKS provided a complete turnkey 200 TPH cone crushing plant for our quarry in Keesara. Outstanding build quality, high manganese wear parts, and excellent technical service team."</p>
+                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"SREW Projects provided a complete turnkey 200 TPH cone crushing plant for our quarry in Keesara. Outstanding build quality, high manganese wear parts, and excellent technical service team."</p>
                   <div className="d-flex align-items-center gap-2 mt-3 pt-3 border-top justify-content-between text-muted" style={{ fontSize: '0.72rem' }}>
                     <span>Google Review</span>
                     <span>3 months ago</span>

@@ -6,7 +6,7 @@ export const Industries = () => {
   return (
     <>
       <Helmet>
-        <title>Industries Served - Mining, Construction, Recycling, Sand Processing | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
+        <title>Industries Served - Mining, Construction, Recycling, Sand Processing | SREW Projects</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/industries" />
@@ -16,8 +16,8 @@ export const Industries = () => {
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Industries We Serve - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
-        <meta name="twitter:description" content="Discover SREW Projects - Crushing & Screening Plant Manufacturer WORKS industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
+        <meta name="twitter:title" content="Industries We Serve - SREW Projects" />
+        <meta name="twitter:description" content="Discover SREW Projects industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
         <meta name="twitter:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -30,7 +30,7 @@ export const Industries = () => {
             "@type": "Service",
             "provider": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
+              "name": "SREW Projects"
             },
             "serviceType": "Industrial Equipment Manufacturing",
             "areaServed": [
@@ -79,10 +79,10 @@ export const Industries = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What industries does SREW Projects - Crushing & Screening Plant Manufacturer WORKS serve?",
+                "name": "What industries does SREW Projects serve?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
+                  "text": "SREW Projects serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
                 }
               },
               {
@@ -129,10 +129,10 @@ export const Industries = () => {
             "name": "Industries Served - Mining, Construction, Recycling | SREW",
             "url": "https://srewprojects.com/industries",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -257,7 +257,7 @@ export const Industries = () => {
                 <div className="col-md-7">
                   <h2 className="text-primary-ultra h3 mb-3">4. Construction &amp; Demolition (C&amp;D) Recycling</h2>
                   <p className="text-body mb-4">
-                    Rapid urban expansion creates massive quantities of demolition debris. SREW Projects - Crushing & Screening Plant Manufacturer WORKS is an engineering pioneer in circular economy solutions, designing custom C&amp;D Waste Recycling plants. Our systems process old concrete, brick, and block rubble into clean, reusable aggregates and recycled concrete sand. Complete with overbelt magnetic separators and light-refuse air classifiers, these plants deliver clean, marketable raw materials, diverting waste from urban landfills.
+                    Rapid urban expansion creates massive quantities of demolition debris. SREW Projects is an engineering pioneer in circular economy solutions, designing custom C&amp;D Waste Recycling plants. Our systems process old concrete, brick, and block rubble into clean, reusable aggregates and recycled concrete sand. Complete with overbelt magnetic separators and light-refuse air classifiers, these plants deliver clean, marketable raw materials, diverting waste from urban landfills.
                   </p>
                   <ul className="list-inline small text-primary fw-bold">
                     <li className="list-inline-item me-3"><i className="fas fa-arrow-right me-1"></i> Concrete Rubble Recovery</li>

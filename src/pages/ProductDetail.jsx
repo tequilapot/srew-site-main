@@ -79,8 +79,8 @@ export const ProductDetail = () => {
     <>
       <Helmet>
         <title>{`${product.name} - 30–800 TPH Industrial Crushing | SREW`}</title>
-        <meta name="description" content={`${product.purpose} SREW Projects - Crushing & Screening Plant Manufacturer WORKS is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
-        <meta name="keywords" content={`${product.shortName}, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
+        <meta name="description" content={`${product.purpose} SREW Projects is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
+        <meta name="keywords" content={`${product.shortName}, SREW Projects, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
         <link rel="canonical" href={`https://srewprojects.com/products/${product.slug}`} />
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://srewprojects.com/products/${product.slug}`} />
@@ -118,7 +118,7 @@ export const ProductDetail = () => {
               "itemCondition": "https://schema.org/NewCondition",
               "seller": {
                 "@type": "Organization",
-                "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
+                "name": "SREW Projects"
               }
             },
             "aggregateRating": {

@@ -21,13 +21,13 @@ export const ProjectDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{`${project.name} - Case Study | SREW Projects - Crushing & Screening Plant Manufacturer WORKS`}</title>
+        <title>{`${project.name} - Case Study | SREW Projects`}</title>
         <meta name="description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for SREW's ${project.name} turnkey project in ${project.location}.`} />
-        <meta name="keywords" content={`${project.name}, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, case study, ${project.location}, aggregate plant, turnkey crushing plant, mineral processing, Hyderabad, India`} />
+        <meta name="keywords" content={`${project.name}, SREW Projects, case study, ${project.location}, aggregate plant, turnkey crushing plant, mineral processing, Hyderabad, India`} />
         <link rel="canonical" href={`https://srewprojects.com/projects/${project.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://srewprojects.com/projects/${project.slug}`} />
-        <meta property="og:title" content={`${project.name} - SREW Projects - Crushing & Screening Plant Manufacturer WORKS Case Study`} />
+        <meta property="og:title" content={`${project.name} - SREW Projects Case Study`} />
         <meta property="og:description" content={`Engineering breakdown of site setups, raw feed inputs, and final aggregate output yields for SREW's ${project.name}.`} />
         <meta property="og:image" content={`https://srewprojects.com${project.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -49,11 +49,11 @@ export const ProjectDetail = () => {
             "image": "https://srewprojects.com${project.image}",
             "author": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"
+              "name": "SREW Projects"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"

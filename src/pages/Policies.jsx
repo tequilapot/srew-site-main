@@ -8,7 +8,7 @@ const PoliciesHeader = ({ title }) => (
         <div className="col-12">
           <h1 className="fw-extrabold text-primary-ultra">{title}</h1>
           <p className="lead mt-3 mb-0" style={{ color: '#555' }}>
-            Legal and regulatory compliance guidelines for SREW Projects - Crushing & Screening Plant Manufacturer WORKS.
+            Legal and regulatory compliance guidelines for SREW Projects.
           </p>
         </div>
       </div>
@@ -20,17 +20,17 @@ export const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
-        <meta name="description" content="Read SREW Projects - Crushing & Screening Plant Manufacturer WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
-        <meta name="keywords" content="privacy policy, data protection, privacy, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, SREW privacy, Hyderabad" />
+        <title>Privacy Policy | SREW Projects</title>
+        <meta name="description" content="Read SREW Projects Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
+        <meta name="keywords" content="privacy policy, data protection, privacy, SREW Projects, SREW privacy, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/privacy" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/privacy" />
-        <meta property="og:title" content="Privacy Policy - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
-        <meta property="og:description" content="Read SREW Projects - Crushing & Screening Plant Manufacturer WORKS Privacy Policy to understand how we protect your personal and project information." />
+        <meta property="og:title" content="Privacy Policy - SREW Projects" />
+        <meta property="og:description" content="Read SREW Projects Privacy Policy to understand how we protect your personal and project information." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Privacy Policy - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
+        <meta name="twitter:title" content="Privacy Policy - SREW Projects" />
         <meta name="twitter:description" content="Our commitment to safeguarding your corporate engineering inquiries and RFQ data." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -42,14 +42,14 @@ export const Privacy = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Privacy Policy | SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
-            "description": "Read SREW Projects - Crushing & Screening Plant Manufacturer WORKS Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
+            "name": "Privacy Policy | SREW Projects",
+            "description": "Read SREW Projects Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
             "url": "https://srewprojects.com/privacy",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -78,7 +78,7 @@ export const Privacy = () => {
             <div className="col-lg-10 mx-auto">
               <p className="small text-muted mb-4">Last Updated: May 20, 2026</p>
               <h2>1. Introduction</h2>
-              <p>SREW Projects - Crushing & Screening Plant Manufacturer WORKS (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srewprojects.com, or submit RFQ and brochure requests.</p>
+              <p>SREW Projects (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal data when you visit our website, srewprojects.com, or submit RFQ and brochure requests.</p>
               
               <h2 className="mt-4">2. Information We Collect</h2>
               <p>We collect information that you voluntarily provide to us through contact forms, RFQ selectors, and brochure download inputs, including your name, company name, email address, phone number, and engineering project details.</p>
@@ -103,17 +103,17 @@ export const Terms = () => {
   return (
     <>
       <Helmet>
-        <title>Terms &amp; Conditions | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
-        <meta name="description" content="Review SREW Projects - Crushing & Screening Plant Manufacturer WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
-        <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, SREW terms, Hyderabad" />
+        <title>Terms &amp; Conditions | SREW Projects</title>
+        <meta name="description" content="Review SREW Projects Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
+        <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, SREW Projects, SREW terms, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/terms" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/terms" />
-        <meta property="og:title" content="Terms &amp; Conditions - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
-        <meta property="og:description" content="Review SREW Projects - Crushing & Screening Plant Manufacturer WORKS Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
+        <meta property="og:title" content="Terms &amp; Conditions - SREW Projects" />
+        <meta property="og:description" content="Review SREW Projects Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Terms &amp; Conditions - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
+        <meta name="twitter:title" content="Terms &amp; Conditions - SREW Projects" />
         <meta name="twitter:description" content="Review intellectual property, mechanical drawings copyright, and aggregate crushing selector calculations usage terms." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -125,14 +125,14 @@ export const Terms = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Terms & Conditions | SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
-            "description": "Review SREW Projects - Crushing & Screening Plant Manufacturer WORKS Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
+            "name": "Terms & Conditions | SREW Projects",
+            "description": "Review SREW Projects Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
             "url": "https://srewprojects.com/terms",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -161,10 +161,10 @@ export const Terms = () => {
             <div className="col-lg-10 mx-auto">
               <p className="small text-muted mb-4">Last Updated: May 20, 2026</p>
               <h2>1. Acceptance of Terms</h2>
-              <p>By accessing or using the SREW Projects - Crushing & Screening Plant Manufacturer WORKS website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please refrain from using our online portal.</p>
+              <p>By accessing or using the SREW Projects website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please refrain from using our online portal.</p>
               
               <h2 className="mt-4">2. Intellectual Property</h2>
-              <p>All content displayed on this website, including SREW product blueprints, CAD diagrams, text, industrial photographs, spare parts metallurgy specifications, logos, and brochures, is the exclusive intellectual property of SREW Projects - Crushing & Screening Plant Manufacturer WORKS and is protected by Indian copyright laws.</p>
+              <p>All content displayed on this website, including SREW product blueprints, CAD diagrams, text, industrial photographs, spare parts metallurgy specifications, logos, and brochures, is the exclusive intellectual property of SREW Projects and is protected by Indian copyright laws.</p>
               
               <h2 className="mt-4">3. Quotations &amp; Technical Accuracy</h2>
               <p>All aggregate crushing capacities, technical measurements, and recommended crusher configurations generated by our online TPH Crusher Selector are intended for initial planning purposes only. Formal sales quotes and mechanical guarantees are strictly issued via authorized SREW engineering contracts.</p>
@@ -183,17 +183,17 @@ export const Cookies = () => {
   return (
     <>
       <Helmet>
-        <title>Cookie Policy | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
-        <meta name="description" content="Learn about cookies on SREW Projects - Crushing & Screening Plant Manufacturer WORKS website and how they help us optimize your aggregate machinery configuration experience." />
-        <meta name="keywords" content="cookie policy, cookies, tracking, analytics, SREW Projects - Crushing & Screening Plant Manufacturer WORKS, SREW cookies, Hyderabad" />
+        <title>Cookie Policy | SREW Projects</title>
+        <meta name="description" content="Learn about cookies on SREW Projects website and how they help us optimize your aggregate machinery configuration experience." />
+        <meta name="keywords" content="cookie policy, cookies, tracking, analytics, SREW Projects, SREW cookies, Hyderabad" />
         <link rel="canonical" href="https://srewprojects.com/cookies" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/cookies" />
-        <meta property="og:title" content="Cookie Policy - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
-        <meta property="og:description" content="Learn about cookies on SREW Projects - Crushing & Screening Plant Manufacturer WORKS website and how they help us optimize your browsing and TPH selector experience." />
+        <meta property="og:title" content="Cookie Policy - SREW Projects" />
+        <meta property="og:description" content="Learn about cookies on SREW Projects website and how they help us optimize your browsing and TPH selector experience." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Cookie Policy - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
+        <meta name="twitter:title" content="Cookie Policy - SREW Projects" />
         <meta name="twitter:description" content="Understand cookie settings, analytical tags, and browser configuration choices." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
@@ -205,14 +205,14 @@ export const Cookies = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Cookie Policy | SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
-            "description": "Learn about cookies on SREW Projects - Crushing & Screening Plant Manufacturer WORKS website and how they help us optimize your aggregate machinery configuration experience.",
+            "name": "Cookie Policy | SREW Projects",
+            "description": "Learn about cookies on SREW Projects website and how they help us optimize your aggregate machinery configuration experience.",
             "url": "https://srewprojects.com/cookies",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"

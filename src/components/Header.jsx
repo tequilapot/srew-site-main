@@ -18,8 +18,8 @@ export const Header = () => {
     <header role="banner">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" role="navigation" aria-label="Main navigation">
         <div class="container align-items-center">
-          <Link class="navbar-brand me-1 me-md-3 d-flex align-items-center" to="/" onClick={handleNavClick} aria-label="SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Home" style={{ flexShrink: 0, textDecoration: 'none' }}>
-            <img src="/images/logo.png" alt="SREW Projects - Crushing & Screening Plant Manufacturer WORKS Logo" class="d-inline-block align-text-top nav-logo-img" />
+          <Link class="navbar-brand me-1 me-md-3 d-flex align-items-center" to="/" onClick={handleNavClick} aria-label="SREW Projects - Home" style={{ flexShrink: 0, textDecoration: 'none' }}>
+            <img src="/images/logo.png" alt="SREW Projects Logo" class="d-inline-block align-text-top nav-logo-img" />
           </Link>
           
           <div class="d-flex align-items-center order-lg-last ms-auto me-2 me-lg-0" style={{ whiteSpace: 'nowrap' }}>

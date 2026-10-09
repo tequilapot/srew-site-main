@@ -12,7 +12,7 @@ export const SpareParts = () => {
   return (
     <>
       <Helmet>
-        <title>Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
+        <title>Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="jaw plates, cone mantles, VSI blow bars, conveyor rollers, screen mesh, crusher spares, grizzly bar, mineral processing, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/spare-parts" />
@@ -23,7 +23,7 @@ export const SpareParts = () => {
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Spare Parts - Genuine Equipment Spares" />
-        <meta name="twitter:description" content="Certified Manganese Steel Jaw Plates, Cone Mantles, VSI blow bars, and screen meshes. Precision machined SREW Projects - Crushing & Screening Plant Manufacturer WORKS genuine spare parts." />
+        <meta name="twitter:description" content="Certified Manganese Steel Jaw Plates, Cone Mantles, VSI blow bars, and screen meshes. Precision machined SREW Projects genuine spare parts." />
         <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -166,7 +166,7 @@ export const SpareParts = () => {
                 "name": "What spare parts does SREW supply?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS supplies spare parts including jaw plates, toggle plates, cheek plates for jaw crushers; mantles, concaves, and bowl liners for cone crushers; blow bars, anvils, and rotor tips for impact crushers; screen meshes and deck panels for vibrating screens; and conveyor belts, rollers, and bearings for material handling systems."
+                  "text": "SREW Projects supplies spare parts including jaw plates, toggle plates, cheek plates for jaw crushers; mantles, concaves, and bowl liners for cone crushers; blow bars, anvils, and rotor tips for impact crushers; screen meshes and deck panels for vibrating screens; and conveyor belts, rollers, and bearings for material handling systems."
                 }
               },
               {
@@ -194,14 +194,14 @@ export const SpareParts = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+            "name": "Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects",
             "description": "ISO 9001:2015 certified manufacturer supplying genuine spare parts for crushing, screening, and sand processing equipment.",
             "url": "https://srewprojects.com/spare-parts",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -243,7 +243,7 @@ export const SpareParts = () => {
             <div className="col-lg-10">
               <h2 className="text-primary-ultra h3 mb-3">Certified Wear Components &amp; Machinery Spares</h2>
               <p className="lead text-muted">
-                SREW Projects - Crushing & Screening Plant Manufacturer WORKS supplies a comprehensive inventory of genuine replacement parts for aggregate crushing, high-frequency screening, and material handling systems. Engineered to resist extreme impact and wear, our parts eliminate unscheduled downtime.
+                SREW Projects supplies a comprehensive inventory of genuine replacement parts for aggregate crushing, high-frequency screening, and material handling systems. Engineered to resist extreme impact and wear, our parts eliminate unscheduled downtime.
               </p>
             </div>
           </div>

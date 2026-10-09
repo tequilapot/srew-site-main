@@ -126,12 +126,12 @@ export const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Request RFQ &amp; Consultation</title>
-        <meta name="description" content="Request a quote or consult SREW Projects - Crushing & Screening Plant Manufacturer WORKS on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
+        <title>Contact SREW Projects - Request RFQ &amp; Consultation</title>
+        <meta name="description" content="Request a quote or consult SREW Projects on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
         <link rel="canonical" href="https://srewprojects.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/contact" />
-        <meta property="og:title" content="Contact SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Request RFQ &amp; Consultation" />
+        <meta property="og:title" content="Contact SREW Projects - Request RFQ &amp; Consultation" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
@@ -144,7 +144,7 @@ export const Contact = () => {
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+            "name": "SREW Projects",
             "alternateName": "SREW",
             "@id": "https://srewprojects.com/#localbusiness",
             "url": "https://srewprojects.com",
@@ -203,7 +203,7 @@ export const Contact = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Contact SREW Projects - Crushing & Screening Plant Manufacturer WORKS - Request RFQ & Consultation",
+            "name": "Contact SREW Projects - Request RFQ & Consultation",
             "url": "https://srewprojects.com/contact",
             "dateModified": "2026-05-21"
           }
@@ -414,7 +414,7 @@ export const Contact = () => {
                   {/* Interactive Map Embed */}
                   <div className="rounded overflow-hidden shadow-sm border" style={{ height: '300px' }}>
                     <iframe
-                      title="SREW Projects - Crushing & Screening Plant Manufacturer WORKS Office &amp; Plant Location Map"
+                      title="SREW Projects Office &amp; Plant Location Map"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3804.8251347076595!2d78.43521257597143!3d17.515865299105436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb906cf2c78a0d%3A0xe54fb7a2e8c281df!2sS%20R%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1712490000000!5m2!1sen!2sin"
                       width="100%"
                       height="100%"

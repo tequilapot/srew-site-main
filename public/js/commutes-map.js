@@ -2,7 +2,7 @@
 
 /**
  * Commutes Map Module for SREW Premium Page
- * (c) 2026 SREW Projects - Crushing & Screening Plant Manufacturer WORKS
+ * (c) 2026 SREW Projects
  */
 function Commutes(configuration) {
   let commutesMap;

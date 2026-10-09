@@ -88,7 +88,7 @@ export const Products = () => {
   return (
     <>
       <Helmet>
-        <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
+        <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | SREW Projects</title>
         <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://srewprojects.com/products" />
@@ -99,7 +99,7 @@ export const Products = () => {
         <meta property="og:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
-        <meta name="twitter:description" content="Explore SREW Projects - Crushing & Screening Plant Manufacturer WORKS comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
+        <meta name="twitter:description" content="Explore SREW Projects comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
         <meta name="twitter:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -110,7 +110,7 @@ export const Products = () => {
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS Products",
+            "name": "SREW Projects Products",
             "description": "Comprehensive range of crushing, screening and processing equipment",
             "itemListElement": [
               {
@@ -220,7 +220,7 @@ export const Products = () => {
                 "name": "What types of crushers does SREW manufacture?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS manufactures four types of crushers: Jaw Crushers (30-800 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
+                  "text": "SREW Projects manufactures four types of crushers: Jaw Crushers (30-800 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
                 }
               },
               {
@@ -259,10 +259,10 @@ export const Products = () => {
             "name": "Products - Jaw Crushers, Screening &amp; Sand Plants | SREW",
             "url": "https://srewprojects.com/products",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"

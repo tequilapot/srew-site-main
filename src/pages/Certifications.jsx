@@ -6,13 +6,13 @@ export const Certifications = () => {
   return (
     <>
       <Helmet>
-        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | SREW Projects - Crushing & Screening Plant Manufacturer WORKS</title>
-        <meta name="description" content="Explore SREW Projects - Crushing & Screening Plant Manufacturer WORKS rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
+        <title>Quality &amp; Certifications - ISO 9001:2015 Standards | SREW Projects</title>
+        <meta name="description" content="Explore SREW Projects rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
         <meta name="keywords" content="ISO 9001:2015, quality assurance, NDT testing, metallurgical analysis, dynamic run check, SREW certifications, aggregate machinery quality, Hyderabad, India" />
         <link rel="canonical" href="https://srewprojects.com/certifications" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/certifications" />
-        <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - SREW Projects - Crushing & Screening Plant Manufacturer WORKS" />
+        <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - SREW Projects" />
         <meta property="og:description" content="Guaranteeing industrial yield, metallurgical toughness, and zero-accident mechanical structural integrity under ISO 9001:2015." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
@@ -28,14 +28,14 @@ export const Certifications = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Quality & Certifications - ISO 9001:2015 Standards | SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
-            "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for SREW Projects - Crushing & Screening Plant Manufacturer WORKS.",
+            "name": "Quality & Certifications - ISO 9001:2015 Standards | SREW Projects",
+            "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for SREW Projects.",
             "url": "https://srewprojects.com/certifications",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "SREW Projects - Crushing & Screening Plant Manufacturer WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -88,7 +88,7 @@ export const Certifications = () => {
                   <div className="badge bg-primary-light text-white px-3 py-2 rounded mb-3 fw-bold uppercase">Corporate Quality Standard</div>
                   <h2 className="text-primary-ultra mb-4">ISO 9001:2015 Certification</h2>
                   <p className="lead text-muted mb-4">
-                    SREW Projects - Crushing & Screening Plant Manufacturer WORKS operates under a strictly certified ISO 9001:2015 Quality Management System governing our entire design, manufacturing, assembly, and testing loops.
+                    SREW Projects operates under a strictly certified ISO 9001:2015 Quality Management System governing our entire design, manufacturing, assembly, and testing loops.
                   </p>
                   <p className="text-body mb-4">
                     Every piece of crushing and screening equipment manufactured at our Jeedimetla plant is subjected to strict inspection checklists. We record metallurgical batches, dimensional alignments, and dynamic vibration levels for every machine, creating a complete lifecycle traceability profile.
