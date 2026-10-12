@@ -1,20 +1,89 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/blog/:slug", "destination": "/:slug", "permanent": true }
+    {
+      "source": "/blog/:slug",
+      "destination": "/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-crusher-manufacturer",
+      "destination": "/mobile-stone-crusher-plant",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-crusher-manufacturer.html",
+      "destination": "/mobile-stone-crusher-plant",
+      "permanent": true
+    },
+    {
+      "source": "/sand-washer-plant",
+      "destination": "/sand-washing-machine",
+      "permanent": true
+    },
+    {
+      "source": "/sand-washer-plant.html",
+      "destination": "/sand-washing-machine",
+      "permanent": true
+    },
+    {
+      "source": "/glass-crusher",
+      "destination": "/glass-crusher-machine",
+      "permanent": true
+    },
+    {
+      "source": "/glass-crusher.html",
+      "destination": "/glass-crusher-machine",
+      "permanent": true
+    },
+    {
+      "source": "/pulverizer",
+      "destination": "/pulverizer-machine",
+      "permanent": true
+    },
+    {
+      "source": "/pulverizer.html",
+      "destination": "/pulverizer-machine",
+      "permanent": true
+    },
+    {
+      "source": "/pulveriser-machine",
+      "destination": "/pulverizer-machine",
+      "permanent": true
+    },
+    {
+      "source": "/pulveriser-machine.html",
+      "destination": "/pulverizer-machine",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/images/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
     },
     {
       "source": "/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }
