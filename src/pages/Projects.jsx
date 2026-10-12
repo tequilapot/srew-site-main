@@ -19,7 +19,7 @@ export const Projects = () => {
         <meta property="og:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Project Case Studies - SREW Projects" />
-        <meta name="twitter:description" content="View SREW Projects successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
+        <meta name="twitter:description" content="View SREW Projects successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 250 TPH plant, Keesara 150 TPH plant." />
         <meta name="twitter:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -49,8 +49,8 @@ export const Projects = () => {
                   "position": 2,
                   "item": {
                     "@type": "Article",
-                    "name": "400 TPH Aggregate Plant – Singareni",
-                    "description": "Achieved 385+ TPH production stability even during monsoon season."
+                    "name": "250 TPH Aggregate Plant – Singareni",
+                    "description": "Achieved stable production even during monsoon season."
                   }
                 },
                 {

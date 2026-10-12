@@ -20,7 +20,7 @@ export const projects = [
   },
   {
     slug: "singareni-400-tph",
-    name: "400 TPH Aggregate Processing Plant – Singareni",
+    name: "250 TPH Aggregate Processing Plant – Singareni",
     location: "Singareni, Telangana, India",
     year: "2020",
     client: "State Mining & Infrastructure Corporation Joint Venture",
@@ -28,7 +28,7 @@ export const projects = [
     objective: "Supply massive daily volumes of railway ballast and road aggregates for heavy railway expansion lines.",
     challenge: "Maintaining continuous 24/7 crushing operations in highly abrasive basalt rock, and keeping plant uptime high through severe monsoonal rainfall.",
     solution: "We deployed dual-toggle jaw crushers alongside secondary hydraulic cone crushers. SREW designed custom water shedder cowlings over all motor drives and set up a zero-discharge water recycling clarifier tank system to recirculate process water, preventing sand clogging during monsoonal downpours.",
-    outcome: "The aggregate plant achieved a consistent, resilient production rate of over 385 TPH, establishing an industrial benchmark for continuous operation during wet seasons.",
+    outcome: "The aggregate plant achieved a consistent, resilient production rate, establishing an industrial benchmark for continuous operation during wet seasons.",
     specs: [
       { key: "Material Processed", val: "Abrasive Basalt & Iron Ore Overburden" },
       { key: "Ballast Size", val: "40mm - 65mm (Railway Ballast)" },

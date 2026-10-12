@@ -382,7 +382,7 @@ export const Home = () => {
                         <i className="fas fa-tachometer-alt"></i>
                         <div>
                           <span className="product-spec-label">Capacity</span>
-                          <strong>30 - 400 TPH</strong>
+                          <strong>30 - 250 TPH</strong>
                         </div>
                       </div>
                       <div className="product-spec-badge">

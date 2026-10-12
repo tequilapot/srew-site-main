@@ -121,7 +121,7 @@ export const products = [
     shortName: "Vibrating Screens",
     category: "Screening",
     purpose: "Precision sizing, sorting, and grading of wet and dry aggregates into multiple sizes.",
-    capacity: "Up to 400 TPH",
+    capacity: "Up to 250 TPH",
     applications: [
       "Aggregate sizing in quarry plants",
       "Industrial mineral separation and screening",
@@ -150,7 +150,7 @@ export const products = [
     shortName: "Grizzly Feeders",
     category: "Feeding",
     purpose: "Regulated feed control to primary crushers while scalping out fine material beforehand.",
-    capacity: "50 TPH to 400 TPH",
+    capacity: "50 TPH to 250 TPH",
     applications: [
       "Quarry primary feeding stations",
       "Pre-screening in large mining plants",

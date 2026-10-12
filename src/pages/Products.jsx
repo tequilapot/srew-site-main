@@ -152,7 +152,7 @@ export const Products = () => {
                 "item": {
                   "@type": "Product",
                   "name": "Vibrating Screens",
-                  "description": "Screening and grading materials into multiple precise sizes. Up to 400 TPH.",
+                  "description": "Screening and grading materials into multiple precise sizes. Up to 250 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "url": "https://www.srewprojects.com/products#vibrating-screens"
                 }
