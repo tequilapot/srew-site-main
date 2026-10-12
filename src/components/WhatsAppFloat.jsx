@@ -34,7 +34,7 @@ export const WhatsAppFloat = () => {
       href="#"
       onClick={handleClick}
       className={`whatsapp-float ${visible ? 'visible' : ''}`}
-      aria-label="Chat with S R ENGG WORKS on WhatsApp"
+      aria-label="Chat with SREW Projects on WhatsApp"
     >
       <i className="fab fa-whatsapp" aria-hidden="true"></i>
     </a>

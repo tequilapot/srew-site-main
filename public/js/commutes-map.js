@@ -2,7 +2,7 @@
 
 /**
  * Commutes Map Module for SREW Premium Page
- * (c) 2026 S R ENGG WORKS
+ * (c) 2026 SREW Projects
  */
 function Commutes(configuration) {
   let commutesMap;

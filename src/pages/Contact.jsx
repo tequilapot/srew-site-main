@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSearchParams } from 'react-router-dom';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { ENV } from '../env';
 
 export const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -29,6 +30,7 @@ export const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (status.text) setStatus({ type: '', text: '' });
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -47,11 +49,21 @@ export const Contact = () => {
     }
 
     setSubmitting(true);
-    setStatus({ type: 'info', text: 'Sending your message...' });
+    if (status.text) setStatus({ type: '', text: '' });
 
-    // Submit payload to SREW's validated Google Apps Script endpoint
-    const url = 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec';
-    
+    // Web3Forms payload using central ENV
+    const web3Payload = JSON.stringify({
+      access_key: ENV.WEB3FORMS_ACCESS_KEY,
+      name: name,
+      email: email,
+      phone: phone || 'Not provided',
+      subject: subject,
+      message: message,
+      from_name: 'SREW Contact Form'
+    });
+
+    // Submit payload to both Web3Forms and Google Apps Script endpoint from central ENV
+    const url = ENV.GOOGLE_SHEETS_CONTACT_URL;
     const params = new URLSearchParams();
     params.append('name', name);
     params.append('email', email);
@@ -60,14 +72,32 @@ export const Contact = () => {
     params.append('message', message);
     params.append('source', 'Contact Form');
 
-    fetch(url, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: params.toString()
-    })
+    Promise.all([
+      fetch(ENV.WEB3FORMS_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: web3Payload
+      }).then(res => res.json()),
+      fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      }).catch(() => {})
+    ])
       .then(() => {
-        setStatus({ type: 'success', text: '✓ Thank you! Your message has been submitted. We will get back to you soon.' });
+        // Show toaster notification popup ONLY (remove inline success alert)
+        if (typeof window._srew_toast === 'function') {
+          window._srew_toast('✓ Form sent successfully! We will contact you soon.', 'success');
+        } else {
+          const c = document.createElement('div');
+          c.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:99999;background:#fff;padding:16px 24px;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,0.18);border-left:4px solid #10b981;font-size:14px;max-width:380px;animation:toastIn 0.5s ease;display:flex;align-items:center;gap:12px;color:#0f172a;font-weight:500;';
+          c.innerHTML = '<strong style="color:#10b981;font-size:16px;">✓</strong> <span>Form sent successfully! We will get back to you shortly.</span>';
+          document.body.appendChild(c);
+          setTimeout(() => c.remove(), 4500);
+        }
+
+        // Reset the form right away and clear inline status so another form can be submitted immediately
         setFormData({
           name: '',
           email: '',
@@ -76,11 +106,19 @@ export const Contact = () => {
           message: ''
         });
         setSubmitting(false);
-        // Clear message after 6 seconds
-        setTimeout(() => setStatus({ type: '', text: '' }), 6000);
+        setStatus({ type: '', text: '' });
       })
       .catch(() => {
         setStatus({ type: 'danger', text: 'There was an error sending your message. Please try again or call us directly.' });
+        if (typeof window._srew_toast === 'function') {
+          window._srew_toast('Failed to send form. Please try again.', 'error');
+        } else {
+          const c = document.createElement('div');
+          c.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:99999;background:#fff;padding:16px 24px;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,0.18);border-left:4px solid #ef4444;font-size:14px;max-width:380px;animation:toastIn 0.5s ease;display:flex;align-items:center;gap:12px;color:#0f172a;font-weight:500;';
+          c.innerHTML = '<strong style="color:#ef4444;font-size:16px;">✕</strong> <span>Failed to send form. Please try again.</span>';
+          document.body.appendChild(c);
+          setTimeout(() => c.remove(), 4500);
+        }
         setSubmitting(false);
       });
   };
@@ -88,12 +126,12 @@ export const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact S R ENGG WORKS - Request RFQ &amp; Consultation</title>
-        <meta name="description" content="Request a quote or consult S R ENGG WORKS on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
+        <title>Contact SREW Projects - Request RFQ &amp; Consultation</title>
+        <meta name="description" content="Request a quote or consult SREW Projects on crushing, screening, M-Sand, and C&amp;D waste recycling plants. Multiple office coordinates in Hyderabad, India." />
         <link rel="canonical" href="https://srewprojects.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/contact" />
-        <meta property="og:title" content="Contact S R ENGG WORKS - Request RFQ &amp; Consultation" />
+        <meta property="og:title" content="Contact SREW Projects - Request RFQ &amp; Consultation" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
@@ -106,7 +144,7 @@ export const Contact = () => {
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "S R ENGG WORKS",
+            "name": "SREW Projects",
             "alternateName": "SREW",
             "@id": "https://srewprojects.com/#localbusiness",
             "url": "https://srewprojects.com",
@@ -165,7 +203,7 @@ export const Contact = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Contact S R ENGG WORKS - Request RFQ & Consultation",
+            "name": "Contact SREW Projects - Request RFQ & Consultation",
             "url": "https://srewprojects.com/contact",
             "dateModified": "2026-05-21"
           }
@@ -295,7 +333,15 @@ export const Contact = () => {
                           className="btn btn-primary btn-curved btn-lg w-100"
                           disabled={submitting}
                         >
-                          {submitting ? 'Submitting Inquiry...' : 'Submit Engineering Request'}
+                          {submitting ? (
+                            <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                              <svg width="18" height="18" viewBox="0 0 24 24" style={{ animation: 'spin 1s linear infinite' }}>
+                                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" fill="none" strokeDasharray="40 20" />
+                              </svg>
+                              Submitting Inquiry...
+                            </span>
+                          ) : 'Submit Engineering Request'}
                         </button>
                       </div>
                     </form>
@@ -368,7 +414,7 @@ export const Contact = () => {
                   {/* Interactive Map Embed */}
                   <div className="rounded overflow-hidden shadow-sm border" style={{ height: '300px' }}>
                     <iframe
-                      title="S R ENGG WORKS Office &amp; Plant Location Map"
+                      title="SREW Projects Office &amp; Plant Location Map"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3804.8251347076595!2d78.43521257597143!3d17.515865299105436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb906cf2c78a0d%3A0xe54fb7a2e8c281df!2sS%20R%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1712490000000!5m2!1sen!2sin"
                       width="100%"
                       height="100%"

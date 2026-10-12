@@ -6,13 +6,13 @@ export const Sustainability = () => {
   return (
     <>
       <Helmet>
-        <title>Sustainability &amp; Green Engineering Solutions | S R ENGG WORKS</title>
-        <meta name="description" content="Explore S R ENGG WORKS eco-friendly aggregate systems, high-capacity C&amp;D waste recycling plants, and zero-effluent water recirculating clarifiers." />
+        <title>Sustainability &amp; Green Engineering Solutions | SREW Projects</title>
+        <meta name="description" content="Explore SREW Projects eco-friendly aggregate systems, high-capacity C&amp;D waste recycling plants, and zero-effluent water recirculating clarifiers." />
         <meta name="keywords" content="sustainability, green engineering, C&amp;D recycling, circular economy, water conservation, eco aggregate, zero effluent clarifiers, SREW green tech, Hyderabad, India" />
         <link rel="canonical" href="https://srewprojects.com/sustainability" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://srewprojects.com/sustainability" />
-        <meta property="og:title" content="Sustainability &amp; Circular Economy Solutions - S R ENGG WORKS" />
+        <meta property="og:title" content="Sustainability &amp; Circular Economy Solutions - SREW Projects" />
         <meta property="og:description" content="Leading circular economy solutions, reducing urban landfills, and optimizing water conservation in aggregate processing." />
         <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
@@ -28,14 +28,14 @@ export const Sustainability = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Sustainability & Green Engineering Solutions | S R ENGG WORKS",
-            "description": "Information on eco-friendly aggregate systems, C&D waste recycling, and water clarifiers at S R ENGG WORKS.",
+            "name": "Sustainability & Green Engineering Solutions | SREW Projects",
+            "description": "Information on eco-friendly aggregate systems, C&D waste recycling, and water clarifiers at SREW Projects.",
             "url": "https://srewprojects.com/sustainability",
             "dateModified": "2026-05-21",
-            "author": {"@type": "Organization", "name": "S R ENGG WORKS"},
+            "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
               "@type": "Organization",
-              "name": "S R ENGG WORKS",
+              "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://srewprojects.com/images/logo.png"
@@ -88,7 +88,7 @@ export const Sustainability = () => {
                   <div className="badge bg-success text-white px-3 py-2 rounded mb-3 fw-bold uppercase"><i className="fas fa-recycle me-1"></i> Circular Economy Engineering</div>
                   <h2 className="text-primary-ultra mb-4">Construction &amp; Demolition (C&amp;D) Waste Recycling</h2>
                   <p className="lead text-muted mb-4">
-                    S R ENGG WORKS is proud to lead the transition toward circular construction practices by manufacturing specialized urban C&amp;D Waste Recycling plants.
+                    SREW Projects is proud to lead the transition toward circular construction practices by manufacturing specialized urban C&amp;D Waste Recycling plants.
                   </p>
                   <p className="text-body mb-4">
                     Our customized C&amp;D processing systems crush concrete rubble, brick slabs, and masonry debris, converting them into graded aggregates and recycled concrete sand. By utilizing high-power overbelt magnets to recover steel rebar and dynamic air-knives to separate light plastics, our recycling plants deliver marketable building materials, diverting tons of waste from landfills.

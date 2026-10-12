@@ -1,6 +1,6 @@
 /**
  * SREW Core Engine v3.0
- * (c) S R ENGG WORKS - Proprietary
+ * (c) SREW Projects - Proprietary
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
@@ -184,20 +184,47 @@ function initSmoothScroll(){
    ────────────────────────────────────────────── */
 function initActiveNav(){
     const loc=w.location.href;
+    const pathName=w.location.pathname.split('/').pop()||'index.html';
     const links=_qa('.navbar-nav .nav-link');
-    let homeActive=true;
+    let foundActive=false;
 
     links.forEach(function(link){
         link.classList.remove('active');
-        if(link.href===loc){
+        const href=link.getAttribute('href');
+        if(link.href===loc || (href && pathName===href)){
             link.classList.add('active');
-            homeActive=false;
-        }else if(loc.endsWith('/')&&link.getAttribute('href')==='index.html'&&homeActive){
-            link.classList.add('active');
-            homeActive=false;
+            foundActive=true;
         }
     });
-    if(homeActive&&(loc.endsWith('/index.html')||loc.endsWith('/'))){
+
+    if(!foundActive){
+        const subItem = _qs('.mega-dropdown a[href*="'+pathName+'"], .dropdown-menu a[href*="'+pathName+'"]');
+        if(subItem){
+            const parentNav = subItem.closest('.nav-item');
+            if(parentNav){
+                const parentLink = parentNav.querySelector('.nav-link');
+                if(parentLink){
+                    parentLink.classList.add('active');
+                    foundActive=true;
+                }
+            }
+        }
+    }
+
+    if(!foundActive){
+        if(pathName.includes('industry-')){
+            const l=_qs('.navbar-nav .nav-link[href="industries.html"]');
+            if(l){l.classList.add('active'); foundActive=true;}
+        }else if(pathName.includes('project-')){
+            const l=_qs('.navbar-nav .nav-link[href="projects.html"]');
+            if(l){l.classList.add('active'); foundActive=true;}
+        }else if(pathName.includes('crusher') || pathName.includes('sand') || pathName.includes('screen') || pathName.includes('grizzly') || pathName.includes('hopper') || pathName.includes('silo') || pathName.includes('conveyor') || pathName.includes('tph-') || pathName.includes('videos.html') || pathName.includes('spare-parts.html')===false && pathName.includes('product')){
+            const l=_qs('.navbar-nav .nav-link[href="products.html"]');
+            if(l){l.classList.add('active'); foundActive=true;}
+        }
+    }
+
+    if(!foundActive && (loc.endsWith('/') || pathName==='index.html' || pathName==='')){
         const h=_qs('.navbar-nav .nav-link[href="index.html"]');
         if(h)h.classList.add('active');
     }
@@ -640,7 +667,7 @@ function initCookieConsent() {
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
-            S R ENGG WORKS uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
+            SREW Projects uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
         </p>
         <div class="d-flex gap-2">
             <button class="btn btn-primary btn-sm flex-grow-1 fw-bold py-2" id="cookieAcceptBtn" style="border-radius: 8px; font-size: 0.82rem;">Accept All</button>
