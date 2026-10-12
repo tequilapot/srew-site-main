@@ -22,7 +22,7 @@ export const Products = () => {
   const getRecommendation = () => {
     const isHard = calcMaterial === 'granite' || calcMaterial === 'iron-ore';
     
-    if (calcCapacity === '30-50') {
+    if (calcCapacity === '20-50') {
       return {
         model: "SREW 24x15 Heavy-Duty Jaw Crusher",
         motor: "45 HP - 55 HP",
@@ -47,7 +47,7 @@ export const Products = () => {
         css: "50mm - 75mm",
         yield: "Premium cubical outputs"
       };
-    } else if (calcCapacity === '100-200') {
+    } else if (calcCapacity === '100-150') {
       if (isHard) {
         return {
           model: "SREW 36x24 Deep-Chamber Jaw Crusher + SREW Medium Cone Crusher",
@@ -64,7 +64,7 @@ export const Products = () => {
         css: "75mm - 90mm",
         yield: "High TPH stable continuous screening feed"
       };
-    } else if (calcCapacity === '200-300' || calcCapacity === '300-500' || calcCapacity === '500-800') {
+    } else if (calcCapacity === '150-250') {
       return {
         model: "SREW Dual-Toggle 42x36 Primary Jaw Crusher + SREW Hydraulic Cone Crusher",
         motor: "200 HP (Jaw) + 250 HP (Cone)",
@@ -300,12 +300,10 @@ export const Products = () => {
                           value={calcCapacity} 
                           onChange={(e) => setCalcCapacity(e.target.value)}
                         >
-                          <option value="30-50">30 - 50 TPH (Small Quarry)</option>
+                          <option value="20-50">20 - 50 TPH (Small Quarry)</option>
                           <option value="50-100">50 - 100 TPH (Medium Plant)</option>
-                          <option value="100-200">100 - 200 TPH (High-Capacity Highway)</option>
-                          <option value="200-300">200 - 300 TPH (Heavy Construction)</option>
-                          <option value="300-500">300 - 500 TPH (Large Scale Mining)</option>
-                          <option value="500-800">500 - 800 TPH (Mega Turnkey Site)</option>
+                          <option value="100-150">100 - 150 TPH (Highway / Contractor)</option>
+                          <option value="150-250">150 - 250 TPH (Large Quarry)</option>
                         </select>
                       </div>
 
