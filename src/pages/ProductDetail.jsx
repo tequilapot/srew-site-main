@@ -78,19 +78,19 @@ export const ProductDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{`${product.name} - 30–800 TPH Industrial Crushing | SREW`}</title>
+        <title>{`${product.name} - 20–250 TPH Industrial Crushing | SREW`}</title>
         <meta name="description" content={`${product.purpose} SREW Projects is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
         <meta name="keywords" content={`${product.shortName}, SREW Projects, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
-        <link rel="canonical" href={`https://srewprojects.com/products/${product.slug}`} />
+        <link rel="canonical" href={`https://www.srewprojects.com/products/${product.slug}`} />
         <meta property="og:type" content="product" />
-        <meta property="og:url" content={`https://srewprojects.com/products/${product.slug}`} />
+        <meta property="og:url" content={`https://www.srewprojects.com/products/${product.slug}`} />
         <meta property="og:title" content={`${product.name} - Crushing &amp; Screening Machinery`} />
-        <meta property="og:description" content={`${product.purpose} ISO 9001:2015 certified turnkey plants up to 800 TPH.`} />
-        <meta property="og:image" content={`https://srewprojects.com${product.image}`} />
+        <meta property="og:description" content={`${product.purpose} ISO 9001:2015 certified turnkey plants up to 250 TPH.`} />
+        <meta property="og:image" content={`https://www.srewprojects.com${product.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${product.name} - Heavy Duty SREW Machinery`} />
         <meta name="twitter:description" content={`Get standard brochures, dimensional blueprint specs, and aggregate capacity reviews for SREW's high-yield ${product.name}.`} />
-        <meta name="twitter:image" content={`https://srewprojects.com${product.image}`} />
+        <meta name="twitter:image" content={`https://www.srewprojects.com${product.image}`} />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -101,7 +101,7 @@ export const ProductDetail = () => {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "${product.name}",
-            "image": "https://srewprojects.com${product.image}",
+            "image": "https://www.srewprojects.com${product.image}",
             "description": "${product.purpose}",
             "brand": {
               "@type": "Brand",
@@ -120,11 +120,6 @@ export const ProductDetail = () => {
                 "@type": "Organization",
                 "name": "SREW Projects"
               }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "32"
             }
           }
         `}
@@ -135,9 +130,9 @@ export const ProductDetail = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://srewprojects.com/products"},
-              {"@type": "ListItem", "position": 3, "name": "${product.shortName}", "item": "https://srewprojects.com/products/${product.slug}"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.srewprojects.com/products"},
+              {"@type": "ListItem", "position": 3, "name": "${product.shortName}", "item": "https://www.srewprojects.com/products/${product.slug}"}
             ]
           }
         `}

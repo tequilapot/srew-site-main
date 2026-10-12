@@ -9,16 +9,16 @@ export const Certifications = () => {
         <title>Quality &amp; Certifications - ISO 9001:2015 Standards | SREW Projects</title>
         <meta name="description" content="Explore SREW Projects rigid Quality Management Systems. ISO 9001:2015 certified metallurgical inspections, dynamic run checks, and manufacturing standards." />
         <meta name="keywords" content="ISO 9001:2015, quality assurance, NDT testing, metallurgical analysis, dynamic run check, SREW certifications, aggregate machinery quality, Hyderabad, India" />
-        <link rel="canonical" href="https://srewprojects.com/certifications" />
+        <link rel="canonical" href="https://www.srewprojects.com/certifications" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/certifications" />
+        <meta property="og:url" content="https://www.srewprojects.com/certifications" />
         <meta property="og:title" content="Quality Assurance &amp; ISO Certifications - SREW Projects" />
         <meta property="og:description" content="Guaranteeing industrial yield, metallurgical toughness, and zero-accident mechanical structural integrity under ISO 9001:2015." />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="SREW Quality &amp; Certifications" />
         <meta name="twitter:description" content="ISO 9001:2015 certified design, manufacture, and assembly of premium aggregate crushing and sand plants." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -30,7 +30,7 @@ export const Certifications = () => {
             "@type": "WebPage",
             "name": "Quality & Certifications - ISO 9001:2015 Standards | SREW Projects",
             "description": "Rigid Quality Management Systems and ISO 9001:2015 certification details for SREW Projects.",
-            "url": "https://srewprojects.com/certifications",
+            "url": "https://www.srewprojects.com/certifications",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -38,7 +38,7 @@ export const Certifications = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             }
           }
@@ -50,8 +50,8 @@ export const Certifications = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Certifications", "item": "https://srewprojects.com/certifications"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Certifications", "item": "https://www.srewprojects.com/certifications"}
             ]
           }
         `}

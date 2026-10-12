@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className="col-lg-4 col-md-6">
             <h3 className="h4 text-white mb-3">SREW Projects</h3>
             <p className="small mb-4 text-white-50">
-              ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants. Delivering 30–800 TPH solutions across the Indian subcontinent since 2018 with 10+ years of engineering core expertise.
+              ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants. Delivering 20–250 TPH solutions across the Indian subcontinent since 2018 with 10+ years of engineering core expertise.
             </p>
             <div className="social-icons mb-4">
               <a href="https://www.facebook.com/profile.php?id=100070029793724" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>

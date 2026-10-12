@@ -8,12 +8,12 @@ export const About = () => {
       <Helmet>
         <title>About SREW Projects - Precision Engineering India</title>
         <meta name="description" content="SREW Projects is an ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
-        <link rel="canonical" href="https://srewprojects.com/about" />
+        <link rel="canonical" href="https://www.srewprojects.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/about" />
+        <meta property="og:url" content="https://www.srewprojects.com/about" />
         <meta property="og:title" content="About SREW Projects - Precision Engineering India" />
         <meta property="og:description" content="ISO 9001:2015 certified manufacturer of crushing, screening, and sand processing plants in Hyderabad, India with 10+ years industry experience." />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
@@ -25,7 +25,7 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "About SREW Projects - Precision Engineering India",
-            "url": "https://srewprojects.com/about",
+            "url": "https://www.srewprojects.com/about",
             "dateModified": "2026-05-21",
             "author": {
               "@type": "Organization",
@@ -36,7 +36,7 @@ export const About = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
             "speakable": {
@@ -52,8 +52,8 @@ export const About = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://srewprojects.com/about"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.srewprojects.com/about"}
             ]
           }
         `}
@@ -66,7 +66,7 @@ export const About = () => {
             "mainEntity": [
               {"@type": "Question", "name": "When was SREW Projects established?", "acceptedAnswer": {"@type": "Answer", "text": "SREW Projects was established in 2018. Our founding team brings over 10 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
               {"@type": "Question", "name": "What are SREW's manufacturing facilities?", "acceptedAnswer": {"@type": "Answer", "text": "SREW operates a state-of-the-art manufacturing facility in Hyderabad, India, equipped with CNC machining centers for precision component manufacturing, high-precision fabrication bays for large-scale industrial structures, hydraulic press shops for metal forming, and PLC panel manufacturing units for plant automation."}},
-              {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 30 TPH to 800 TPH."}}
+              {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 20–250 TPH."}}
             ]
           }
         `}
@@ -105,7 +105,7 @@ export const About = () => {
                     Founded with a vision to revolutionize aggregate crushing efficiency, SREW Projects has grown into a key manufacturer of heavy-duty industrial processing machinery in India.
                   </p>
                   <p className="mb-4 text-body">
-                    Headquartered in Hyderabad, Telangana, we design, fabricate, deploy, and service high-yield turnkey plants spanning capacities from 30 TPH to 800 TPH. Our manufacturing facility in the Jeedimetla Industrial Area is equipped with state-of-the-art CNC machining centers, automated plasma cutting, heavy-duty rolling, and custom metallurgy heat-treatment testing systems.
+                    Headquartered in Hyderabad, Telangana, we design, fabricate, deploy, and service high-yield turnkey plants spanning capacities from 20–250 TPH. Our manufacturing facility in the Jeedimetla Industrial Area is equipped with state-of-the-art CNC machining centers, automated plasma cutting, heavy-duty rolling, and custom metallurgy heat-treatment testing systems.
                   </p>
                   <p className="mb-4 text-body">
                     We maintain an unwavering commitment to quality under our certified <strong>ISO 9001:2015</strong> Quality Management Systems, ensuring every jaw crusher, screen panel, or conveyor framework is manufactured to tight mechanical tolerances.

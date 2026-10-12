@@ -24,16 +24,16 @@ export const ProjectDetail = () => {
         <title>{`${project.name} - Case Study | SREW Projects`}</title>
         <meta name="description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for SREW's ${project.name} turnkey project in ${project.location}.`} />
         <meta name="keywords" content={`${project.name}, SREW Projects, case study, ${project.location}, aggregate plant, turnkey crushing plant, mineral processing, Hyderabad, India`} />
-        <link rel="canonical" href={`https://srewprojects.com/projects/${project.slug}`} />
+        <link rel="canonical" href={`https://www.srewprojects.com/projects/${project.slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://srewprojects.com/projects/${project.slug}`} />
+        <meta property="og:url" content={`https://www.srewprojects.com/projects/${project.slug}`} />
         <meta property="og:title" content={`${project.name} - SREW Projects Case Study`} />
         <meta property="og:description" content={`Engineering breakdown of site setups, raw feed inputs, and final aggregate output yields for SREW's ${project.name}.`} />
-        <meta property="og:image" content={`https://srewprojects.com${project.image}`} />
+        <meta property="og:image" content={`https://www.srewprojects.com${project.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.name} Case Study`} />
         <meta name="twitter:description" content={`Explore engineering blueprints, technical challenges, solutions, and plant specs for SREW's ${project.name} turnkey project.`} />
-        <meta name="twitter:image" content={`https://srewprojects.com${project.image}`} />
+        <meta name="twitter:image" content={`https://www.srewprojects.com${project.image}`} />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -46,7 +46,7 @@ export const ProjectDetail = () => {
             "headline": "${project.name}",
             "name": "${project.name}",
             "description": "${project.objective.replace(/"/g, '\\"')}",
-            "image": "https://srewprojects.com${project.image}",
+            "image": "https://www.srewprojects.com${project.image}",
             "author": {
               "@type": "Organization",
               "name": "SREW Projects"
@@ -56,10 +56,10 @@ export const ProjectDetail = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
-            "mainEntityOfPage": "https://srewprojects.com/projects/${project.slug}"
+            "mainEntityOfPage": "https://www.srewprojects.com/projects/${project.slug}"
           }
         `}
         </script>
@@ -69,9 +69,9 @@ export const ProjectDetail = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://srewprojects.com/projects"},
-              {"@type": "ListItem", "position": 3, "name": "${project.name}", "item": "https://srewprojects.com/projects/${project.slug}"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.srewprojects.com/projects"},
+              {"@type": "ListItem", "position": 3, "name": "${project.name}", "item": "https://www.srewprojects.com/projects/${project.slug}"}
             ]
           }
         `}

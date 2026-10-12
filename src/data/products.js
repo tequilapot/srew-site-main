@@ -5,7 +5,7 @@ export const products = [
     shortName: "Jaw Crushers",
     category: "Crushers",
     purpose: "Primary crushing of large hard materials like granite, basalt, and limestone.",
-    capacity: "30 TPH to 800 TPH",
+    capacity: "20–250 TPH",
     applications: [
       "Mining operations & mineral extraction",
       "Road construction aggregate processing",
@@ -239,7 +239,7 @@ export const products = [
     purpose: "Centralized power distribution, safety interlocking, and system automation for industrial plants.",
     capacity: "Custom configurations based on plant size",
     applications: [
-      "Complete turnkey plant automation (30 - 800 TPH)",
+      "Complete turnkey plant automation (20–250 TPH)",
       "Multi-stage motor synchronization & sequential boot sequences",
       "Safety interlocking loops and remote operational controls",
       "Thermal load sensing and VFD speed matching"
@@ -295,7 +295,7 @@ export const products = [
     shortName: "Conveyors",
     category: "Handling",
     purpose: "High-capacity bulk material transfer and dynamic stockpiling between crushing and screening units.",
-    capacity: "Belt widths from 500mm to 1400mm; capacity up to 800 TPH",
+    capacity: "Belt widths from 500mm to 1400mm; capacity up to 250 TPH",
     applications: [
       "Quarry plant material link routes",
       "Dynamic stockpiling and radial stacker distribution",
