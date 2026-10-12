@@ -13,18 +13,18 @@ export const SpareParts = () => {
     <>
       <Helmet>
         <title>Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="jaw plates, cone mantles, VSI blow bars, conveyor rollers, screen mesh, crusher spares, grizzly bar, mineral processing, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://srewprojects.com/spare-parts" />
+        <link rel="canonical" href="https://www.srewprojects.com/spare-parts" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/spare-parts" />
+        <meta property="og:url" content="https://www.srewprojects.com/spare-parts" />
         <meta property="og:title" content="Spare Parts - Genuine Equipment Spares | SREW" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Spare Parts - Genuine Equipment Spares" />
         <meta name="twitter:description" content="Certified Manganese Steel Jaw Plates, Cone Mantles, VSI blow bars, and screen meshes. Precision machined SREW Projects genuine spare parts." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -44,14 +44,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Manganese Steel Jaw Plate",
                   "description": "Heavy-duty corrugated manganese steel jaw plates for primary rock crushing.",
-                  "image": "https://srewprojects.com/images/spare-parts/jaw-plate.png",
+                  "image": "https://www.srewprojects.com/images/spare-parts/jaw-plate.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "24"
-                  }
+                  "category": "Crusher Wear Parts"
                 }
               },
               {
@@ -61,14 +56,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "High-Chrome VSI Blow Bar",
                   "description": "Thick, rectangular high-chrome VSI crusher blow bar for superior sand shaping and durability.",
-                  "image": "https://srewprojects.com/images/spare-parts/blue-mild-steel-impact-crusher-blow-bar-1000x1000.webp",
+                  "image": "https://www.srewprojects.com/images/spare-parts/blue-mild-steel-impact-crusher-blow-bar-1000x1000.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "16"
-                  }
+                  "category": "Crusher Wear Parts"
                 }
               },
               {
@@ -78,14 +68,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Woven Wire Screen Mesh Panel",
                   "description": "Industrial woven wire screen mesh panel for precise aggregate sorting in vibrating screens.",
-                  "image": "https://srewprojects.com/images/spare-parts/screen-mesh.png",
+                  "image": "https://www.srewprojects.com/images/spare-parts/screen-mesh.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Screen Components",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.7",
-                    "reviewCount": "19"
-                  }
+                  "category": "Screen Components"
                 }
               },
               {
@@ -95,14 +80,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Heavy-Duty Conveyor Roller",
                   "description": "Industrial heavy-duty conveyor idler roller assembly with sealed bearing housings.",
-                  "image": "https://srewprojects.com/images/spare-parts/conveyor-roller.png",
+                  "image": "https://www.srewprojects.com/images/spare-parts/conveyor-roller.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Conveyor Components",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "32"
-                  }
+                  "category": "Conveyor Components"
                 }
               },
               {
@@ -112,14 +92,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Manganese Steel Cone Crusher Mantle",
                   "description": "Massive, bell-shaped manganese steel cone crusher mantle wear liner for secondary crushing.",
-                  "image": "https://srewprojects.com/images/spare-parts/crusher-mantle-500x500.webp",
+                  "image": "https://www.srewprojects.com/images/spare-parts/crusher-mantle-500x500.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Crusher Wear Parts",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "15"
-                  }
+                  "category": "Crusher Wear Parts"
                 }
               },
               {
@@ -129,14 +104,9 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Stepped Grizzly Feeder Bar",
                   "description": "Thick, stepped steel grizzly feeder bar for heavy-duty primary rock separation.",
-                  "image": "https://srewprojects.com/images/spare-parts/grizzly-bar.png",
+                  "image": "https://www.srewprojects.com/images/spare-parts/grizzly-bar.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "category": "Feeder Components",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "11"
-                  }
+                  "category": "Feeder Components"
                 }
               }
             ]
@@ -149,8 +119,8 @@ export const SpareParts = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Spare Parts", "item": "https://srewprojects.com/spare-parts"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Spare Parts", "item": "https://www.srewprojects.com/spare-parts"}
             ]
           }
         `}
@@ -196,7 +166,7 @@ export const SpareParts = () => {
             "@type": "WebPage",
             "name": "Spare Parts - Crusher, Screen, Feeder &amp; Conveyor Spares | SREW Projects",
             "description": "ISO 9001:2015 certified manufacturer supplying genuine spare parts for crushing, screening, and sand processing equipment.",
-            "url": "https://srewprojects.com/spare-parts",
+            "url": "https://www.srewprojects.com/spare-parts",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -204,7 +174,7 @@ export const SpareParts = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
             "speakable": {

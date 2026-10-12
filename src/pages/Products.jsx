@@ -22,7 +22,7 @@ export const Products = () => {
   const getRecommendation = () => {
     const isHard = calcMaterial === 'granite' || calcMaterial === 'iron-ore';
     
-    if (calcCapacity === '30-50') {
+    if (calcCapacity === '20-50') {
       return {
         model: "SREW 24x15 Heavy-Duty Jaw Crusher",
         motor: "45 HP - 55 HP",
@@ -47,7 +47,7 @@ export const Products = () => {
         css: "50mm - 75mm",
         yield: "Premium cubical outputs"
       };
-    } else if (calcCapacity === '100-200') {
+    } else if (calcCapacity === '100-150') {
       if (isHard) {
         return {
           model: "SREW 36x24 Deep-Chamber Jaw Crusher + SREW Medium Cone Crusher",
@@ -64,7 +64,7 @@ export const Products = () => {
         css: "75mm - 90mm",
         yield: "High TPH stable continuous screening feed"
       };
-    } else if (calcCapacity === '200-300' || calcCapacity === '300-500' || calcCapacity === '500-800') {
+    } else if (calcCapacity === '150-250') {
       return {
         model: "SREW Dual-Toggle 42x36 Primary Jaw Crusher + SREW Hydraulic Cone Crusher",
         motor: "200 HP (Jaw) + 250 HP (Cone)",
@@ -89,18 +89,18 @@ export const Products = () => {
     <>
       <Helmet>
         <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://srewprojects.com/products" />
+        <link rel="canonical" href="https://www.srewprojects.com/products" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/products" />
+        <meta property="og:url" content="https://www.srewprojects.com/products" />
         <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | SREW" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
         <meta name="twitter:description" content="Explore SREW Projects comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/product-jaw-crusher.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -119,14 +119,9 @@ export const Products = () => {
                 "item": {
                   "@type": "Product",
                   "name": "Jaw Crushers",
-                  "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 30-800 TPH capacity.",
+                  "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 20–250 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#jaw-crushers",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "38"
-                  }
+                  "url": "https://www.srewprojects.com/products#jaw-crushers"
                 }
               },
               {
@@ -137,12 +132,7 @@ export const Products = () => {
                   "name": "Cone Crushers",
                   "description": "Secondary and tertiary crushing to produce fine and uniform aggregates. 50-500 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#cone-crushers",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "29"
-                  }
+                  "url": "https://www.srewprojects.com/products#cone-crushers"
                 }
               },
               {
@@ -153,12 +143,7 @@ export const Products = () => {
                   "name": "VSI/HSI Crushers",
                   "description": "Shaping and producing cubical sand and aggregates. 50-300 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#vsi-hsi-crushers",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "41"
-                  }
+                  "url": "https://www.srewprojects.com/products#vsi-hsi-crushers"
                 }
               },
               {
@@ -169,12 +154,7 @@ export const Products = () => {
                   "name": "Vibrating Screens",
                   "description": "Screening and grading materials into multiple precise sizes. Up to 400 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#vibrating-screens",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.7",
-                    "reviewCount": "24"
-                  }
+                  "url": "https://www.srewprojects.com/products#vibrating-screens"
                 }
               },
               {
@@ -185,12 +165,7 @@ export const Products = () => {
                   "name": "Sand Dryers",
                   "description": "Reduce moisture content in sand for industrial applications. 20-50 TPH.",
                   "brand": {"@type": "Brand", "name": "SREW"},
-                  "url": "https://srewprojects.com/products#sand-dryers",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "18"
-                  }
+                  "url": "https://www.srewprojects.com/products#sand-dryers"
                 }
               }
             ]
@@ -203,8 +178,8 @@ export const Products = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://srewprojects.com/products"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.srewprojects.com/products"}
             ]
           }
         `}
@@ -220,7 +195,7 @@ export const Products = () => {
                 "name": "What types of crushers does SREW manufacture?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects manufactures four types of crushers: Jaw Crushers (30-800 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
+                  "text": "SREW Projects manufactures four types of crushers: Jaw Crushers (20–250 TPH) for primary rock breaking, Cone Crushers (50-500 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-300 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
                 }
               },
               {
@@ -228,7 +203,7 @@ export const Products = () => {
                 "name": "What is the capacity range of SREW jaw crushers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW jaw crushers are available from 30 TPH to 800 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
+                  "text": "SREW jaw crushers are available from 20–250 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
                 }
               },
               {
@@ -257,7 +232,7 @@ export const Products = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Products - Jaw Crushers, Screening &amp; Sand Plants | SREW",
-            "url": "https://srewprojects.com/products",
+            "url": "https://www.srewprojects.com/products",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -265,7 +240,7 @@ export const Products = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
             "speakable": {
@@ -285,7 +260,7 @@ export const Products = () => {
               <div className="col-12">
                 <h1 className="fw-extrabold text-primary-ultra">Machinery Products &amp; Systems</h1>
                 <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: '#555' }}>
-                  Industrial aggregate systems ranging from 30 TPH to 800 TPH capacities, certified to ISO 9001:2015.
+                  Industrial aggregate systems ranging from 20–250 TPH capacities, certified to ISO 9001:2015.
                 </p>
                 <nav aria-label="Breadcrumb" className="mt-4">
                   <ol className="breadcrumb">
@@ -325,12 +300,10 @@ export const Products = () => {
                           value={calcCapacity} 
                           onChange={(e) => setCalcCapacity(e.target.value)}
                         >
-                          <option value="30-50">30 - 50 TPH (Small Quarry)</option>
+                          <option value="20-50">20 - 50 TPH (Small Quarry)</option>
                           <option value="50-100">50 - 100 TPH (Medium Plant)</option>
-                          <option value="100-200">100 - 200 TPH (High-Capacity Highway)</option>
-                          <option value="200-300">200 - 300 TPH (Heavy Construction)</option>
-                          <option value="300-500">300 - 500 TPH (Large Scale Mining)</option>
-                          <option value="500-800">500 - 800 TPH (Mega Turnkey Site)</option>
+                          <option value="100-150">100 - 150 TPH (Highway / Contractor)</option>
+                          <option value="150-250">150 - 250 TPH (Large Quarry)</option>
                         </select>
                       </div>
 

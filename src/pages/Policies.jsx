@@ -23,16 +23,16 @@ export const Privacy = () => {
         <title>Privacy Policy | SREW Projects</title>
         <meta name="description" content="Read SREW Projects Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details." />
         <meta name="keywords" content="privacy policy, data protection, privacy, SREW Projects, SREW privacy, Hyderabad" />
-        <link rel="canonical" href="https://srewprojects.com/privacy" />
+        <link rel="canonical" href="https://www.srewprojects.com/privacy" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/privacy" />
+        <meta property="og:url" content="https://www.srewprojects.com/privacy" />
         <meta property="og:title" content="Privacy Policy - SREW Projects" />
         <meta property="og:description" content="Read SREW Projects Privacy Policy to understand how we protect your personal and project information." />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Privacy Policy - SREW Projects" />
         <meta name="twitter:description" content="Our commitment to safeguarding your corporate engineering inquiries and RFQ data." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -44,7 +44,7 @@ export const Privacy = () => {
             "@type": "WebPage",
             "name": "Privacy Policy | SREW Projects",
             "description": "Read SREW Projects Privacy Policy to understand how we collect, protect, and handle your data and corporate RFQ details.",
-            "url": "https://srewprojects.com/privacy",
+            "url": "https://www.srewprojects.com/privacy",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -52,7 +52,7 @@ export const Privacy = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             }
           }
@@ -64,8 +64,8 @@ export const Privacy = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://srewprojects.com/privacy"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.srewprojects.com/privacy"}
             ]
           }
         `}
@@ -106,16 +106,16 @@ export const Terms = () => {
         <title>Terms &amp; Conditions | SREW Projects</title>
         <meta name="description" content="Review SREW Projects Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines." />
         <meta name="keywords" content="terms and conditions, terms of use, aggregate crusher, SREW Projects, SREW terms, Hyderabad" />
-        <link rel="canonical" href="https://srewprojects.com/terms" />
+        <link rel="canonical" href="https://www.srewprojects.com/terms" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/terms" />
+        <meta property="og:url" content="https://www.srewprojects.com/terms" />
         <meta property="og:title" content="Terms &amp; Conditions - SREW Projects" />
         <meta property="og:description" content="Review SREW Projects Terms and Conditions for website use, industrial engineering contents, and crusher configuration calculators." />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Terms &amp; Conditions - SREW Projects" />
         <meta name="twitter:description" content="Review intellectual property, mechanical drawings copyright, and aggregate crushing selector calculations usage terms." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -127,7 +127,7 @@ export const Terms = () => {
             "@type": "WebPage",
             "name": "Terms & Conditions | SREW Projects",
             "description": "Review SREW Projects Terms and Conditions for website use, SREW product blueprints, CAD diagrams, and aggregate equipment quote guidelines.",
-            "url": "https://srewprojects.com/terms",
+            "url": "https://www.srewprojects.com/terms",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -135,7 +135,7 @@ export const Terms = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             }
           }
@@ -147,8 +147,8 @@ export const Terms = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://srewprojects.com/terms"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://www.srewprojects.com/terms"}
             ]
           }
         `}
@@ -186,16 +186,16 @@ export const Cookies = () => {
         <title>Cookie Policy | SREW Projects</title>
         <meta name="description" content="Learn about cookies on SREW Projects website and how they help us optimize your aggregate machinery configuration experience." />
         <meta name="keywords" content="cookie policy, cookies, tracking, analytics, SREW Projects, SREW cookies, Hyderabad" />
-        <link rel="canonical" href="https://srewprojects.com/cookies" />
+        <link rel="canonical" href="https://www.srewprojects.com/cookies" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/cookies" />
+        <meta property="og:url" content="https://www.srewprojects.com/cookies" />
         <meta property="og:title" content="Cookie Policy - SREW Projects" />
         <meta property="og:description" content="Learn about cookies on SREW Projects website and how they help us optimize your browsing and TPH selector experience." />
-        <meta property="og:image" content="https://srewprojects.com/images/logo.png" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Cookie Policy - SREW Projects" />
         <meta name="twitter:description" content="Understand cookie settings, analytical tags, and browser configuration choices." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/logo.png" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/logo.png" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -207,7 +207,7 @@ export const Cookies = () => {
             "@type": "WebPage",
             "name": "Cookie Policy | SREW Projects",
             "description": "Learn about cookies on SREW Projects website and how they help us optimize your aggregate machinery configuration experience.",
-            "url": "https://srewprojects.com/cookies",
+            "url": "https://www.srewprojects.com/cookies",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -215,7 +215,7 @@ export const Cookies = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             }
           }
@@ -227,8 +227,8 @@ export const Cookies = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Cookie Policy", "item": "https://srewprojects.com/cookies"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Cookie Policy", "item": "https://www.srewprojects.com/cookies"}
             ]
           }
         `}

@@ -7,18 +7,18 @@ export const Industries = () => {
     <>
       <Helmet>
         <title>Industries Served - Mining, Construction, Recycling, Sand Processing | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://srewprojects.com/industries" />
+        <link rel="canonical" href="https://www.srewprojects.com/industries" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/industries" />
+        <meta property="og:url" content="https://www.srewprojects.com/industries" />
         <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/Industries/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industries We Serve - SREW Projects" />
         <meta name="twitter:description" content="Discover SREW Projects industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/Industries/mining.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/Industries/mining.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -65,8 +65,8 @@ export const Industries = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://srewprojects.com/industries"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.srewprojects.com/industries"}
             ]
           }
         `}
@@ -82,7 +82,7 @@ export const Industries = () => {
                 "name": "What industries does SREW Projects serve?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (30–800 TPH), screening plants, sand processing plants, and material handling systems."
+                  "text": "SREW Projects serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (20–250 TPH), screening plants, sand processing plants, and material handling systems."
                 }
               },
               {
@@ -106,7 +106,7 @@ export const Industries = () => {
                 "name": "What size crushing plant do I need for a highway or road project?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For NHAI highway and road construction projects, SREW recommends 200–800 TPH crushing plants with a Jaw Crusher for primary crushing, Cone Crusher for secondary crushing, and multi-deck Vibrating Screens for grading aggregates to IRC specifications. We provide complete turnkey installation, commissioning, and after-sales support."
+                  "text": "For NHAI highway and road construction projects, SREW recommends 150–250 TPH crushing plants with a Jaw Crusher for primary crushing, Cone Crusher for secondary crushing, and multi-deck Vibrating Screens for grading aggregates to IRC specifications. We provide complete turnkey installation, commissioning, and after-sales support."
                 }
               },
               {
@@ -127,7 +127,7 @@ export const Industries = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Industries Served - Mining, Construction, Recycling | SREW",
-            "url": "https://srewprojects.com/industries",
+            "url": "https://www.srewprojects.com/industries",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -135,7 +135,7 @@ export const Industries = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
             "speakable": {

@@ -9,18 +9,18 @@ export const Projects = () => {
     <>
       <Helmet>
         <title>Projects - Crushing &amp; Screening Plant Case Studies | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, case studies, turnkey installation, Kepler, Singareni, Kesara, aggregate plant, project commissions, Hyderabad, India, SREW" />
-        <link rel="canonical" href="https://srewprojects.com/projects" />
+        <link rel="canonical" href="https://www.srewprojects.com/projects" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srewprojects.com/projects" />
+        <meta property="og:url" content="https://www.srewprojects.com/projects" />
         <meta property="og:title" content="Project Case Studies - SREW Projects" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 30–800 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Project Case Studies - SREW Projects" />
         <meta name="twitter:description" content="View SREW Projects successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 400 TPH plant, Keesara 150 TPH plant." />
-        <meta name="twitter:image" content="https://srewprojects.com/images/Projects/project1.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -91,8 +91,8 @@ export const Projects = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srewprojects.com/"},
-              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://srewprojects.com/projects"}
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.srewprojects.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.srewprojects.com/projects"}
             ]
           }
         `}
@@ -108,7 +108,7 @@ export const Projects = () => {
                 "name": "How many projects has SREW completed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects has successfully completed over 120 turnkey projects for 45+ clients across India. Projects range from 30 TPH to 800 TPH capacity plants spanning mining, construction, infrastructure, and C&D waste recycling sectors."
+                  "text": "SREW Projects has successfully completed over 120 turnkey projects for 45+ clients across India. Projects range from 20–250 TPH capacity plants spanning mining, construction, infrastructure, and C&D waste recycling sectors."
                 }
               },
               {
@@ -137,7 +137,7 @@ export const Projects = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Projects - Turnkey Crushing &amp; Screening Plants | SREW",
-            "url": "https://srewprojects.com/projects",
+            "url": "https://www.srewprojects.com/projects",
             "dateModified": "2026-05-21",
             "author": {"@type": "Organization", "name": "SREW Projects"},
             "publisher": {
@@ -145,7 +145,7 @@ export const Projects = () => {
               "name": "SREW Projects",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://srewprojects.com/images/logo.png"
+                "url": "https://www.srewprojects.com/images/logo.png"
               }
             },
             "speakable": {
