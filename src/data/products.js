@@ -5,7 +5,7 @@ export const products = [
     shortName: "Jaw Crushers",
     category: "Crushers",
     purpose: "Primary crushing of large hard materials like granite, basalt, and limestone.",
-    capacity: "20–250 TPH",
+    capacity: "2–250 TPH",
     applications: [
       "Mining operations & mineral extraction",
       "Road construction aggregate processing",
@@ -34,7 +34,7 @@ export const products = [
     shortName: "Cone Crushers",
     category: "Crushers",
     purpose: "Secondary and tertiary crushing to produce fine, uniform, and cubical aggregate sizes.",
-    capacity: "50 TPH to 500 TPH",
+    capacity: "50 TPH to 250 TPH",
     applications: [
       "Sub-base and road base production",
       "High-grade concrete aggregate manufacturing",
@@ -63,7 +63,7 @@ export const products = [
     shortName: "VSI & HSI Crushers",
     category: "Crushers",
     purpose: "Shaping aggregates and producing high-quality cubical manufactured sand (M-Sand).",
-    capacity: "50 TPH to 300 TPH",
+    capacity: "50 TPH to 250 TPH",
     applications: [
       "Premium Manufactured Sand (M-Sand) production",
       "Plaster sand and high-specification fine sands",
@@ -239,7 +239,7 @@ export const products = [
     purpose: "Centralized power distribution, safety interlocking, and system automation for industrial plants.",
     capacity: "Custom configurations based on plant size",
     applications: [
-      "Complete turnkey plant automation (20–250 TPH)",
+      "Complete turnkey plant automation (2–250 TPH)",
       "Multi-stage motor synchronization & sequential boot sequences",
       "Safety interlocking loops and remote operational controls",
       "Thermal load sensing and VFD speed matching"
