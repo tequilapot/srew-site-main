@@ -4658,3 +4658,75 @@ div[style*="position: sticky"]:has(.nav-tabs),
 
 
 
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE HEADER - solid & crisp (no frosted glass)
+   backdrop-filter on the fixed navbar made the header look hazy
+   over images and, on iOS Safari, could clip the fixed-position
+   mobile menu panel so the hamburger appeared to do nothing.
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 991.98px) {
+    .navbar,
+    .navbar.scrolled,
+    .navbar.fixed-top,
+    .navbar.fixed-top.scrolled {
+        background: #ffffff !important;
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        border-bottom: 1px solid #e5e9f0 !important;
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08) !important;
+    }
+    .navbar-collapse,
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        background: #ffffff !important;
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        z-index: 1060 !important;
+    }
+    .navbar-toggler {
+        position: relative;
+        z-index: 1070;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+    }
+}
+
+/* Real product photos (replacing 3D renders) */
+img.real-photo { mix-blend-mode: normal !important; }
+.hero-image-wrapper img.real-photo {
+    filter: none !important;
+    width: 100%;
+    max-height: 460px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.18);
+}
+.card div:has(> img.real-photo),
+.product-card div:has(> img.real-photo) {
+    padding: 0 !important;
+    overflow: hidden;
+}
+.card div:has(> img.real-photo) > img.real-photo,
+.product-card div:has(> img.real-photo) > img.real-photo {
+    width: 100%;
+    height: 100%;
+    max-height: none !important;
+    object-fit: cover !important;
+}
+img.gallery-photo { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+
+/* Lite YouTube embeds */
+.video-lite-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 15px rgba(15,23,42,.06);border:1px solid #eef1f5}
+.lite-yt{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.lite-yt-btn{all:unset;cursor:pointer;display:block;position:absolute;inset:0}
+.lite-yt-btn:focus-visible{outline:3px solid #ffc107;outline-offset:-3px}
+.lite-yt img{width:100%;height:100%;object-fit:cover;display:block}
+.lite-yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;transform:translate(-50%,-50%);background:#e62117;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.lite-yt-play::after{content:"";position:absolute;left:27px;top:14px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
+.lite-yt-btn:hover .lite-yt-play{background:#c4170f}
+.lite-yt-dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.82);color:#fff;font-size:.75rem;font-weight:600;padding:2px 6px;border-radius:4px}
+.lite-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.product-videos{background:#f8fafc}
