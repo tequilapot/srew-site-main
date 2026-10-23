@@ -58,7 +58,7 @@
         <div class="container d-flex justify-content-between align-items-center h-100">
             <div class="top-info-left" style="color: rgba(255,255,255,0.85); font-weight: 500;">
                 <a href="videos.html" class="text-white text-decoration-none" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600;"><i class="fab fa-youtube text-danger"></i> Videos</a>
-                <span><i class="fas fa-certificate text-warning me-1"></i> ISO 9001:2015 Certified</span>
+                <span>ISO 9001:2015 Certified</span>
                 <span class="gst-line"><i class="fas fa-file-invoice text-warning me-1"></i> GSTIN: 36BEIPR4767N1ZL</span>
             </div>
             <div class="top-info-right">
@@ -284,11 +284,11 @@
         .tab-content-area { background: #fff; padding: 4rem 0; }
         .section-heading { font-weight: 800; color: var(--c-primary); font-size: 1.5rem; margin-bottom: 1.5rem; }
         
-        .icon-card { text-align: center; padding: 1.5rem; border: 1px solid #e9ecef; border-radius: 12px; height: 100%; transition: all 0.3s ease; }
-        .icon-card:hover { border-color: #0d6efd; box-shadow: 0 5px 15px rgba(13,110,253,0.1); transform: translateY(-3px); }
-        .icon-card i { font-size: 2rem; color: #0d6efd; margin-bottom: 1rem; }
-        .icon-card h6 { font-weight: 700; color: #212529; margin-bottom: 0.5rem; }
-        .icon-card p { font-size: 0.85rem; color: #6c757d; margin-bottom: 0; }
+        .icon-card { text-align: left; padding: 1.25rem 1.25rem 1.3rem; border: 1px solid #e9ecef; border-radius: 12px; height: 100%; background: #fff; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .icon-card:hover { border-color: #0d6efd; box-shadow: 0 5px 15px rgba(13,110,253,0.08); }
+        .icon-card h6::before { content: ""; display: block; width: 28px; height: 3px; border-radius: 2px; background: #0d6efd; margin-bottom: 0.85rem; }
+        .icon-card h6 { font-weight: 700; color: #212529; margin-bottom: 0.35rem; font-size: 1rem; }
+        .icon-card p { font-size: 0.875rem; line-height: 1.5; color: #6c757d; margin-bottom: 0; }
         
         .tech-table { width: 100%; border-collapse: collapse; }
         .tech-table th, .tech-table td { padding: 1rem; border-bottom: 1px solid #e9ecef; font-size: 0.9rem; }
@@ -400,7 +400,6 @@
                                     
         <div class="col-6">
             <div class="icon-card">
-                <i class="fas fa-tachometer-alt"></i>
                 <h6>High Efficiency</h6>
                 <p>More Output</p>
             </div>
@@ -408,7 +407,6 @@
         
         <div class="col-6">
             <div class="icon-card">
-                <i class="fas fa-cubes"></i>
                 <h6>Consistent Quality</h6>
                 <p>Superior Cubicity</p>
             </div>
@@ -416,7 +414,6 @@
         
         <div class="col-6">
             <div class="icon-card">
-                <i class="fas fa-shield-alt"></i>
                 <h6>Durable & Reliable</h6>
                 <p>Longer wear life</p>
             </div>
@@ -424,7 +421,6 @@
         
         <div class="col-6">
             <div class="icon-card">
-                <i class="fas fa-tools"></i>
                 <h6>Low Maintenance</h6>
                 <p>Easy access roof</p>
             </div>
