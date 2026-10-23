@@ -78,7 +78,7 @@ export const ProductDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{`${product.name} - 2–250 TPH Industrial Crushing | SREW`}</title>
+        <title>{`${product.name} - 20–250 TPH Industrial Crushing | SREW`}</title>
         <meta name="description" content={`${product.purpose} SREW Projects is an ISO 9001:2015 certified manufacturer of high-capacity aggregate machinery in Hyderabad, India.`} />
         <meta name="keywords" content={`${product.shortName}, SREW Projects, ${product.name}, quarry crushing, sand processing, heavy engineering, stone crusher, industrial machinery, Hyderabad, India`} />
         <link rel="canonical" href={`https://www.srewprojects.com/products/${product.slug}`} />

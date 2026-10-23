@@ -5,7 +5,7 @@ export const products = [
     shortName: "Jaw Crushers",
     category: "Crushers",
     purpose: "Primary crushing of large hard materials like granite, basalt, and limestone.",
-    capacity: "2–250 TPH",
+    capacity: "20–250 TPH",
     applications: [
       "Mining operations & mineral extraction",
       "Road construction aggregate processing",
@@ -239,7 +239,7 @@ export const products = [
     purpose: "Centralized power distribution, safety interlocking, and system automation for industrial plants.",
     capacity: "Custom configurations based on plant size",
     applications: [
-      "Complete turnkey plant automation (2–250 TPH)",
+      "Complete turnkey plant automation (20–250 TPH)",
       "Multi-stage motor synchronization & sequential boot sequences",
       "Safety interlocking loops and remote operational controls",
       "Thermal load sensing and VFD speed matching"

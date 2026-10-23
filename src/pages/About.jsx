@@ -66,7 +66,7 @@ export const About = () => {
             "mainEntity": [
               {"@type": "Question", "name": "When was SREW Projects established?", "acceptedAnswer": {"@type": "Answer", "text": "SREW Projects was established in 2018. Our founding team brings over 10 years of combined industry experience in precision engineering, industrial fabrication, and heavy equipment manufacturing for the mining, construction, and recycling sectors."}},
               {"@type": "Question", "name": "What are SREW's manufacturing facilities?", "acceptedAnswer": {"@type": "Answer", "text": "SREW operates a state-of-the-art manufacturing facility in Hyderabad, India, equipped with CNC machining centers for precision component manufacturing, high-precision fabrication bays for large-scale industrial structures, hydraulic press shops for metal forming, and PLC panel manufacturing units for plant automation."}},
-              {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 2–250 TPH."}}
+              {"@type": "Question", "name": "How many projects has SREW delivered?", "acceptedAnswer": {"@type": "Answer", "text": "SREW has successfully delivered over 120 turnkey projects for 45+ clients across India. Our projects span mining, construction, infrastructure, sand processing, and C&D waste recycling applications, with plant capacities ranging from 20–250 TPH."}}
             ]
           }
         `}
@@ -105,7 +105,7 @@ export const About = () => {
                     Founded with a vision to revolutionize aggregate crushing efficiency, SREW Projects has grown into a key manufacturer of heavy-duty industrial processing machinery in India.
                   </p>
                   <p className="mb-4 text-body">
-                    Headquartered in Hyderabad, Telangana, we design, fabricate, deploy, and service high-yield turnkey plants spanning capacities from 2–250 TPH. Our manufacturing facility in the Jeedimetla Industrial Area is equipped with state-of-the-art CNC machining centers, automated plasma cutting, heavy-duty rolling, and custom metallurgy heat-treatment testing systems.
+                    Headquartered in Hyderabad, Telangana, we design, fabricate, deploy, and service high-yield turnkey plants spanning capacities from 20–250 TPH. Our manufacturing facility in the Jeedimetla Industrial Area is equipped with state-of-the-art CNC machining centers, automated plasma cutting, heavy-duty rolling, and custom metallurgy heat-treatment testing systems.
                   </p>
                   <p className="mb-4 text-body">
                     We maintain an unwavering commitment to quality under our certified <strong>ISO 9001:2015</strong> Quality Management Systems, ensuring every jaw crusher, screen panel, or conveyor framework is manufactured to tight mechanical tolerances.

@@ -7,13 +7,13 @@ export const Industries = () => {
     <>
       <Helmet>
         <title>Industries Served - Mining, Construction, Recycling, Sand Processing | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, quarrying, mining equipment, C&amp;D recycling, M-Sand manufacturing, turnkey plant, sand dryers, road aggregate, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://www.srewprojects.com/industries" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.srewprojects.com/industries" />
         <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://www.srewprojects.com/images/Industries/mining.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industries We Serve - SREW Projects" />
@@ -82,7 +82,7 @@ export const Industries = () => {
                 "name": "What industries does SREW Projects serve?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (2–250 TPH), screening plants, sand processing plants, and material handling systems."
+                  "text": "SREW Projects serves quarry operators, mining companies, NHAI highway contractors, M-Sand producers, C&D waste recycling entrepreneurs, and EPC turnkey project firms. We provide turnkey crushing plants (20–250 TPH), screening plants, sand processing plants, and material handling systems."
                 }
               },
               {
