@@ -667,7 +667,7 @@ function initCookieConsent() {
     banner.className = 'srew-cookie-banner d-flex flex-column';
     banner.innerHTML = `
         <div class="d-flex align-items-center mb-2">
-            <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
+            <i class="fas fa-cookie-bite me-2" style="font-size: 1.2rem;"></i>
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
@@ -680,6 +680,7 @@ function initCookieConsent() {
     `;
 
     d.body.appendChild(banner);
+    d.body.classList.add('has-cookie-banner');
 
     // Show banner with a slight delay
     setTimeout(function() {
@@ -698,6 +699,7 @@ function initCookieConsent() {
 
     function hideBanner() {
         banner.classList.add('hiding');
+        d.body.classList.remove('has-cookie-banner');
         setTimeout(function() {
             banner.remove();
         }, 500);
