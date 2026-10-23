@@ -138,11 +138,8 @@
     
 
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;600;700&display=swap"></noscript>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/vendor/bootstrap-5.3.3/bootstrap.min.css"
@@ -158,7 +155,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
-    <meta name="theme-color" content="#0056b3">
+    <meta name="theme-color" content="#14202E">
 
 
     <!-- Meta Pixel Code -->
@@ -286,12 +283,13 @@
     <!-- MAIN CONTENT -->
     <main id="main-content" role="main">
         <!-- SUBPAGE HERO -->
-        <section class="subpage-hero" aria-label="Project Hero">
+        <section class="subpage-hero el-band" aria-label="Project Hero">
             <div class="container text-center text-lg-start">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase mb-3"><i class="fas fa-map-marker-alt me-1"></i> SREW Projects Showcase</span>
-                        <h1>200 TPH Crushing & Screening Plant</h1>
+                        
+                        <p class="el-eyebrow">Projects</p>
+<h1>200 TPH Crushing & Screening Plant</h1>
                         <p class="lead mb-0 text-white-50">West Bengal, India | Year of Delivery: 2020</p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
@@ -495,72 +493,13 @@
       </div>
     </footer>
     <!-- Sticky Mobile Bottom CTA Bar -->
-    <div class="sticky-mobile-cta" role="navigation" aria-label="Quick contact">
-      <a href="tel:+918790759460" class="sticky-cta-btn call"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> Call</a>
-      <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="sticky-cta-btn whatsapp"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a>
-      <a href="/contact" class="sticky-cta-btn quote"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-send"></use></svg> Get Quote</a>
-    </div>
+    
     <!-- BROCHURE MODAL POPUP -->
-    <div id="brochureOverlay" class="brochure-overlay"></div>
-    <div id="brochurePopup" class="brochure-modal-card">
-        <button class="brochure-close-btn" aria-label="Close modal" id="brochureCloseBtn">✕</button>
-        <div class="brochure-modal-grid" id="brochureGrid">
-            <!-- Left Side: Image Showcase -->
-            <div class="brochure-modal-image-side">
-                <img src="images/project-singareni.webp" alt="SREW Projects 250 TPH plant at Singareni" class="brochure-side-img" loading="lazy" decoding="async">
-                <div class="brochure-image-overlay">
-                    <span class="brochure-image-badge">250 TPH Plant</span>
-                </div>
-            </div>
-            <!-- Right Side: Form Area -->
-            <div class="brochure-modal-form-side">
-                <h3 class="brochure-form-title">Download Technical Specs</h3>
-                <p class="brochure-form-desc">Get comprehensive configurations, equipment dimensions, and plant layout schematics instantly.</p>
-                <form id="brochureForm" novalidate>
-                    <div class="brochure-input-group">
-                        <label for="brochureName" class="brochure-input-label">Full Name <span class="required-asterisk">*</span></label>
-                        <div class="brochure-input-wrapper">
-                            <i class="fas fa-user input-icon"></i>
-                            <input type="text" id="brochureName" name="name" required autocomplete="name" placeholder="Enter your full name">
-                        </div>
-                    </div>
-                    <div class="brochure-input-group">
-                        <label for="brochurePhone" class="brochure-input-label">Phone Number <span class="required-asterisk">*</span></label>
-                        <div class="brochure-input-wrapper">
-                            <i class="fas fa-phone-alt input-icon"></i>
-                            <input type="tel" id="brochurePhone" name="phone" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel" placeholder="10-digit mobile number">
-                        </div>
-                    </div>
-                    <div class="brochure-input-group">
-                        <label for="brochureRequirement" class="brochure-input-label">Your Requirement <span class="required-asterisk">*</span></label>
-                        <div class="brochure-input-wrapper">
-                            <i class="fas fa-align-left input-icon textarea-icon"></i>
-                            <textarea id="brochureRequirement" name="requirement" required placeholder="Describe your plant capacity or equipment needs (e.g. 200 TPH stone crusher)..."></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="brochure-submit-btn">
-                        <span>Download Brochure</span>
-                        <i class="fas fa-download icon-right"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-        <!-- Success State Pane -->
-        <div class="brochure-success-pane" id="brochureSuccessPane" style="display: none;">
-            <div class="success-icon-wrapper">
-                <div class="success-checkmark"></div>
-            </div>
-            <h3 class="success-title">Download Successful!</h3>
-            <p class="success-message">Thank you for your interest. SREW Projects corporate brochure is now downloading.</p>
-            <button class="success-btn" id="brochureSuccessOkBtn">OK</button>
-        </div>
-    </div>
+    
+    
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/918790759460" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
+    
 
 
 

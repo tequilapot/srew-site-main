@@ -48,11 +48,8 @@
     <!-- Twitter Card -->
 
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;600;700&display=swap"></noscript>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Stylesheets -->
     <link
@@ -90,7 +87,7 @@
       href="images/favicon-16x16.png"
     />
     <link rel="manifest" href="images/site.webmanifest" />
-    <meta name="theme-color" content="#0056b3" />
+    <meta name="theme-color" content="#14202E" />
 
     <!-- Local SEO geo tags -->
     <meta name="geo.region" content="IN-TG" />
@@ -269,7 +266,7 @@
     <main id="main-content" role="main">
       <!-- ARTICLE HERO SECTION -->
       <section
-        class="py-5 text-white text-start"
+        class="py-5 text-white text-start el-band"
         style="
           background: linear-gradient(135deg, #0b1d37 0%, #1e60b3 100%);
           position: relative;
@@ -281,11 +278,9 @@
         <div class="container position-relative" style="z-index: 2">
           <div class="row">
             <div class="col-lg-10">
-              <span
-                class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3 text-uppercase"
-                >Problem-Solving</span
-              >
-              <h1
+              
+              <p class="el-eyebrow">Resources</p>
+<h1
                 style="
                   font-family: var(--ff-display);
                   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
@@ -856,135 +851,14 @@
       </div>
     </footer>
     <!-- BROCHURE MODAL POPUP -->
-    <div id="brochureOverlay" class="brochure-overlay"></div>
-    <div id="brochurePopup" class="brochure-modal-card">
-      <button
-        class="brochure-close-btn"
-        aria-label="Close modal"
-        id="brochureCloseBtn"
-      >
-        ✕
-      </button>
-      <div class="brochure-modal-grid" id="brochureGrid">
-        <!-- Left Side: Image Showcase -->
-        <div class="brochure-modal-image-side">
-          <img
-            src="images/project-singareni.webp"
-            alt="SREW Projects 250 TPH plant at Singareni"
-            class="brochure-side-img" loading="lazy" decoding="async" />
-          <div class="brochure-image-overlay">
-            <span class="brochure-image-badge">250 TPH Plant</span>
-          </div>
-        </div>
-        <!-- Right Side: Form Area -->
-        <div class="brochure-modal-form-side">
-          <h3 class="brochure-form-title">Download Technical Specs</h3>
-          <p class="brochure-form-desc">
-            Get comprehensive configurations, equipment dimensions, and plant
-            layout schematics instantly.
-          </p>
-          <form id="brochureForm" novalidate>
-            <div class="brochure-input-group">
-              <label for="brochureName" class="brochure-input-label"
-                >Full Name <span class="required-asterisk">*</span></label
-              >
-              <div class="brochure-input-wrapper">
-                <i class="fas fa-user input-icon"></i>
-                <input
-                  type="text"
-                  id="brochureName"
-                  name="name"
-                  required
-                  autocomplete="name"
-                  placeholder="Enter your full name"
-                />
-              </div>
-            </div>
-            <div class="brochure-input-group">
-              <label for="brochurePhone" class="brochure-input-label"
-                >Phone Number <span class="required-asterisk">*</span></label
-              >
-              <div class="brochure-input-wrapper">
-                <i class="fas fa-phone-alt input-icon"></i>
-                <input
-                  type="tel"
-                  id="brochurePhone"
-                  name="phone"
-                  required
-                  pattern="[0-9]{10}"
-                  maxlength="10"
-                  autocomplete="tel"
-                  placeholder="10-digit mobile number"
-                />
-              </div>
-            </div>
-            <div class="brochure-input-group">
-              <label for="brochureRequirement" class="brochure-input-label"
-                >Your Requirement
-                <span class="required-asterisk">*</span></label
-              >
-              <div class="brochure-input-wrapper">
-                <i class="fas fa-align-left input-icon textarea-icon"></i>
-                <textarea
-                  id="brochureRequirement"
-                  name="requirement"
-                  required
-                  placeholder="Describe your plant capacity or equipment needs (e.g. 200 TPH stone crusher)..."
-                ></textarea>
-              </div>
-            </div>
-            <button type="submit" class="brochure-submit-btn">
-              <span>Download Brochure</span>
-              <i class="fas fa-download icon-right"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-      <!-- Success State Pane -->
-      <div
-        class="brochure-success-pane"
-        id="brochureSuccessPane"
-        style="display: none"
-      >
-        <div class="success-icon-wrapper">
-          <div class="success-checkmark"></div>
-        </div>
-        <h3 class="success-title">Download Successful!</h3>
-        <p class="success-message">
-          Thank you for your interest. SREW Projects corporate brochure is now downloading.
-        </p>
-        <button class="success-btn" id="brochureSuccessOkBtn">OK</button>
-      </div>
-    </div>
+    
+    
 
     <!-- Sticky Mobile Bottom CTA Bar -->
-    <div class="sticky-mobile-cta">
-      <a href="tel:8790759460" class="sticky-cta-btn call">
-        <i class="fas fa-phone-alt"></i> Call
-      </a>
-      <a
-        href="https://wa.me/918790759460?text=Hi%20SREW,%20my%20crusher%20plant%20output%20is%20dropping.%20Please%20share%20technical%20advice%20and%20support%20options."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="sticky-cta-btn whatsapp"
-      >
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="#leadQuoteForm" class="sticky-cta-btn quote">
-        <i class="fas fa-file-invoice-dollar"></i> Get Quote
-      </a>
-    </div>
+    
 
     <!-- WhatsApp Float -->
-    <a
-      href="https://wa.me/918790759460?text=Hi%20SREW,%20my%20crusher%20plant%20output%20is%20dropping.%20Please%20share%20technical%20advice%20and%20support%20options."
-      class="whatsapp-float"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-    >
-      <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
+    
 
     <!-- VIDEO LIGHTBOX MODAL -->
     <div
@@ -994,7 +868,7 @@
     >
       <div class="video-lightbox-content" onclick="event.stopPropagation()">
         <button class="video-lightbox-close" onclick="closeVideoModal()">
-          ✕
+          Close
         </button>
         <h4 id="videoLightboxTitle" class="video-lightbox-title">
           Video Player
