@@ -44,7 +44,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Manganese Steel Jaw Plate",
                   "description": "Heavy-duty corrugated manganese steel jaw plates for primary rock crushing.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/jaw-plate.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Crusher Wear Parts"
                 }
@@ -56,7 +55,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "High-Chrome VSI Blow Bar",
                   "description": "Thick, rectangular high-chrome VSI crusher blow bar for superior sand shaping and durability.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/blue-mild-steel-impact-crusher-blow-bar-1000x1000.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Crusher Wear Parts"
                 }
@@ -68,7 +66,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Woven Wire Screen Mesh Panel",
                   "description": "Industrial woven wire screen mesh panel for precise aggregate sorting in vibrating screens.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/screen-mesh.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Screen Components"
                 }
@@ -80,7 +77,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Heavy-Duty Conveyor Roller",
                   "description": "Industrial heavy-duty conveyor idler roller assembly with sealed bearing housings.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/conveyor-roller.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Conveyor Components"
                 }
@@ -92,7 +88,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Manganese Steel Cone Crusher Mantle",
                   "description": "Massive, bell-shaped manganese steel cone crusher mantle wear liner for secondary crushing.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/crusher-mantle-500x500.webp",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Crusher Wear Parts"
                 }
@@ -104,7 +99,6 @@ export const SpareParts = () => {
                   "@type": "Product",
                   "name": "Stepped Grizzly Feeder Bar",
                   "description": "Thick, stepped steel grizzly feeder bar for heavy-duty primary rock separation.",
-                  "image": "https://www.srewprojects.com/images/spare-parts/grizzly-bar.png",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "category": "Feeder Components"
                 }
@@ -239,12 +233,15 @@ export const SpareParts = () => {
               <div className="col-lg-4 col-md-6" key={part.id}>
                 <ScrollReveal className="part-card">
                   <div className="overflow-hidden" style={{ height: '220px' }}>
-                    <img 
-                      src={part.image} 
-                      alt={part.name} 
-                      className="part-card-img" 
-                      onError={(e) => { e.target.src = '/images/logo.png'; e.target.style.objectFit = 'contain'; e.target.style.padding = '20px'; }}
-                    />
+                    {part.image ? (
+                      <img
+                        src={part.image}
+                        alt={part.name}
+                        className="part-card-img"
+                      />
+                    ) : (
+                      <div className="catalog-gap" aria-hidden="true" style={{ height: '100%' }} />
+                    )}
                   </div>
                   <div className="p-4 d-flex flex-column" style={{ height: 'calc(100% - 220px)' }}>
                     <h3 className="h5 text-primary-ultra mb-1">{part.name}</h3>

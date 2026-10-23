@@ -275,3 +275,17 @@ main>section:first-child[style*="margin-top:90px"]{margin-top:0!important}
 p.text-muted a:not(.btn){text-decoration:underline;text-underline-offset:2px}
 #products .section-header p.lead{color:#525a62 !important}
 section .text-center > span.badge.text-primary{color:#0a4a9e !important}
+
+/* Product catalog photos (public/images/catalog). Pastel mat so contain-fit
+   machines do not sit on a harsh white or cropped edge. */
+img.catalog-photo{background:#f3f6fa}
+.hero-v4 .hv4-media{background:#e7eef4}
+.hero-v4 .hv4-media img.catalog-photo{object-fit:contain;background:#e7eef4}
+.hero-image-wrapper img.catalog-photo{object-fit:contain;background:#eef3f8;aspect-ratio:auto;max-height:520px}
+img.catalog-portrait{object-fit:contain!important;background:#f4f7fb!important}
+.card div:has(> img.catalog-portrait) > img.catalog-portrait,
+.product-card div:has(> img.catalog-portrait) > img.catalog-portrait{object-fit:contain!important;background:#f4f7fb!important;height:100%}
+img.catalog-native{width:auto!important;max-width:min(100%,578px)!important;height:auto!important;object-fit:contain!important;background:#f4f7fb}
+.catalog-gap{display:block;width:100%;min-height:140px;background:linear-gradient(165deg,#f7f4ef 0%,#e7eef6 58%,#f4f7fb 100%)}
+.cat-tile > .catalog-gap,.rp-card > .catalog-gap{aspect-ratio:4/3;min-height:0}
+.card-img-top-wrapper > .catalog-gap{height:100%;min-height:180px}

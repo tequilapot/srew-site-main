@@ -16,11 +16,11 @@ export const Projects = () => {
         <meta property="og:url" content="https://www.srewprojects.com/projects" />
         <meta property="og:title" content="Project Case Studies - SREW Projects" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/catalog/stone-crusher-plant-layout.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Project Case Studies - SREW Projects" />
         <meta name="twitter:description" content="View SREW Projects successful turnkey installations across India: West Bengal 200 TPH plant, Singareni 250 TPH plant, Keesara 150 TPH plant." />
-        <meta name="twitter:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/catalog/stone-crusher-plant-layout.webp" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />

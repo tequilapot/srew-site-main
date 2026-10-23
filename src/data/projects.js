@@ -16,7 +16,7 @@ export const projects = [
       { key: "Operating Hours", val: "16 Hours / Day" },
       { key: "Environmental", val: "Enclosed chutes & mist-dust suppressors" }
     ],
-    image: "/images/Projects/project1.jpg"
+    image: "/images/catalog/stone-crusher-plant-layout.webp"
   },
   {
     slug: "singareni-400-tph",
@@ -35,7 +35,7 @@ export const projects = [
       { key: "Water System", val: "Zero-effluent water recirculating clarifier" },
       { key: "Uptime", val: "94% operational efficiency under monsoon" }
     ],
-    image: "/images/Projects/project2.jpg"
+    image: "/images/catalog/vibrating-screen-on-structure-site.webp"
   },
   {
     slug: "odisha-40-tph-mobile",
@@ -54,7 +54,7 @@ export const projects = [
       { key: "Relocation Time", val: "48 Hours from teardown to setup" },
       { key: "Capacity", val: "40-45 TPH steady output" }
     ],
-    image: "/images/Projects/project3.jpg"
+    image: "/images/catalog/mobile-jaw-crushing-plant-tyre.webp"
   },
   {
     slug: "keesara-150-tph",
@@ -73,7 +73,7 @@ export const projects = [
       { key: "Control System", val: "Centralized SCADA/PLC mimic board" },
       { key: "Material", val: "Quartzite & Blue Metal Granite" }
     ],
-    image: "/images/Projects/project4.jpg"
+    image: "/images/catalog/mobile-cone-screening-plant.webp"
   },
   {
     slug: "urban-cd-recycling",
@@ -92,6 +92,6 @@ export const projects = [
       { key: "Sand Dryer Moisture", val: "Reduced from 12% down to 1.2%" },
       { key: "Metal Separator", val: "High-intensity overbelt magnet (99.8% recovery)" }
     ],
-    image: "/images/Projects/project5.jpg"
+    image: "/images/catalog/cnd-waste-recycling-plant.webp"
   }
 ];

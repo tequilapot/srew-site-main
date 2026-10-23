@@ -104,11 +104,11 @@ export const Products = () => {
         <meta property="og:url" content="https://www.srewprojects.com/products" />
         <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | SREW" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://www.srewprojects.com/images/product-jaw-crusher.jpg" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/catalog/jaw-crusher-heavy.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
         <meta name="twitter:description" content="Explore SREW Projects comprehensive range of heavy duty jaw crushers, cone crushers, M-sand VSI crushers, vibrating screens, grizzly feeders, and sand dryers." />
-        <meta name="twitter:image" content="https://www.srewprojects.com/images/product-jaw-crusher.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/catalog/jaw-crusher-heavy.webp" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />

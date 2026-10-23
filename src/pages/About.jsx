@@ -116,7 +116,7 @@ export const About = () => {
                 <ScrollReveal delay={200}>
                   <div className="position-relative overflow-hidden rounded shadow-lg" style={{ height: '400px' }}>
                     <img 
-                      src="/images/Products/jaw-crusher.jpg" 
+                      src="/images/catalog/jaw-crusher-heavy.webp" 
                       alt="SREW precision fabrication facility showing heavy machinery assembly" 
                       className="w-100 h-100" 
                       style={{ objectFit: 'cover' }} 
