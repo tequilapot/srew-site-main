@@ -168,7 +168,7 @@ function initBrochureForm(){
             const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
             const link = d.createElement('a');
             link.href = pdfUrl;
-            link.download = 'SR-Engineering-Works-Company-Profile.pdf'; // Forces a download natively
+            link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
             link.target = '_blank';
             d.body.appendChild(link);
             link.click();
@@ -251,7 +251,7 @@ function initContactForm(){
             phone: phone.trim() !== '' ? (countryCode + ' ' + cleanPhone) : 'Not provided',
             subject: subject,
             message: message,
-            from_name: 'S.R.Engineering Works Contact Form'
+            from_name: 'SREW Contact Form'
         });
 
         // Send to Google Sheets

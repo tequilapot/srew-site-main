@@ -375,7 +375,7 @@ function initBrochureModal(){
         const pdfUrl = new URL('brochures/srew-company-profile.pdf', window.location.href).href;
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'SR-Engineering-Works-Company-Profile.pdf';
+        link.download = 'SREW-Company-Profile.pdf';
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
@@ -667,7 +667,7 @@ function initCookieConsent() {
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
-            S.R.Engineering Works uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
+            SREW Projects uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="cookies.html" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
         </p>
         <div class="d-flex gap-2">
             <button class="btn btn-primary btn-sm flex-grow-1 fw-bold py-2" id="cookieAcceptBtn" style="border-radius: 8px; font-size: 0.82rem;">Accept All</button>
