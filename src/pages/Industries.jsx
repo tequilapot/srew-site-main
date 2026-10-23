@@ -14,11 +14,11 @@ export const Industries = () => {
         <meta property="og:url" content="https://www.srewprojects.com/industries" />
         <meta property="og:title" content="Industries We Serve - Mining, Construction, Recycling" />
         <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
-        <meta property="og:image" content="https://www.srewprojects.com/images/Industries/mining.jpg" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/catalog/stone-crusher-plant-layout.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Industries We Serve - SREW Projects" />
         <meta name="twitter:description" content="Discover SREW Projects industrial solutions across Mining, Quarry, Road Aggregates, Sand Processing, and Construction &amp; Demolition (C&amp;D) Waste Recycling." />
-        <meta name="twitter:image" content="https://www.srewprojects.com/images/Industries/mining.jpg" />
+        <meta name="twitter:image" content="https://www.srewprojects.com/images/catalog/stone-crusher-plant-layout.webp" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
         <meta name="geo.position" content="17.5158653;78.4377875" />
@@ -176,7 +176,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-jaw-crusher.jpg" alt="Aggregate Quarry crushing station" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/catalog/jaw-crusher-heavy.webp" alt="Aggregate Quarry crushing station" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -201,7 +201,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5 flex-md-row-reverse">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-cone-crusher-plant.png" alt="Heavy mineral processing crushing line" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/catalog/mobile-cone-screening-plant.webp" alt="Heavy mineral processing crushing line" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -226,7 +226,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-vertical-shaft-crusher.png" alt="M-Sand manufacturing VSI plant" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/catalog/vsi-sand-making-machine.webp" alt="M-Sand manufacturing VSI plant" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">
@@ -251,7 +251,7 @@ export const Industries = () => {
               <div className="row align-items-center g-5 flex-md-row-reverse">
                 <div className="col-md-5">
                   <div className="rounded overflow-hidden shadow-md" style={{ height: '300px' }}>
-                    <img src="/images/Products/srew-cd-recycling.jpg" alt="Construction & Demolition Waste Recycling" className="w-100 h-100" style={{ objectFit: 'cover' }} />
+                    <img src="/images/catalog/cnd-waste-recycling-plant.webp" alt="Construction & Demolition Waste Recycling" className="w-100 h-100" style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7">

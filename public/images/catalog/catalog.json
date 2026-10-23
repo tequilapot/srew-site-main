@@ -1,0 +1,393 @@
+{
+  "note": "New batches: add <name>.webp and <name>-800.webp here, describe the image in scripts/apply-catalog.mjs (ALTS_TEXT plus a SLUG or FILE_RULES entry), then run npm run images.",
+  "origin": "map.csv lists the original upload filenames for this batch.",
+  "images": {
+    "belt-conveyor": {
+      "file": "belt-conveyor.webp",
+      "file800": "belt-conveyor-800.webp",
+      "width": 1600,
+      "height": 1200,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Belt conveyor for a crushing plant, built by SREW Projects",
+      "use": true
+    },
+    "bucket-wheel-sand-washer": {
+      "file": "bucket-wheel-sand-washer.webp",
+      "file800": "bucket-wheel-sand-washer-800.webp",
+      "width": 1600,
+      "height": 1200,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Bucket wheel sand washer built by SREW Projects",
+      "use": true
+    },
+    "cement-silos": {
+      "file": "cement-silos.webp",
+      "file800": "cement-silos-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "Cement storage silos fabricated by SREW Projects",
+      "use": true
+    },
+    "cnd-waste-recycling-plant": {
+      "file": "cnd-waste-recycling-plant.webp",
+      "file800": "cnd-waste-recycling-plant-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Construction and demolition waste recycling plant built by SREW Projects",
+      "use": true
+    },
+    "cone-crusher-single-cylinder": {
+      "file": "cone-crusher-single-cylinder.webp",
+      "file800": "cone-crusher-single-cylinder-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Single cylinder hydraulic cone crusher built by SREW Projects",
+      "use": true
+    },
+    "dewatering-screen-hydrocyclone": {
+      "file": "dewatering-screen-hydrocyclone.webp",
+      "file800": "dewatering-screen-hydrocyclone-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Dewatering screen with hydrocyclone for sand recovery, built by SREW Projects",
+      "use": true
+    },
+    "double-roll-crusher": {
+      "file": "double-roll-crusher.webp",
+      "file800": "double-roll-crusher-800.webp",
+      "width": 1600,
+      "height": 893,
+      "width800": 800,
+      "height800": 447,
+      "alt": "Double roll crusher built by SREW Projects",
+      "use": true
+    },
+    "electrical-control-panel": {
+      "file": "electrical-control-panel.webp",
+      "file800": "electrical-control-panel-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "Electrical control panel for a crushing plant, built by SREW Projects",
+      "use": true
+    },
+    "feed-hopper": {
+      "file": "feed-hopper.webp",
+      "file800": "feed-hopper-800.webp",
+      "width": 1600,
+      "height": 1195,
+      "width800": 800,
+      "height800": 597,
+      "alt": "Feed hopper for a crushing plant, built by SREW Projects",
+      "use": true
+    },
+    "glass-crusher": {
+      "file": "glass-crusher.webp",
+      "file800": "glass-crusher-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "Glass crusher built by SREW Projects",
+      "use": true
+    },
+    "hammer-crusher": {
+      "file": "hammer-crusher.webp",
+      "file800": "hammer-crusher-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Hammer crusher built by SREW Projects",
+      "use": true
+    },
+    "horizontal-vibrating-screen": {
+      "file": "horizontal-vibrating-screen.webp",
+      "file800": "horizontal-vibrating-screen-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Horizontal vibrating screen built by SREW Projects",
+      "use": true
+    },
+    "hydraulic-cone-crusher-multi-cylinder": {
+      "file": "hydraulic-cone-crusher-multi-cylinder.webp",
+      "file800": "hydraulic-cone-crusher-multi-cylinder-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Multi-cylinder hydraulic cone crusher built by SREW Projects",
+      "use": true
+    },
+    "hydraulic-tyre-mounted-machine": {
+      "file": "hydraulic-tyre-mounted-machine.webp",
+      "file800": "hydraulic-tyre-mounted-machine-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "hydraulic-tyre-mounted-machine",
+      "use": false,
+      "holdReason": "Held back: no page clearly matches this photo. Do not assign it until a page does."
+    },
+    "impact-crusher-hsi": {
+      "file": "impact-crusher-hsi.webp",
+      "file800": "impact-crusher-hsi-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Horizontal shaft impact crusher built by SREW Projects",
+      "use": true
+    },
+    "inclined-vibrating-screen-3-deck": {
+      "file": "inclined-vibrating-screen-3-deck.webp",
+      "file800": "inclined-vibrating-screen-3-deck-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Inclined 3-deck vibrating screen built by SREW Projects",
+      "use": true
+    },
+    "jaw-crusher-heavy": {
+      "file": "jaw-crusher-heavy.webp",
+      "file800": "jaw-crusher-heavy-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Heavy-duty jaw crusher with drive, built by SREW Projects",
+      "use": true
+    },
+    "jaw-crusher-with-drive": {
+      "file": "jaw-crusher-with-drive.webp",
+      "file800": "jaw-crusher-with-drive-800.webp",
+      "width": 1195,
+      "height": 896,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Jaw crusher with motor and drive base, built by SREW Projects",
+      "use": true
+    },
+    "jaw-crusher": {
+      "file": "jaw-crusher.webp",
+      "file800": "jaw-crusher-800.webp",
+      "width": 1195,
+      "height": 896,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Jaw crusher built by SREW Projects",
+      "use": true
+    },
+    "mobile-cone-screening-plant": {
+      "file": "mobile-cone-screening-plant.webp",
+      "file800": "mobile-cone-screening-plant-800.webp",
+      "width": 1600,
+      "height": 1600,
+      "width800": 800,
+      "height800": 800,
+      "alt": "Mobile cone crushing and screening plant built by SREW Projects",
+      "use": true
+    },
+    "mobile-impact-crushing-plant": {
+      "file": "mobile-impact-crushing-plant.webp",
+      "file800": "mobile-impact-crushing-plant-800.webp",
+      "width": 1600,
+      "height": 1459,
+      "width800": 800,
+      "height800": 729,
+      "alt": "Mobile impact crushing plant built by SREW Projects",
+      "use": true
+    },
+    "mobile-jaw-crushing-plant-tyre": {
+      "file": "mobile-jaw-crushing-plant-tyre.webp",
+      "file800": "mobile-jaw-crushing-plant-tyre-800.webp",
+      "width": 1600,
+      "height": 893,
+      "width800": 800,
+      "height800": 447,
+      "alt": "Tyre-mounted mobile jaw crushing plant built by SREW Projects",
+      "use": true
+    },
+    "modular-jaw-crushing-plant": {
+      "file": "modular-jaw-crushing-plant.webp",
+      "file800": "modular-jaw-crushing-plant-800.webp",
+      "width": 1600,
+      "height": 1459,
+      "width800": 800,
+      "height800": 729,
+      "alt": "Modular jaw crushing plant built by SREW Projects",
+      "use": true
+    },
+    "plate-rolling-machine": {
+      "file": "plate-rolling-machine.webp",
+      "file800": "plate-rolling-machine-800.webp",
+      "width": 578,
+      "height": 432,
+      "width800": 578,
+      "height800": 432,
+      "alt": "Plate rolling machine at the SREW Projects fabrication works",
+      "use": true
+    },
+    "portable-inclined-feed-conveyor": {
+      "file": "portable-inclined-feed-conveyor.webp",
+      "file800": "portable-inclined-feed-conveyor-800.webp",
+      "width": 1600,
+      "height": 1195,
+      "width800": 800,
+      "height800": 597,
+      "alt": "Portable inclined feed conveyor built by SREW Projects",
+      "use": true
+    },
+    "pulverizer-cyclone-bag-filter-system": {
+      "file": "pulverizer-cyclone-bag-filter-system.webp",
+      "file800": "pulverizer-cyclone-bag-filter-system-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "Pulverizer with cyclone and bag filter, built by SREW Projects",
+      "use": true
+    },
+    "rotary-drum": {
+      "file": "rotary-drum.webp",
+      "file800": "rotary-drum-800.webp",
+      "width": 1600,
+      "height": 893,
+      "width800": 800,
+      "height800": 447,
+      "alt": "Rotary drum dryer built by SREW Projects",
+      "use": true
+    },
+    "screw-sand-washer": {
+      "file": "screw-sand-washer.webp",
+      "file800": "screw-sand-washer-800.webp",
+      "width": 1600,
+      "height": 1200,
+      "width800": 800,
+      "height800": 600,
+      "alt": "Screw sand washer built by SREW Projects",
+      "use": true
+    },
+    "small-roll-crusher": {
+      "file": "small-roll-crusher.webp",
+      "file800": "small-roll-crusher-800.webp",
+      "width": 1600,
+      "height": 2143,
+      "width800": 800,
+      "height800": 1071,
+      "alt": "Small roll crusher built by SREW Projects",
+      "use": true
+    },
+    "stone-crusher-plant-layout": {
+      "file": "stone-crusher-plant-layout.webp",
+      "file800": "stone-crusher-plant-layout-800.webp",
+      "width": 1600,
+      "height": 813,
+      "width800": 800,
+      "height800": 407,
+      "alt": "Stone crusher plant with conveyors and screens, built by SREW Projects",
+      "use": true
+    },
+    "vibrating-screen-3-deck-pedestal": {
+      "file": "vibrating-screen-3-deck-pedestal.webp",
+      "file800": "vibrating-screen-3-deck-pedestal-800.webp",
+      "width": 1448,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "3-deck vibrating screen on a pedestal, built by SREW Projects",
+      "use": true
+    },
+    "vibrating-screen-on-structure-site": {
+      "file": "vibrating-screen-on-structure-site.webp",
+      "file800": "vibrating-screen-on-structure-site-800.webp",
+      "width": 1600,
+      "height": 1195,
+      "width800": 800,
+      "height800": 597,
+      "alt": "Vibrating screen on a plant structure at a SREW Projects site",
+      "use": true
+    },
+    "vsi-crusher-twin-motor": {
+      "file": "vsi-crusher-twin-motor.webp",
+      "file800": "vsi-crusher-twin-motor-800.webp",
+      "width": 1600,
+      "height": 1195,
+      "width800": 800,
+      "height800": 597,
+      "alt": "Twin-motor VSI crusher built by SREW Projects",
+      "use": true
+    },
+    "vsi-sand-making-machine": {
+      "file": "vsi-sand-making-machine.webp",
+      "file800": "vsi-sand-making-machine-800.webp",
+      "width": 1449,
+      "height": 1086,
+      "width800": 800,
+      "height800": 600,
+      "alt": "VSI sand making machine built by SREW Projects",
+      "use": true
+    },
+    "wood-chipper": {
+      "file": "wood-chipper.webp",
+      "file800": "wood-chipper-800.webp",
+      "width": 250,
+      "height": 250,
+      "width800": 250,
+      "height800": 250,
+      "alt": "wood-chipper",
+      "use": false,
+      "holdReason": "Held back: no page clearly matches this photo. Do not assign it until a page does."
+    }
+  },
+  "usedOnThisRun": [
+    "belt-conveyor",
+    "bucket-wheel-sand-washer",
+    "cement-silos",
+    "cnd-waste-recycling-plant",
+    "cone-crusher-single-cylinder",
+    "dewatering-screen-hydrocyclone",
+    "double-roll-crusher",
+    "electrical-control-panel",
+    "feed-hopper",
+    "glass-crusher",
+    "hammer-crusher",
+    "horizontal-vibrating-screen",
+    "hydraulic-cone-crusher-multi-cylinder",
+    "impact-crusher-hsi",
+    "inclined-vibrating-screen-3-deck",
+    "jaw-crusher",
+    "jaw-crusher-heavy",
+    "jaw-crusher-with-drive",
+    "mobile-cone-screening-plant",
+    "mobile-impact-crushing-plant",
+    "mobile-jaw-crushing-plant-tyre",
+    "modular-jaw-crushing-plant",
+    "plate-rolling-machine",
+    "portable-inclined-feed-conveyor",
+    "pulverizer-cyclone-bag-filter-system",
+    "rotary-drum",
+    "screw-sand-washer",
+    "small-roll-crusher",
+    "stone-crusher-plant-layout",
+    "vibrating-screen-3-deck-pedestal",
+    "vibrating-screen-on-structure-site",
+    "vsi-crusher-twin-motor",
+    "vsi-sand-making-machine"
+  ]
+}
