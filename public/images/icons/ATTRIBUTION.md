@@ -10,3 +10,5 @@ It is NOT the ISO organisation logo and does not name a certification body or ce
 Files: adjustments.svg, file-download.svg, arrows-minimize.svg, atom.svg, bucket.svg, building-factory-2.svg, bulldozer.svg, calendar-check.svg, circle-check.svg, clock-check.svg, cpu.svg, cube.svg, currency-rupee.svg, frame.svg, hammer.svg, layers-subtract.svg, magnet.svg, mountain.svg, packages.svg, ruler-measure.svg, settings-bolt.svg, stack-3.svg, target.svg, tool.svg, truck-delivery.svg, weight.svg, world-check.svg
 
 MIT License text: https://github.com/tabler/tabler-icons/blob/main/LICENSE
+
+`ui-sprite.svg` bundles these Tabler Icons v3.49.0 outline icons (MIT, same licence as above) as `<symbol>`s for the header, footer, key-specs strip and mobile action bar: phone, brand-whatsapp, mail, map-pin, chevron-down, arrow-right, shield-check, file-description, certificate, clock-hour-4, truck-delivery, building-factory-2, file-download, send, brand-youtube, tool, currency-rupee, gauge, briefcase, users.

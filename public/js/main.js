@@ -4,7 +4,6 @@
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
-console.log("[SREW Debug] main.js is executing...");
 
 
 /* ──────────────────────────────────────────────
@@ -39,7 +38,6 @@ function initNavbar(){
     // Close mobile menu on link click (except dropdown toggles and mega triggers)
     _qa('.navbar-nav .nav-link:not(.dropdown-toggle):not(.mega-nav-trigger), .navbar-nav .dropdown-item, .mega-item').forEach(function(link){
         _on(link,'click',function(){
-            console.log("[JS main.js click listener debug] Link clicked: Tag=" + link.tagName + " Text=" + link.innerText.split('\n')[0] + " Classes=" + link.className);
             const collapse=_qs('.navbar-collapse');
             if(collapse&&collapse.classList.contains('show')){
                 const bsCollapse=bootstrap.Collapse.getInstance(collapse);
@@ -183,6 +181,8 @@ function initSmoothScroll(){
    ACTIVE NAV LINK
    ────────────────────────────────────────────── */
 function initActiveNav(){
+    // v2 header: the active item is rendered server-side (clean URLs), so keep it.
+    if(_qs('.navbar[data-active-set]'))return;
     const loc=w.location.href;
     const pathName=w.location.pathname.split('/').pop()||'index.html';
     const links=_qa('.navbar-nav .nav-link');
