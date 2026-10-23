@@ -14,8 +14,7 @@
 /privacy            /privacy-policy.html  200
 /cookies            /cookies.html         200
 
-# SPA catch-all fallback for any other React routes (certifications, sustainability, etc.)
-/certifications     /index.html           200
+# SPA catch-all fallback for any other React routes (sustainability, etc.)
 /sustainability     /index.html           200
 
 # ──────────────────────────────────────────────

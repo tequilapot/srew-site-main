@@ -176,11 +176,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.srewprojects.com/mobile-crusher-manufacturer</loc>
-    <lastmod>2026-10-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.srewprojects.com/mobile-crusher-vs-fixed-crusher</loc>
     <lastmod>2026-10-10</lastmod>
     <priority>0.7</priority>
@@ -247,11 +242,6 @@
   </url>
   <url>
     <loc>https://www.srewprojects.com/sand-dryer-manufacturer</loc>
-    <lastmod>2026-10-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.srewprojects.com/sand-washer-plant</loc>
     <lastmod>2026-10-10</lastmod>
     <priority>0.7</priority>
   </url>
@@ -366,5 +356,15 @@
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.srewprojects.com/returns-warranty</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.srewprojects.com/shipping-policy</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>
