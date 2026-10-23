@@ -149,7 +149,7 @@ export const Sustainability = () => {
                 <ScrollReveal delay={200}>
                   <div className="position-relative overflow-hidden rounded shadow-lg" style={{ height: '350px' }}>
                     <img 
-                      src="/images/catalog/inclined-vibrating-screen-3-deck.webp" 
+                      src="/images/Products/vibrating-screen.jpg" 
                       alt="Eco aggregate washing plant setup in action" 
                       className="w-100 h-100" 
                       style={{ objectFit: 'cover' }} 

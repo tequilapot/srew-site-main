@@ -1,4 +1,10 @@
 /**
+ * Retired. This rewriter used to replace every header photo.
+ * Product photos are mapped by scripts/apply-product-images.py.
+ */
+console.error("apply-catalog.mjs is retired. Use: python3 scripts/apply-product-images.py");
+process.exit(1);
+/**
  * Apply public/images/catalog to every product and header photo.
  *
  * Adding a later batch:

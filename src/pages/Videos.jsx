@@ -27,28 +27,28 @@ export const Videos = () => {
       title: "SREW Roller Crusher | Heavy-Duty Industrial Roll Crusher",
       duration: "0:47",
       description: "Heavy-duty roller crusher for coal, clay and industrial crushing applications.",
-      thumbnail: "/images/catalog/double-roll-crusher.webp",
+      thumbnail: "/images/Products/srew-roller-crusher.jpg",
       url: "https://www.youtube.com/embed/ECjllQYxTMk?si=FVavcdGX2A-cTGWz&autoplay=1"
     },
     {
       title: "Jaw Crusher Plant | Primary Rock Breaking",
       duration: "2:12",
       description: "Primary jaw crusher plant designed for high-capacity rock crushing.",
-      thumbnail: "/images/catalog/jaw-crusher-heavy.webp",
+      thumbnail: "/images/Products/srew-jaw-crusher.jpg",
       url: "https://www.youtube.com/embed/s8r6FAvzzgo?si=-zSm_Mnkld2s9F5W&autoplay=1"
     },
     {
       title: "Turnkey Crushing Screening & Washing Plant",
       duration: "1:31",
       description: "Complete turnkey crushing, screening and washing plant operation.",
-      thumbnail: "/images/catalog/mobile-cone-screening-plant.webp",
+      thumbnail: "/images/Products/srew-cone-crusher-plant.png",
       url: "https://www.youtube.com/embed/cpBA2UDgPgI?si=melBAJFqJ6PweRaC&autoplay=1"
     },
     {
       title: "Turnkey Crushing & Screening Plant",
       duration: "1:03",
       description: "Integrated crushing and screening plant with optimized performance.",
-      thumbnail: "/images/catalog/mobile-jaw-crushing-plant-tyre.webp",
+      thumbnail: "/images/Products/srew-mobile-crushing-plant.png",
       url: "https://www.youtube.com/embed/a15meWcHKHM?si=YyK7SELL0xGARERQ&autoplay=1"
     }
   ];
@@ -63,7 +63,7 @@ export const Videos = () => {
         <meta property="og:url" content="https://www.srewprojects.com/videos" />
         <meta property="og:title" content="Plant Operations &amp; Equipment Videos - SREW Projects" />
         <meta property="og:description" content="Watch high-capacity SREW crushing plants, screening systems, roller crushers, and M-Sand manufacturing plants in real-world operations across India." />
-        <meta property="og:image" content="https://www.srewprojects.com/images/catalog/stone-crusher-plant-layout.webp" />
+        <meta property="og:image" content="https://www.srewprojects.com/images/Projects/project1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />

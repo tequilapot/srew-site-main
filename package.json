@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "images": "node scripts/apply-catalog.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",
