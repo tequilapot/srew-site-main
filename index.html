@@ -234,6 +234,8 @@
 
     <link rel="preload" as="image" href="/videos/hero-poster.jpg" fetchpriority="high" media="(prefers-reduced-motion: no-preference)">
     <link rel="preload" as="image" href="/images/hero/srew-mobile-crushing-unit-1400.webp" imagesrcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" imagesizes="(min-width:1024px) min(1152px, calc(100vw - 128px)), 100vw" fetchpriority="high" media="(prefers-reduced-motion: reduce)">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/roboto-300.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/roboto-900.woff2" crossorigin>
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -250,6 +252,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="/css/redesign.css">
+    <link rel="stylesheet" href="/css/elevate.css">
     <link
       rel="sitemap"
       type="application/xml"
@@ -412,7 +415,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "VideoObject", "name": "250 TPH Crushing & Screening Plant | SREW Projects", "description": "A complete 250 TPH turnkey crushing and screening plant by SREW Projects, Hyderabad.", "thumbnailUrl": ["https://i.ytimg.com/vi/a15meWcHKHM/hqdefault.jpg"], "uploadDate": "2026-04-05T00:19:01-07:00", "duration": "PT1M3S", "embedUrl": "https://www.youtube.com/embed/a15meWcHKHM", "contentUrl": "https://www.youtube.com/watch?v=a15meWcHKHM", "publisher": {"@type": "Organization", "name": "SREW Projects", "url": "https://www.srewprojects.com/"}}, {"@type": "VideoObject", "name": "Jaw Crusher Plant, Primary Rock Crushing | SREW Projects", "description": "SREW Projects jaw crusher plant for primary rock crushing.", "thumbnailUrl": ["https://i.ytimg.com/vi/s8r6FAvzzgo/hqdefault.jpg"], "uploadDate": "2026-04-05T00:22:07-07:00", "duration": "PT2M12S", "embedUrl": "https://www.youtube.com/embed/s8r6FAvzzgo", "contentUrl": "https://www.youtube.com/watch?v=s8r6FAvzzgo", "publisher": {"@type": "Organization", "name": "SREW Projects", "url": "https://www.srewprojects.com/"}}, {"@type": "VideoObject", "name": "150 TPH M-Sand Manufacturing Plant | SREW Projects", "description": "A 150 TPH M-sand manufacturing plant designed and built by SREW Projects.", "thumbnailUrl": ["https://i.ytimg.com/vi/cJQ2SIVhz-4/hqdefault.jpg"], "uploadDate": "2026-04-05T00:18:21-07:00", "duration": "PT2M37S", "embedUrl": "https://www.youtube.com/embed/cJQ2SIVhz-4", "contentUrl": "https://www.youtube.com/watch?v=cJQ2SIVhz-4", "publisher": {"@type": "Organization", "name": "SREW Projects", "url": "https://www.srewprojects.com/"}}]}</script>
 </head>
 
-  <body>
+  <body class="el-site">
     <noscript
       ><img
         height="1"
@@ -437,7 +440,7 @@
           <a class="navbar-brand d-flex align-items-center" href="/" aria-label="SREW Projects - Home"><img src="/images/logo.png" alt="SREW Projects Logo" class="nav-logo-img" width="299" height="117" decoding="async"></a>
           <div class="nav-actions d-flex align-items-center order-lg-last ms-auto">
             <a href="tel:+918790759460" class="nav-phone-link" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg><span class="d-none d-xl-inline">+91 8790759460</span></a>
-            <a href="/contact" class="btn btn-quote d-none d-lg-inline-flex">Get a Quote</a>
+            <a href="/contact" class="btn btn-quote d-none d-lg-inline-flex">Contact us</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu"><span class="navbar-toggler-icon"></span></button>
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -458,68 +461,60 @@
 
     <!-- MAIN CONTENT -->
     <main id="main-content" role="main">
-      <!-- HERO SECTION (v4: layout modelled on a top OEM homepage: headline, full-width photo, then a calm panel with actions and proof points) -->
-      <section class="hero-v4" aria-label="Company introduction">
-        <div class="hv4-head">
-          <div class="hv4-container">
-            <p class="hv4-eyebrow"><img src="/images/icons/iso-9001-badge.svg" alt="" width="20" height="20"> <span>ISO 9001:2015 Certified Partner · <span class="nowrap">Hyderabad, India</span></span></p>
-            <h1>Complete Crushing, Screening &amp; <span class="nowrap">M-Sand</span> Plant Solutions | 2–250 TPH</h1>
-          </div>
+      <section class="el-hero" aria-label="Company introduction">
+        <div class="el-hero-media">
+          <img id="el-hero-fallback" class="el-hero-fallback" alt="Mobile crushing unit with feed hopper, jaw crusher and vibrating screen built by SREW Projects" width="1400" height="787" decoding="async" hidden data-src="/images/hero/srew-mobile-crushing-unit-1400.webp" data-srcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" data-sizes="100vw">
+          <video id="el-hero-video" autoplay muted loop playsinline poster="/videos/hero-poster.jpg" preload="none" width="1280" height="720" aria-hidden="true">
+            <source src="/videos/hero.webm" type="video/webm">
+            <source src="/videos/hero.mp4" type="video/mp4">
+            <img src="/images/hero/srew-mobile-crushing-unit-1400.webp" srcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" sizes="100vw" alt="Mobile crushing unit with feed hopper, jaw crusher and vibrating screen built by SREW Projects" width="1400" height="787" decoding="async">
+          </video>
+          <div class="el-hero-shade" aria-hidden="true"></div>
         </div>
-        <div class="hv4-media-row">
-          <div class="hv4-container hv4-media-container">
-            <div class="hv4-media">
-              <img id="hv4-fallback" class="hv4-fallback" alt="Mobile crushing unit with feed hopper, jaw crusher and vibrating screen built by SREW Projects" width="1400" height="787" decoding="async" hidden data-src="/images/hero/srew-mobile-crushing-unit-1400.webp" data-srcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" data-sizes="(min-width:1024px) min(1152px, calc(100vw - 128px)), 100vw">
-              <video id="hv4-video" class="hv4-video" autoplay muted loop playsinline poster="/videos/hero-poster.jpg" preload="none" width="1280" height="720" aria-hidden="true">
-                <source src="/videos/hero.webm" type="video/webm">
-                <source src="/videos/hero.mp4" type="video/mp4">
-                <img src="/images/hero/srew-mobile-crushing-unit-1400.webp" srcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" sizes="(min-width:1024px) min(1152px, calc(100vw - 128px)), 100vw" alt="Mobile crushing unit with feed hopper, jaw crusher and vibrating screen built by SREW Projects" width="1400" height="787" decoding="async">
-              </video>
-            </div>
-            <script>
-            (function () {
-              var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-              var img = document.getElementById("hv4-fallback");
-              var video = document.getElementById("hv4-video");
-              function showStill() {
-                if (!img || img.getAttribute("src")) return;
-                img.src = img.getAttribute("data-src");
-                if (img.getAttribute("data-srcset")) img.srcset = img.getAttribute("data-srcset");
-                if (img.getAttribute("data-sizes")) img.sizes = img.getAttribute("data-sizes");
-                img.hidden = false;
-                img.setAttribute("fetchpriority", "high");
-                if (video) {
-                  try { video.pause(); } catch (e) {}
-                  video.hidden = true;
-                  video.removeAttribute("autoplay");
-                }
-              }
-              if (reduce) showStill();
-              else if (video) video.addEventListener("error", showStill);
-            })();
-            </script>
-          </div>
+        <div class="el-hero-copy">
+          <p class="el-eyebrow">ISO 9001:2015 Certified · Hyderabad, India</p>
+          <h1>Complete crushing, screening and M-Sand plants</h1>
+          <p class="el-sub">Design, manufacturing, installation and commissioning of industrial crushing and screening plants. Capacity stays between 2 and 250 TPH.</p>
+          <a class="el-cta" href="#quote-section">Get started <span class="el-cta-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
         </div>
-        <div class="hv4-panel">
-          <div class="hv4-container hv4-grid">
-            <div class="hv4-copy">
-              <p class="hv4-lead">Design, manufacturing, installation and commissioning of industrial crushing and screening plants.</p>
-              <div class="hv4-ctas">
-                <a href="#quote-section" class="btn hv4-btn hv4-btn-primary">Get a Quote</a>
-                <a href="tel:+918790759460" class="btn hv4-btn hv4-btn-secondary hero-call" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> <span class="d-md-none">Call</span><span class="num">+91 8790759460</span></a>
-                <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="btn hv4-btn hv4-btn-outline"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a>
-              </div>
-              <button type="button" class="btn hv4-link" id="hero-cta-brochure" data-brochure-trigger="true">Download Brochure <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></button>
-            </div>
-            <ul class="hv4-proof" aria-label="Why buyers choose SREW Projects">
-              <li><strong>ISO 9001:2015</strong> <span>Certified</span></li>
-              <li><strong><span data-counter="2">2</span>–<span data-counter="250">250</span> TPH</strong> <span>plant range</span></li>
-              <li><strong><span data-counter="120">120</span>+</strong> <span>projects delivered</span></li>
-              <li><strong><span data-counter="10">10</span>+ years</strong> <span>of experience</span></li>
-              <li><strong><span data-counter="6">6</span>–<span data-counter="12">12</span> months</strong> <span>warranty, by product</span></li>
-              <li><strong><span data-counter="6">6</span>–<span data-counter="30">30</span> days</strong> <span>dispatch from order</span></li>
-            </ul>
-          </div>
+        <div class="el-stats" aria-label="Why buyers choose SREW Projects">
+          <div class="el-stat"><strong><span data-counter="2">2</span>–<span data-counter="250">250</span> TPH</strong><span>plant range</span></div>
+          <div class="el-stat"><strong><span data-counter="120">120</span>+</strong><span>projects delivered</span></div>
+          <div class="el-stat"><strong><span data-counter="10">10</span>+ years</strong><span>of experience</span></div>
+          <div class="el-stat"><strong><span data-counter="6">6</span>–<span data-counter="30">30</span> days</strong><span>dispatch from order</span></div>
+        </div>
+        <a class="el-scroll" href="#el-statement">Scroll<br>down</a>
+        <script>
+        (function () {
+          var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          var img = document.getElementById("el-hero-fallback");
+          var video = document.getElementById("el-hero-video");
+          function showStill() {
+            if (!img || img.getAttribute("src")) return;
+            img.src = img.getAttribute("data-src");
+            if (img.getAttribute("data-srcset")) img.srcset = img.getAttribute("data-srcset");
+            if (img.getAttribute("data-sizes")) img.sizes = img.getAttribute("data-sizes");
+            img.hidden = false;
+            img.setAttribute("fetchpriority", "high");
+            if (video) { try { video.pause(); } catch (e) {} video.hidden = true; video.removeAttribute("autoplay"); }
+          }
+          if (reduce) showStill();
+          else if (video) video.addEventListener("error", showStill);
+        })();
+        </script>
+      </section>
+      <section class="el-statement" id="el-statement">
+        <h2>Plants built in Hyderabad that turn a site into a running line.</h2>
+        <div class="el-statement-row">
+          <p>SREW Projects designs and manufactures crushing, screening and M-Sand plants, then installs and commissions them. One works, 2–250 TPH, ISO 9001:2015 certified.</p>
+          <a class="el-learn" href="/about">Learn more</a>
+        </div>
+      </section>
+      <section class="el-trio" aria-label="Explore the works">
+        <div class="el-trio-grid">
+          <a class="el-card" href="/products"><span class="el-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>Our products</h3><p>Crushers, screens, washers, conveyors and complete plants, each shown at full size.</p></a>
+          <a class="el-card" href="/projects"><span class="el-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><h3>Our projects</h3><p>Installed plants across mining, construction and recycling sites in India.</p></a>
+          <a class="el-card el-card-dark" href="/contact"><span class="el-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5h14v14H5z"/><path d="M5 8l7 5 7-5"/></svg></span><h3>Contact us</h3><p>Share capacity, material and site. We reply with a quotation, usually within one working day.</p></a>
         </div>
       </section>
       <section class="cat-grid-section py-5" aria-label="Explore by category">

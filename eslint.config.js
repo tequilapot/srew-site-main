@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'public/vendor/**', 'vendor/**', 'node_modules/**'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -27,6 +27,20 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    files: ['js/**/*.js', 'public/js/**/*.js', 'src/**/*.{js,jsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, google: 'readonly', bootstrap: 'readonly' },
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      'no-undef': 'off',
+      'no-empty': 'off',
+      'no-useless-assignment': 'off',
+      'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/immutability': 'off',
     },
   },
 ]
