@@ -58,7 +58,7 @@
         <div class="container d-flex justify-content-between align-items-center h-100">
             <div class="top-info-left" style="color: rgba(255,255,255,0.85); font-weight: 500;">
                 <a href="videos.html" class="text-white text-decoration-none" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600;"><i class="fab fa-youtube text-danger"></i> Videos</a>
-                <span>ISO 9001:2015 Certified</span>
+                <span><img class="iso-top-icon" src="/images/icons/iso-9001-badge.svg" alt="" width="16" height="16" decoding="async"> ISO 9001:2015 Certified</span>
                 <span class="gst-line"><i class="fas fa-file-invoice text-warning me-1"></i> GSTIN: 36BEIPR4767N1ZL</span>
             </div>
             <div class="top-info-right">
@@ -284,9 +284,10 @@
         .tab-content-area { background: #fff; padding: 4rem 0; }
         .section-heading { font-weight: 800; color: var(--c-primary); font-size: 1.5rem; margin-bottom: 1.5rem; }
         
-        .icon-card { text-align: left; padding: 1.25rem 1.25rem 1.3rem; border: 1px solid #e9ecef; border-radius: 12px; height: 100%; background: #fff; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .icon-card { text-align: center; padding: 1.4rem 1.1rem; border: 1px solid #e9ecef; border-radius: 12px; height: 100%; background: #fff; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
         .icon-card:hover { border-color: #0d6efd; box-shadow: 0 5px 15px rgba(13,110,253,0.08); }
-        .icon-card h6::before { content: ""; display: block; width: 28px; height: 3px; border-radius: 2px; background: #0d6efd; margin-bottom: 0.85rem; }
+        .icon-card .fc-icon-wrap { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 12px; background: #eef4ff; margin-bottom: 0.85rem; }
+        .icon-card .fc-icon { width: 28px; height: 28px; }
         .icon-card h6 { font-weight: 700; color: #212529; margin-bottom: 0.35rem; font-size: 1rem; }
         .icon-card p { font-size: 0.875rem; line-height: 1.5; color: #6c757d; margin-bottom: 0; }
         
@@ -297,7 +298,7 @@
         
         .bottom-banner { background: #f8f9fa; padding: 2rem 0; border-top: 1px solid #e9ecef; }
         .trust-item { display: flex; align-items: center; gap: 15px; }
-        .trust-item i { font-size: 2rem; color: #adb5bd; }
+        .trust-item .ti-icon { width: 36px; height: 36px; flex-shrink: 0; }
         .trust-item-text h6 { font-weight: 700; margin-bottom: 2px; color: #212529; }
         .trust-item-text span { font-size: 0.85rem; color: #6c757d; }
         
@@ -400,6 +401,7 @@
                                     
         <div class="col-6">
             <div class="icon-card">
+                <span class="fc-icon-wrap"><img class="fc-icon" src="/images/icons/settings-bolt.svg" alt="" width="28" height="28" loading="lazy" decoding="async"></span>
                 <h6>High Efficiency</h6>
                 <p>Maximum screening output</p>
             </div>
@@ -407,6 +409,7 @@
         
         <div class="col-6">
             <div class="icon-card">
+                <span class="fc-icon-wrap"><img class="fc-icon" src="/images/icons/stack-3.svg" alt="" width="28" height="28" loading="lazy" decoding="async"></span>
                 <h6>Multi-Deck</h6>
                 <p>Up to 4 classification decks</p>
             </div>
@@ -414,6 +417,7 @@
         
         <div class="col-6">
             <div class="icon-card">
+                <span class="fc-icon-wrap"><img class="fc-icon" src="/images/icons/hammer.svg" alt="" width="28" height="28" loading="lazy" decoding="async"></span>
                 <h6>Durable Build</h6>
                 <p>Huck-bolted side plates</p>
             </div>
@@ -421,6 +425,7 @@
         
         <div class="col-6">
             <div class="icon-card">
+                <span class="fc-icon-wrap"><img class="fc-icon" src="/images/icons/calendar-check.svg" alt="" width="28" height="28" loading="lazy" decoding="async"></span>
                 <h6>Low Maintenance</h6>
                 <p>Easy mesh replacement</p>
             </div>
@@ -496,7 +501,7 @@
                 <div class="row g-4 mb-4">
                     <div class="col-md-6 col-lg-3">
                         <div class="trust-item">
-                            <i class="fas fa-tools"></i>
+                            <img class="ti-icon" src="/images/icons/ruler-measure.svg" alt="" width="36" height="36" loading="lazy" decoding="async">
                             <div class="trust-item-text">
                                 <h6>Customizable Solutions</h6>
                                 <span>Built to meet your project needs</span>
@@ -505,7 +510,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="trust-item">
-                            <i class="fas fa-map-marked-alt"></i>
+                            <img class="ti-icon" src="/images/icons/truck-delivery.svg" alt="" width="36" height="36" loading="lazy" decoding="async">
                             <div class="trust-item-text">
                                 <h6>Nationwide Service Support</h6>
                                 <span>Quick assistance across India</span>
@@ -514,7 +519,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="trust-item">
-                            <i class="fas fa-cog"></i>
+                            <img class="ti-icon" src="/images/icons/packages.svg" alt="" width="36" height="36" loading="lazy" decoding="async">
                             <div class="trust-item-text">
                                 <h6>Spares Availability</h6>
                                 <span>Genuine parts, always in stock</span>
@@ -523,7 +528,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="trust-item">
-                            <i class="fas fa-globe-asia"></i>
+                            <img class="ti-icon" src="/images/icons/world-check.svg" alt="" width="36" height="36" loading="lazy" decoding="async">
                             <div class="trust-item-text">
                                 <h6>Export Quality</h6>
                                 <span>Built to global standards</span>

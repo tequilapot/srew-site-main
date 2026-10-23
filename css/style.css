@@ -4367,9 +4367,10 @@ select.form-control-premium {
     text-align: left;
 }
 
-.product-spec-badge {
-    border-left: 3px solid var(--c-primary-light);
-    padding: 8px 12px 8px 10px;
+.product-spec-badge .psb-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .product-spec-label {
@@ -4732,7 +4733,9 @@ img.gallery-photo { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
 
 /* Text-only trust badges (homepage certification row) */
 .trust-text-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 6px 12px;
     border: 1px solid #cbd5e1;
     border-radius: 999px;
@@ -4742,3 +4745,5 @@ img.gallery-photo { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
     font-weight: 700;
     letter-spacing: 0.01em;
 }
+
+.iso-top-icon { width: 16px; height: 16px; vertical-align: -3px; margin-right: 2px; }
