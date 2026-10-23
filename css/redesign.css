@@ -92,7 +92,7 @@
 .hero-v4 .hv4-media-container{padding:0}
 .hero-v4 .hv4-media{position:relative;aspect-ratio:16/9;background:#dfe5ea;overflow:hidden}
 .hero-v4 .hv4-media img{display:block;width:100%;height:100%;object-fit:cover}
-.hero-v4 .hv4-panel{background:var(--h4-panel);color:var(--h4-text);padding:32px 0 40px;border-bottom:1px solid #e3e8ee}
+.hero-v4 .hv4-panel{background:var(--h4-panel);color:var(--h4-text);padding:48px 0 48px;border-bottom:1px solid #e3e8ee}
 .hero-v4 .hv4-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
 .hero-v4 .hv4-lead{font-size:1rem;line-height:1.5;color:var(--h4-text);margin:0 0 24px;max-width:28em}
 .hero-v4 .hv4-ctas{display:flex;flex-wrap:wrap;gap:12px}
