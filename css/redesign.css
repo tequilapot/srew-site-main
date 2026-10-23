@@ -82,7 +82,7 @@
 }
 
 /* ---------- Homepage hero v4 (layout modelled on a leading OEM homepage: headline, full-width 16:9 photo, calm panel below) ---------- */
-.hero-v4{--h4-ink:#1f2933;--h4-text:#4b5563;--h4-muted:#6b7684;--h4-panel:#eef2f5;--h4-line:#cfd6dd;--h4-btn:#3a4f63;--h4-btn-d:#2e4052;--h4-grey:#e2e7ec;
+.hero-v4{--h4-ink:#1f2933;--h4-text:#4b5563;--h4-muted:#566170;--h4-panel:#eef2f5;--h4-line:#cfd6dd;--h4-btn:#3a4f63;--h4-btn-d:#2e4052;--h4-grey:#e2e7ec;
   background:#fff;color:var(--h4-text);font-family:var(--ff-body)}
 .hero-v4 .hv4-container{width:100%;max-width:1280px;margin:0 auto;padding:0 24px}
 .hero-v4 .hv4-head{padding:32px 0 32px}
