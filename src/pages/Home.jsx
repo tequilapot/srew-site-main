@@ -120,7 +120,7 @@ export const Home = () => {
     <>
       <Helmet>
         <title>SREW Projects - Complete Crushing, Screening &amp; M-Sand Plant Solutions</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://www.srewprojects.com/" />
       </Helmet>
@@ -142,7 +142,7 @@ export const Home = () => {
                   ISO 9001:2015 Certified Partner
                 </span>
                 <h1 className="text-white fw-bold mb-3" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', lineHeight: 1.15, textShadow: '0 3px 15px rgba(0,0,0,0.6)' }}>
-                  Complete Crushing, Screening &amp; M-Sand Plant Solutions | 20–250 TPH
+                  Complete Crushing, Screening &amp; M-Sand Plant Solutions | 2–250 TPH
                 </h1>
                 <p className="lead text-white-50 mb-4" style={{ maxWidth: '750px', fontSize: 'clamp(0.95rem, 1.5vw, 1.25rem)' }}>
                   Design, manufacturing, installation and commissioning of industrial crushing and screening plants.
@@ -344,7 +344,7 @@ export const Home = () => {
                         <i className="fas fa-tachometer-alt"></i>
                         <div>
                           <span className="product-spec-label">Capacity</span>
-                          <strong>20–250 TPH</strong>
+                          <strong>2 - 250 TPH</strong>
                         </div>
                       </div>
                       <div className="product-spec-badge">
@@ -502,7 +502,7 @@ export const Home = () => {
                     </h3>
                     <div id="collapse1" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body text-muted small">
-                        SREW offers turnkey crushing and screening plants ranging from 20–250 TPH capacity. We design plants customized to mining, aggregates, and recycling sectors.
+                        SREW offers turnkey crushing and screening plants ranging from 2–250 TPH capacity. We design plants customized to mining, aggregates, and recycling sectors.
                       </div>
                     </div>
                   </div>
@@ -579,6 +579,7 @@ export const Home = () => {
                         <label className="form-label-premium">Plant Capacity *</label>
                         <select className="form-control-premium" name="capacity" value={formData.capacity} onChange={handleInputChange} required>
                           <option value="">Select capacity range</option>
+                          <option value="2-20 TPH">2 - 20 TPH</option>
                           <option value="20-50 TPH">20 - 50 TPH</option>
                           <option value="50-100 TPH">50 - 100 TPH</option>
                           <option value="100-150 TPH">100 - 150 TPH</option>

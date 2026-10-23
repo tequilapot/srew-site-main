@@ -22,7 +22,15 @@ export const Products = () => {
   const getRecommendation = () => {
     const isHard = calcMaterial === 'granite' || calcMaterial === 'iron-ore';
     
-    if (calcCapacity === '20-50') {
+    if (calcCapacity === '2-20') {
+      return {
+        model: "SREW 2–20 TPH Mini Mobile Crusher Plant (10x6 to 24x15 jaw)",
+        motor: "10 HP - 40 HP",
+        ratio: "4:1 - 5:1",
+        css: "20mm - 40mm",
+        yield: "Compact aggregate for small sites"
+      };
+    } else if (calcCapacity === '20-50') {
       return {
         model: "SREW 24x15 Heavy-Duty Jaw Crusher",
         motor: "45 HP - 55 HP",
@@ -89,13 +97,13 @@ export const Products = () => {
     <>
       <Helmet>
         <title>Products - Jaw Crushers, Cone Crushers, VSI, Vibrating Screens | SREW Projects</title>
-        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta name="description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta name="keywords" content="crushing plant, screening plant, jaw crusher, cone crusher, VSI crusher, sand dryer, vibrating screen, material handling, quarry crushing plant, M-Sand plant, M-Sand manufacturer, stone crusher manufacturer, aggregate plant, NHAI crusher, C&amp;D recycling plant, EPC equipment partner, turnkey crushing plant, Hyderabad, India, SREW" />
         <link rel="canonical" href="https://www.srewprojects.com/products" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.srewprojects.com/products" />
         <meta property="og:title" content="Products - Crushing, Screening &amp; Material Handling Equipment | SREW" />
-        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 20–250 TPH | Hyderabad, India | 10+ Years Experience" />
+        <meta property="og:description" content="ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India | 10+ Years Experience" />
         <meta property="og:image" content="https://www.srewprojects.com/images/product-jaw-crusher.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Products - Crushing &amp; Screening Plant Equipment" />
@@ -119,7 +127,7 @@ export const Products = () => {
                 "item": {
                   "@type": "Product",
                   "name": "Jaw Crushers",
-                  "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 20–250 TPH capacity.",
+                  "description": "Primary crushing of large hard materials like granite, basalt, and limestone. 2–250 TPH capacity.",
                   "brand": {"@type": "Brand", "name": "SREW"},
                   "url": "https://www.srewprojects.com/products#jaw-crushers"
                 }
@@ -195,7 +203,7 @@ export const Products = () => {
                 "name": "What types of crushers does SREW manufacture?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW Projects manufactures four types of crushers: Jaw Crushers (20–250 TPH) for primary rock breaking, Cone Crushers (50-250 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-250 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
+                  "text": "SREW Projects manufactures four types of crushers: Jaw Crushers (2–250 TPH) for primary rock breaking, Cone Crushers (50-250 TPH) for secondary aggregate shaping, VSI/HSI Crushers (50-250 TPH) for M-Sand and cubical aggregate production, and Roller Crushers (50-100 TPH) for fine crushing of soft materials like coal, clay, and limestone."
                 }
               },
               {
@@ -203,7 +211,7 @@ export const Products = () => {
                 "name": "What is the capacity range of SREW jaw crushers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SREW jaw crushers are available from 20–250 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
+                  "text": "SREW jaw crushers are available from 2–250 TPH capacity. They feature heavy-duty construction, high reduction ratio, adjustable Closed Side Setting (CSS), and optional hydraulic toggle systems. Applications include mining, road construction, cement plants, and rock crushing."
                 }
               },
               {
@@ -260,7 +268,7 @@ export const Products = () => {
               <div className="col-12">
                 <h1 className="fw-extrabold text-primary-ultra">Machinery Products &amp; Systems</h1>
                 <p className="lead mt-3 mb-0" style={{ maxWidth: '800px', color: '#555' }}>
-                  Industrial aggregate systems ranging from 20–250 TPH capacities, certified to ISO 9001:2015.
+                  Industrial aggregate systems ranging from 2–250 TPH capacities, certified to ISO 9001:2015.
                 </p>
                 <nav aria-label="Breadcrumb" className="mt-4">
                   <ol className="breadcrumb">
@@ -300,6 +308,7 @@ export const Products = () => {
                           value={calcCapacity} 
                           onChange={(e) => setCalcCapacity(e.target.value)}
                         >
+                          <option value="2-20">2 - 20 TPH (Mini / Mobile Plant)</option>
                           <option value="20-50">20 - 50 TPH (Small Quarry)</option>
                           <option value="50-100">50 - 100 TPH (Medium Plant)</option>
                           <option value="100-150">100 - 150 TPH (Highway / Contractor)</option>
