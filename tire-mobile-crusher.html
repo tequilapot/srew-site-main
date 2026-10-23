@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="/vendor/bootstrap-5.3.3/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/redesign.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -52,199 +53,36 @@
 <body>
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- TOP CONTACT BAR -->
-    <div class="top-contact-banner d-none d-lg-block">
-        <div class="container d-flex justify-content-between align-items-center h-100">
-            <div class="top-info-left" style="color: rgba(255,255,255,0.85); font-weight: 500;">
-                <a href="videos.html" class="text-white text-decoration-none" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600;"><i class="fab fa-youtube text-danger"></i> Videos</a>
-                <span><img class="iso-top-icon" src="/images/icons/iso-9001-badge.svg" alt="" width="16" height="16" decoding="async"> ISO 9001:2015 Certified</span>
-                <span class="gst-line"><i class="fas fa-file-invoice text-warning me-1"></i> GSTIN: 36BEIPR4767N1ZL</span>
-            </div>
-            <div class="top-info-right">
-                <a href="tel:+918790759460" class="text-white text-decoration-none"><i class="fas fa-phone-alt text-warning me-1"></i> +91 8790759460</a>
-                <a href="mailto:srenggworks2016@gmail.com" class="text-white text-decoration-none"><i class="fas fa-envelope text-warning me-1"></i> srenggworks2016@gmail.com</a>
-                <span class="text-white"><i class="fas fa-map-marker-alt text-warning me-1"></i> Dullapally, Hyderabad</span>
-            </div>
+    <!-- SITE HEADER v2 (shared) -->
+    <div class="top-contact-banner topbar-v2 d-none d-lg-block">
+      <div class="container d-flex justify-content-between align-items-center h-100">
+        <div class="top-info-left"><span class="tb-item"><img class="iso-top-icon" src="/images/icons/iso-9001-badge.svg" alt="" width="16" height="16" decoding="async"> ISO 9001:2015 Certified</span><span class="tb-item gst-line">GSTIN 36BEIPR4767N1ZL</span><span class="tb-item"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-map-pin"></use></svg> Dullapally, Hyderabad</span></div>
+        <div class="top-info-right"><a href="tel:+918790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> +91 8790759460</a><a href="tel:+916281665454">+91 6281665454</a><a href="mailto:srenggworks2016@gmail.com"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-mail"></use></svg> srenggworks2016@gmail.com</a><a href="/videos"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-youtube"></use></svg> Videos</a></div>
+      </div>
+    </div>
+    <header role="banner" class="site-header-v2">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-v2" aria-label="Main navigation" data-active-set="1">
+        <div class="container align-items-center">
+          <a class="navbar-brand d-flex align-items-center" href="/" aria-label="SREW Projects - Home"><img src="/images/logo.png" alt="SREW Projects Logo" class="nav-logo-img" width="299" height="117" decoding="async"></a>
+          <div class="nav-actions d-flex align-items-center order-lg-last ms-auto">
+            <a href="tel:+918790759460" class="nav-phone-link" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg><span class="d-none d-xl-inline">+91 8790759460</span></a>
+            <a href="/contact" class="btn btn-quote d-none d-lg-inline-flex">Get a Quote</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu"><span class="navbar-toggler-icon"></span></button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-4 me-auto">
+              <li class="nav-item mega-nav-item" id="megaProductsItem"><a class="nav-link mega-nav-trigger active" href="/products" id="productsDropdown" role="button" aria-expanded="false" aria-haspopup="true">Products <svg class="ic mega-chevron" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-chevron-down"></use></svg></a><div class="mega-dropdown" id="megaProductsDropdown" role="menu" aria-labelledby="productsDropdown"><div class="container"><div class="mega-grid"><div class="mega-col"><div class="mega-group"><a class="mega-title" href="/products#stone-crusher-plants-and-mobile-plants">Plants &amp; Mobile</a><ul class="mega-links"><li><a href="/stone-crusher-plant" class="mega-item" role="menuitem">Stone Crusher Plant</a></li><li><a href="/crusher-plant-capacity" class="mega-item" role="menuitem">Crusher Plant by Capacity (2–250 TPH)</a></li><li><a href="/cone-crusher-plant" class="mega-item" role="menuitem">Cone Crusher Plant</a></li><li><a href="/mobile-stone-crusher-plant" class="mega-item" role="menuitem">Mobile Crushing Plant</a></li><li><a href="/modular-mobile-crusher" class="mega-item" role="menuitem">Modular Mobile Crusher</a></li><li><a href="/tire-mobile-crusher" class="mega-item" role="menuitem">Tire Mobile Crusher</a></li><li><a href="/cd-recycling-plant" class="mega-item" role="menuitem">C&amp;D Recycling Plant</a></li></ul></div></div><div class="mega-col"><div class="mega-group"><a class="mega-title" href="/products#crushers">Crushers</a><ul class="mega-links"><li><a href="/jaw-crusher-manufacturer" class="mega-item" role="menuitem">Jaw Crusher</a></li><li><a href="/european-type-jaw-crusher" class="mega-item" role="menuitem">European Type Jaw Crusher</a></li><li><a href="/grease-jaw-crusher" class="mega-item" role="menuitem">Grease Jaw Crusher</a></li><li><a href="/cone-crusher-manufacturer" class="mega-item" role="menuitem">Cone Crusher</a></li><li><a href="/single-cylinder-cone-crusher" class="mega-item" role="menuitem">Single-Cylinder Cone Crusher</a></li><li><a href="/multi-cylinder-hydraulic-cone-crusher" class="mega-item" role="menuitem">Multi-Cylinder Hydraulic Cone Crusher</a></li><li><a href="/hsi-crusher-manufacturer" class="mega-item" role="menuitem">HSI Impact Crusher</a></li><li><a href="/hydraulic-impact-crusher" class="mega-item" role="menuitem">Hydraulic Impact Crusher</a></li><li><a href="/vsi-crusher-m-sand" class="mega-item" role="menuitem">Vertical Shaft Impactor (VSI)</a></li><li><a href="/roller-crusher-manufacturer" class="mega-item" role="menuitem">Roller Crusher</a></li><li><a href="/hammer-crusher-manufacturer" class="mega-item" role="menuitem">Hammer Crusher</a></li><li><a href="/pulverizer-machine" class="mega-item" role="menuitem">Pulverizer Machine</a></li><li><a href="/glass-crusher-machine" class="mega-item" role="menuitem">Glass Crusher Machine</a></li></ul></div></div><div class="mega-col"><div class="mega-group"><a class="mega-title" href="/products#screens-feeders-hoppers-and-silos">Screens &amp; Feeders</a><ul class="mega-links"><li><a href="/vibrating-screen-manufacturer" class="mega-item" role="menuitem">Vibrating Screen</a></li><li><a href="/vibrating-screen-3-deck" class="mega-item" role="menuitem">3 Deck Vibrating Screen</a></li><li><a href="/damping-vibrating-screen" class="mega-item" role="menuitem">Damping Vibrating Screen</a></li><li><a href="/triple-shaft-vibrating-screen" class="mega-item" role="menuitem">Triple Shaft Vibrating Screen</a></li><li><a href="/grizzly-feeder-manufacturer" class="mega-item" role="menuitem">Grizzly / Vibrating Feeder</a></li><li><a href="/loading-hopper-manufacturer" class="mega-item" role="menuitem">Loading Hopper</a></li><li><a href="/silo-storage-systems" class="mega-item" role="menuitem">Silo Storage System</a></li></ul></div><div class="mega-group"><a class="mega-title" href="/products#conveyors">Conveyors &amp; Controls</a><ul class="mega-links"><li><a href="/belt-conveyor-manufacturer" class="mega-item" role="menuitem">Belt Conveyor</a></li><li><a href="/control-panel-automation" class="mega-item" role="menuitem">Control Panel Board</a></li></ul></div></div><div class="mega-col"><div class="mega-group"><a class="mega-title" href="/products#sand-washing-and-drying">Sand Washing</a><ul class="mega-links"><li><a href="/sand-washing-machine" class="mega-item" role="menuitem">Sand Washer</a></li><li><a href="/series-sand-washer" class="mega-item" role="menuitem">Series Sand Washer</a></li><li><a href="/dewatering-screen" class="mega-item" role="menuitem">Dewatering Screen</a></li><li><a href="/fine-sand-recycling-machine" class="mega-item" role="menuitem">Fine Sand Recycling Machine</a></li><li><a href="/sand-dryer-manufacturer" class="mega-item" role="menuitem">Sand Dryer</a></li></ul></div><div class="mega-group"><a class="mega-title" href="/products#ss-fabrication-tanks-and-sheds">SS Fabrication</a><ul class="mega-links"><li><a href="/ss-fabrication" class="mega-item" role="menuitem">SS Fabrication</a></li></ul></div><div class="mega-group"><a class="mega-title" href="/products#spare-parts-and-control-panels">Spares</a><ul class="mega-links"><li><a href="/spare-parts" class="mega-item" role="menuitem">Crusher &amp; Conveyor Spare Parts</a></li></ul></div></div><div class="mega-col mega-feature"><a href="/products" class="mega-feature-card"><img src="/images/seo/150-tph-stone-crusher-plant-full-view.webp" alt="150 TPH stone crusher plant built by SREW Projects" width="280" height="180" loading="lazy" decoding="async"><span class="mf-title">All products</span><span class="mf-text">Crushers, screens, sand washing, conveyors and complete plants from 2 to 250 TPH. Prices ex-works Hyderabad + 18% GST.</span><span class="mf-link">View the full range <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></span></a></div></div></div></div></li>
+              <li class="nav-item"><a class="nav-link" href="/industries">Industries</a></li>
+              <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="/spare-parts">Spare Parts</a></li>
+              <li class="nav-item"><a class="nav-link" href="/ss-fabrication">SS Fabrication</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+            <div class="nav-mobile-cta d-lg-none"><a href="/contact" class="btn btn-quote w-100">Get a Quote</a><a href="tel:+918790759460" class="btn btn-outline-primary w-100"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> +91 8790759460</a><a href="tel:+916281665454" class="btn btn-outline-primary w-100"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> +91 6281665454</a></div>
+          </div>
         </div>
-    </div>
-    </div>
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation"
-            aria-label="Main navigation">
-            <div class="container align-items-center">
-                <a class="navbar-brand me-1 me-md-3 d-flex align-items-center" href="index.html" aria-label="SREW Projects - Home" style="flex-shrink:0; text-decoration: none;">
-                    <img src="images/logo.png" alt="SREW Projects Logo" class="d-inline-block align-text-top nav-logo-img" decoding="async">
-                </a>
-                
-                <div class="d-flex align-items-center order-lg-last ms-auto me-2 me-lg-0" style="white-space:nowrap;">
-                    <a href="tel:8790759460" class="text-decoration-none fw-bold d-flex align-items-center nav-phone-link" style="color: var(--c-primary-ultra); gap: 4px;">
-                        <i class="fas fa-phone-alt"></i> <span>8790759460</span>
-                    </a>
-                </div>
-
-                <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu" style="flex-shrink:0;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item mega-nav-item" id="megaProductsItem">
-                            <a class="nav-link mega-nav-trigger" href="products.html" id="productsDropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                Products
-                                <i class="fas fa-chevron-down mega-chevron" aria-hidden="true"></i>
-                            </a>
-                                                                                                                                            <div class="mega-dropdown shadow-lg" id="megaProductsDropdown" role="menu" aria-labelledby="productsDropdown" style="background-color: #ffffff; border-top: 3px solid var(--c-primary-ultra); padding: 2.5rem 0;">
-                                <div class="container">
-                                    <div class="row w-100">
-                                        <div class="col-lg-3 border-end">
-                                            <h6 class="mega-title text-uppercase mb-4" style="color:#495057; letter-spacing:1px; font-size:0.85rem;"><i class="fas fa-layer-group me-2"></i> Crushing</h6>
-                                            <div class="mega-list">
-                                            <a href="jaw-crusher-manufacturer.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-jaw-crusher-png-104.webp" alt="Jaw Crusher" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Jaw Crusher</span>
-                                                </div>
-                                            </a>
-                                            <a href="cone-crusher-plant.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-cone-crusher-plant-png-104.webp" alt="Cone Crusher" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Cone Crusher</span>
-                                                </div>
-                                            </a>
-                                            <a href="vsi-crusher-m-sand.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-vertical-shaft-crusher-png-104.webp" alt="Vertical Shaft Impactor (VSI)" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Vertical Shaft Impactor (VSI)</span>
-                                                </div>
-                                            </a>
-                                            <a href="hydraulic-impact-crusher.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-hydraulic-impact-crusher-png-104.webp" alt="Hydraulic Impact Crusher" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Hydraulic Impact Crusher</span>
-                                                </div>
-                                            </a>
-                                            <a href="mobile-stone-crusher-plant.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-mobile-crushing-plant-png-104.webp" alt="Mobile Crushing Plant" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Mobile Crushing Plant</span>
-                                                </div>
-                                            </a>
-                                            <a href="products.html" class="d-inline-flex align-items-center mt-2 fw-bold" style="color: var(--c-primary-ultra); font-size: 0.85rem; text-decoration: none;">
-                                                See more options <i class="fas fa-arrow-right ms-1"></i>
-                                            </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-3 border-end">
-                                            <h6 class="mega-title text-uppercase mb-4" style="color:#495057; letter-spacing:1px; font-size:0.85rem;"><i class="fas fa-layer-group me-2"></i> Screening</h6>
-                                            <div class="mega-list">
-                                            <a href="vibrating-screen-manufacturer.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/vibrating-screen-jpg-104.webp" alt="Vibrating Screen" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Vibrating Screen</span>
-                                                </div>
-                                            </a>
-                                            <a href="vibrating-screen-3-deck.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/Vibrating-Screen-3-deck-png-104.webp" alt="3 Deck Vibrating Screen" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">3 Deck Vibrating Screen</span>
-                                                </div>
-                                            </a>
-                                            <a href="damping-vibrating-screen.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-Damping-vibrating-screen-png-104.webp" alt="Damping Vibrating Screen" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Damping Vibrating Screen</span>
-                                                </div>
-                                            </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-3 border-end">
-                                            <h6 class="mega-title text-uppercase mb-4" style="color:#495057; letter-spacing:1px; font-size:0.85rem;"><i class="fas fa-layer-group me-2"></i> Washing</h6>
-                                            <div class="mega-list">
-                                            <a href="sand-washing-machine.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-sand-washer-png-104.webp" alt="Sand Washer" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Sand Washer</span>
-                                                </div>
-                                            </a>
-                                            <a href="fine-sand-recycling-machine.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-fine-sand-recycling-machine-png-104.webp" alt="Fine Sand Recycling" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Fine Sand Recycling</span>
-                                                </div>
-                                            </a>
-                                            </div>
-
-                                            <div class="mt-4">
-                                            <h6 class="mega-title text-uppercase mb-4" style="color:#495057; letter-spacing:1px; font-size:0.85rem;"><i class="fas fa-layer-group me-2"></i> Feeding</h6>
-                                            <div class="mega-list">
-                                            <a href="loading-hopper-manufacturer.html" class="mega-item d-flex align-items-center mb-3" role="menuitem" style="text-decoration:none;">
-                                                <div style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; flex-shrink:0;" class="me-3 dropdown-item-img-container">
-                                                    <img src="images/thumbs/srew-hopper-jpg-104.webp" alt="Loading Hopper" style="max-width:100%; max-height:100%; object-fit:contain;" width="52" height="52" loading="lazy" decoding="async">
-                                                </div>
-                                                <div style="flex-grow:1;">
-                                                    <span class="d-block fw-bold" style="color:#212529; font-size:0.9rem; transition:color 0.2s;">Loading Hopper</span>
-                                                </div>
-                                            </a>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="h-100 d-flex flex-column justify-content-center align-items-center p-3">
-                                                <img src="images/thumbs/srew-tire-mobile-crusher-png-560.webp" alt="Tire Mobile Crusher" class="img-fluid mb-3" style="max-height: 280px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); transform: scale(1.1);" loading="lazy" decoding="async" width="560" height="511">
-                                                <h5 class="text-dark fw-bold mb-1 mt-3">Tire Mobile Crusher</h5>
-                                                <p class="text-muted small mb-0 text-center" style="font-size: 0.85rem;">High mobility crushing solution</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </li>
-                                                                                                
-                                                <li class="nav-item">
-                            <a class="nav-link" href="industries.html">Industries</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="spare-parts.html">Spare Parts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      </nav>
     </header>
     <style>
         /* Custom Premium Product Layout Styles */
@@ -367,34 +205,23 @@
             </div>
         </section>
 
-        <!-- Tabs -->
-        <div style="background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03); position: sticky; top: var(--navbar-h, 80px); z-index: 100;">
-            <div class="container">
-                <ul class="nav nav-tabs-premium" id="productTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">Overview</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Technical Specifications</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab">Gallery</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
+        <section class="pd-keyspecs" aria-label="Tire Mobile Crusher key specifications"><div class="container"><ul class="ks-list"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-gauge"></use></svg><span><span class="ks-label">Capacity</span><span class="ks-value">50–100 TPH</span></span></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-currency-rupee"></use></svg><span><span class="ks-label">Price, ex-works Hyderabad</span><span class="ks-value">₹60,00,000 + GST</span></span></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-shield-check"></use></svg><span><span class="ks-label">Warranty</span><span class="ks-value">6–12 months, by product</span></span></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-truck-delivery"></use></svg><span><span class="ks-label">Dispatch</span><span class="ks-value">6–30 days from order</span></span></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-certificate"></use></svg><span><span class="ks-label">Quality</span><span class="ks-value">ISO 9001:2015 Certified</span></span></li></ul></div></section>
+
+        <!-- Section navigation -->
+        <nav class="pd-subnav" aria-label="On this page"><div class="container"><ul><li><a href="#overview">Overview</a></li><li><a href="#specs">Technical Specifications</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#downloads">Downloads</a></li><li><a href="#related">Related</a></li></ul></div></nav>
 
         <!-- Tab Content -->
         <section class="tab-content-area">
             <div class="container">
-                <div class="tab-content" id="productTabsContent">
+                <div class="pd-sections" id="productSections">
                     
                     <!-- Overview Tab -->
-                    <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                    <div class="pd-section" id="overview">
                         <div class="row g-5">
                             <!-- Column 1: Overview & Icons -->
                             <div class="col-lg-4">
-                                <h3 class="section-heading">Overview</h3>
+                                <h2 class="section-heading">Overview</h2>
                                 <p class="text-secondary mb-4" style="line-height: 1.7;">The SREW Projects Tire Mobile Crusher is engineered to deliver exceptional performance in the most demanding conditions. Utilizing premium materials and advanced manufacturing techniques, it ensures reliable operation and maximum uptime for your plant.</p>
                                 
                                 <div class="row g-3">
@@ -436,26 +263,22 @@
                             
                             <!-- Column 2: How It Works -->
                             <div class="col-lg-3">
-                                <h3 class="section-heading">How It Works</h3>
+                                <h2 class="section-heading">How It Works</h2>
                                 <p class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;">The Tire Mobile Crusher operates using proven mechanical principles optimized by SREW Projects engineering. Material is processed through the active chamber/zone where kinetic or vibratory energy effectively achieves the desired material reduction or separation.</p>
                             </div>
                             
                             <!-- Column 3: Tech Specs Preview -->
                             <div class="col-lg-5">
-                                <h3 class="section-heading">Technical Specifications</h3>
-                                <div class="table-responsive rounded border">
-                                    <table class="tech-table"><thead><tr><th>Model</th><th>Key specifications</th><th>Capacity</th><th>Price (+ GST, ex-works Hyderabad)</th></tr></thead><tbody><tr><td class='fw-bold text-dark'>Tyre mounted mobile crusher plant</td><td>Jaw crusher primary; wheel-mounted chassis</td><td>50–100 TPH</td><td>₹60,00,000 + GST (₹70,80,000 incl. 18% GST)</td></tr></tbody></table>
-                                </div>
-                                <p class="mt-3 text-muted" style="font-size: 0.8rem;">*Prices are ex-works Hyderabad. Capacity depends on feed material, feed size and moisture content.</p>
+                                <div class="pd-quote-card"><h2 class="section-heading">At a glance</h2><dl class="pq-dl"><div><dt>Capacity</dt><dd>50–100 TPH</dd></div><div><dt>Price</dt><dd>₹60,00,000 + GST</dd></div><div><dt>Warranty</dt><dd>6–12 months, by product</dd></div><div><dt>Dispatch</dt><dd>6–30 days from order confirmation</dd></div></dl><a href="#specs" class="pq-specs">See the full specification table <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></a><div class="pq-actions"><a href="/contact?product=Tire%20Mobile%20Crusher" class="btn btn-quote">Get a Quote</a><a href="https://wa.me/918790759460" class="btn btn-wa" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a></div><p class="mt-3 text-muted" style="font-size: 0.8rem;">*Prices are ex-works Hyderabad. Capacity depends on feed material, feed size and moisture content.</p></div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Full Specs Tab -->
-                    <div class="tab-pane fade" id="specs" role="tabpanel">
+                    <div class="pd-section" id="specs">
                         <div class="row">
                             <div class="col-12">
-                                <h3 class="section-heading">Complete Specifications Matrix</h3>
+                                <h2 class="section-heading">Complete Specifications Matrix</h2>
                                 <div class="table-responsive rounded border shadow-sm">
                                     <table class="tech-table table-hover mb-0"><thead><tr><th>Model</th><th>Key specifications</th><th>Capacity</th><th>Price (+ GST, ex-works Hyderabad)</th></tr></thead><tbody><tr><td class='fw-bold text-dark'>Tyre mounted mobile crusher plant</td><td>Jaw crusher primary; wheel-mounted chassis</td><td>50–100 TPH</td><td>₹60,00,000 + GST (₹70,80,000 incl. 18% GST)</td></tr></tbody></table>
                                 </div>
@@ -464,7 +287,9 @@
                     </div>
                     
                     <!-- Gallery Tab -->
-                    <div class="tab-pane fade" id="gallery" role="tabpanel">
+                    <div class="pd-section pd-section-dl"><div class="pd-downloads" id="downloads"><h2 class="section-heading">Downloads</h2><ul class="dl-list"><li><a href="/downloads/srew-projects-mobile-stone-crusher-plant-specifications.pdf" target="_blank" rel="noopener" download><svg class="ic dl-ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-file-description"></use></svg><span><span class="dl-name">Tire Mobile Crusher: specification sheet</span><span class="dl-meta">PDF, 254 KB</span></span><svg class="ic dl-go" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-file-download"></use></svg></a></li></ul></div></div>
+                    <div class="pd-section" id="gallery">
+                        <h2 class="section-heading">Gallery</h2>
                         <div class="row g-4">
                             <div class="col-md-6 col-lg-4">
                                 <img src="/images/real/mobile-crushing-unit-srew-projects.webp" srcset="/images/real/mobile-crushing-unit-srew-projects-800.webp 800w, /images/real/mobile-crushing-unit-srew-projects.webp 1280w" sizes="(max-width: 768px) 100vw, 640px" class="img-fluid rounded border shadow-sm real-photo" alt="30 TPH wheel-mounted mobile crushing unit built by SREW Projects" style="background:#f8f9fa;" loading="lazy" decoding="async" width="1280" height="960">
@@ -486,7 +311,8 @@
         </section>
 
         <!-- Bottom Banner -->
-        <section class="bottom-banner">
+        <section class="related-products py-5" id="related" aria-label="Related products"><div class="container"><div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4"><h2 class="h3 fw-bold mb-0">Related products</h2><a class="rp-all" href="/products#stone-crusher-plants-and-mobile-plants">More in Plants &amp; Mobile <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></a></div><div class="row g-3 g-lg-4"><div class="col-6 col-lg-3"><a class="rp-card" href="/stone-crusher-plant"><img src="/images/cards/stone-crusher-plant.webp" alt="Stone Crusher Plant by SREW Projects" width="600" height="450" loading="lazy" decoding="async"><span class="rp-body"><span class="rp-name">Stone Crusher Plant</span><span class="rp-price">30 TPH plant from ₹29,00,000 + GST</span><span class="rp-link">View specs <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></span></span></a></div><div class="col-6 col-lg-3"><a class="rp-card" href="/crusher-plant-capacity"><img src="/images/cards/crusher-plant-capacity.webp" alt="Crusher Plant by Capacity (2–250 TPH) by SREW Projects" width="600" height="450" loading="lazy" decoding="async"><span class="rp-body"><span class="rp-name">Crusher Plant by Capacity (2–250 TPH)</span><span class="rp-price">2 TPH plant from ₹5,20,000 + GST</span><span class="rp-link">View specs <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></span></span></a></div><div class="col-6 col-lg-3"><a class="rp-card" href="/cone-crusher-plant"><img src="/images/cards/cone-crusher-plant.webp" alt="Cone Crusher Plant by SREW Projects" width="600" height="450" loading="lazy" decoding="async"><span class="rp-body"><span class="rp-name">Cone Crusher Plant</span><span class="rp-price">100 TPH · ₹1,15,00,000 + GST</span><span class="rp-link">View specs <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></span></span></a></div><div class="col-6 col-lg-3"><a class="rp-card" href="/mobile-stone-crusher-plant"><img src="/images/cards/mobile-stone-crusher-plant.webp" alt="Mobile Crushing Plant by SREW Projects" width="600" height="450" loading="lazy" decoding="async"><span class="rp-body"><span class="rp-name">Mobile Crushing Plant</span><span class="rp-price">From ₹5,20,000 + GST</span><span class="rp-link">View specs <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></span></span></a></div></div></div></section>
+<section class="bottom-banner">
             <div class="container">
                 <div class="row g-4 mb-4">
                     <div class="col-md-6 col-lg-3">
@@ -540,85 +366,76 @@
             </div>
         </section>
     </main>
-<footer class="footer py-5 bg-dark text-white" role="contentinfo">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h3>SREW Projects</h3>
-                    <p>ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100070029793724" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="https://www.linkedin.com/company/thesrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a href="https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/srenggworks/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Follow us on Instagram" style="color:white; margin:0 5px;"><i class="fab fa-instagram"
-                                aria-hidden="true" style="font-size:1.2rem;"></i></a>
-                    </div>
-                    <a href="https://www.indiamart.com/srengineeringworks-266746886/aboutus.html" target="_blank" rel="noopener noreferrer" class="footer-indiamart-btn" aria-label="IndiaMART company profile for SREW Projects"><img src="images/footer/indiamart.jpg" alt="IndiaMART" loading="lazy" decoding="async"></a>
-                    <ul class="list-unstyled footer-links mb-0">
-                        <li><a href="https://www.indiamart.com/srengineeringworks-266746886/" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-store me-2" style="color: #8ab4f8;"></i> Company Profile</a></li>
-                        <li><a href="https://www.indiamart.com/srengineeringworks-266746886/products.html" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-box me-2" style="color: #8ab4f8;"></i> Products</a></li>
-                        <li><a href="https://www.indiamart.com/srengineeringworks-266746886/#aboutus" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-info-circle me-2" style="color: #8ab4f8;"></i> About Us</a></li>
-                        <li><a href="https://www.indiamart.com/srengineeringworks-266746886/photos.html" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-image me-2" style="color: #8ab4f8;"></i> Photos</a></li>
-                        <li><a href="https://www.indiamart.com/srengineeringworks-266746886/enquiry.html" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope me-2" style="color: #8ab4f8;"></i> Send Enquiry</a></li>
-                    </ul>
-
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h3>Quick Links</h3>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="about.html" class="text-white">About Us</a></li>
-                        <li><a href="products.html" class="text-white">Products</a></li>
-                        <li><a href="industries.html" class="text-white">Industries</a></li>
-                        <li><a href="projects.html" class="text-white">Projects</a></li>
-                        <li><a href="spare-parts.html" class="text-white">Spare Parts</a></li>
-                        <li><a href="ss-fabrication.html" class="text-white">SS Fabrication</a></li>
-                        <li><a href="videos.html" class="text-white">Videos</a></li>
-                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
-                        <li><a href="returns-warranty.html" class="text-white">Returns &amp; Warranty</a></li>
-                        <li><a href="shipping-policy.html" class="text-white">Shipping Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h3>Contact Information</h3>
-                    <ul class="list-unstyled contact-info">
-                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sy.No.155/A, Ayyappa Temple Road, Dullapally, Hyderabad, Medchal-Malkajgiri, Telangana 500100</li>
-                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+918790759460" style="color:inherit">+91 8790759460</a> / <a href="tel:+916281665454" style="color:inherit">+91 6281665454</a></li>
-                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:srenggworks2016@gmail.com" style="color:inherit">srenggworks2016@gmail.com</a></li>
-                    </ul>
-                    <div class="mt-3">
-                        <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-curved" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i> Chat on WhatsApp</a>
-                        <a href="https://share.google/hDqCzUIV3UuE8WGLg" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-curved small d-inline-flex align-items-center mt-2" style="border-color: #4285F4; background: rgba(66, 133, 244, 0.15); font-size: 0.85rem; padding: 6px 12px; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='#4285F4'; this.style.color='#fff';" onmouseout="this.style.background='rgba(66, 133, 244, 0.15)'; this.style.color='';">
-                            <i class="fab fa-google me-2" style="color: #FBBC05;"></i>
-                            <span class="me-2 text-white">Review us on Google</span>
-                            <span style="color: #FBBC05; display: inline-flex; gap: 2px;">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-4 mb-4" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
-            <p class="small mb-3 footer-legal" style="color: rgba(255,255,255,0.75);">SREW Projects is a unit of S.R.Engineering Works | GSTIN 36BEIPR4767N1ZL</p>
-            <div class="row align-items-center">
-                <div class="col-md-6"><p class="mb-2 mb-md-0">&copy; <span id="currentYear">2026</span> SREW Projects. All Rights Reserved.</p></div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="list-inline mb-0 small">
-                        <li class="list-inline-item"><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="terms-and-conditions.html" class="text-white text-decoration-none">Terms &amp; Conditions</a></li>
-                        <li class="list-inline-item"><a href="returns-warranty.html" class="text-white text-decoration-none">Returns &amp; Warranty</a></li>
-                        <li class="list-inline-item"><a href="shipping-policy.html" class="text-white text-decoration-none">Shipping Policy</a></li>
-                        <li class="list-inline-item"><a href="cookies.html" class="text-white text-decoration-none">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
+<footer class="footer footer-v2" role="contentinfo">
+      <div class="footer-cta">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div><p class="fc-title">Planning a crusher plant or need a machine?</p><p class="fc-text">Send your capacity, material and site. We reply with a quotation, usually within one working day.</p></div>
+          <div class="d-flex flex-wrap gap-2"><a href="/contact" class="btn btn-quote">Get a Quote</a><a href="tel:+918790759460" class="btn btn-outline-light"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> +91 8790759460</a><a href="https://wa.me/918790759460" class="btn btn-wa" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a></div>
         </div>
+      </div>
+      <div class="container footer-main">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <h2 class="footer-h">SREW Projects</h2>
+            <p>ISO 9001:2015 Certified Manufacturer of Crushing, Screening &amp; Sand Processing Plants | 2–250 TPH | Hyderabad, India</p>
+            <p class="footer-iso"><img src="/images/icons/iso-9001-badge.svg" alt="" width="28" height="28" loading="lazy" decoding="async"> ISO 9001:2015 Certified</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100070029793724" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/company/thesrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/srenggworks/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <a href="https://www.indiamart.com/srengineeringworks-266746886/aboutus.html" target="_blank" rel="noopener noreferrer" class="footer-indiamart-btn" aria-label="IndiaMART company profile for SREW Projects"><img src="/images/footer/indiamart.jpg" alt="IndiaMART" loading="lazy" decoding="async"></a>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h2 class="footer-h">Products</h2>
+            <ul class="list-unstyled footer-links"><li><a href="/products#stone-crusher-plants-and-mobile-plants">Plants &amp; Mobile</a></li><li><a href="/products#crushers">Crushers</a></li><li><a href="/products#screens-feeders-hoppers-and-silos">Screens &amp; Feeders</a></li><li><a href="/products#sand-washing-and-drying">Sand Washing</a></li><li><a href="/products#conveyors">Conveyors &amp; Controls</a></li><li><a href="/products#ss-fabrication-tanks-and-sheds">SS Fabrication</a></li><li><a href="/products#spare-parts-and-control-panels">Spares</a></li><li><a href="/products">All products</a></li></ul>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h2 class="footer-h">Company</h2>
+            <ul class="list-unstyled footer-links">
+              <li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/industries">Industries</a></li><li><a href="/projects">Projects</a></li><li><a href="/spare-parts">Spare Parts</a></li><li><a href="/ss-fabrication">SS Fabrication</a></li><li><a href="/videos">Videos</a></li><li><a href="/blogs">Blogs</a></li><li><a href="/contact">Contact Us</a></li><li><a href="/returns-warranty">Returns &amp; Warranty</a></li><li><a href="/shipping-policy">Shipping Policy</a></li>
+            </ul>
+            <h2 class="footer-h mt-4">On IndiaMART</h2>
+            <ul class="list-unstyled footer-links">
+              <li><a href="https://www.indiamart.com/srengineeringworks-266746886/" target="_blank" rel="noopener noreferrer">Company Profile</a></li>
+              <li><a href="https://www.indiamart.com/srengineeringworks-266746886/products.html" target="_blank" rel="noopener noreferrer">Products</a></li>
+              <li><a href="https://www.indiamart.com/srengineeringworks-266746886/#aboutus" target="_blank" rel="noopener noreferrer">About Us</a></li>
+              <li><a href="https://www.indiamart.com/srengineeringworks-266746886/photos.html" target="_blank" rel="noopener noreferrer">Photos</a></li>
+              <li><a href="https://www.indiamart.com/srengineeringworks-266746886/enquiry.html" target="_blank" rel="noopener noreferrer">Send Enquiry</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h2 class="footer-h">Contact Information</h2>
+            <ul class="list-unstyled contact-info">
+              <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-map-pin"></use></svg> <span>Sy.No.155/A, Ayyappa Temple Road, Dullapally, Hyderabad, Medchal-Malkajgiri, Telangana 500100</span></li>
+              <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> <span><a href="tel:+918790759460">+91 8790759460</a> / <a href="tel:+916281665454">+91 6281665454</a></span></li>
+              <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-mail"></use></svg> <span><a href="mailto:srenggworks2016@gmail.com">srenggworks2016@gmail.com</a></span></li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="btn btn-wa" aria-label="Chat on WhatsApp"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> Chat on WhatsApp</a>
+              <a href="https://share.google/hDqCzUIV3UuE8WGLg" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-review"><i class="fab fa-google me-2" aria-hidden="true"></i> Review us on Google</a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-rule">
+        <p class="small mb-3 footer-legal">SREW Projects is a unit of S.R.Engineering Works | GSTIN 36BEIPR4767N1ZL</p>
+        <div class="row align-items-center">
+          <div class="col-md-6"><p class="mb-2 mb-md-0 small">&copy; <span id="currentYear">2026</span> SREW Projects. All Rights Reserved.</p></div>
+          <div class="col-md-6 text-md-end">
+            <ul class="list-inline mb-0 small footer-policy">
+              <li class="list-inline-item"><a href="/privacy-policy">Privacy Policy</a></li><li class="list-inline-item"><a href="/terms-and-conditions">Terms &amp; Conditions</a></li><li class="list-inline-item"><a href="/returns-warranty">Returns &amp; Warranty</a></li><li class="list-inline-item"><a href="/shipping-policy">Shipping Policy</a></li><li class="list-inline-item"><a href="/cookies">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
+    <!-- Sticky Mobile Bottom CTA Bar -->
+    <div class="sticky-mobile-cta" role="navigation" aria-label="Quick contact">
+      <a href="tel:+918790759460" class="sticky-cta-btn call"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> Call</a>
+      <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="sticky-cta-btn whatsapp"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a>
+      <a href="/contact?product=Tire%20Mobile%20Crusher" class="sticky-cta-btn quote"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-send"></use></svg> Get Quote</a>
+    </div>
 
     <a href="https://wa.me/918790759460" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 
