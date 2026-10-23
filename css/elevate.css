@@ -318,10 +318,33 @@ main > :first-child:not(.el-hero){padding-top:132px}
   border-top:1px solid rgba(255,255,255,.28);
   margin:0 4vw 0;
 }
-.el-stat{padding:22px 18px;border-right:1px solid rgba(255,255,255,.28)}
+.el-stat{padding:22px 18px;border-right:1px solid rgba(255,255,255,.28);min-width:0}
 .el-stat:last-child{border-right:0}
-.el-stat strong{display:block;font-weight:300;font-size:clamp(1.6rem,2.4vw,2.4rem);color:#fff;letter-spacing:-.03em;line-height:1.1}
-.el-stat span{display:block;margin-top:6px;font-size:.8rem;color:rgba(255,255,255,.75);font-style:normal;font-weight:300}
+.el-stat strong{
+  display:block;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+  font-weight:300;
+  font-size:clamp(1.35rem,2vw,2.15rem);
+  color:#fff;
+  letter-spacing:-.03em;
+  line-height:1.1;
+}
+.el-stat:nth-child(1) strong{min-width:12ch}
+.el-stat:nth-child(2) strong{min-width:5.5ch}
+.el-stat:nth-child(3) strong{min-width:10ch}
+.el-stat:nth-child(4) strong{min-width:11.5ch}
+.el-stat strong span{
+  display:inline;
+  margin:0;
+  font-size:inherit;
+  line-height:inherit;
+  color:inherit;
+  font-weight:inherit;
+  font-style:normal;
+  font-variant-numeric:tabular-nums;
+}
+.el-stat > span{display:block;margin-top:6px;font-size:.8rem;color:rgba(255,255,255,.75);font-style:normal;font-weight:300}
 .el-scroll{
   position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
   width:92px;height:92px;border-radius:50%;
@@ -340,10 +363,56 @@ main > :first-child:not(.el-hero){padding-top:132px}
   .el-hero{min-height:auto}
   .el-hero-copy{padding:112px 24px 24px}
   .el-hero h1{font-size:2.4rem;max-width:none}
-  .el-stats{grid-template-columns:1fr 1fr;margin:0 16px 72px}
+  .el-stats{grid-template-columns:1fr 1fr;margin:0 12px 88px}
+  .el-stat{padding:16px 12px}
+  .el-stat strong{font-size:1.35rem}
   .el-stat:nth-child(2){border-right:0}
   .el-stat:nth-child(1),.el-stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.28)}
   .el-scroll{width:72px;height:72px}
+}
+
+/* Cookie notice: slim bottom bar so it never sits on the hero stats. */
+.srew-cookie-banner{
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  width:100%;
+  max-width:none !important;
+  padding:10px 28px !important;
+  border-radius:0 !important;
+  background:#fff !important;
+  border:0;
+  border-top:1px solid var(--el-line);
+  box-shadow:0 -8px 24px rgba(20,32,46,.08);
+  z-index:90;
+}
+.srew-cookie-banner.show{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center;
+  gap:16px;
+}
+.srew-cookie-banner > div:first-child{margin:0 !important;flex:0 0 auto}
+.srew-cookie-banner h4{font-family:Roboto,sans-serif;font-weight:400;color:var(--el-night);font-size:.9rem;white-space:nowrap}
+.srew-cookie-banner .fa-cookie-bite{color:var(--el-primary) !important}
+.srew-cookie-banner p{margin:0 !important;flex:1;font-size:.8rem !important;line-height:1.35 !important;font-style:normal;color:var(--el-muted)}
+.srew-cookie-banner > div:last-child{flex:0 0 auto;margin:0}
+.srew-cookie-banner .btn{border-radius:var(--el-r-full) !important;font-weight:400 !important;white-space:nowrap}
+body.has-cookie-banner .el-hero{padding-bottom:248px}
+body.has-cookie-banner .el-scroll{bottom:76px}
+@media (max-width:767.98px){
+  .srew-cookie-banner{
+    bottom:64px !important;
+    padding:8px 12px !important;
+    gap:8px;
+  }
+  .srew-cookie-banner > div:first-child{display:none !important}
+  .srew-cookie-banner p{font-size:.72rem !important}
+  .srew-cookie-banner > div:last-child{flex-direction:column;gap:4px !important}
+  .srew-cookie-banner .btn{padding:.3rem .7rem !important;font-size:.75rem !important}
+  body.has-cookie-banner .el-hero{padding-bottom:240px}
+  body.has-cookie-banner .el-stats{margin-bottom:108px}
+  body.has-cookie-banner .el-scroll{bottom:168px}
 }
 
 /* Statement + logo strip + three cards */
