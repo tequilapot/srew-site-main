@@ -22,15 +22,7 @@ export const Products = () => {
   const getRecommendation = () => {
     const isHard = calcMaterial === 'granite' || calcMaterial === 'iron-ore';
     
-    if (calcCapacity === '2-20') {
-      return {
-        model: "SREW 2–20 TPH Mini Mobile Crusher Plant (10x6 to 24x15 jaw)",
-        motor: "10 HP - 40 HP",
-        ratio: "4:1 - 5:1",
-        css: "20mm - 40mm",
-        yield: "Compact aggregate for small sites"
-      };
-    } else if (calcCapacity === '20-50') {
+    if (calcCapacity === '20-50') {
       return {
         model: "SREW 24x15 Heavy-Duty Jaw Crusher",
         motor: "45 HP - 55 HP",
@@ -308,7 +300,6 @@ export const Products = () => {
                           value={calcCapacity} 
                           onChange={(e) => setCalcCapacity(e.target.value)}
                         >
-                          <option value="2-20">2 - 20 TPH (Mini / Mobile Plant)</option>
                           <option value="20-50">20 - 50 TPH (Small Quarry)</option>
                           <option value="50-100">50 - 100 TPH (Medium Plant)</option>
                           <option value="100-150">100 - 150 TPH (Highway / Contractor)</option>
