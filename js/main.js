@@ -122,9 +122,12 @@ function initCounters(){
                 observer.unobserve(entry.target);
             }
         });
-    },{threshold:0.25});
+    },{threshold:0.2});
 
-    counters.forEach(function(el){observer.observe(el)});
+    counters.forEach(function(el){
+        if(el.closest&&el.closest('.el-hero')) animateCounter(el);
+        else observer.observe(el);
+    });
 }
 
 /* ──────────────────────────────────────────────

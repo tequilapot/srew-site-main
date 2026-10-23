@@ -92,11 +92,12 @@ function initRevealAnimations(){
 function initCounters(){
     const counters=_qa('[data-counter]');
     if(!counters.length||!('IntersectionObserver' in w))return;
+    if(w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 
     function animateCounter(el){
         const target=parseInt(el.getAttribute('data-counter'),10);
         const suffix=el.getAttribute('data-suffix')||'';
-        const duration=1800;
+        const duration=1500;
         const startTime=performance.now();
 
         function easeOutQuart(t){return 1-Math.pow(1-t,4)}
@@ -119,9 +120,12 @@ function initCounters(){
                 observer.unobserve(entry.target);
             }
         });
-    },{threshold:0.4});
+    },{threshold:0.2});
 
-    counters.forEach(function(el){observer.observe(el)});
+    counters.forEach(function(el){
+        if(el.closest&&el.closest('.el-hero')) animateCounter(el);
+        else observer.observe(el);
+    });
 }
 
 /* ──────────────────────────────────────────────
