@@ -232,6 +232,7 @@
       }
     </script>
 
+    <link rel="preload" as="image" href="/images/hero/srew-mobile-crushing-unit-1400.webp" imagesrcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" imagesizes="(min-width:1024px) min(1152px, calc(100vw - 128px)), 100vw" fetchpriority="high">
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -456,34 +457,42 @@
 
     <!-- MAIN CONTENT -->
     <main id="main-content" role="main">
-      <!-- HERO SECTION -->
-      <section class="hero-v2 hero-v3" aria-label="Company introduction">
-        <div class="container hv3-wrap">
-          <div class="hv3-copy">
-            <p class="hero-v2-eyebrow"><img src="/images/icons/iso-9001-badge.svg" alt="" width="20" height="20"> <span>ISO 9001:2015 Certified Partner · <span class="nowrap">Hyderabad, India</span></span></p>
+      <!-- HERO SECTION (v4: layout modelled on a top OEM homepage: headline, full-width photo, then a calm panel with actions and proof points) -->
+      <section class="hero-v4" aria-label="Company introduction">
+        <div class="hv4-head">
+          <div class="hv4-container">
+            <p class="hv4-eyebrow"><img src="/images/icons/iso-9001-badge.svg" alt="" width="20" height="20"> <span>ISO 9001:2015 Certified Partner · <span class="nowrap">Hyderabad, India</span></span></p>
             <h1>Complete Crushing, Screening &amp; <span class="nowrap">M-Sand</span> Plant Solutions | 2–250 TPH</h1>
-            <p class="hero-v2-lead">Design, manufacturing, installation and commissioning of industrial crushing and screening plants.</p>
-            <div class="hv3-ctas">
-              <a href="#quote-section" class="btn hv3-btn hv3-btn-primary">Get a Quote</a>
-              <a href="tel:+918790759460" class="btn hv3-btn hv3-btn-call hero-call" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> <span class="d-md-none">Call</span><span class="num">+91 8790759460</span></a>
-              <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="btn hv3-btn hv3-btn-wa"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a>
-            </div>
-            <button type="button" class="btn hv3-link" id="hero-cta-brochure" data-brochure-trigger="true"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-file-download"></use></svg> Download Brochure</button>
-          </div>
-          <div class="hv3-media">
-            <img class="hero-v2-img" src="/images/hero/srew-plant-hero-1400.webp" srcset="/images/hero/srew-plant-hero-800.webp 800w, /images/hero/srew-plant-hero-1400.webp 1400w" sizes="(min-width:1200px) 600px, (min-width:992px) 46vw, 100vw" alt="SREW Projects - Industrial Crushing Equipment Plant in operation" width="1400" height="1050" fetchpriority="high" decoding="async">
           </div>
         </div>
-      </section>
-      <section class="trust-band" aria-label="Why buyers choose SREW Projects">
-        <div class="container"><ul class="tb-list">
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-certificate"></use></svg><span><strong>ISO 9001:2015</strong> Certified</span></li>
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-gauge"></use></svg><span><strong>2–250 TPH</strong> plant range</span></li>
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-building-factory-2"></use></svg><span><strong>120+</strong> projects delivered</span></li>
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-briefcase"></use></svg><span><strong>10+ years</strong> of experience</span></li>
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-shield-check"></use></svg><span><strong>6–12 months</strong> warranty, by product</span></li>
-          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-truck-delivery"></use></svg><span><strong>6–30 days</strong> dispatch from order</span></li>
-        </ul></div>
+        <div class="hv4-media-row">
+          <div class="hv4-container hv4-media-container">
+            <div class="hv4-media">
+              <img src="/images/hero/srew-mobile-crushing-unit-1400.webp" srcset="/images/hero/srew-mobile-crushing-unit-800.webp 800w, /images/hero/srew-mobile-crushing-unit-1400.webp 1400w" sizes="(min-width:1024px) min(1152px, calc(100vw - 128px)), 100vw" alt="Mobile crushing unit with feed hopper, jaw crusher and vibrating screen built by SREW Projects" width="1400" height="787" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="hv4-panel">
+          <div class="hv4-container hv4-grid">
+            <div class="hv4-copy">
+              <p class="hv4-lead">Design, manufacturing, installation and commissioning of industrial crushing and screening plants.</p>
+              <div class="hv4-ctas">
+                <a href="#quote-section" class="btn hv4-btn hv4-btn-primary">Get a Quote</a>
+                <a href="tel:+918790759460" class="btn hv4-btn hv4-btn-secondary hero-call" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg> <span class="d-md-none">Call</span><span class="num">+91 8790759460</span></a>
+                <a href="https://wa.me/918790759460" target="_blank" rel="noopener noreferrer" class="btn hv4-btn hv4-btn-outline"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-brand-whatsapp"></use></svg> WhatsApp</a>
+              </div>
+              <button type="button" class="btn hv4-link" id="hero-cta-brochure" data-brochure-trigger="true">Download Brochure <svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-arrow-right"></use></svg></button>
+            </div>
+            <ul class="hv4-proof" aria-label="Why buyers choose SREW Projects">
+              <li><strong>ISO 9001:2015</strong> <span>Certified</span></li>
+              <li><strong>2–250 TPH</strong> <span>plant range</span></li>
+              <li><strong>120+</strong> <span>projects delivered</span></li>
+              <li><strong>10+ years</strong> <span>of experience</span></li>
+              <li><strong>6–12 months</strong> <span>warranty, by product</span></li>
+              <li><strong>6–30 days</strong> <span>dispatch from order</span></li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="cat-grid-section py-5" aria-label="Explore by category">
         <div class="container">
