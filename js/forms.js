@@ -419,6 +419,7 @@ function initCountryCodeSelectors() {
         if (input.dataset.countryInjected === 'true') return;
 
         const select = d.createElement('select');
+        select.setAttribute('aria-label', 'Country code');
         select.className = 'form-select country-code-select';
         select.style.cssText = 'width: 105px; flex-shrink: 0; border-radius: 8px; border: 1px solid #ced4da; font-size: 0.88rem; padding: 0.375rem 0.5rem; background-position: right 0.5rem center; cursor: pointer;';
         

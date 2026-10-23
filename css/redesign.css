@@ -249,3 +249,11 @@ main>section:first-child[style*="margin-top:90px"]{margin-top:0!important}
   .ks-label{font-size:.64rem;letter-spacing:.04em}
   .ks-value{font-size:.86rem}
 }
+
+/* ---- a11y contrast fixes (Lighthouse) ---- */
+.trust-item .trust-item-text span{color:#5c636a}
+.help-box > div > h5{color:#fff}
+.help-box > div > p{color:#eef2f7}
+p.text-muted a:not(.btn){text-decoration:underline;text-underline-offset:2px}
+#products .section-header p.lead{color:#525a62 !important}
+section .text-center > span.badge.text-primary{color:#0a4a9e !important}
