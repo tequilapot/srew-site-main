@@ -92,42 +92,7 @@ function initRevealAnimations(){
    ANIMATED COUNTER - Count-Up Engine
    ────────────────────────────────────────────── */
 function initCounters(){
-    const counters=_qa('[data-counter]');
-    if(!counters.length||!('IntersectionObserver' in w))return;
-    if(w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-
-    function animateCounter(el){
-        const target=parseInt(el.getAttribute('data-counter'),10);
-        const suffix=el.getAttribute('data-suffix')||'';
-        const duration=1500;
-        const startTime=performance.now();
-
-        function easeOutQuart(t){return 1-Math.pow(1-t,4)}
-
-        function tick(now){
-            const elapsed=now-startTime;
-            const progress=Math.min(elapsed/duration,1);
-            const value=Math.floor(easeOutQuart(progress)*target);
-            el.textContent=value+suffix;
-            if(progress<1)_raf(tick);
-            else el.textContent=target+suffix;
-        }
-        _raf(tick);
-    }
-
-    const observer=new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-            if(entry.isIntersecting){
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    },{threshold:0.2});
-
-    counters.forEach(function(el){
-        if(el.closest&&el.closest('.el-hero')) animateCounter(el);
-        else observer.observe(el);
-    });
+    /* Final values are rendered in the HTML. Do not count up from zero. */
 }
 
 /* ──────────────────────────────────────────────

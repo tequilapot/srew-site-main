@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="t d">
+  <title id="t">Illustrated video poster</title>
+  <desc id="d">Graphic poster. Not a photograph from a site.</desc>
+  <rect width="480" height="360" fill="#0c0c0c"/>
+  <g fill="none" stroke="#e9e9e9" stroke-width="2">
+    <path d="M40 250h70l30-70h50v70h30l70-90h60v90h40"/>
+    <rect x="70" y="160" width="60" height="60"/>
+  </g>
+  <rect x="36" y="36" width="24" height="3" fill="#66dba4"/>
+  <text x="36" y="64" fill="#a7a7a7" font-family="Roboto Mono, ui-monospace, monospace" font-size="12">VIDEO</text>
+  <text x="36" y="100" fill="#fff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Play film</text>
+  <text x="36" y="300" fill="#66dba4" font-family="Roboto Mono, ui-monospace, monospace" font-size="11">ILLUSTRATED POSTER</text>
+</svg>

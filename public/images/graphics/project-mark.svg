@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="t d">
+  <title id="t">Graphic marker for a crushing plant project</title>
+  <desc id="d">Vector diagram. Not a photograph of a completed installation.</desc>
+  <rect width="1400" height="788" fill="#0c0c0c"/>
+  <g stroke="#222" stroke-width="1">
+    <path d="M0 100H1400M0 200H1400M0 300H1400M0 400H1400M0 500H1400M0 600H1400M0 700H1400"/>
+    <path d="M100 0V788M200 0V788M300 0V788M400 0V788M500 0V788M600 0V788M700 0V788M800 0V788M900 0V788M1000 0V788M1100 0V788M1200 0V788M1300 0V788"/>
+  </g>
+  <rect x="80" y="70" width="28" height="4" fill="#66dba4"/>
+  <text x="80" y="110" fill="#a7a7a7" font-family="Roboto Mono, ui-monospace, monospace" font-size="16">PROJECT GRAPHIC</text>
+  <text x="80" y="168" fill="#fff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="48">Plant line</text>
+  <g fill="none" stroke="#fff" stroke-width="2">
+    <path d="M120 560h180l80-180h140v180h80l200-240h180v240h160"/>
+    <rect x="200" y="360" width="140" height="140"/>
+    <rect x="760" y="280" width="180" height="120"/>
+  </g>
+  <text x="80" y="640" fill="#66dba4" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">NOT A PHOTOGRAPH OF AN INSTALLATION</text>
+</svg>

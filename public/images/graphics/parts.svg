@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Graphic of crusher wear parts</title>
+  <desc id="d">Vector graphic. Not a photograph of spare parts.</desc>
+  <rect width="800" height="600" fill="#f4f4f4"/>
+  <g fill="none" stroke="#202020" stroke-width="2">
+    <path d="M220 160h200l40 280H180z"/>
+    <path d="M250 220h150M240 280h160M230 340h170"/>
+    <rect x="480" y="200" width="140" height="200"/>
+  </g>
+  <rect x="48" y="48" width="28" height="4" fill="#66dba4"/>
+  <text x="48" y="84" fill="#4e4e4e" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">EQUIPMENT GRAPHIC</text>
+</svg>
