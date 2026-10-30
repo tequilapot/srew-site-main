@@ -17,6 +17,19 @@ const _qs=(s,c)=>(c||d).querySelector(s);
 const _id=s=>d.getElementById(s);
 
 /* Toast helper - uses global from main.js */
+function showFormError(form, msg){
+    if(!form) return;
+    let box=form.querySelector('.form-error');
+    if(!box){
+        box=d.createElement('p');
+        box.className='form-error';
+        box.setAttribute('role','alert');
+        form.insertBefore(box, form.firstChild);
+    }
+    box.textContent=msg||'';
+    box.hidden=!msg;
+}
+
 function toast(msg,type){
     if(typeof w._srew_toast==='function'){
         w._srew_toast(msg,type);
@@ -206,6 +219,7 @@ function initContactForm(){
 
         if(!name||!email||!subject||!message){
             if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please fill out all required fields.</div>';
+            showFormError(form,'Please fill out all required fields.');
             toast('Please fill out all required fields.','error');
             return;
         }
@@ -272,7 +286,12 @@ function initContactForm(){
             }).then(function(res) { return res.json(); }),
             submitToGoogleSheet(gsData).catch(function(){})
         ])
-        .then(function(){
+        .then(function(results){
+            var web3=results&&results[0];
+            if(!web3||web3.success!==true){
+                throw new Error((web3&&web3.message)||'Web3Forms rejected the enquiry');
+            }
+            showFormError(form,'');
             if(submitBtn){
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = origBtnText;
@@ -330,6 +349,7 @@ function initLeadQuoteForm() {
         const message = _id('quoteMessage').value.trim();
 
         if (!name || !email || !phone || !location || !capacity || !material) {
+            showFormError(form, 'Please fill out all required fields.');
             toast('Please fill out all required fields.', 'error');
             return;
         }
@@ -368,9 +388,31 @@ function initLeadQuoteForm() {
             requirement: 'Plant Capacity: ' + capacity + ' | Material: ' + material // Maps to Column G (Requirement)
         };
 
-        submitToGoogleSheet(gsData)
-        .then(function() {
+        var web3Payload = JSON.stringify({
+            access_key: ENV.WEB3FORMS_ACCESS_KEY,
+            name: name,
+            email: email,
+            phone: countryCode + ' ' + cleanPhone,
+            subject: 'B2B Quote Request: ' + capacity + ' Capacity Plant',
+            message: 'Project Location: ' + location + '\nMaterial: ' + material + '\nMessage: ' + message,
+            from_name: 'SREW Quote Form'
+        });
+
+        Promise.all([
+            fetch(ENV.WEB3FORMS_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: web3Payload
+            }).then(function(res){ return res.json(); }),
+            submitToGoogleSheet(gsData).catch(function(){})
+        ])
+        .then(function(results) {
+            var web3=results&&results[0];
+            if(!web3||web3.success!==true){
+                throw new Error((web3&&web3.message)||'Web3Forms rejected the quote');
+            }
             if (submitBtn) setButtonLoading(submitBtn, false);
+            showFormError(form, '');
             // Trigger Google Ads conversion event if available
             if (typeof w.gtag_report_conversion === 'function') {
                 w.gtag_report_conversion();
@@ -452,28 +494,7 @@ function initCountryCodeSelectors() {
         input.dataset.countryInjected = 'true';
     });
 
-    fetch('https://ipapi.co/json/')
-        .then(function(res) { return res.json(); })
-        .then(function(data) {
-            if (data && data.country_calling_code) {
-                const callingCode = data.country_calling_code;
-                d.querySelectorAll('.country-code-select').forEach(function(sel) {
-                    const exists = Array.from(sel.options).some(function(opt) { return opt.value === callingCode; });
-                    if (exists) {
-                        sel.value = callingCode;
-                    } else {
-                        const opt = d.createElement('option');
-                        opt.value = callingCode;
-                        opt.textContent = (data.country_code || '📍') + ' ' + callingCode;
-                        sel.appendChild(opt);
-                        sel.value = callingCode;
-                    }
-                });
-            }
-        })
-        .catch(function(err) {
-            console.log('Location detection fallback to +91:', err);
-        });
+    /* Country code stays +91. A lookup to ipapi.co was blocked by CORS and is not required. */
 }
 
 /* ──────── BOOT ──────── */

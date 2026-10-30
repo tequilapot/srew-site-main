@@ -1,0 +1,92 @@
+/* SREW Projects design tokens.
+   Source of truth for colour, type, spacing and layout.
+   Neue Haas Grotesk Display Pro is listed first and used only when the
+   visitor already has a licensed copy. It is not loaded from a CDN.
+   Roboto Mono is self-hosted from /fonts/roboto-mono-400.woff2. */
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/roboto-mono-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: light;
+
+  --color-white: #ffffff;
+  --color-background: #ffffff;
+  --color-foreground: #202020;
+  --color-black: #000000;
+  --color-black-900: #0c0c0c;
+  --color-black-800: #222222;
+  --color-gray-10: #f4f4f4;
+  --color-gray-25: #e9e9e9;
+  --color-gray-100: #bdbdbd;
+  --color-gray-200: #a7a7a7;
+  --color-gray-300: #919191;
+  --color-gray-400: #7a7a7a;
+  --color-gray-600: #4e4e4e;
+  --color-gray-700: #383838;
+  --color-inactive: #767676;
+  --color-mint: #66dba4;
+  --color-mint-bright: #39dda2;
+  --color-link: #2020e0;
+
+  --font-sans: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+
+  --text-body: 16px;
+  --text-body-lg: 18px;
+  --text-eyebrow: 13px;
+  --text-card-title: 48px;
+  --text-section-title: 62px;
+
+  --content-width: 1280px;
+  --page-gutter: 24px;
+  --section-space: 96px;
+  --header-height: 80px;
+  --rule-width: 1px;
+
+  --scrim-hero: linear-gradient(90deg, rgb(0 0 0 / 42%), rgb(0 0 0 / 8%));
+  --scrim-case-bottom: linear-gradient(180deg, transparent 30%, rgb(0 0 0 / 72%) 100%);
+
+  --radius: 0px;
+
+  /* Legacy aliases so older stylesheets pick up the same values. */
+  --c-primary: var(--color-black-900);
+  --c-primary-dark: var(--color-black-800);
+  --c-primary-ultra: var(--color-black-900);
+  --c-white: var(--color-white);
+  --c-dark: var(--color-foreground);
+  --c-darker: var(--color-black-900);
+  --c-body: var(--color-gray-600);
+  --c-border: var(--color-gray-25);
+  --ff-body: var(--font-sans);
+  --ff-heading: var(--font-sans);
+  --ff-display: var(--font-sans);
+  --navbar-h: var(--header-height);
+  --el-ink: var(--color-foreground);
+  --el-night: var(--color-black-900);
+  --el-white: var(--color-white);
+  --el-bg: var(--color-white);
+  --el-line: var(--color-gray-25);
+  --el-muted: var(--color-gray-600);
+  --v2-ink: var(--color-foreground);
+  --v2-navy: var(--color-black-900);
+  --v2-line: var(--color-gray-25);
+  --v2-bg: var(--color-white);
+  --v2-r: 0px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 20px;
+    --section-space: 64px;
+    --text-card-title: 36px;
+    --text-section-title: 40px;
+    --header-height: 68px;
+  }
+}

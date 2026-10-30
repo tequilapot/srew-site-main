@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Graphic of a stainless counter</title>
+  <desc id="d">Vector graphic. Not a photograph of finished equipment.</desc>
+  <rect width="800" height="600" fill="#f4f4f4"/>
+  <g fill="none" stroke="#202020" stroke-width="2">
+    <path d="M120 240h560v40H120z"/>
+    <path d="M160 280v140M640 280v140"/>
+    <rect x="220" y="300" width="160" height="80"/>
+  </g>
+  <rect x="48" y="48" width="28" height="4" fill="#66dba4"/>
+  <text x="48" y="84" fill="#4e4e4e" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">EQUIPMENT GRAPHIC</text>
+  <text x="48" y="520" fill="#202020" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32">SS counter</text>
+</svg>

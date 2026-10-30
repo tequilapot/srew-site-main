@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Graphic of a tracked mobile crushing plant</title>
+  <desc id="d">Vector equipment graphic. Not a photograph of a completed installation.</desc>
+  <rect width="1280" height="720" fill="#0c0c0c"/>
+  <g stroke="#2a2a2a" stroke-width="1">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280M0 640H1280"/>
+    <path d="M80 0V720M160 0V720M240 0V720M320 0V720M400 0V720M480 0V720M560 0V720M640 0V720M720 0V720M800 0V720M880 0V720M960 0V720M1040 0V720M1120 0V720M1200 0V720"/>
+  </g>
+  <rect x="70" y="48" width="36" height="4" fill="#66dba4"/>
+  <text x="70" y="84" fill="#a7a7a7" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">EQUIPMENT GRAPHIC</text>
+  <text x="70" y="118" fill="#ffffff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36">Mobile plant</text>
+  <g fill="none" stroke="#e9e9e9" stroke-width="2">
+    <path d="M180 470h220l70-150h120l40 150h90"/>
+    <rect x="250" y="300" width="150" height="120"/>
+    <path d="M400 300l90-70h160v70"/>
+    <path d="M620 360h280l40 80H660"/>
+    <rect x="860" y="250" width="220" height="130"/>
+  </g>
+  <g fill="none" stroke="#66dba4" stroke-width="3">
+    <circle cx="280" cy="520" r="28"/>
+    <circle cx="360" cy="520" r="28"/>
+    <circle cx="440" cy="520" r="28"/>
+    <path d="M250 520h220"/>
+  </g>
+  <text x="880" y="420" fill="#66dba4" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">NOT A PHOTOGRAPH</text>
+</svg>

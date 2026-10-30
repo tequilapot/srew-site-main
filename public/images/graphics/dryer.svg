@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Graphic of a sand dryer</title>
+  <desc id="d">Vector graphic. Not a photograph of installed equipment.</desc>
+  <rect width="800" height="600" fill="#f4f4f4"/>
+  <g fill="none" stroke="#202020" stroke-width="2">
+    <rect x="180" y="230" width="420" height="140" transform="rotate(-8 390 300)"/>
+    <circle cx="230" cy="400" r="28"/>
+    <circle cx="560" cy="360" r="28"/>
+  </g>
+  <rect x="48" y="48" width="28" height="4" fill="#66dba4"/>
+  <text x="48" y="84" fill="#4e4e4e" font-family="Roboto Mono, ui-monospace, monospace" font-size="14">EQUIPMENT GRAPHIC</text>
+</svg>
