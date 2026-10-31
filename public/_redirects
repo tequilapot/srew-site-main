@@ -36,3 +36,7 @@
 /blog/conveyor-failures                 /conveyor-failures.html               200
 /blog/vibrating-screen-issues           /vibrating-screen-issues.html         200
 /blog/crusher-maintenance-reduction-methods  /crusher-maintenance-reduction-methods.html 200
+
+# Retired capacity guide. Keep the URL for existing SEO.
+/crusher-plant-capacity          /stone-crusher-plant    301
+/crusher-plant-capacity.html     /stone-crusher-plant    301

@@ -394,6 +394,13 @@ a.cat-tile:hover,a.rp-card:hover,a.product-card:hover,.products-section a.card:h
   box-shadow:0 16px 32px rgba(20,32,46,.06) !important;
   color:inherit;
 }
+picture{display:contents}
+img.cat-scene{
+  object-fit:cover !important;
+  padding:0 !important;
+  aspect-ratio:16/10;
+  border-radius:20px;
+}
 .cat-tile img,.rp-card img,.product-card img.catalog-photo,.products-section .card img.catalog-photo,
 img.catalog-photo,img.catalog-scene{
   object-fit:contain !important;
@@ -401,6 +408,14 @@ img.catalog-photo,img.catalog-scene{
   aspect-ratio:4/3;
   width:100%;height:auto !important;
   padding:12px;
+}
+picture{display:contents}
+img.cat-scene{
+  object-fit:cover !important;
+  padding:0 !important;
+  aspect-ratio:16/10;
+  border-radius:20px;
+  background:var(--cat-grey) !important;
 }
 .card-img-top-wrapper{
   height:auto !important;background:var(--cat-grey) !important;
@@ -591,3 +606,51 @@ html.cat-motion body::after{
 }
 
 section[aria-label="Leadership"]{display:none !important}
+
+/* Our Clients — numbered rule, featured card, 3×3 logo grid */
+.clients-board{background:var(--cat-grey);padding:72px 0 64px}
+.clients-kicker{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.clients-num{font-family:ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;font-size:.85rem;letter-spacing:.08em;color:var(--cat-muted);font-weight:500}
+.clients-rule{flex:1;height:1px;background:var(--cat-line)}
+.clients-label{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cat-navy);font-weight:600}
+.clients-headline{
+  font-weight:400 !important;
+  font-size:clamp(2rem, 4.2vw, 3.5rem);
+  line-height:1.12;
+  letter-spacing:-.03em;
+  color:var(--cat-navy);
+  max-width:18em;
+  margin:0 0 40px;
+}
+.clients-layout{display:grid;grid-template-columns:minmax(240px, 0.85fr) minmax(0, 2.4fr);gap:28px;align-items:start}
+.clients-aside{display:flex;flex-direction:column;gap:18px}
+.clients-stats{margin:0}
+.clients-stats strong{
+  display:block;font-weight:400 !important;
+  font-size:clamp(3.2rem, 5vw, 4.6rem);
+  line-height:.95;letter-spacing:-.04em;color:var(--cat-night);
+}
+.clients-stats span{display:block;margin-top:8px;color:var(--cat-muted);font-size:1rem}
+.clients-grid{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:12px}
+.client-card{
+  display:flex;flex-direction:column;justify-content:space-between;
+  background:#fff;border:1px solid var(--cat-line);border-radius:16px;
+  min-height:132px;text-decoration:none;color:inherit;overflow:hidden;
+  transition:border-color .2s ease;
+}
+.client-card.is-featured{min-height:220px}
+.client-logo{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 14px;background:#fff}
+.client-card img{max-width:76%;max-height:52px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.82;background:transparent;padding:0;aspect-ratio:auto;transition:filter .2s ease, opacity .2s ease}
+.client-card.is-featured img{max-height:84px;max-width:72%}
+.client-card:hover{border-color:var(--cat-amber)}
+.client-card:hover img{filter:none;opacity:1}
+.client-industry{
+  margin:0;background:var(--cat-night);color:#fff;
+  font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  text-align:center;padding:8px 10px;font-weight:600;
+}
+@media (max-width:900px){
+  .clients-board{padding:48px 0}
+  .clients-layout{grid-template-columns:1fr}
+  .clients-grid{grid-template-columns:1fr 1fr}
+}

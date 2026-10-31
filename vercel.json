@@ -55,6 +55,16 @@
       "source": "/pulveriser-machine.html",
       "destination": "/pulverizer-machine",
       "permanent": true
+    },
+    {
+      "source": "/crusher-plant-capacity",
+      "destination": "/stone-crusher-plant",
+      "permanent": true
+    },
+    {
+      "source": "/crusher-plant-capacity.html",
+      "destination": "/stone-crusher-plant",
+      "permanent": true
     }
   ],
   "headers": [
