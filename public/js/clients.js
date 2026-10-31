@@ -68,10 +68,9 @@ window.SREW_CLIENTS = [
 ];
 
 (function () {
-  var featuredMount = document.getElementById("clients-featured");
   var grid = document.getElementById("clients-grid");
   var list = window.SREW_CLIENTS || [];
-  if (!featuredMount || !grid || !list.length) return;
+  if (!grid || !list.length) return;
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -79,19 +78,15 @@ window.SREW_CLIENTS = [
     });
   }
 
-  function card(client, featured) {
+  function card(client) {
     var inner =
       '<div class="client-logo"><img src="' + esc(client.logo) + '" alt="' + esc(client.name) + ' logo" width="220" height="72" loading="lazy" decoding="async"></div>' +
-      '<p class="client-industry">' + esc(client.industry || "To confirm") + "</p>";
-    var cls = "client-card" + (featured ? " is-featured" : "");
+      '<p class="client-industry">' + esc(client.name) + "</p>";
     if (client.url) {
-      return '<a class="' + cls + '" href="' + esc(client.url) + '" target="_blank" rel="noopener noreferrer">' + inner + "</a>";
+      return '<a class="client-card" href="' + esc(client.url) + '" target="_blank" rel="noopener noreferrer">' + inner + "</a>";
     }
-    return '<div class="' + cls + '">' + inner + "</div>";
+    return '<div class="client-card">' + inner + "</div>";
   }
 
-  var featured = list.filter(function (c) { return c.featured; })[0] || list[0];
-  var rest = list.filter(function (c) { return c !== featured; });
-  featuredMount.innerHTML = card(featured, true);
-  grid.innerHTML = rest.map(function (c) { return card(c, false); }).join("");
+  grid.innerHTML = list.map(card).join("");
 })();
