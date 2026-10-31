@@ -18,12 +18,32 @@ const getHtmlInputs = () => {
   return inputs
 }
 
+function copyRootCss() {
+  return {
+    name: 'copy-root-css',
+    apply: 'build',
+    closeBundle() {
+      const from = path.resolve(__dirname, 'css')
+      const to = path.resolve(__dirname, 'dist/css')
+      if (fs.existsSync(from)) fs.cpSync(from, to, { recursive: true })
+    }
+  }
+}
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), copyRootCss()],
   server: {
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         const url = req.url.split('?')[0];
+        if (url.startsWith('/css/')) {
+          const file = path.resolve(__dirname, '.' + url)
+          if (fs.existsSync(file) && fs.statSync(file).isFile()) {
+            res.setHeader('Content-Type', 'text/css; charset=utf-8')
+            fs.createReadStream(file).pipe(res)
+            return
+          }
+        }
         if (url.startsWith('/blog/')) {
           const slug = url.split('/blog/')[1];
           const cleanSlug = slug.endsWith('.html') ? slug.slice(0, -5) : slug;

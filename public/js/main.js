@@ -123,7 +123,7 @@ function initCounters(){
     },{threshold:0.2});
 
     counters.forEach(function(el){
-        if(el.closest&&el.closest('.el-hero')) animateCounter(el);
+        if(el.closest&&el.closest('.el-hero, .cat-hero')) animateCounter(el);
         else observer.observe(el);
     });
 }

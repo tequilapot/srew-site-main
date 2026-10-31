@@ -51,6 +51,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About SREW Projects - Precision Engineering India","url":"https://www.srewprojects.com/about","dateModified":"2026-04-06","author":{"@type":"Organization","name":"SREW Projects"},"publisher":{"@type":"Organization","name":"SREW Projects","logo":{"@type":"ImageObject","url":"https://www.srewprojects.com/images/logo.png"}},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead","#faq-section"]}}</script>
 <style>.mega-item:hover { background: #f8f9fa; border-radius: 8px; } .mega-item:hover span { color: var(--c-primary-ultra) !important; }</style>
 <script>/* Mobile menu: works even before Bootstrap JS has loaded (slow mobile networks) */document.addEventListener("click",function(e){if(window.bootstrap&&window.bootstrap.Collapse)return;var t=e.target.closest&&e.target.closest(".navbar-toggler");if(!t)return;var n=document.querySelector(t.getAttribute("data-bs-target")||"#navbarNav");if(!n)return;e.preventDefault();var o=n.classList.toggle("show");t.setAttribute("aria-expanded",o?"true":"false");t.classList.toggle("collapsed",!o)},true);</script>
+    <link rel="stylesheet" href="/css/catalogue.css">
 </head>
 <body class="el-site">
 
@@ -68,7 +69,7 @@
           <a class="navbar-brand d-flex align-items-center" href="/" aria-label="SREW Projects - Home"><img src="/images/logo.png" alt="SREW Projects Logo" class="nav-logo-img" width="299" height="117" decoding="async"></a>
           <div class="nav-actions d-flex align-items-center order-lg-last ms-auto">
             <a href="tel:+918790759460" class="nav-phone-link" aria-label="Call +91 8790759460"><svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-phone"></use></svg><span class="d-none d-xl-inline">+91 8790759460</span></a>
-            <a href="/contact" class="btn btn-quote d-none d-lg-inline-flex">Contact us</a>
+            <a href="/contact" class="btn btn-quote d-none d-lg-inline-flex">Enquire</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu"><span class="navbar-toggler-icon"></span></button>
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -182,36 +183,7 @@
                     </div>
                 </div>
             </div>
-        <!-- LEADERSHIP SECTION -->
-        <section class="py-10 bg-white" aria-label="Leadership">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 mb-5 mb-lg-0">
-                        <div class="position-relative">
-                            <div class="leadership-img-wrapper mt-lg-5" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                                <img src="images/founder.webp" alt="Mr. Ranga Reddy J. - Founder & Head of Operations" class="img-fluid w-100" style="display: block;" loading="lazy" decoding="async" width="1024" height="1024">
-                            </div>
-                            <div class="leadership-badge" style="position: absolute; bottom: -20px; right: -20px; background: var(--c-primary); color: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 2;">
-                                <h4 class="mb-0" style="font-size: 1.1rem; font-weight: 700;">30+ Years Experience</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 ps-lg-5">
-                        <div class="leadership-content">
-                            <h6 class="text-primary fw-bold text-uppercase mb-2 reveal" style="letter-spacing: 2px;">Leadership</h6>
-                            <h2 class="mb-3 reveal text-gradient" style="font-size: 2.5rem; font-weight: 800; color: var(--c-dark); transition-delay: 0.1s;">Mr. Ranga Reddy J.</h2>
-                            <h5 class="text-muted mb-4 reveal" style="font-weight: 600; transition-delay: 0.2s;">Founder & Head of Operations</h5>
-                            
-                            <div class="leadership-bio" style="font-size: 1.05rem; line-height: 1.8; color: var(--c-body);">
-                                <p class="mb-4">With over 30 years of field-tested expertise, Ranga Reddy leads SREW Projects with a focus on reliability and execution quality. His extensive career includes serving as Operations Head for major projects in Kenya and key roles at Srisailam and Singareni Collieries.</p>
-                                
-                                <p class="mb-4">Having managed industrial operations across India, Africa, and beyond, he bridges local conditions with international standards to deliver practical, robust engineering solutions. A recipient of the <strong>'Best Engineer Award'</strong> by Balaji Industries, his hands-on leadership at SREW Projects ensures every project is built for durability and long-term performance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="py-5" aria-label="Our facilities">
             <div class="container">
@@ -274,10 +246,7 @@
                     <h3>How many projects delivered?</h3>
                     <p>We have successfully delivered over 120 turnkey projects for 45+ clients across India and internationally in the mining and recycling sectors.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Who is the SREW Projects founder?</h3>
-                    <p>Mr. Ranga Reddy J., Founder & Head of Operations, brings over 30 years of hands-on expertise from major global industrial projects.</p>
-                </div>
+
                 <div class="faq-item">
                     <h3>What is your design philosophy?</h3>
                     <p>We focus on reliability, efficiency, and execution quality, ensuring that every plant is built for maximum durability and uptime.</p>
@@ -373,5 +342,6 @@
 
     <script src="/vendor/bootstrap-5.3.3/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="/js/catalogue.js" defer></script>
 </body>
 </html>
