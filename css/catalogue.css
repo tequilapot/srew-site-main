@@ -497,7 +497,9 @@ img.cat-scene{
 /* ---------- Editorial page heroes ---------- */
 .el-band,.page-header,.product-hero,.subpage-hero{
   position:relative;
-  background:linear-gradient(125deg,#081323 0%,#0B1F3A 100%) !important;
+  background-image:linear-gradient(rgba(8,19,35,.64),rgba(8,19,35,.64)),url('/images/user-assets/hero-background.jpg') !important;
+  background-size:cover !important;
+  background-position:center !important;
   color:#fff !important;
   padding:calc(var(--navbar-h) + 52px) 0 64px !important;
   border-bottom:1px solid rgba(255,255,255,.12) !important;
@@ -507,7 +509,7 @@ img.cat-scene{
   display:block !important;
   content:"";
   position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(8,19,35,.28),transparent 76%);
+  background:transparent;
 }
 .el-band > .container,.page-header > .container,.product-hero > .container,.subpage-hero > .container{position:relative;z-index:2}
 .el-band h1,.page-header h1,.product-hero h1,.product-hero .hero-title,.subpage-hero h1{
