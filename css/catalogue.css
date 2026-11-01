@@ -502,6 +502,7 @@ img.cat-scene{
   padding:calc(var(--navbar-h) + 52px) 0 64px !important;
   border-bottom:1px solid rgba(255,255,255,.12) !important;
 }
+.industries-hero{background:linear-gradient(125deg,#081323 0%,#0B1F3A 100%) !important;color:#fff !important}
 .el-band::before,.page-header::before,.product-hero::before,.subpage-hero::before{
   display:block !important;
   content:"";
