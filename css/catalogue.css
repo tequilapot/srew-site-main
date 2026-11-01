@@ -1315,12 +1315,15 @@ section[aria-label="Leadership"]{display:none !important}
 .clients-board{background:#fff!important;color:#5B6568;border-top:1px solid #DCE4E3}
 .about-editorial .about-editorial-number,
 .about-editorial .about-editorial-label,
-.about-editorial .about-editorial-copy h2,
 .about-editorial .about-editorial-copy p,
 .clients-board .clients-headline,
 .clients-board .clients-num,
 .clients-board .clients-label{color:#5B6568!important;-webkit-text-fill-color:#5B6568!important}
 .about-editorial .about-editorial-rule,.clients-board .clients-rule{background:#B8C1C3}
+.about-editorial .about-editorial-copy h2{color:#252A2E!important;-webkit-text-fill-color:#252A2E!important}
+.about-editorial .about-editorial-stat{background:#0B1F3A;border-color:#0B1F3A}
+.about-editorial .about-editorial-stat strong,.about-editorial .about-editorial-stat span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.clients-board .clients-rule{background:#8E999D}
 .about-editorial .about-editorial-cta{background:#F2F0EA;color:#5B6568;border-color:#F2F0EA}
 .about-editorial .about-editorial-cta:hover,.about-editorial .about-editorial-cta:focus-visible{background:var(--cat-amber);color:#17282C;border-color:var(--cat-amber)}
 #clients .clients-grid.clients-grid-only .client-card img{filter:grayscale(1) brightness(.62)!important;opacity:.86!important}
