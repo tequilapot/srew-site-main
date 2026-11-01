@@ -1323,6 +1323,7 @@ section[aria-label="Leadership"]{display:none !important}
 .clients-board .clients-label{color:#5B6568!important;-webkit-text-fill-color:#5B6568!important}
 .about-editorial .about-editorial-rule,.clients-board .clients-rule{background:#B8C1C3}
 .about-editorial .about-editorial-copy h2{color:#252A2E!important;-webkit-text-fill-color:#252A2E!important}
+.about-editorial .about-editorial-rule{display:none}
 .about-editorial .about-editorial-stat{background:#0B1F3A;border-color:#0B1F3A}
 .about-editorial .about-editorial-stat strong,.about-editorial .about-editorial-stat span{color:#fff!important;-webkit-text-fill-color:#fff!important}
 .clients-board .clients-rule{background:#8E999D}
