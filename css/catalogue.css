@@ -851,7 +851,7 @@ html.cat-motion body::after{
 section[aria-label="Leadership"]{display:none !important}
 
 /* Our Clients — numbered rule, featured card, 3×3 logo grid */
-.clients-board{background:#252A2E;padding:72px 0 64px;border-top:1px solid rgba(242,168,59,.28)}
+.clients-board{background:#0B1F3A;padding:72px 0 64px;border-top:1px solid rgba(242,168,59,.28)}
 .clients-kicker{display:flex;align-items:center;gap:16px;margin-bottom:28px}
 .clients-num{font-family:ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;font-size:.85rem;letter-spacing:.08em;color:var(--cat-muted);font-weight:500}
 .clients-rule{flex:1;height:1px;background:var(--cat-line)}
@@ -1248,7 +1248,7 @@ section[aria-label="Leadership"]{display:none !important}
 }
 
 /* Homepage About section: editorial layout on a deep graphite background. */
-.about-editorial{background:linear-gradient(125deg,#0B1F3A 0%,#123D5A 100%);color:#fff;padding:clamp(64px,8vw,112px) 0}
+.about-editorial{background:#252A2E;color:#fff;padding:clamp(64px,8vw,112px) 0}
 .about-editorial-top{display:flex;align-items:center;gap:24px;margin-bottom:clamp(48px,6vw,84px);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;letter-spacing:.035em}
 .about-editorial-number{flex:0 0 auto;color:#fff}
 .about-editorial-rule{height:1px;flex:1;background:rgba(255,255,255,.55)}
@@ -1312,7 +1312,7 @@ section[aria-label="Leadership"]{display:none !important}
 #projects #projects-view-all:focus-visible{background:var(--cat-amber)!important;border-color:var(--cat-amber)!important;color:var(--cat-night)!important}
 
 /* Client logos on graphite, with larger logo areas and no inner padding. */
-.clients-board{background:#252A2E!important;color:#fff;border-top:1px solid rgba(242,168,59,.28)}
+.clients-board{background:#0B1F3A!important;color:#fff;border-top:1px solid rgba(242,168,59,.28)}
 .clients-board .clients-headline{color:#fff!important}
 .clients-board .clients-num{color:rgba(255,255,255,.72)}
 .clients-board .clients-rule{background:rgba(255,255,255,.34)}
