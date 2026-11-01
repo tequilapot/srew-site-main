@@ -633,7 +633,7 @@ table thead,table thead th,.table thead th{background:var(--cat-grey) !important
   background:var(--cat-night)!important;
 }
 .about-hero-visual,.projects-hero-visual{position:absolute;inset:0;z-index:0}
-.about-hero-visual{background:url('/images/hero-crushing-plant.jpg') center 54%/cover no-repeat}
+.about-hero-visual{background:url('/images/about-company.jpg') center 54%/cover no-repeat}
 .projects-hero-visual{background:url('/images/Projects/project-4.webp') center 52%/cover no-repeat}
 .about-hero::before,.projects-hero::before{
   background:linear-gradient(90deg,rgba(5,12,15,.9) 0%,rgba(5,12,15,.74) 42%,rgba(5,12,15,.16) 100%),linear-gradient(0deg,rgba(5,12,15,.38),transparent 58%)!important;
@@ -1001,7 +1001,7 @@ section[aria-label="Leadership"]{display:none !important}
   position:relative;display:flex;align-items:flex-end;min-height:clamp(520px,68vh,760px);overflow:hidden;
   padding:clamp(132px,17vh,188px) 0 58px;color:#fff;
   background-color:#111d24;
-  background-image:linear-gradient(90deg,rgba(6,14,19,.84) 0%,rgba(6,14,19,.58) 47%,rgba(6,14,19,.14) 100%),url('/images/hero-crushing-plant.jpg');
+  background-image:linear-gradient(90deg,rgba(6,14,19,.84) 0%,rgba(6,14,19,.58) 47%,rgba(6,14,19,.14) 100%),url('/images/hero-background.jpg');
   background-size:cover;background-position:center 47%;
 }
 .contact-hero-inner{position:relative;z-index:1}
