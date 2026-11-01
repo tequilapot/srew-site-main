@@ -79,13 +79,11 @@ window.SREW_CLIENTS = [
   }
 
   function card(client) {
-    var inner =
-      '<div class="client-logo"><img src="' + esc(client.logo) + '" alt="' + esc(client.name) + ' logo" width="220" height="72" loading="lazy" decoding="async"></div>' +
-      '<p class="client-industry">' + esc(client.name) + "</p>";
+    var inner = '<div class="client-logo"><img src="' + esc(client.logo) + '" alt="' + esc(client.name) + ' logo" width="220" height="72" loading="lazy" decoding="async"></div>';
     if (client.url) {
-      return '<a class="client-card" href="' + esc(client.url) + '" target="_blank" rel="noopener noreferrer">' + inner + "</a>";
+      return '<a class="client-card" href="' + esc(client.url) + '" aria-label="Visit ' + esc(client.name) + ' website" target="_blank" rel="noopener noreferrer">' + inner + "</a>";
     }
-    return '<div class="client-card">' + inner + "</div>";
+    return '<div class="client-card" role="img" aria-label="' + esc(client.name) + ' logo">' + inner + "</div>";
   }
 
   grid.innerHTML = list.map(card).join("");

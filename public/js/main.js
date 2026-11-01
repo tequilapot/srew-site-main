@@ -185,8 +185,6 @@ function initSmoothScroll(){
    ACTIVE NAV LINK
    ────────────────────────────────────────────── */
 function initActiveNav(){
-    // v2 header: the active item is rendered server-side (clean URLs), so keep it.
-    if(_qs('.navbar[data-active-set]'))return;
     const loc=w.location.href;
     const pathName=w.location.pathname.split('/').pop()||'index.html';
     const links=_qa('.navbar-nav .nav-link');
@@ -480,7 +478,54 @@ function initMegaMenu(){
     const items = _qa('.mega-nav-item');
     if(!items.length) return;
 
-    const isMobile = () => w.innerWidth < 992;
+    // The site menu uses Products as a direct catalogue link, not a popup button.
+    items.forEach(function(item){
+        const trigger = item.querySelector('.mega-nav-trigger');
+        if(!trigger) return;
+        trigger.removeAttribute('role');
+        trigger.removeAttribute('aria-haspopup');
+        trigger.removeAttribute('aria-expanded');
+    });
+
+    // Products stays a direct catalogue link; its separate arrow opens the
+    // product list inside the hamburger panel.
+    items.forEach(function(item){
+        const toggle = item.querySelector('.nav-products-toggle');
+        if(!toggle) return;
+        toggle.addEventListener('click',function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+            items.forEach(function(other){
+                other.classList.remove('is-submenu-open');
+                const otherToggle = other.querySelector('.nav-products-toggle');
+                if(otherToggle) otherToggle.setAttribute('aria-expanded','false');
+                const otherNav = other.closest('.navbar-nav');
+                if(otherNav) otherNav.classList.remove('products-only-open');
+            });
+            if(shouldOpen){
+                item.classList.add('is-submenu-open');
+                toggle.setAttribute('aria-expanded','true');
+                const nav = item.closest('.navbar-nav');
+                if(nav) nav.classList.add('products-only-open');
+            }
+        });
+    });
+
+    const collapse = _id('navbarNav');
+    if(collapse){
+        _on(collapse,'hidden.bs.collapse',function(){
+            items.forEach(function(item){
+                item.classList.remove('is-submenu-open');
+                const toggle = item.querySelector('.nav-products-toggle');
+                if(toggle) toggle.setAttribute('aria-expanded','false');
+                const nav = item.closest('.navbar-nav');
+                if(nav) nav.classList.remove('products-only-open');
+            });
+        });
+    }
+
+    const isMobile = () => w.innerWidth < 992 || d.body.classList.contains('cat-menu-open');
 
     // Create backdrop element for desktop
     let backdrop = _id('megaBackdrop');
@@ -507,7 +552,14 @@ function initMegaMenu(){
     }
 
     function closeAll(){
-        items.forEach(closeItem);
+        items.forEach(function(item){
+            closeItem(item);
+            item.classList.remove('is-submenu-open');
+            const toggle = item.querySelector('.nav-products-toggle');
+            if(toggle) toggle.setAttribute('aria-expanded','false');
+            const nav = item.closest('.navbar-nav');
+            if(nav) nav.classList.remove('products-only-open');
+        });
         backdrop.classList.remove('active');
     }
 
@@ -533,17 +585,10 @@ function initMegaMenu(){
         // Desktop & mobile: click/tap the trigger to navigate or toggle
         trigger.addEventListener('click', function(e){
             if(isMobile()){
-                // On mobile, toggle the accordion
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = item.classList.contains('is-open');
-                if(isOpen){
-                    closeItem(item);
-                } else {
-                    openItem(item);
-                }
+                // In the compact site menu, Products is a direct link to the full catalogue.
+                closeAll();
             }
-            // On desktop, the link navigates naturally — allow it
+            // Allow the Products link to navigate on every viewport.
         });
 
         // Keep open when hovering over the dropdown panel itself
@@ -706,6 +751,50 @@ function initCookieConsent() {
     }
 }
 
+function initCategoryCarousel(){
+    _qa('.category-carousel').forEach(function(carousel){
+        const track = _qs('.category-carousel-track', carousel);
+        const previous = _qs('.category-carousel-prev', carousel);
+        const next = _qs('.category-carousel-next', carousel);
+        if(!track) return;
+
+        const step = function(){
+            const item = _qs('.category-carousel-item', track);
+            const gap = parseFloat(w.getComputedStyle(track).columnGap) || 0;
+            return item ? item.getBoundingClientRect().width + gap : track.clientWidth;
+        };
+        let frame = 0;
+        const updateControls = function(){
+            if(frame) return;
+            frame = _raf(function(){
+                frame = 0;
+                const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+                if(previous) previous.disabled = track.scrollLeft <= 2;
+                if(next) next.disabled = track.scrollLeft >= maxScroll - 2;
+            });
+        };
+
+        if(previous) previous.addEventListener('click', function(){
+            track.scrollBy({left: -step(), behavior: 'smooth'});
+        });
+        if(next) next.addEventListener('click', function(){
+            track.scrollBy({left: step(), behavior: 'smooth'});
+        });
+        track.addEventListener('scroll', updateControls, {passive: true});
+        track.addEventListener('keydown', function(event){
+            if(event.key === 'ArrowLeft' && previous){
+                event.preventDefault();
+                previous.click();
+            }else if(event.key === 'ArrowRight' && next){
+                event.preventDefault();
+                next.click();
+            }
+        });
+        _on(w, 'resize', updateControls, {passive: true});
+        updateControls();
+    });
+}
+
 /* ──────────────────────────────────────────────
    BOOT SEQUENCE
    ────────────────────────────────────────────── */
@@ -715,6 +804,7 @@ function boot(){
     initNavbar();
     initNavbarDismissOutside();
     initMegaMenu();
+    initCategoryCarousel();
     initHero();
     initRevealAnimations();
     initCounters();
