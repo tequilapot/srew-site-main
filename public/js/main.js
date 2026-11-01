@@ -4,6 +4,7 @@
  * Advanced scroll animations, counter engine, navbar transitions
  */
 ;(function(w,d){'use strict';
+console.log("[SREW Debug] main.js is executing...");
 
 
 /* ──────────────────────────────────────────────
@@ -38,6 +39,7 @@ function initNavbar(){
     // Close mobile menu on link click (except dropdown toggles and mega triggers)
     _qa('.navbar-nav .nav-link:not(.dropdown-toggle):not(.mega-nav-trigger), .navbar-nav .dropdown-item, .mega-item').forEach(function(link){
         _on(link,'click',function(){
+            console.log("[JS main.js click listener debug] Link clicked: Tag=" + link.tagName + " Text=" + link.innerText.split('\n')[0] + " Classes=" + link.className);
             const collapse=_qs('.navbar-collapse');
             if(collapse&&collapse.classList.contains('show')){
                 const bsCollapse=bootstrap.Collapse.getInstance(collapse);
@@ -476,6 +478,64 @@ function initBrochureModal(){
    ────────────────────────────────────────────── */
 function initMegaMenu(){
     const items = _qa('.mega-nav-item');
+    const projectLinks = _qa('.navbar-nav > .nav-item > .nav-link[href="/projects"]');
+    projectLinks.forEach(function(link, index){
+        const item = link.closest('.nav-item');
+        if(!item || item.querySelector('.nav-projects-toggle')) return;
+
+        item.classList.add('nav-projects-item');
+        const row = d.createElement('div');
+        row.className = 'nav-projects-row';
+        item.insertBefore(row, link);
+        row.appendChild(link);
+
+        const toggle = d.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'nav-projects-toggle';
+        toggle.setAttribute('aria-label', 'Show project list');
+        toggle.setAttribute('aria-expanded', 'false');
+        const panelId = 'mobileProjectsDropdown' + (index ? '-' + index : '');
+        toggle.setAttribute('aria-controls', panelId);
+        toggle.innerHTML = '<svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-chevron-down"></use></svg>';
+        row.appendChild(toggle);
+
+        const panel = d.createElement('div');
+        panel.className = 'nav-projects-dropdown';
+        panel.id = panelId;
+        panel.setAttribute('aria-label', 'Featured projects');
+        panel.innerHTML = '<a href="/projects#project-west-bengal">West Bengal · 200 TPH Plant</a>' +
+            '<a href="/projects#project-singareni">Singareni · 250 TPH Plant</a>' +
+            '<a href="/projects#project-odisha-mobile">Odisha · 40 TPH Mobile Unit</a>' +
+            '<a href="/projects#project-keesara-cone">Keesara · Cone Crusher Plant</a>' +
+            '<a href="/projects#project-cd-recycling-sand-dryer">C&amp;D Recycling &amp; Sand Dryer</a>';
+        item.appendChild(panel);
+
+        toggle.addEventListener('click', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+            const nav = item.closest('.navbar-nav');
+            if(nav) nav.querySelectorAll('.nav-projects-item.is-projects-open').forEach(function(openItem){
+                openItem.classList.remove('is-projects-open');
+                const openToggle = openItem.querySelector('.nav-projects-toggle');
+                if(openToggle) openToggle.setAttribute('aria-expanded', 'false');
+            });
+            if(shouldOpen){
+                item.classList.add('is-projects-open');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        panel.addEventListener('click', function(event){
+            if(!event.target.closest('a')) return;
+            item.classList.remove('is-projects-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            const collapse = _id('navbarNav');
+            const bsCollapse = collapse && w.bootstrap && w.bootstrap.Collapse && w.bootstrap.Collapse.getInstance(collapse);
+            if(bsCollapse) bsCollapse.hide();
+        });
+    });
+
     if(!items.length) return;
 
     // The site menu uses Products as a direct catalogue link, not a popup button.
@@ -503,10 +563,15 @@ function initMegaMenu(){
                 const otherNav = other.closest('.navbar-nav');
                 if(otherNav) otherNav.classList.remove('products-only-open');
             });
+            const nav = item.closest('.navbar-nav');
+            if(nav) nav.querySelectorAll('.nav-projects-item.is-projects-open').forEach(function(projectItem){
+                projectItem.classList.remove('is-projects-open');
+                const projectToggle = projectItem.querySelector('.nav-projects-toggle');
+                if(projectToggle) projectToggle.setAttribute('aria-expanded', 'false');
+            });
             if(shouldOpen){
                 item.classList.add('is-submenu-open');
                 toggle.setAttribute('aria-expanded','true');
-                const nav = item.closest('.navbar-nav');
                 if(nav) nav.classList.add('products-only-open');
             }
         });
@@ -521,6 +586,13 @@ function initMegaMenu(){
                 if(toggle) toggle.setAttribute('aria-expanded','false');
                 const nav = item.closest('.navbar-nav');
                 if(nav) nav.classList.remove('products-only-open');
+            });
+            projectLinks.forEach(function(link){
+                const item = link.closest('.nav-projects-item');
+                if(!item) return;
+                item.classList.remove('is-projects-open');
+                const toggle = item.querySelector('.nav-projects-toggle');
+                if(toggle) toggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -559,6 +631,11 @@ function initMegaMenu(){
             if(toggle) toggle.setAttribute('aria-expanded','false');
             const nav = item.closest('.navbar-nav');
             if(nav) nav.classList.remove('products-only-open');
+        });
+        _qa('.nav-projects-item.is-projects-open').forEach(function(item){
+            item.classList.remove('is-projects-open');
+            const toggle = item.querySelector('.nav-projects-toggle');
+            if(toggle) toggle.setAttribute('aria-expanded', 'false');
         });
         backdrop.classList.remove('active');
     }
