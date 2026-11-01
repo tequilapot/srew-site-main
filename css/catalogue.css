@@ -851,7 +851,7 @@ html.cat-motion body::after{
 section[aria-label="Leadership"]{display:none !important}
 
 /* Our Clients — numbered rule, featured card, 3×3 logo grid */
-.clients-board{background:#0B1F3A;padding:72px 0 64px;border-top:1px solid rgba(242,168,59,.28)}
+.clients-board{background:#fff;padding:72px 0 64px;border-top:1px solid #DCE4E3;color:#5B6568}
 .clients-kicker{display:flex;align-items:center;gap:16px;margin-bottom:28px}
 .clients-num{font-family:ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;font-size:.85rem;letter-spacing:.08em;color:var(--cat-muted);font-weight:500}
 .clients-rule{flex:1;height:1px;background:var(--cat-line)}
@@ -1248,7 +1248,7 @@ section[aria-label="Leadership"]{display:none !important}
 }
 
 /* Homepage About section: editorial layout on a deep graphite background. */
-.about-editorial{background:#252A2E;color:#fff;padding:clamp(64px,8vw,112px) 0}
+.about-editorial{background:#fff;color:#5B6568;padding:clamp(64px,8vw,112px) 0}
 .about-editorial-top{display:flex;align-items:center;gap:24px;margin-bottom:clamp(48px,6vw,84px);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;letter-spacing:.035em}
 .about-editorial-number{flex:0 0 auto;color:#fff}
 .about-editorial-rule{height:1px;flex:1;background:rgba(255,255,255,.55)}
@@ -1312,7 +1312,18 @@ section[aria-label="Leadership"]{display:none !important}
 #projects #projects-view-all:focus-visible{background:var(--cat-amber)!important;border-color:var(--cat-amber)!important;color:var(--cat-night)!important}
 
 /* Client logos on graphite, with larger logo areas and no inner padding. */
-.clients-board{background:#0B1F3A!important;color:#fff;border-top:1px solid rgba(242,168,59,.28)}
+.clients-board{background:#fff!important;color:#5B6568;border-top:1px solid #DCE4E3}
+.about-editorial .about-editorial-number,
+.about-editorial .about-editorial-label,
+.about-editorial .about-editorial-copy h2,
+.about-editorial .about-editorial-copy p,
+.clients-board .clients-headline,
+.clients-board .clients-num,
+.clients-board .clients-label{color:#5B6568!important;-webkit-text-fill-color:#5B6568!important}
+.about-editorial .about-editorial-rule,.clients-board .clients-rule{background:#B8C1C3}
+.about-editorial .about-editorial-cta{background:#F2F0EA;color:#5B6568;border-color:#F2F0EA}
+.about-editorial .about-editorial-cta:hover,.about-editorial .about-editorial-cta:focus-visible{background:var(--cat-amber);color:#17282C;border-color:var(--cat-amber)}
+#clients .clients-grid.clients-grid-only .client-card img{filter:grayscale(1) brightness(.62)!important;opacity:.86!important}
 .clients-board .clients-headline{color:#fff!important}
 .clients-board .clients-num{color:rgba(255,255,255,.72)}
 .clients-board .clients-rule{background:rgba(255,255,255,.34)}
