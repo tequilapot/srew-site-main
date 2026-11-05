@@ -403,16 +403,16 @@ export const Home = () => {
                 </div>
               </div>
 
-              {/* Product 4: Crawler Mobile Crusher */}
+              {/* Product 4: Mobile Crusher */}
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/seo/modular-mobile-crusher-plant.webp" className="img-fluid" alt="Crawler mobile crushing plant" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/seo/mobile-crusher-plant-cutout.png" className="img-fluid" alt="Mobile Crusher plant by SREW Projects" style={{ maxHeight: '100%', objectFit: 'contain' }} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/images/cards/modular-mobile-crusher.webp'; }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
-                    <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Crawler Mobile Crusher</h4>
+                    <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Mobile Crusher</h4>
                     <p className="small text-muted flex-grow-1" style={{ fontSize: '0.85rem', lineHeight: 1.5, marginBottom: '1rem' }}>
-                      Fully autonomous mobile crushing station equipped with tracks. PLC automated control provides maximum mobility.
+                      Fully autonomous mobile crushing station with intelligent PLC controls and flexible setup for changing quarry requirements.
                     </p>
                     
                     <div className="product-spec-badge-grid">
@@ -720,7 +720,7 @@ export const Home = () => {
                   <div className="text-warning mb-2 text-start">
                     <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                   </div>
-                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"SREW's PLC automated crawler mobile crushing plant has significantly improved our aggregates output. Their manganese casting jaws last longer, saving us replacement time and operational costs."</p>
+                  <p className="text-muted small text-start flex-grow-1 mb-0" style={{ lineSpace: '1.6', fontSize: '0.88rem' }}>"SREW's PLC automated mobile crushing plant has significantly improved our aggregates output. Their manganese casting jaws last longer, saving us replacement time and operational costs."</p>
                   <div className="d-flex align-items-center gap-2 mt-3 pt-3 border-top justify-content-between text-muted" style={{ fontSize: '0.72rem' }}>
                     <span>Google Review</span>
                     <span>4 months ago</span>
