@@ -293,7 +293,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/jaw-crusher.jpg" className="img-fluid" alt="Heavy Duty Jaw Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/seo/european-type-jaw-crusher-cutout.png" className="img-fluid" alt="Heavy-duty jaw crusher by SREW Projects" style={{ maxHeight: '100%', objectFit: 'contain' }} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/images/seo/primary-jaw-crusher-setup.webp'; }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Heavy-Duty Jaw Crusher</h4>
@@ -331,7 +331,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/cone-crusher.jpg" className="img-fluid" alt="Turnkey Cone Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/cards/cone-crusher-manufacturer.webp" className="img-fluid" alt="Cone crusher by SREW Projects" style={{ maxHeight: '100%', objectFit: 'contain' }} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/images/real/cone-crusher-plant-srew-projects.webp'; }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Turnkey Cone Crusher</h4>
@@ -369,7 +369,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/VSI-crusher.jpg" className="img-fluid" alt="VSI M-Sand Machine" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/cards/vsi-crusher-m-sand.webp" className="img-fluid" alt="VSI M-Sand crusher by SREW Projects" style={{ maxHeight: '100%', objectFit: 'contain' }} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = '/images/real/vsi-crusher-tower-srew-projects.webp'; }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>VSI M-Sand Machine</h4>
