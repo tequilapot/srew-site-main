@@ -293,7 +293,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/srew-jaw-crusher.png" className="img-fluid" alt="Heavy Duty Jaw Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/Products/jaw-crusher.jpg" className="img-fluid" alt="Heavy Duty Jaw Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Heavy-Duty Jaw Crusher</h4>
@@ -331,7 +331,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/srew-cone-crusher-plant.png" className="img-fluid" alt="Turnkey Cone Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/Products/cone-crusher.jpg" className="img-fluid" alt="Turnkey Cone Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Turnkey Cone Crusher</h4>
@@ -369,7 +369,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/srew-vertical-shaft-crusher.png" className="img-fluid" alt="VSI M-Sand Machine" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/Products/VSI-crusher.jpg" className="img-fluid" alt="VSI M-Sand Machine" style={{ maxHeight: '100%', objectFit: 'contain' }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>VSI M-Sand Machine</h4>
@@ -407,7 +407,7 @@ export const Home = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="card h-100 shadow-sm border-0 product-card" style={{ borderRadius: '12px', overflow: 'hidden', background: '#fff' }}>
                   <div className="card-img-top-wrapper" style={{ height: '220px', overflow: 'hidden', background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-                    <img src="/images/Products/srew-mobile-crushing-plant.png" className="img-fluid" alt="Crawler Mobile Crusher" style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                    <img src="/images/seo/modular-mobile-crusher-plant.webp" className="img-fluid" alt="Crawler mobile crushing plant" style={{ maxHeight: '100%', objectFit: 'contain' }} />
                   </div>
                   <div className="card-body p-4 d-flex flex-column">
                     <h4 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.2rem' }}>Crawler Mobile Crusher</h4>
