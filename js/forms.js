@@ -1,494 +1,514 @@
-/**
- * SREW Forms Engine v3.0
- * (c) SREW Projects - Proprietary
- * HubSpot integration with toast notifications & validation
- */
-;(function(w,d){'use strict';
-console.log("[SREW Debug] forms.js is executing...");
+/* SREW website lead capture */
+;(function (w, d) {
+  'use strict';
 
-const ENV = w.SREW_ENV || {
-    WEB3FORMS_ACCESS_KEY: 'ddd31534-f1b6-47fb-84a9-7d998299513e',
-    WEB3FORMS_API_URL: 'https://api.web3forms.com/submit',
-    GOOGLE_SHEETS_CONTACT_URL: 'https://script.google.com/macros/s/AKfycbygp3Zch4TodP1k2VG0xh9zjZPc-NmjvOR-y7wBU24GfoyED4IXhIl8FQ76sv66CyPCuA/exec',
-    GOOGLE_SHEETS_GENERAL_URL: 'https://script.google.com/macros/s/AKfycbwpwtDVKM85IDFdH_IC13Ly-zE0MP3Dx9J7e8NrDZ0I2R-oGUdCUlNcabUEIfFUFVYrXw/exec'
-};
+  const _id = (id) => d.getElementById(id);
+  const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid'];
+  const ATTRIBUTION_KEY = 'srew_lead_attribution_v1';
+  let googleScriptPromise;
 
-const _qs=(s,c)=>(c||d).querySelector(s);
-const _id=s=>d.getElementById(s);
-
-/* Toast helper - uses global from main.js */
-function toast(msg,type){
-    if(typeof w._srew_toast==='function'){
-        w._srew_toast(msg,type);
-    }else{
-        /* Fallback if main.js hasn't loaded yet */
-        const c=d.createElement('div');
-        c.style.cssText='position:fixed;bottom:24px;right:24px;z-index:9999;background:#fff;padding:16px 24px;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,0.15);font-size:14px;max-width:360px;animation:toastIn 0.5s ease';
-        c.textContent=msg;
-        d.body.appendChild(c);
-        setTimeout(function(){c.remove()},4000);
+  function toast(message, type) {
+    if (typeof w._srew_toast === 'function') {
+      w._srew_toast(message, type);
+      return;
     }
-}
+    const node = d.createElement('div');
+    node.setAttribute('role', 'status');
+    node.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:99999;background:#fff;padding:14px 18px;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.18);font-size:14px;max-width:360px;color:#10233f';
+    node.textContent = message;
+    d.body.appendChild(node);
+    w.setTimeout(() => node.remove(), 4500);
+  }
 
-/* Real-time field validation */
-function validateField(input){
-    const value=input.value.trim();
-    const type=input.type;
-    let valid=true;
+  function countryCodeFor(form) {
+    return form.querySelector('.country-code-select')?.value || '+91';
+  }
 
-    if(input.required&&!value){
-        valid=false;
-    }else if(type==='email'&&value){
-        valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(value);
-    }else if(type==='tel'&&value){
-        const form=input.closest('form');
-        const select=form?form.querySelector('.country-code-select'):null;
-        const countryCode=select?select.value:'+91';
-        const cleanPhone=value.replace(/[^0-9]/g,'');
-        if(countryCode==='+91'){
-            valid=/^[6-9][0-9]{9}$/.test(cleanPhone);
-        }else{
-            valid=cleanPhone.length>=7&&cleanPhone.length<=15;
-        }
+  function validateField(input) {
+    const value = input.value.trim();
+    let valid = !input.required || Boolean(value);
+    if (valid && input.type === 'email' && value) valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+    if (valid && input.type === 'tel' && value) {
+      const digits = value.replace(/\D/g, '');
+      valid = countryCodeFor(input.form) === '+91' ? /^[6-9]\d{9}$/.test(digits) : digits.length >= 7 && digits.length <= 15;
     }
-
-    input.classList.toggle('is-valid',valid&&value);
-    input.classList.toggle('is-invalid',!valid&&(input.dataset.touched==='true'));
+    input.classList.toggle('is-valid', valid && Boolean(value));
+    input.classList.toggle('is-invalid', !valid && input.dataset.touched === 'true');
     return valid;
-}
+  }
 
-function setupValidation(form){
-    const inputs=form.querySelectorAll('input, textarea, select');
-    inputs.forEach(function(input){
-        input.addEventListener('blur',function(){
-            this.dataset.touched='true';
-            validateField(this);
-        });
-        input.addEventListener('input',function(){
-            if(this.dataset.touched==='true'){
-                validateField(this);
-            }
-        });
+  function setupValidation(form) {
+    form.querySelectorAll('input, textarea, select').forEach((input) => {
+      input.addEventListener('blur', () => {
+        input.dataset.touched = 'true';
+        validateField(input);
+      });
+      input.addEventListener('input', () => {
+        if (input.dataset.touched === 'true') validateField(input);
+      });
     });
-}
+  }
 
-/* Button loading state */
-function setButtonLoading(btn,loading){
-    if(loading){
-        btn.dataset.originalText=btn.innerHTML;
-        btn.innerHTML='<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Processing...</span>';
-        btn.disabled=true;
-    }else{
-        btn.innerHTML=btn.dataset.originalText||'Submit';
-        btn.disabled=false;
+  function setButtonLoading(button, loading, label) {
+    if (!button) return;
+    if (loading) {
+      button.dataset.originalText = button.innerHTML;
+      button.textContent = label || 'Sending…';
+      button.disabled = true;
+    } else {
+      button.innerHTML = button.dataset.originalText || 'Submit';
+      button.disabled = false;
     }
-}
+  }
 
-
-
-/* Google Sheets submission */
-function submitToGoogleSheet(data){
-    const url = ENV.GOOGLE_SHEETS_GENERAL_URL;
-    const formData = new URLSearchParams();
-    for(const key in data){
-        formData.append(key, data[key]);
+  function sourcePath(value) {
+    try {
+      const url = new URL(value, w.location.origin);
+      return url.origin + url.pathname;
+    } catch {
+      return '';
     }
-    return fetch(url, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formData.toString()
+  }
+
+  function collectPageContext() {
+    let firstTouch = null;
+    try {
+      const stored = w.sessionStorage.getItem(ATTRIBUTION_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Date.now() - Number(parsed.capturedAt) < 30 * 60 * 1000) firstTouch = parsed;
+      }
+      if (!firstTouch) {
+        const params = new URLSearchParams(w.location.search);
+        const tags = {};
+        TRACKING_KEYS.forEach((key) => {
+          const value = params.get(key);
+          if (value) tags[key] = value.slice(0, 240);
+        });
+        firstTouch = {
+          landingPage: w.location.pathname,
+          referrer: sourcePath(d.referrer),
+          tags,
+          capturedAt: Date.now(),
+        };
+        w.sessionStorage.setItem(ATTRIBUTION_KEY, JSON.stringify(firstTouch));
+      }
+    } catch {
+      firstTouch = { landingPage: w.location.pathname, referrer: sourcePath(d.referrer), tags: {} };
+    }
+
+    const tags = firstTouch.tags || {};
+    return {
+      currentPage: w.location.pathname,
+      landingPage: firstTouch.landingPage || w.location.pathname,
+      referrer: firstTouch.referrer || '',
+      utmSource: tags.utm_source || '',
+      utmMedium: tags.utm_medium || '',
+      utmCampaign: tags.utm_campaign || '',
+      utmTerm: tags.utm_term || '',
+      utmContent: tags.utm_content || '',
+      googleClickId: tags.gclid || tags.gbraid || tags.wbraid || '',
+    };
+  }
+
+  function addHoneypot(form) {
+    if (form.querySelector('[name="website"]')) return;
+    const wrapper = d.createElement('div');
+    wrapper.setAttribute('aria-hidden', 'true');
+    wrapper.style.cssText = 'position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden';
+    const label = d.createElement('label');
+    label.textContent = 'Leave this field blank';
+    const input = d.createElement('input');
+    input.type = 'text';
+    input.name = 'website';
+    input.tabIndex = -1;
+    input.autocomplete = 'off';
+    label.appendChild(input);
+    wrapper.appendChild(label);
+    form.appendChild(wrapper);
+  }
+
+  function addPrivacyNote(form) {
+    if (form.querySelector('.srew-lead-privacy')) return;
+    const note = d.createElement('p');
+    note.className = 'srew-lead-privacy form-text small mt-2 mb-2';
+    note.append(d.createTextNode('When you send this enquiry, SREW Projects may use these details to respond. The page and campaign source may be recorded with your enquiry. '));
+    const link = d.createElement('a');
+    link.href = '/privacy-policy';
+    link.textContent = 'Privacy Policy';
+    note.appendChild(link);
+    const button = form.querySelector('button[type="submit"], input[type="submit"]');
+    if (button) form.insertBefore(note, button);
+    else form.appendChild(note);
+  }
+
+  function addCompanyField(form) {
+    if (form.querySelector('[name="company"]')) return;
+    const inputStyle = form.querySelector('.form-control-premium') ? 'form-control-premium' : 'form-control';
+    const wrapper = d.createElement('div');
+    wrapper.className = form.querySelector('.form-group-premium') ? 'form-group-premium srew-company-field' : 'mb-3 srew-company-field';
+    const label = d.createElement('label');
+    label.className = form.querySelector('.form-label-premium') ? 'form-label-premium' : 'form-label';
+    label.textContent = 'Company / organization (optional)';
+    const input = d.createElement('input');
+    input.type = 'text';
+    input.name = 'company';
+    input.className = inputStyle;
+    input.autocomplete = 'organization';
+    input.maxLength = 160;
+    input.placeholder = 'Company or project organization';
+    wrapper.append(label, input);
+    const message = form.querySelector('#quoteMessage, #contactMessage, textarea[name="message"], textarea[name="Message"]');
+    const target = message?.closest('.form-group-premium, .mb-3') || form.querySelector('button[type="submit"]');
+    if (target) form.insertBefore(wrapper, target);
+    else form.appendChild(wrapper);
+  }
+
+  function decodeGoogleNameEmail(credential, form) {
+    try {
+      const encoded = credential.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+      const claims = JSON.parse(w.atob(encoded));
+      const name = form.querySelector('[name="name"], [name="Name"]');
+      const email = form.querySelector('[name="email"], [name="Email"]');
+      if (name && claims.name) name.value = claims.name;
+      if (email && claims.email) email.value = claims.email;
+      form.dataset.googleIdToken = credential;
+      form.querySelectorAll('[name="name"], [name="Name"], [name="email"], [name="Email"]').forEach(validateField);
+      const note = form.querySelector('.srew-google-note');
+      if (note) note.textContent = 'Google filled your name and email. You can edit them before sending.';
+    } catch {
+      toast('Google sign-in could not fill the form. Please enter your details manually.', 'error');
+    }
+  }
+
+  function loadGoogleIdentityScript() {
+    if (w.google?.accounts?.id) return Promise.resolve();
+    if (googleScriptPromise) return googleScriptPromise;
+    googleScriptPromise = new Promise((resolve, reject) => {
+      const script = d.createElement('script');
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      d.head.appendChild(script);
     });
-}
+    return googleScriptPromise;
+  }
 
-/* ──────── BROCHURE FORM ──────── */
-function initBrochureForm(){
-    console.log("[SREW Debug] initBrochureForm() called.");
-    const form=_id('brochureForm');
-    if(!form) {
-        console.log("[SREW Debug] brochureForm NOT found on this page.");
+  function setupGoogleSignIn(form) {
+    if (form.dataset.googleSignInInit === 'true') return;
+    form.dataset.googleSignInInit = 'true';
+    fetch('/api/google-auth-config', { headers: { Accept: 'application/json' } })
+      .then((response) => response.ok ? response.json() : null)
+      .then(async (config) => {
+        if (!config?.enabled || !config.clientId) return;
+        await loadGoogleIdentityScript();
+        const wrapper = d.createElement('div');
+        wrapper.className = 'srew-google-signin mb-3';
+        const note = d.createElement('p');
+        note.className = 'srew-google-note form-text small mb-2';
+        note.textContent = 'Optional: use Google to fill your name and email for this enquiry.';
+        const button = d.createElement('div');
+        wrapper.append(note, button);
+        const submit = form.querySelector('button[type="submit"], input[type="submit"]');
+        if (submit) form.insertBefore(wrapper, submit);
+        else form.appendChild(wrapper);
+        w.google.accounts.id.initialize({
+          client_id: config.clientId,
+          callback: (response) => decodeGoogleNameEmail(response.credential, form),
+          auto_select: false,
+          cancel_on_tap_outside: true,
+        });
+        w.google.accounts.id.renderButton(button, { theme: 'outline', size: 'large', text: 'continue_with', shape: 'rectangular' });
+      })
+      .catch(() => {});
+  }
+
+  function enhanceLeadForm(form, formType) {
+    if (form.dataset.srewEnhanced === 'true') return;
+    form.dataset.srewEnhanced = 'true';
+    form.dataset.leadFormType = formType;
+    form.dataset.srewStartedAt = String(Date.now());
+    addHoneypot(form);
+    addPrivacyNote(form);
+    if (formType === 'quote' || formType === 'contact' || formType === 'industry') addCompanyField(form);
+    if (formType !== 'brochure') setupGoogleSignIn(form);
+  }
+
+  async function submitLead(form, formType, data) {
+    const result = await fetch('/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        ...data,
+        formType,
+        pageContext: collectPageContext(),
+        website: form.querySelector('[name="website"]')?.value || '',
+        formStartedAt: Number(form.dataset.srewStartedAt || Date.now()),
+        googleIdToken: form.dataset.googleIdToken || '',
+      }),
+    });
+    const payload = await result.json().catch(() => ({}));
+    if (!result.ok || !payload.ok) throw new Error(payload.error || 'We could not send the enquiry. Please try again.');
+    return payload;
+  }
+
+  function reportLead(formType, result) {
+    if (typeof w.gtag === 'function') {
+      w.gtag('event', 'generate_lead', { method: formType, lead_reference: result.leadId || '' });
+    }
+    if (typeof w.gtag_report_conversion === 'function') w.gtag_report_conversion();
+  }
+
+  function formInterest() {
+    return d.querySelector('main h1, h1')?.textContent.trim().slice(0, 180) || d.title.slice(0, 180);
+  }
+
+  function initBrochureForm() {
+    const form = _id('brochureForm');
+    if (!form) return;
+    enhanceLeadForm(form, 'brochure');
+    setupValidation(form);
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const name = _id('brochureName')?.value.trim() || '';
+      const phone = _id('brochurePhone')?.value.trim() || '';
+      const requirement = _id('brochureRequirement')?.value.trim() || '';
+      const digits = phone.replace(/\D/g, '');
+      const code = countryCodeFor(form);
+      if (!name || !phone || !requirement || (code === '+91' ? !/^[6-9]\d{9}$/.test(digits) : digits.length < 7 || digits.length > 15)) {
+        toast('Please enter your name, a valid phone number and your requirement.', 'error');
         return;
-    }
-    console.log("[SREW Debug] brochureForm found:", form);
-
-    setupValidation(form);
-
-    form.addEventListener('submit',function(e){
-        console.log("[SREW Debug] brochureForm submit triggered!");
-        e.preventDefault();
-
-        const name=_id('brochureName').value.trim();
-        const phone=_id('brochurePhone').value.trim();
-        const requirement=_id('brochureRequirement') ? _id('brochureRequirement').value.trim() : '';
-
-        if(!name||!phone||!requirement){
-            toast('Please fill in all required fields.','error');
-            return;
-        }
-
-        const select=form.querySelector('.country-code-select');
-        const countryCode=select?select.value:'+91';
-        const cleanPhone=phone.replace(/[^0-9]/g,'');
-        let isPhoneValid=false;
-        if(countryCode==='+91'){
-            isPhoneValid=/^[6-9][0-9]{9}$/.test(cleanPhone);
-        }else{
-            isPhoneValid=cleanPhone.length>=7&&cleanPhone.length<=15;
-        }
-
-        if(!isPhoneValid){
-            toast('Please enter a valid mobile number.','error');
-            return;
-        }
-
-        const submitBtn=form.querySelector('button[type="submit"]');
-        if(submitBtn) setButtonLoading(submitBtn, true);
-
-        // Send to Google Sheets first, then show success state in the modal
-        const gsData = {
-            name: name,
-            email: countryCode + ' ' + cleanPhone,          // Apps Script maps email -> Column C (labeled Phone)
-            phone: '',             // Apps Script maps phone -> Column D (labeled Email)
-            subject: 'Brochure Request',
-            message: '',           // Keep Message column clear for brochure request
-            requirement: requirement // Apps Script maps requirement -> Column G (labeled Requirement)
-        };
-
-        submitToGoogleSheet(gsData)
-        .then(function(){
-            if(submitBtn) setButtonLoading(submitBtn, false);
-
-            // Hide the standard form grid and reveal the premium success pane
-            const grid=_id('brochureGrid');
-            const successPane=_id('brochureSuccessPane');
-            if(grid) grid.style.display='none';
-            if(successPane) successPane.style.display='flex';
-
-            /* Open PDF using hidden anchor tag to prevent adblock/popup blockers from blocking it */
-            const pdfUrl=new URL('brochures/srew-company-profile.pdf',w.location.href).href;
-            const link = d.createElement('a');
-            link.href = pdfUrl;
-            link.download = 'SREW-Company-Profile.pdf'; // Forces a download natively
-            link.target = '_blank';
-            d.body.appendChild(link);
-            link.click();
-            d.body.removeChild(link);
-
-            toast('Brochure download started!','success');
-            form.reset();
-            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
-                el.classList.remove('is-valid','is-invalid');
-            });
-        })
-        .catch(function(){
-            if(submitBtn) setButtonLoading(submitBtn, false);
-            toast('Failed to capture lead. Please try again.','error');
+      }
+      const button = form.querySelector('button[type="submit"]');
+      setButtonLoading(button, true, 'Preparing download…');
+      try {
+        const result = await submitLead(form, 'brochure', {
+          name,
+          phone: `${code} ${digits}`,
+          interest: formInterest(),
+          requirement,
+          subject: 'Product information / brochure request',
         });
+        reportLead('brochure', result);
+        const link = d.createElement('a');
+        link.href = '/brochures/srew-company-profile.pdf';
+        link.download = 'SREW-Company-Profile.pdf';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        d.body.appendChild(link);
+        link.click();
+        link.remove();
+        const grid = _id('brochureGrid');
+        const successPane = _id('brochureSuccessPane');
+        if (grid) grid.style.display = 'none';
+        if (successPane) {
+          successPane.style.display = 'flex';
+          const reference = successPane.querySelector('[data-lead-reference]');
+          if (reference) reference.textContent = result.leadId;
+        }
+        form.reset();
+        form.dataset.googleIdToken = '';
+        toast(`Brochure request received. Reference ${result.leadId}.`, 'success');
+      } catch (error) {
+        toast(error.message || 'Could not capture your request. Please try again.', 'error');
+      } finally {
+        setButtonLoading(button, false);
+      }
     });
-}
+  }
 
-/* ──────── CONTACT FORM ──────── */
-function initContactForm(){
-    const form=_id('contactForm');
-    const msgs=_id('form-messages');
-    if(!form)return;
-
+  function initContactForm() {
+    const form = _id('contactForm');
+    const messages = _id('form-messages');
+    if (!form) return;
+    enhanceLeadForm(form, 'contact');
     setupValidation(form);
-
-    form.addEventListener('submit',function(e){
-        e.preventDefault();
-
-        const name=(form.querySelector('[name="name"]')||{}).value||'';
-        const email=(form.querySelector('[name="email"]')||{}).value||'';
-        const subject=(form.querySelector('[name="subject"]')||{}).value||'';
-        const message=(form.querySelector('[name="message"]')||{}).value||'';
-        const phone=(form.querySelector('[name="phone"]')||{}).value||'';
-
-        if(!name||!email||!subject||!message){
-            if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please fill out all required fields.</div>';
-            toast('Please fill out all required fields.','error');
-            return;
-        }
-
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if(!emailRegex.test(email.trim())){
-            if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please enter a valid corporate email address.</div>';
-            toast('Please enter a valid corporate email address.','error');
-            return;
-        }
-
-        const select=form.querySelector('.country-code-select');
-        const countryCode=select?select.value:'+91';
-        const cleanPhone=phone.replace(/[^0-9]/g,'');
-
-        if(phone.trim()!==''){
-            let isPhoneValid=false;
-            if(countryCode==='+91'){
-                isPhoneValid=/^[6-9][0-9]{9}$/.test(cleanPhone);
-            }else{
-                isPhoneValid=cleanPhone.length>=7&&cleanPhone.length<=15;
-            }
-            if(!isPhoneValid){
-                if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">Please enter a valid phone number.</div>';
-                toast('Please enter a valid phone number.','error');
-                return;
-            }
-        }
-
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const origBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
-        if(submitBtn){
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" style="animation:spin 1s linear infinite"><style>@keyframes spin{to{transform:rotate(360deg)}}</style><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="40 20"/></svg> Sending...</span>';
-        }
-        if(msgs) msgs.innerHTML = '';
-
-        // Web3Forms payload
-        const web3Payload = JSON.stringify({
-            access_key: ENV.WEB3FORMS_ACCESS_KEY,
-            name: name,
-            email: email,
-            phone: phone.trim() !== '' ? (countryCode + ' ' + cleanPhone) : 'Not provided',
-            subject: subject,
-            message: message,
-            from_name: 'SREW Contact Form'
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const get = (name) => form.querySelector(`[name="${name}"]`)?.value.trim() || '';
+      const name = get('name');
+      const email = get('email');
+      const phone = get('phone');
+      const subject = get('subject');
+      const message = get('message');
+      if (!name || !email || !subject || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+        if (messages) messages.textContent = 'Please enter your name, a valid email, a subject and a message.';
+        toast('Please complete the required fields.', 'error');
+        return;
+      }
+      const code = countryCodeFor(form);
+      const digits = phone.replace(/\D/g, '');
+      if (phone && (code === '+91' ? !/^[6-9]\d{9}$/.test(digits) : digits.length < 7 || digits.length > 15)) {
+        if (messages) messages.textContent = 'Please enter a valid phone number.';
+        toast('Please enter a valid phone number.', 'error');
+        return;
+      }
+      const button = form.querySelector('button[type="submit"]');
+      setButtonLoading(button, true, 'Sending…');
+      if (messages) messages.textContent = '';
+      try {
+        const result = await submitLead(form, 'contact', {
+          name, email,
+          phone: phone ? `${code} ${digits}` : '',
+          company: get('company'),
+          interest: subject,
+          subject,
+          message,
         });
-
-        // Send to Google Sheets
-        const gsData = {
-            name: name,
-            email: phone.trim() !== '' ? (countryCode + ' ' + cleanPhone) : '', // Maps to Column C (labeled Phone)
-            phone: email,          // Apps Script maps phone -> Column D (labeled Email)
-            subject: subject,
-            message: message,      // Apps Script maps message -> Column F (labeled Message)
-            requirement: ''        // Keep Requirement column clear for contact form
-        };
-
-        Promise.all([
-            fetch(ENV.WEB3FORMS_API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: web3Payload
-            }).then(function(res) { return res.json(); }),
-            submitToGoogleSheet(gsData).catch(function(){})
-        ])
-        .then(function(){
-            if(submitBtn){
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = origBtnText;
-            }
-            // Trigger Google Ads conversion event if available
-            if (typeof w.gtag_report_conversion === 'function') {
-                w.gtag_report_conversion();
-            }
-            if(msgs) msgs.innerHTML = '';
-            toast('✓ Form submitted successfully! We will get back to you shortly.','success');
-            form.reset();
-            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el){
-                el.classList.remove('is-valid','is-invalid');
-            });
-        })
-        .catch(function(){
-            if(submitBtn){
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = origBtnText;
-            }
-            if(msgs)msgs.innerHTML='<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
-            toast('Failed to send. Please try again.','error');
-            /* Auto-dismiss message after 5 seconds */
-            if(msgs) setTimeout(function(){ msgs.innerHTML=''; }, 5000);
-        });
+        reportLead('contact', result);
+        form.reset();
+        form.dataset.googleIdToken = '';
+        if (messages) messages.textContent = `Thanks. Your enquiry was received. Reference: ${result.leadId}.`;
+        toast(`Enquiry received. Reference ${result.leadId}.`, 'success');
+      } catch (error) {
+        if (messages) messages.textContent = error.message || 'We could not send your enquiry. Please try again or call us.';
+        toast(error.message || 'Could not send your enquiry. Please try again.', 'error');
+      } finally {
+        setButtonLoading(button, false);
+      }
     });
-}
+  }
 
-/* ──────── URL PARAM PRE-FILL ──────── */
-function initUrlPrefill(){
-    const params=new URLSearchParams(w.location.search);
-    const inquiry=params.get('inquiry')||params.get('product')||params.get('project_inquiry')||params.get('industry');
-    const field=_id('contactSubject');
-    if(inquiry&&field){
-        field.value='Inquiry about '+decodeURIComponent(inquiry);
-    }
-}
+  function initUrlPrefill() {
+    const params = new URLSearchParams(w.location.search);
+    const inquiry = params.get('inquiry') || params.get('product') || params.get('project_inquiry') || params.get('industry');
+    const field = _id('contactSubject');
+    if (inquiry && field) field.value = `Inquiry about ${inquiry}`.slice(0, 180);
+  }
 
-/* ──────── B2B LEAD QUOTE FORM ──────── */
-function initLeadQuoteForm() {
+  function initLeadQuoteForm() {
     const form = _id('leadQuoteForm');
     if (!form) return;
-
+    enhanceLeadForm(form, 'quote');
     setupValidation(form);
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = _id('quoteName').value.trim();
-        const email = _id('quoteEmail').value.trim();
-        const phone = _id('quotePhone').value.trim();
-        const location = _id('quoteLocation').value.trim();
-        const capacity = _id('quoteCapacity').value;
-        const material = _id('quoteMaterial').value;
-        const message = _id('quoteMessage').value.trim();
-
-        if (!name || !email || !phone || !location || !capacity || !material) {
-            toast('Please fill out all required fields.', 'error');
-            return;
-        }
-
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if(!emailRegex.test(email)){
-            toast('Please enter a valid corporate email address.', 'error');
-            return;
-        }
-
-        const select = form.querySelector('.country-code-select');
-        const countryCode = select ? select.value : '+91';
-        const cleanPhone = phone.replace(/[^0-9]/g, '');
-
-        let isPhoneValid = false;
-        if(countryCode === '+91') {
-            isPhoneValid = /^[6-9][0-9]{9}$/.test(cleanPhone);
-        } else {
-            isPhoneValid = cleanPhone.length >= 7 && cleanPhone.length <= 15;
-        }
-
-        if(!isPhoneValid){
-            toast('Please enter a valid phone number.', 'error');
-            return;
-        }
-
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) setButtonLoading(submitBtn, true);
-
-        const gsData = {
-            name: name,
-            email: countryCode + ' ' + cleanPhone,                  // Maps to Column C (Phone)
-            phone: email,                  // Maps to Column D (Email)
-            subject: 'B2B Quote Request: ' + capacity + ' Capacity Plant',
-            message: 'Project Location: ' + location + '\nMaterial: ' + material + '\nMessage: ' + message, // Maps to Column F (Message)
-            requirement: 'Plant Capacity: ' + capacity + ' | Material: ' + material // Maps to Column G (Requirement)
-        };
-
-        submitToGoogleSheet(gsData)
-        .then(function() {
-            if (submitBtn) setButtonLoading(submitBtn, false);
-            // Trigger Google Ads conversion event if available
-            if (typeof w.gtag_report_conversion === 'function') {
-                w.gtag_report_conversion();
-            }
-            toast('Quote request submitted successfully!', 'success');
-            form.reset();
-            form.querySelectorAll('.is-valid,.is-invalid').forEach(function(el) {
-                el.classList.remove('is-valid', 'is-invalid');
-            });
-            setTimeout(function() {
-                w.location.href = 'thankyou.html';
-            }, 1000);
-        })
-        .catch(function() {
-            if (submitBtn) setButtonLoading(submitBtn, false);
-            toast('Failed to submit quote request. Please try again.', 'error');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const value = (id) => _id(id)?.value.trim() || '';
+      const name = value('quoteName');
+      const email = value('quoteEmail');
+      const phone = value('quotePhone');
+      const location = value('quoteLocation');
+      const capacity = value('quoteCapacity');
+      const material = value('quoteMaterial');
+      const message = value('quoteMessage');
+      if (!name || !email || !phone || !location || !capacity || !material) {
+        toast('Please complete the required fields.', 'error');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+        toast('Please enter a valid email address.', 'error');
+        return;
+      }
+      const code = countryCodeFor(form);
+      const digits = phone.replace(/\D/g, '');
+      if (code === '+91' ? !/^[6-9]\d{9}$/.test(digits) : digits.length < 7 || digits.length > 15) {
+        toast('Please enter a valid phone number.', 'error');
+        return;
+      }
+      const button = form.querySelector('button[type="submit"]');
+      setButtonLoading(button, true, 'Sending…');
+      try {
+        const result = await submitLead(form, 'quote', {
+          name, email, phone: `${code} ${digits}`, company: form.querySelector('[name="company"]')?.value.trim() || '',
+          location, capacity, material, interest: formInterest(), message,
+          subject: `B2B quote request: ${capacity} plant`,
+          requirement: `Capacity: ${capacity}; material: ${material}; location: ${location}`,
         });
+        reportLead('quote', result);
+        form.reset();
+        form.dataset.googleIdToken = '';
+        w.location.href = `/thankyou?ref=${encodeURIComponent(result.leadId)}`;
+      } catch (error) {
+        toast(error.message || 'Could not submit your quote request. Please try again.', 'error');
+      } finally {
+        setButtonLoading(button, false);
+      }
     });
-}
+  }
 
-/* ──────── COUNTRY CODE INJECTOR ──────── */
-function initCountryCodeSelectors() {
-    const phoneInputs = d.querySelectorAll('input[type="tel"], input[name="phone"], #contactPhone, #quotePhone, #brochurePhone');
+  function initIndustryInquiryForms() {
+    d.querySelectorAll('form#inquiry-form').forEach((form) => {
+      if (form.dataset.srewInquiryBound === 'true') return;
+      form.dataset.srewInquiryBound = 'true';
+      enhanceLeadForm(form, 'industry');
+      setupValidation(form);
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const get = (name) => form.querySelector(`[name="${name}"]`)?.value.trim() || '';
+        const name = get('Name');
+        const email = get('Email');
+        const phone = get('Phone');
+        const message = get('Message');
+        const subject = get('Subject') || formInterest();
+        const code = countryCodeFor(form);
+        const digits = phone.replace(/\D/g, '');
+        if (!name || !email || !phone || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || (code === '+91' ? !/^[6-9]\d{9}$/.test(digits) : digits.length < 7 || digits.length > 15)) {
+          toast('Please enter a valid name, email, phone and requirement.', 'error');
+          return;
+        }
+        const button = form.querySelector('button[type="submit"]');
+        setButtonLoading(button, true, 'Sending…');
+        try {
+          const result = await submitLead(form, 'industry', {
+            name, email, phone: `${code} ${digits}`, company: get('company'), interest: subject, subject, message,
+          });
+          reportLead('industry', result);
+          form.reset();
+          form.dataset.googleIdToken = '';
+          toast(`Enquiry received. Reference ${result.leadId}.`, 'success');
+        } catch (error) {
+          toast(error.message || 'Could not send your enquiry. Please try again.', 'error');
+        } finally {
+          setButtonLoading(button, false);
+        }
+      });
+    });
+  }
+
+  function initCountryCodeSelectors() {
+    const phoneInputs = d.querySelectorAll('input[type="tel"], input[name="phone"], input[name="Phone"], #contactPhone, #quotePhone, #brochurePhone');
     if (!phoneInputs.length) return;
-
     const countries = [
-        { code: '+91', name: 'India', flag: '🇮🇳' },
-        { code: '+1', name: 'USA/Canada', flag: '🇺🇸' },
-        { code: '+44', name: 'UK', flag: '🇬🇧' },
-        { code: '+971', name: 'UAE', flag: '🇦🇪' },
-        { code: '+966', name: 'Saudi Arabia', flag: '🇸🇦' },
-        { code: '+968', name: 'Oman', flag: '🇴🇲' },
-        { code: '+974', name: 'Qatar', flag: '🇶🇦' },
-        { code: '+973', name: 'Bahrain', flag: '🇧🇭' },
-        { code: '+965', name: 'Kuwait', flag: '🇰🇼' },
-        { code: '+27', name: 'South Africa', flag: '🇿🇦' },
-        { code: '+61', name: 'Australia', flag: '🇦🇺' },
-        { code: '+65', name: 'Singapore', flag: '🇸🇬' },
-        { code: '+60', name: 'Malaysia', flag: '🇲🇾' },
-        { code: '+94', name: 'Sri Lanka', flag: '🇱🇰' },
-        { code: '+977', name: 'Nepal', flag: '🇳🇵' },
-        { code: '+880', name: 'Bangladesh', flag: '🇧🇩' }
+      ['🇮🇳 India', '+91'], ['🇺🇸 USA/Canada', '+1'], ['🇬🇧 UK', '+44'], ['🇦🇪 UAE', '+971'],
+      ['🇸🇦 Saudi Arabia', '+966'], ['🇴🇲 Oman', '+968'], ['🇶🇦 Qatar', '+974'], ['🇧🇭 Bahrain', '+973'],
+      ['🇰🇼 Kuwait', '+965'], ['🇿🇦 South Africa', '+27'], ['🇦🇺 Australia', '+61'], ['🇸🇬 Singapore', '+65'],
+      ['🇲🇾 Malaysia', '+60'], ['🇱🇰 Sri Lanka', '+94'], ['🇳🇵 Nepal', '+977'], ['🇧🇩 Bangladesh', '+880'],
     ];
-
-    phoneInputs.forEach(function(input) {
-        if (input.dataset.countryInjected === 'true') return;
-
-        const select = d.createElement('select');
-        select.setAttribute('aria-label', 'Country code');
-        select.className = 'form-select country-code-select';
-        select.style.cssText = 'width: 105px; flex-shrink: 0; border-radius: 8px; border: 1px solid #ced4da; font-size: 0.88rem; padding: 0.375rem 0.5rem; background-position: right 0.5rem center; cursor: pointer;';
-        
-        if (input.classList.contains('form-control-premium')) {
-            select.className = 'form-control-premium country-code-select';
-            select.style.cssText = 'width: 110px; flex-shrink: 0; font-size: 0.9rem; padding: 10px 8px; border-radius: 8px; background-color: #fff; border: 1px solid #e2e8f0; height: 100%; cursor: pointer;';
-        }
-
-        countries.forEach(function(c) {
-            const opt = d.createElement('option');
-            opt.value = c.code;
-            opt.textContent = c.flag + ' ' + c.code;
-            select.appendChild(opt);
-        });
-
-        select.value = '+91';
-
-        const wrapper = d.createElement('div');
-        wrapper.className = 'd-flex align-items-stretch w-100 country-code-wrapper';
-        wrapper.style.cssText = 'gap: 8px; position: relative;';
-
-        const parent = input.parentNode;
-        parent.insertBefore(wrapper, input);
-        wrapper.appendChild(select);
-        wrapper.appendChild(input);
-
-        input.style.flexGrow = '1';
-        input.style.width = 'auto';
-
-        input.dataset.countryInjected = 'true';
+    phoneInputs.forEach((input) => {
+      if (input.dataset.countryInjected === 'true') return;
+      const select = d.createElement('select');
+      select.setAttribute('aria-label', 'Country code');
+      select.className = input.classList.contains('form-control-premium') ? 'form-control-premium country-code-select' : 'form-select country-code-select';
+      select.style.cssText = 'width:110px;flex:0 0 110px;';
+      countries.forEach(([name, code]) => {
+        const option = d.createElement('option');
+        option.value = code;
+        option.textContent = `${name} ${code}`;
+        select.appendChild(option);
+      });
+      select.value = '+91';
+      const wrapper = d.createElement('div');
+      wrapper.className = 'd-flex align-items-stretch w-100 country-code-wrapper';
+      wrapper.style.cssText = 'gap:8px;';
+      input.parentNode.insertBefore(wrapper, input);
+      wrapper.append(select, input);
+      input.style.flexGrow = '1';
+      input.style.width = 'auto';
+      input.dataset.countryInjected = 'true';
     });
+  }
 
-    fetch('https://ipapi.co/json/')
-        .then(function(res) { return res.json(); })
-        .then(function(data) {
-            if (data && data.country_calling_code) {
-                const callingCode = data.country_calling_code;
-                d.querySelectorAll('.country-code-select').forEach(function(sel) {
-                    const exists = Array.from(sel.options).some(function(opt) { return opt.value === callingCode; });
-                    if (exists) {
-                        sel.value = callingCode;
-                    } else {
-                        const opt = d.createElement('option');
-                        opt.value = callingCode;
-                        opt.textContent = (data.country_code || '📍') + ' ' + callingCode;
-                        sel.appendChild(opt);
-                        sel.value = callingCode;
-                    }
-                });
-            }
-        })
-        .catch(function(err) {
-            console.log('Location detection fallback to +91:', err);
-        });
-}
-
-/* ──────── BOOT ──────── */
-function boot(){
+  function boot() {
     initCountryCodeSelectors();
     initBrochureForm();
     initContactForm();
     initLeadQuoteForm();
+    initIndustryInquiryForms();
     initUrlPrefill();
-}
+  }
 
-if(d.readyState==='loading'){
-    d.addEventListener('DOMContentLoaded',boot);
-}else{
-    boot();
-}
-
-})(window,document);
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})(window, document);
