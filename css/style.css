@@ -4394,10 +4394,10 @@ select.form-control-premium {
     max-width: 380px;
     padding: 20px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid #dbe2ea;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
     z-index: 10000;
     opacity: 0;
@@ -4438,6 +4438,7 @@ select.form-control-premium {
 .country-code-wrapper input[type="tel"] {
     flex-grow: 1;
     width: auto !important;
+    min-width: 0;
 }
 
 /* ──────────────────────────────────────────────

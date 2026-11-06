@@ -278,6 +278,11 @@ section .text-center > span.badge.text-primary{color:#0a4a9e !important}
 
 /* ---- Responsive QA refinements: keep the shared navigation clear on tablets ---- */
 @media (min-width:992px) and (max-width:1199.98px){
+  .quote-form-card{padding:1.25rem}
+  .country-code-wrapper{gap:6px!important;min-width:0}
+  .country-code-wrapper select.country-code-select{width:96px!important;flex:0 0 96px!important}
+  .country-code-wrapper input[type="tel"]{flex:1 1 0;min-width:0;width:0!important}
+
   .topbar-v2.d-lg-block{display:none!important}
   .navbar.fixed-top.nav-v2,.navbar.fixed-top.nav-v2.scrolled{top:0!important}
   body{padding-top:var(--navbar-h)!important}
