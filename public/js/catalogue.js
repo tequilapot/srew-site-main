@@ -28,7 +28,7 @@
   if (reduce || !("IntersectionObserver" in window)) return;
 
   var nodes = document.querySelectorAll(
-    "main section:not(:first-child), .product-card, .cat-tile, .rp-card, .el-card, .crawler-card, .faq-item"
+    "main section:not(:first-child):not(.trust-band):not(.solutions-band):not(.price-band), .product-card, .cat-tile, .rp-card, .el-card, .faq-item, .trust-copy, .sol-head, .logo-cell, .sol-card, .price-card"
   );
   var seen = new Set();
   nodes.forEach(function (el, i) {

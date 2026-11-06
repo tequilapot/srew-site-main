@@ -527,7 +527,7 @@ function initMegaMenu(){
 
         item.addEventListener('mouseleave', function(){
             if(isMobile()) return;
-            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 120);
+            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 320);
         });
 
         // Desktop & mobile: click/tap the trigger to navigate or toggle
@@ -553,7 +553,7 @@ function initMegaMenu(){
         });
         dropdown.addEventListener('mouseleave', function(){
             if(isMobile()) return;
-            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 120);
+            leaveTimer = setTimeout(function(){ closeItem(item); backdrop.classList.remove('active'); }, 320);
         });
     });
 
