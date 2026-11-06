@@ -12,7 +12,12 @@ const getHtmlInputs = () => {
   files.forEach(file => {
     if (file.endsWith('.html') && file !== 'google9e25cf69d05e18e5.html') {
       const name = path.parse(file).name
-      inputs[name] = path.resolve(__dirname, file)
+      const input = path.resolve(__dirname, file)
+      inputs[name] = input
+      const html = fs.readFileSync(input, 'utf8')
+      if (/<meta[^>]+property=["']og:type["'][^>]+content=["']article["']/i.test(html)) {
+        inputs[`blogs/${name}`] = input
+      }
     }
   })
   return inputs
