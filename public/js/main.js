@@ -476,7 +476,7 @@ function initMegaMenu(){
     const items = _qa('.mega-nav-item');
     if(!items.length) return;
 
-    const isMobile = () => w.innerWidth < 992;
+    const isMobile = () => w.innerWidth < 1200;
 
     // Create backdrop element for desktop
     let backdrop = _id('megaBackdrop');

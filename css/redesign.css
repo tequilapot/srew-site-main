@@ -313,6 +313,7 @@ section .text-center > span.badge.text-primary{color:#0a4a9e !important}
   .nav-mobile-cta.d-lg-none{display:grid!important}
   .nav-v2 .nav-logo-img{height:40px}
   .mega-backdrop{display:none!important}
+  body:has(.nav-v2 .navbar-collapse.show) .srew-cookie-banner{display:none!important}
 
   .pd-subnav{top:var(--navbar-h)}
   .pd-section{scroll-margin-top:calc(var(--navbar-h) + 64px)}
@@ -322,4 +323,8 @@ section .text-center > span.badge.text-primary{color:#0a4a9e !important}
 /* Prevent mobile browser zoom and keep form controls comfortably readable. */
 @media (max-width:767.98px){
   form input:not([type="checkbox"]):not([type="radio"]),form select,form textarea{font-size:16px!important}
+}
+
+@media (max-width:991.98px){
+  body:has(.nav-v2 .navbar-collapse.show) .srew-cookie-banner{display:none!important}
 }
