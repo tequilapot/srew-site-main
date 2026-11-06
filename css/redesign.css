@@ -246,8 +246,8 @@
   .srew-cookie-banner .btn{padding:.3rem .6rem!important;font-size:.75rem!important}
 }
 
-/* body already reserves the header height; page heroes should not add it again */
-.product-hero{padding-top:1.75rem!important;padding-bottom:2.5rem!important;background:#fff!important}
+/* Product hero clearance below the fixed header */
+.product-hero{padding-top:3rem!important;padding-bottom:2.5rem!important;background:#fff!important}
 .product-hero .hero-title{font-size:clamp(2rem,3.6vw,3rem)!important;color:var(--v2-navy)!important}
 .page-header{padding-top:2.5rem!important;padding-bottom:2rem!important}
 .nav-v2 .navbar-nav .nav-link{text-transform:none!important}
