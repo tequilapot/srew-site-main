@@ -255,6 +255,9 @@
 main>section:first-child[style*="margin-top:90px"]{margin-top:0!important}
 .page-header h1{color:#fff!important;-webkit-text-fill-color:#fff;background:none!important}
 .page-header a{color:#cfe0ff!important}
+@media (max-width:1199.98px) and (prefers-reduced-motion:no-preference){
+  .reveal-left,.reveal-right{transform:translateY(30px) scale(.98)}
+}
 @media (min-width:992px){
   .nav-v2 .mega-dropdown,.nav-v2.scrolled .mega-dropdown{top:calc(var(--navbar-h) + var(--v2-topbar))}
   .mega-backdrop{top:calc(var(--navbar-h) + var(--v2-topbar))}
