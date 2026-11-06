@@ -236,6 +236,10 @@
 @media (max-width:767.98px){
   .sticky-mobile-cta .sticky-cta-btn{color:#fff!important;text-transform:none;letter-spacing:0;font-size:.88rem}
   .sticky-mobile-cta .sticky-cta-btn.quote{color:#1b1400!important}
+  .sticky-mobile-cta .sticky-cta-btn.call,
+  .sticky-mobile-cta .sticky-cta-btn.call i,
+  .sticky-mobile-cta .sticky-cta-btn.whatsapp,
+  .sticky-mobile-cta .sticky-cta-btn.whatsapp i{color:#fff!important}
   .sticky-mobile-cta{height:64px;padding:8px}
   body:has(.sticky-mobile-cta){padding-bottom:64px!important}
   /* compact cookie notice, sits above the action bar */
