@@ -1188,6 +1188,14 @@ a:hover {
 .reveal-right { transform: translateX(40px); }
 .reveal-scale { transform: scale(0.94); }
 
+/* Avoid horizontal overflow from offscreen reveal states on tablet and mobile. */
+@media (max-width: 1199.98px) and (prefers-reduced-motion: no-preference) {
+    .reveal-left,
+    .reveal-right {
+        transform: translateY(30px) scale(0.98);
+    }
+}
+
 /* Staggered entry for grids */
 .stagger-container > * {
     opacity: 0;
