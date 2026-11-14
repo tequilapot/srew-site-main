@@ -8,6 +8,21 @@
       "statusCode": 301
     },
     {
+      "source": "/crusher-plant-capacity",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-capacity/",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-capacity.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
       "source": "/mini-stone-crusher-plant",
       "destination": "/mobile-stone-crusher-plant",
       "statusCode": 301
