@@ -2,6 +2,282 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "srewprojects.com" }],
+      "destination": "https://www.srewprojects.com/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/mini-stone-crusher-plant",
+      "destination": "/mobile-stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/mini-stone-crusher-plant.html",
+      "destination": "/mobile-stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/m-sand-plant-manufacturer",
+      "destination": "/vsi-crusher-m-sand",
+      "statusCode": 301
+    },
+    {
+      "source": "/m-sand-plant-manufacturer.html",
+      "destination": "/vsi-crusher-m-sand",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-manufacturer-india",
+      "destination": "/products",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-manufacturer-india.html",
+      "destination": "/products",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-telangana",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-telangana.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-andhra-pradesh",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-andhra-pradesh.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/cd-waste-recycling-plant-cost",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/cd-waste-recycling-plant-cost.html",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/concrete-recycling-plant",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/concrete-recycling-plant.html",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/construction-waste-recycling-plant",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/construction-waste-recycling-plant.html",
+      "destination": "/cd-recycling-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibrating-screen-for-crusher-plant",
+      "destination": "/vibrating-screen-manufacturer",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibrating-screen-for-crusher-plant.html",
+      "destination": "/vibrating-screen-manufacturer",
+      "statusCode": 301
+    },
+    {
+      "source": "/120-tph-crusher-plant",
+      "destination": "/blogs/120-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/120-tph-crusher-plant.html",
+      "destination": "/blogs/120-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/120-tph-crusher-plant",
+      "destination": "/blogs/120-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/120-tph-crusher-plant",
+      "destination": "/blogs/120-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/200-tph-crusher-plant",
+      "destination": "/blogs/200-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/200-tph-crusher-plant.html",
+      "destination": "/blogs/200-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/200-tph-crusher-plant",
+      "destination": "/blogs/200-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/200-tph-crusher-plant",
+      "destination": "/blogs/200-tph-crusher-plant-cost",
+      "statusCode": 301
+    },
+    {
+      "source": "/300-tph-crusher-plant",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/300-tph-crusher-plant.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/300-tph-crusher-plant",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/300-tph-crusher-plant",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-cost",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-cost.html",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/crusher-plant-cost",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/crusher-plant-cost",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-hyderabad",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-hyderabad.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/crusher-plant-hyderabad",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/crusher-plant-hyderabad",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-setup-guide",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-plant-setup-guide.html",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/crusher-plant-setup-guide",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/crusher-plant-setup-guide",
+      "destination": "/blogs/stone-crusher-plant-investment-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/imported-vs-indian-crusher-plants",
+      "destination": "/blogs/imported-vs-made-in-india-crushing-plants",
+      "statusCode": 301
+    },
+    {
+      "source": "/imported-vs-indian-crusher-plants.html",
+      "destination": "/blogs/imported-vs-made-in-india-crushing-plants",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/imported-vs-indian-crusher-plants",
+      "destination": "/blogs/imported-vs-made-in-india-crushing-plants",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/imported-vs-indian-crusher-plants",
+      "destination": "/blogs/imported-vs-made-in-india-crushing-plants",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-price",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/stone-crusher-plant-price.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stone-crusher-plant-price",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/stone-crusher-plant-price",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-manufacturer-andhra-pradesh",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/crusher-manufacturer-andhra-pradesh.html",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/crusher-manufacturer-andhra-pradesh",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/crusher-manufacturer-andhra-pradesh",
+      "destination": "/stone-crusher-plant",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/:slug",
       "destination": "/blogs/:slug",
       "permanent": true
