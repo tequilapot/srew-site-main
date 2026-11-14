@@ -23,6 +23,51 @@
       "statusCode": 301
     },
     {
+      "source": "/products/vibrating-screens",
+      "destination": "/vibrating-screen-manufacturer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vibrating-screens/",
+      "destination": "/vibrating-screen-manufacturer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vibrating-screens.html",
+      "destination": "/vibrating-screen-manufacturer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vsi-hsi-crushers",
+      "destination": "/vsi-crusher-m-sand",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vsi-hsi-crushers/",
+      "destination": "/vsi-crusher-m-sand",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vsi-hsi-crushers.html",
+      "destination": "/vsi-crusher-m-sand",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms-and-conditions",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms-and-conditions",
+      "statusCode": 301
+    },
+    {
       "source": "/mini-stone-crusher-plant",
       "destination": "/mobile-stone-crusher-plant",
       "statusCode": 301
