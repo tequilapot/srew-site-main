@@ -820,24 +820,18 @@ def business_graph() -> dict:
         "sameAs": SAME_AS,
         "areaServed": {"@type": "Country", "name": "India"},
     }
-    organization = {
-        "@type": "Organization",
-        "@id": ORG_ID,
-        "logo": LOGO,
-        **shared,
-    }
-    local_business = {
-        "@type": "LocalBusiness",
+    business = {
+        "@type": ["Organization", "LocalBusiness"],
         "@id": BIZ_ID,
-        "logo": LOGO_URL,
+        "logo": LOGO,
         "openingHours": "Mo-Sa 09:00-18:00",
         "openingHoursSpecification": HOURS,
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 17.5158653,
-            "longitude": 78.4377875,
+            "latitude": 17.5403008,
+            "longitude": 78.4641043,
         },
-        "hasMap": "https://www.google.com/maps/dir/?api=1&destination=17.5158653,78.4377875",
+        "hasMap": "https://www.google.com/maps/dir/?api=1&destination=17.5403008,78.4641043",
         "contactPoint": [
             {
                 "@type": "ContactPoint",
@@ -851,7 +845,7 @@ def business_graph() -> dict:
     }
     return {
         "@context": "https://schema.org",
-        "@graph": [parent, organization, local_business],
+        "@graph": [parent, business],
     }
 
 
@@ -862,7 +856,7 @@ def top_business_entity(data) -> bool:
 def retarget_about(data):
     if is_type(data, "AboutPage") and isinstance(data.get("mainEntity"), dict):
         if "Organization" in types_of(data["mainEntity"]):
-            data["mainEntity"] = {"@id": ORG_ID}
+            data["mainEntity"] = {"@id": BIZ_ID}
 
 
 def project_creative_work(html: str, canonical: str) -> dict:
