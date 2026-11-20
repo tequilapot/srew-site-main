@@ -127,17 +127,53 @@ async function postToSheet(endpoint, fields) {
   }
 }
 
+class DeliveryError extends Error {
+  constructor(channel, code, status = null) {
+    super(`${channel}: ${code}`);
+    this.channel = channel;
+    this.code = code;
+    this.status = status;
+  }
+}
+
 async function notifySales(fields) {
   const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-  if (!accessKey) throw new Error("Sales email is not configured");
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify({ access_key: accessKey, ...fields }),
-    signal: AbortSignal.timeout(10000),
-  });
-  const result = await response.json().catch(() => ({}));
-  if (!response.ok || result.success !== true) throw new Error("Sales notification did not accept the request");
+  if (!accessKey) throw new DeliveryError("email", "not_configured");
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    let response;
+    try {
+      response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ access_key: accessKey, ...fields }),
+        signal: AbortSignal.timeout(8000),
+      });
+    } catch {
+      // Delivery is ambiguous after a transport timeout; do not risk sending twice.
+      throw new DeliveryError("email", "transport_error");
+    }
+    const result = await response.json().catch(() => ({}));
+    if (response.ok && result.success === true) return;
+    // Retry a rate-limit rejection once, respecting a short Retry-After only.
+    const retryAfter = response.headers.get("retry-after");
+    const delay = retryAfter == null ? 500 : Number(retryAfter) * 1000;
+    if (response.status === 429 && attempt === 0 && Number.isFinite(delay) && delay >= 0 && delay <= 1500) {
+      await new Promise(resolve => setTimeout(resolve, delay));
+      continue;
+    }
+    // Never log provider response bodies: they can contain submitted personal data.
+    throw new DeliveryError("email", response.ok ? "provider_rejected" : "http_error", response.status);
+  }
+}
+
+function deliveryFailure(result, channel) {
+  if (result.status === "fulfilled") return null;
+  const error = result.reason;
+  return {
+    channel,
+    code: error instanceof DeliveryError ? error.code : "delivery_failed",
+    status: error instanceof DeliveryError ? error.status : null,
+  };
 }
 
 export default async function handler(req, res) {
@@ -254,11 +290,14 @@ export default async function handler(req, res) {
   ]);
   const sheetSaved = results[0].status === "fulfilled";
   const emailSent = results[1].status === "fulfilled";
+  if (!sheetSaved || !emailSent) {
+    console.error("Lead delivery degraded", {
+      leadId, formType, sheetSaved, emailSent,
+      failures: results.map((result, index) => deliveryFailure(result, index === 0 ? "sheet" : "email")).filter(Boolean),
+    });
+  }
   if (!sheetSaved && !emailSent) {
     return send(res, 502, { ok: false, error: "We could not save your enquiry just now. Please try again or contact us by phone or WhatsApp." });
-  }
-  if (!sheetSaved || !emailSent) {
-    console.error("Lead delivery is partially degraded", { sheetSaved, emailSent, formType });
   }
   return send(res, 200, { ok: true, leadId, delivery: { sheetSaved, emailSent } });
 }

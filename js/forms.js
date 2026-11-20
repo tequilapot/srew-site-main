@@ -254,6 +254,17 @@
     return payload;
   }
 
+  function acknowledgement(result, label = 'Enquiry') {
+    const reference = result.leadId ? ` Reference ${result.leadId}.` : '';
+    if (result.delivery?.sheetSaved && !result.delivery.emailSent) {
+      return `${label} saved.${reference} Email notification is delayed. For urgent requests, call +91 8790759460. Please do not submit again.`;
+    }
+    if (result.delivery?.emailSent && !result.delivery.sheetSaved) {
+      return `${label} sent to our team.${reference} Please keep this reference for follow-up.`;
+    }
+    return `${label} received.${reference}`;
+  }
+
   function reportLead(formType, result) {
     if (typeof w.gtag === 'function') {
       w.gtag('event', 'generate_lead', { method: formType, lead_reference: result.leadId || '' });
@@ -310,7 +321,7 @@
         }
         form.reset();
         form.dataset.googleIdToken = '';
-        toast(`Brochure request received. Reference ${result.leadId}.`, 'success');
+        toast(acknowledgement(result, 'Brochure request'), 'success');
       } catch (error) {
         toast(error.message || 'Could not capture your request. Please try again.', 'error');
       } finally {
@@ -360,8 +371,8 @@
         reportLead('contact', result);
         form.reset();
         form.dataset.googleIdToken = '';
-        if (messages) messages.textContent = `Thanks. Your enquiry was received. Reference: ${result.leadId}.`;
-        toast(`Enquiry received. Reference ${result.leadId}.`, 'success');
+        if (messages) messages.textContent = acknowledgement(result);
+        toast(acknowledgement(result), 'success');
       } catch (error) {
         if (messages) messages.textContent = error.message || 'We could not send your enquiry. Please try again or call us.';
         toast(error.message || 'Could not send your enquiry. Please try again.', 'error');
@@ -419,7 +430,8 @@
         reportLead('quote', result);
         form.reset();
         form.dataset.googleIdToken = '';
-        w.location.href = `/thankyou?ref=${encodeURIComponent(result.leadId)}`;
+        const delivery = result.delivery?.emailSent === false ? 'saved' : result.delivery?.sheetSaved === false ? 'emailed' : 'complete';
+        w.location.href = `/thankyou?ref=${encodeURIComponent(result.leadId)}&delivery=${delivery}`;
       } catch (error) {
         toast(error.message || 'Could not submit your quote request. Please try again.', 'error');
       } finally {
@@ -457,7 +469,7 @@
           reportLead('industry', result);
           form.reset();
           form.dataset.googleIdToken = '';
-          toast(`Enquiry received. Reference ${result.leadId}.`, 'success');
+          toast(acknowledgement(result), 'success');
         } catch (error) {
           toast(error.message || 'Could not send your enquiry. Please try again.', 'error');
         } finally {
