@@ -207,6 +207,17 @@
 .footer-cta .btn:hover,.footer-v2 .btn:hover{text-decoration:none}
 .footer-main{padding-top:2.75rem;padding-bottom:1.5rem}
 .footer-h{font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:.9rem}
+.footer-v2 h2,.footer-v2 .footer-h,.footer h2.footer-h{color:#fff !important}
+.btn,.btn-sm,.btn-quote,.nav-phone-link,.navbar-toggler{min-height:44px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffc107;outline-offset:2px}
+.project-card .project-image img,.project-card .project-image svg{width:100%;height:200px;object-fit:cover;display:block;background:#f4f7fb}
+.project-image-container img{width:100%;height:auto;max-height:520px;object-fit:contain;background:#f4f7fb}
+@media (max-width:420px){
+  .srew-cookie-banner{left:8px;right:8px;bottom:8px;padding:8px 10px;max-width:none}
+  .srew-cookie-banner h4,.srew-cookie-banner .fa-cookie-bite,.srew-cookie-banner .mb-2{display:none !important}
+  .srew-cookie-banner p{margin:0 !important;font-size:.75rem !important}
+  .reveal{opacity:1 !important;transform:none !important}
+}
 .footer-v2 .footer-links li{margin-bottom:.45rem;font-size:.9rem}
 .footer-v2 .footer-links a{color:rgba(255,255,255,.78)}
 .footer-iso{display:flex;align-items:center;gap:.5rem;font-weight:700;color:#fff}
