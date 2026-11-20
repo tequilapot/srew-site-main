@@ -19,7 +19,18 @@ const getHtmlInputs = () => {
 }
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'defer-injected-app-css',
+      transformIndexHtml(html) {
+        return html.replace(
+          /<link rel="stylesheet" crossorigin href="(\/assets\/style-[^"]+\.css)">/g,
+          '<link rel="stylesheet" crossorigin href="$1" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="$1"></noscript>'
+        )
+      }
+    }
+  ],
   server: {
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
