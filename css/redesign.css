@@ -214,7 +214,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ff
 .project-image-container img{width:100%;height:auto;max-height:520px;object-fit:contain;background:#f4f7fb}
 @media (max-width:420px){
   .srew-cookie-banner{left:8px;right:8px;bottom:8px;padding:8px 10px;max-width:none}
-  .srew-cookie-banner h4,.srew-cookie-banner .fa-cookie-bite,.srew-cookie-banner .mb-2{display:none !important}
+  .srew-cookie-banner .cookie-title,.srew-cookie-banner .fa-cookie-bite,.srew-cookie-banner .mb-2{display:none !important}
   .srew-cookie-banner p{margin:0 !important;font-size:.75rem !important}
   .reveal{opacity:1 !important;transform:none !important}
 }
