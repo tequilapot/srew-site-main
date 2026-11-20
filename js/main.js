@@ -94,12 +94,11 @@ function initRevealAnimations(){
 function initCounters(){
     const counters=_qa('[data-counter]');
     if(!counters.length||!('IntersectionObserver' in w))return;
-    if(w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 
     function animateCounter(el){
         const target=parseInt(el.getAttribute('data-counter'),10);
         const suffix=el.getAttribute('data-suffix')||'';
-        const duration=1500;
+        const duration=1800;
         const startTime=performance.now();
 
         function easeOutQuart(t){return 1-Math.pow(1-t,4)}
@@ -122,12 +121,9 @@ function initCounters(){
                 observer.unobserve(entry.target);
             }
         });
-    },{threshold:0.2});
+    },{threshold:0.4});
 
-    counters.forEach(function(el){
-        if(el.closest&&el.closest('.el-hero, .cat-hero')) animateCounter(el);
-        else observer.observe(el);
-    });
+    counters.forEach(function(el){observer.observe(el)});
 }
 
 /* ──────────────────────────────────────────────
@@ -478,126 +474,9 @@ function initBrochureModal(){
    ────────────────────────────────────────────── */
 function initMegaMenu(){
     const items = _qa('.mega-nav-item');
-    const projectLinks = _qa('.navbar-nav > .nav-item > .nav-link[href="/projects"]');
-    projectLinks.forEach(function(link, index){
-        const item = link.closest('.nav-item');
-        if(!item || item.querySelector('.nav-projects-toggle')) return;
-
-        item.classList.add('nav-projects-item');
-        const row = d.createElement('div');
-        row.className = 'nav-projects-row';
-        item.insertBefore(row, link);
-        row.appendChild(link);
-
-        const toggle = d.createElement('button');
-        toggle.type = 'button';
-        toggle.className = 'nav-projects-toggle';
-        toggle.setAttribute('aria-label', 'Show project list');
-        toggle.setAttribute('aria-expanded', 'false');
-        const panelId = 'mobileProjectsDropdown' + (index ? '-' + index : '');
-        toggle.setAttribute('aria-controls', panelId);
-        toggle.innerHTML = '<svg class="ic" aria-hidden="true" focusable="false"><use href="/images/icons/ui-sprite.svg#i-chevron-down"></use></svg>';
-        row.appendChild(toggle);
-
-        const panel = d.createElement('div');
-        panel.className = 'nav-projects-dropdown';
-        panel.id = panelId;
-        panel.setAttribute('aria-label', 'Featured projects');
-        panel.innerHTML = '<a href="/projects#project-west-bengal">West Bengal · 200 TPH Plant</a>' +
-            '<a href="/projects#project-singareni">Singareni · 250 TPH Plant</a>' +
-            '<a href="/projects#project-odisha-mobile">Odisha · 40 TPH Mobile Unit</a>' +
-            '<a href="/projects#project-keesara-cone">Keesara · Cone Crusher Plant</a>' +
-            '<a href="/projects#project-cd-recycling-sand-dryer">C&amp;D Recycling &amp; Sand Dryer</a>';
-        item.appendChild(panel);
-
-        toggle.addEventListener('click', function(event){
-            event.preventDefault();
-            event.stopPropagation();
-            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
-            const nav = item.closest('.navbar-nav');
-            if(nav) nav.querySelectorAll('.nav-projects-item.is-projects-open').forEach(function(openItem){
-                openItem.classList.remove('is-projects-open');
-                const openToggle = openItem.querySelector('.nav-projects-toggle');
-                if(openToggle) openToggle.setAttribute('aria-expanded', 'false');
-            });
-            if(shouldOpen){
-                item.classList.add('is-projects-open');
-                toggle.setAttribute('aria-expanded', 'true');
-            }
-        });
-
-        panel.addEventListener('click', function(event){
-            if(!event.target.closest('a')) return;
-            item.classList.remove('is-projects-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            const collapse = _id('navbarNav');
-            const bsCollapse = collapse && w.bootstrap && w.bootstrap.Collapse && w.bootstrap.Collapse.getInstance(collapse);
-            if(bsCollapse) bsCollapse.hide();
-        });
-    });
-
     if(!items.length) return;
 
-    // The site menu uses Products as a direct catalogue link, not a popup button.
-    items.forEach(function(item){
-        const trigger = item.querySelector('.mega-nav-trigger');
-        if(!trigger) return;
-        trigger.removeAttribute('role');
-        trigger.removeAttribute('aria-haspopup');
-        trigger.removeAttribute('aria-expanded');
-    });
-
-    // Products stays a direct catalogue link; its separate arrow opens the
-    // product list inside the hamburger panel.
-    items.forEach(function(item){
-        const toggle = item.querySelector('.nav-products-toggle');
-        if(!toggle) return;
-        toggle.addEventListener('click',function(event){
-            event.preventDefault();
-            event.stopPropagation();
-            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
-            items.forEach(function(other){
-                other.classList.remove('is-submenu-open');
-                const otherToggle = other.querySelector('.nav-products-toggle');
-                if(otherToggle) otherToggle.setAttribute('aria-expanded','false');
-                const otherNav = other.closest('.navbar-nav');
-                if(otherNav) otherNav.classList.remove('products-only-open');
-            });
-            const nav = item.closest('.navbar-nav');
-            if(nav) nav.querySelectorAll('.nav-projects-item.is-projects-open').forEach(function(projectItem){
-                projectItem.classList.remove('is-projects-open');
-                const projectToggle = projectItem.querySelector('.nav-projects-toggle');
-                if(projectToggle) projectToggle.setAttribute('aria-expanded', 'false');
-            });
-            if(shouldOpen){
-                item.classList.add('is-submenu-open');
-                toggle.setAttribute('aria-expanded','true');
-                if(nav) nav.classList.add('products-only-open');
-            }
-        });
-    });
-
-    const collapse = _id('navbarNav');
-    if(collapse){
-        _on(collapse,'hidden.bs.collapse',function(){
-            items.forEach(function(item){
-                item.classList.remove('is-submenu-open');
-                const toggle = item.querySelector('.nav-products-toggle');
-                if(toggle) toggle.setAttribute('aria-expanded','false');
-                const nav = item.closest('.navbar-nav');
-                if(nav) nav.classList.remove('products-only-open');
-            });
-            projectLinks.forEach(function(link){
-                const item = link.closest('.nav-projects-item');
-                if(!item) return;
-                item.classList.remove('is-projects-open');
-                const toggle = item.querySelector('.nav-projects-toggle');
-                if(toggle) toggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-
-    const isMobile = () => w.innerWidth < 992 || d.body.classList.contains('cat-menu-open');
+    const isMobile = () => w.innerWidth < 1200;
 
     // Create backdrop element for desktop
     let backdrop = _id('megaBackdrop');
@@ -624,19 +503,7 @@ function initMegaMenu(){
     }
 
     function closeAll(){
-        items.forEach(function(item){
-            closeItem(item);
-            item.classList.remove('is-submenu-open');
-            const toggle = item.querySelector('.nav-products-toggle');
-            if(toggle) toggle.setAttribute('aria-expanded','false');
-            const nav = item.closest('.navbar-nav');
-            if(nav) nav.classList.remove('products-only-open');
-        });
-        _qa('.nav-projects-item.is-projects-open').forEach(function(item){
-            item.classList.remove('is-projects-open');
-            const toggle = item.querySelector('.nav-projects-toggle');
-            if(toggle) toggle.setAttribute('aria-expanded', 'false');
-        });
+        items.forEach(closeItem);
         backdrop.classList.remove('active');
     }
 
@@ -662,10 +529,17 @@ function initMegaMenu(){
         // Desktop & mobile: click/tap the trigger to navigate or toggle
         trigger.addEventListener('click', function(e){
             if(isMobile()){
-                // In the compact site menu, Products is a direct link to the full catalogue.
-                closeAll();
+                // On mobile, toggle the accordion
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = item.classList.contains('is-open');
+                if(isOpen){
+                    closeItem(item);
+                } else {
+                    openItem(item);
+                }
             }
-            // Allow the Products link to navigate on every viewport.
+            // On desktop, the link navigates naturally — allow it
         });
 
         // Keep open when hovering over the dropdown panel itself
@@ -789,7 +663,7 @@ function initCookieConsent() {
     banner.className = 'srew-cookie-banner d-flex flex-column';
     banner.innerHTML = `
         <div class="d-flex align-items-center mb-2">
-            <i class="fas fa-cookie-bite me-2" style="font-size: 1.2rem;"></i>
+            <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
             <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
@@ -802,7 +676,6 @@ function initCookieConsent() {
     `;
 
     d.body.appendChild(banner);
-    d.body.classList.add('has-cookie-banner');
 
     // Show banner with a slight delay
     setTimeout(function() {
@@ -821,55 +694,10 @@ function initCookieConsent() {
 
     function hideBanner() {
         banner.classList.add('hiding');
-        d.body.classList.remove('has-cookie-banner');
         setTimeout(function() {
             banner.remove();
         }, 500);
     }
-}
-
-function initCategoryCarousel(){
-    _qa('.category-carousel').forEach(function(carousel){
-        const track = _qs('.category-carousel-track', carousel);
-        const previous = _qs('.category-carousel-prev', carousel);
-        const next = _qs('.category-carousel-next', carousel);
-        if(!track) return;
-
-        const step = function(){
-            const item = _qs('.category-carousel-item', track);
-            const gap = parseFloat(w.getComputedStyle(track).columnGap) || 0;
-            return item ? item.getBoundingClientRect().width + gap : track.clientWidth;
-        };
-        let frame = 0;
-        const updateControls = function(){
-            if(frame) return;
-            frame = _raf(function(){
-                frame = 0;
-                const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
-                if(previous) previous.disabled = track.scrollLeft <= 2;
-                if(next) next.disabled = track.scrollLeft >= maxScroll - 2;
-            });
-        };
-
-        if(previous) previous.addEventListener('click', function(){
-            track.scrollBy({left: -step(), behavior: 'smooth'});
-        });
-        if(next) next.addEventListener('click', function(){
-            track.scrollBy({left: step(), behavior: 'smooth'});
-        });
-        track.addEventListener('scroll', updateControls, {passive: true});
-        track.addEventListener('keydown', function(event){
-            if(event.key === 'ArrowLeft' && previous){
-                event.preventDefault();
-                previous.click();
-            }else if(event.key === 'ArrowRight' && next){
-                event.preventDefault();
-                next.click();
-            }
-        });
-        _on(w, 'resize', updateControls, {passive: true});
-        updateControls();
-    });
 }
 
 /* ──────────────────────────────────────────────
@@ -881,7 +709,6 @@ function boot(){
     initNavbar();
     initNavbarDismissOutside();
     initMegaMenu();
-    initCategoryCarousel();
     initHero();
     initRevealAnimations();
     initCounters();
