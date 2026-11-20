@@ -664,7 +664,7 @@ function initCookieConsent() {
     banner.innerHTML = `
         <div class="d-flex align-items-center mb-2">
             <i class="fas fa-cookie-bite text-warning me-2" style="font-size: 1.2rem;"></i>
-            <h4 class="m-0 fw-bold text-dark h6">We Value Your Privacy</h4>
+            <p class="cookie-title m-0 fw-bold text-dark h6">We Value Your Privacy</p>
         </div>
         <p class="text-muted mb-3" style="font-size: 0.8rem; line-height: 1.5; text-align: left; margin: 0 0 12px 0;">
             SREW Projects uses cookies to optimize your site experience, analyze quarry traffic, and personalize ads. Read our <a href="/cookies" class="text-primary text-decoration-underline fw-medium">Cookie Policy</a>.
