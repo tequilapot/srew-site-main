@@ -348,3 +348,28 @@ section .text-center > span.badge.text-primary{color:#0a4a9e !important}
 @media (max-width:991.98px){
   body:has(.nav-v2 .navbar-collapse.show) .srew-cookie-banner{display:none!important}
 }
+
+/* LCP/a11y pass: contrast, footer, tap targets. Same colours, darker body text. */
+.section-header p,
+.project-info p,
+.product-info p,
+main .text-muted,
+main .small.text-muted,
+main .text-secondary{color:#3e4c59 !important}
+.hero-capacity-range a,
+main p a:not(.btn),
+.footer-v2 .footer-policy a{text-decoration:underline;text-underline-offset:3px}
+.footer-v2 .footer-links a,
+.footer-v2 .footer-policy a,
+.footer-v2 .contact-info a,
+.footer-v2 .fc-text,
+.footer-v2 .footer-legal,
+.footer-v2 .contact-info li{color:#fff !important}
+.footer-v2 .social-icons a{width:44px !important;height:44px !important;min-width:44px;min-height:44px}
+.footer-v2 .footer-main .row{row-gap:1.5rem}
+main .btn,.spec-pdf-btn{white-space:normal}
+.spec-pdf-btn{min-height:44px;line-height:1.25}
+@media (max-width:575.98px){
+  .ss-pdf-row{flex-direction:column !important;align-items:stretch !important}
+  .ss-pdf-row .spec-pdf-btn{width:100%}
+}
