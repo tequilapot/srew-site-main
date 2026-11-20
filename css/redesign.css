@@ -199,7 +199,7 @@
 /* ---------- Footer ---------- */
 .footer-v2{background:var(--v2-navy)!important;color:rgba(255,255,255,.8);padding:0!important}
 .footer-v2 a{color:rgba(255,255,255,.85);text-decoration:none}
-.footer-v2 a:hover{color:#fff;text-decoration:underline}
+.footer-v2 a:hover:not(.btn){color:#fff;text-decoration:underline}
 .footer-cta{background:var(--v2-navy-2);border-bottom:1px solid rgba(255,255,255,.08);padding:1.75rem 0}
 .footer-cta .fc-title{font-size:1.25rem;font-weight:800;color:#fff;margin:0 0 .2rem}
 .footer-cta .fc-text{margin:0;color:rgba(255,255,255,.75);font-size:.92rem}
@@ -210,6 +210,8 @@
 .footer-v2 h2,.footer-v2 .footer-h,.footer h2.footer-h{color:#fff !important}
 .btn,.btn-sm,.btn-quote,.nav-phone-link,.navbar-toggler{min-height:44px}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffc107;outline-offset:2px}
+.project-section{margin-bottom:0;padding-top:0}
+.project-section hr.my-5{margin:1.5rem 0}
 .project-card .project-image img,.project-card .project-image svg{width:100%;height:200px;object-fit:cover;display:block;background:#f4f7fb}
 .project-image-container img{width:100%;height:auto;max-height:520px;object-fit:contain;background:#f4f7fb}
 @media (max-width:420px){
@@ -372,4 +374,64 @@ main .btn,.spec-pdf-btn{white-space:normal}
 @media (max-width:575.98px){
   .ss-pdf-row{flex-direction:column !important;align-items:stretch !important}
   .ss-pdf-row .spec-pdf-btn{width:100%}
+}
+
+/* Light button fills keep navy labels on hover, focus and the stuck iOS tap state. */
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:focus-visible,
+.btn-light:active,
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:focus-visible,
+.btn-outline-light:active,
+.footer-v2 a.btn-light:hover,
+.footer-v2 a.btn-light:focus,
+.footer-v2 a.btn-light:active,
+.footer-v2 a.btn-outline-light:hover,
+.footer-v2 a.btn-outline-light:focus,
+.footer-v2 a.btn-outline-light:active,
+.footer-cta a.btn-outline-light:hover,
+.footer-cta a.btn-outline-light:focus,
+.footer-cta a.btn-outline-light:active,
+.cta-section .btn-light:hover,
+.cta-section .btn-light:focus,
+.cta-section .btn-light:active{
+  background:#fff !important;
+  background-color:#fff !important;
+  color:#0b1f3a !important;
+  border-color:#fff !important;
+}
+.btn-light:hover i,
+.btn-light:focus i,
+.btn-light:active i,
+.btn-outline-light:hover i,
+.btn-outline-light:focus i,
+.btn-outline-light:active i,
+.btn-light:hover .ic,
+.btn-outline-light:hover .ic,
+.btn-outline-light:focus .ic,
+.btn-outline-light:active .ic,
+.footer-v2 a.btn-outline-light:hover i,
+.footer-v2 a.btn-outline-light:active i,
+.cta-section .btn-light:hover i,
+.cta-section .btn-light:active i{
+  color:#0b1f3a !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible,
+.btn-outline-primary:active{
+  background:#0b1f3a !important;
+  background-color:#0b1f3a !important;
+  border-color:#0b1f3a !important;
+  color:#fff !important;
+}
+.btn-outline-primary:hover i,
+.btn-outline-primary:focus i,
+.btn-outline-primary:active i,
+.btn-outline-primary:hover .ic,
+.btn-outline-primary:focus .ic,
+.btn-outline-primary:active .ic{
+  color:#fff !important;
 }
