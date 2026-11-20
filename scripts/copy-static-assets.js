@@ -14,3 +14,6 @@ fs.mkdirSync(publicCss, { recursive: true });
 fs.cpSync(sourceCss, publicCss, { recursive: true, force: true });
 
 console.log('Copied site stylesheets into the Vite public output.');
+
+// Keep the served form and application scripts aligned with their source files.
+fs.cpSync(path.join(projectRoot, 'js'), path.join(projectRoot, 'public', 'js'), { recursive: true, force: true });

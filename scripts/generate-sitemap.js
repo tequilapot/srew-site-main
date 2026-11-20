@@ -133,5 +133,6 @@ for (const url of urls) {
 lines.push('</urlset>', '');
 
 const sitemap = lines.join('\n');
+writeFileSync(join(root, 'sitemap.xml'), sitemap, 'utf8');
 writeFileSync(join(root, 'public', 'sitemap.xml'), sitemap, 'utf8');
 console.log(`Generated sitemap with ${urls.length} canonical, indexable pages.`);
