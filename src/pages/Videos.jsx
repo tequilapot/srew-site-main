@@ -67,8 +67,8 @@ export const Videos = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
-        <meta name="geo.position" content="17.5158653;78.4377875" />
-        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <meta name="geo.position" content="17.5403008;78.4641043" />
+        <meta name="ICBM" content="17.5403008, 78.4641043" />
         <script type="application/ld+json">
         {`
           {

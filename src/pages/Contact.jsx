@@ -137,51 +137,111 @@ export const Contact = () => {
         <meta name="twitter:card" content="summary" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana, India" />
-        <meta name="geo.position" content="17.5158653;78.4377875" />
-        <meta name="ICBM" content="17.5158653, 78.4377875" />
+        <meta name="geo.position" content="17.5403008;78.4641043" />
+        <meta name="ICBM" content="17.5403008, 78.4641043" />
         <script type="application/ld+json">
         {`
           {
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "SREW Projects",
-            "alternateName": "SREW",
-            "@id": "https://www.srewprojects.com/#localbusiness",
-            "url": "https://www.srewprojects.com",
-            "telephone": "+91-8790759460",
-            "email": "srenggworks2016@gmail.com",
-            "image": "https://www.srewprojects.com/images/logo.png",
-            "logo": "https://www.srewprojects.com/images/logo.png",
-            "priceRange": "₹₹₹",
-            "description": "ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants. 2–250 TPH capacity. 10+ years experience. Hyderabad, India.",
-            "hasMap": "https://share.google/hDqCzUIV3UuE8WGLg",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 17.5158653,
-              "longitude": 78.4377875
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "11-125, IDA Jeedimetla, Dulapally",
-              "addressLocality": "Hyderabad",
-              "addressRegion": "Telangana",
-              "postalCode": "500100",
-              "addressCountry": "IN"
-            },
-            "openingHoursSpecification": [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-                "opens": "09:00",
-                "closes": "18:00"
+                "@type": "Organization",
+                "@id": "https://www.srewprojects.com/#legal-entity",
+                "name": "S.R.Engineering Works",
+                "legalName": "S.R.Engineering Works"
+              },
+              {
+                "@type": [
+                  "Organization",
+                  "LocalBusiness"
+                ],
+                "@id": "https://www.srewprojects.com/#business",
+                "logo": {
+                  "@type": "ImageObject",
+                  "@id": "https://www.srewprojects.com/#logo",
+                  "url": "https://www.srewprojects.com/images/logo.png",
+                  "contentUrl": "https://www.srewprojects.com/images/logo.png",
+                  "width": 299,
+                  "height": 117
+                },
+                "openingHours": "Mo-Sa 09:00-18:00",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ],
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 17.5403008,
+                  "longitude": 78.4641043
+                },
+                "hasMap": "https://www.google.com/maps/dir/?api=1&destination=17.5403008,78.4641043",
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-8790759460",
+                    "contactType": "customer service",
+                    "areaServed": "IN"
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-6281665454",
+                    "contactType": "customer service",
+                    "areaServed": "IN"
+                  }
+                ],
+                "name": "SREW Projects",
+                "legalName": "S.R.Engineering Works",
+                "url": "https://www.srewprojects.com",
+                "image": "https://www.srewprojects.com/images/logo.png",
+                "description": "SREW Projects is a unit of S.R.Engineering Works. ISO 9001:2015 Certified Manufacturer of Crushing, Screening & Sand Processing Plants | 2–250 TPH | Hyderabad, India.",
+                "email": "srenggworks2016@gmail.com",
+                "telephone": [
+                  "+91-8790759460",
+                  "+91-6281665454"
+                ],
+                "taxID": "36BEIPR4767N1ZL",
+                "vatID": "36BEIPR4767N1ZL",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Sy.No.155/A, Ayyappa Temple Road, Dullapally, Medchal-Malkajgiri",
+                  "addressLocality": "Hyderabad",
+                  "addressRegion": "Telangana",
+                  "postalCode": "500100",
+                  "addressCountry": "IN"
+                },
+                "parentOrganization": {
+                  "@id": "https://www.srewprojects.com/#legal-entity"
+                },
+                "award": "ISO 9001:2015 Certified",
+                "hasCredential": {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "ISO 9001:2015",
+                  "credentialCategory": "certification",
+                  "description": "ISO 9001:2015 Certified"
+                },
+                "sameAs": [
+                  "https://www.facebook.com/profile.php?id=100070029793724",
+                  "https://www.linkedin.com/company/thesrew",
+                  "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
+                  "https://www.instagram.com/srenggworks/",
+                  "https://www.indiamart.com/srengineeringworks-266746886/"
+                ],
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "India"
+                }
               }
-            ],
-            "sameAs": [
-              "https://www.facebook.com/profile.php?id=100070029793724",
-              "https://www.linkedin.com/company/thesrew",
-              "https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw",
-              "https://www.instagram.com/srenggworks/",
-              "https://share.google/hDqCzUIV3UuE8WGLg"
             ]
           }
         `}

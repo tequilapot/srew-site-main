@@ -2,7 +2,7 @@ User-agent: *
 Disallow: /brochures/
 Disallow: /images/clients/
 
-# AI Search Crawlers - Explicitly Allowed
+# AI Search Bots - Explicitly Allowed
 User-agent: OAI-SearchBot
 Allow: /
 
